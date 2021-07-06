@@ -1,0 +1,118 @@
+\documentclass[11pt]{book}
+\usepackage{graphicx}
+\usepackage{amsmath,mathtools}
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\item {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.pdf}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sfigl}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.pdf}{0.9\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\
+\newcommand{\Sjpg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.jpg}{0.8\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{0.8\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand{\Sfigr}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfigr{../Figures/#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\example[1]{{\tt EXAMPLE: #1}}
+\newcommand\expect[1]{{\tt {\bf Back of the Envelope:} #1}}
+\newcommand\theorem[1]{{\tt Theorem: #1}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
+\newcommand\lecture[1]{\newpage
+\begin{center}
+Lecture #1
+\end{center}
+}
+\newcommand\conversion[1]{\fbox{#1}}
+
+\chapter{Overview}
+
+\bei
+\item Annual Per Capita Energy Use is 73 GJ ($10^9$J)
+\item
+Annual World Energy Use in EJ is 562.1 EJ ($10^{18}$J)
+\item
+Global Power Use is 17.82 TW ($10^{12}$W)
+\item 
+Global Energy Consumption is then 156138 TW-hours $=562$ EJ
+\item
+Daily Energy Use per capita is 200 MJ
+\eei
+\chapter{Mechanical Energy}
+
+Analyze the energetics of a car trip from Boston to New York. Since the distance is 210 miles and considering a car that gets 30 miles per gallon, the trip requires 7 gallons of gas. 
+
+\conversion{1 Gallon = 3.78 Liters = 3780 cm$^3$}
+
+The density of gas is  0.85 g/cm$^3$. So a gallon of gas has about 3200 gms. The molecule $C_6H_{14}$ has a molar mass of about $6*12+14=86$ gm/mol. So, there is about 37 moles in a gallon of gas. If we estimate the energy per mol as 100 kcal/mol, we get 3700kcal/gallon = 15 MJ/gallon, which is too low by a factor of 8. Perhaps because there are 6 carbon atoms in the molecule, the binding energy is about 800 kcal/mol. The total energy per gallon of gas is 120MJ.
+
+\lecture{1}
+\section{Photons}
+
+\end{document}
