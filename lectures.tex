@@ -1,6 +1,6 @@
 \documentclass[11pt]{book}
 \usepackage{graphicx}
-\usepackage{amsmath,mathtools}
+\usepackage{amsmath,mathtools,mathabx}
 \begin{document}
 \newcommand{\problem}[1]{%\addtocounter{problemc}{1}
 \item {#1}
@@ -92,6 +92,7 @@ Lecture #1
 \newcommand\conversion[1]{\fbox{#1}}
 
 \chapter{Overview}
+\lecture{1}
 
 \bei
 \item Annual Per Capita Energy Use is 73 GJ ($10^9$J)
@@ -112,7 +113,39 @@ Analyze the energetics of a car trip from Boston to New York. Since the distance
 
 The density of gas is  0.85 g/cm$^3$. So a gallon of gas has about 3200 gms. The molecule $C_6H_{14}$ has a molar mass of about $6*12+14=86$ gm/mol. So, there is about 37 moles in a gallon of gas. If we estimate the energy per mol as 100 kcal/mol, we get 3700kcal/gallon = 15 MJ/gallon, which is too low by a factor of 8. Perhaps because there are 6 carbon atoms in the molecule, the binding energy is about 800 kcal/mol. The total energy per gallon of gas is 120MJ.
 
-\lecture{1}
-\section{Photons}
+Seven gallons of gas therefore contain 840MJ of energy. However, transforming that energy into usable energy is not 100\% efficient. It is roughly 25\% efficient, so buying 7 gallons of gas gives you about 210MJ of energy. How is that used to get from Boston to New York?
+
+First calculate the difference between the kinetic energy of the car moving at 60mph and the car at rest (0). The energy in the gas must be used to give the car this kinetic energy. 
+
+
+\chapter{Climate}
+
+\section{Simple Models}
+
+\bei
+\item incoming solar radiation: $I_\Sun$=1366 W/m$^2$
+\item Earth absorbs $\pi R_\Earth^2$ of this (the cross-sectional area), so total absorbed is $I_\Sun \pi R_\Earth^2$
+\item This must equal the radiation emitted from Earth: $4\pi R_\Earth^2 \sigma T_\Earth^4$, so
+\item $T_\Earth=278.6K=5.43$C, not bad
+\eei 
+
+v2: not all of the radiation from the sun reaches Earth: about 6\% is absorbed by the atmosphere; clouds absorb another 14\% and the surface reflects 10\%. Technically, this is called the {\it albedo}: $a_\Earth=0.3$. Taken at face value, this reduces the total absorbed by $0.7$ and therefore the temperature is smaller by $0.7^{1/4}$, leading to a revised estimate: $T_\Earth=254K=-18$C, much worse.
+
+v3: Account for the fact that some of the radiation emitted by Earth is reflected by the atmosphere back down to Earth, so radiative balance at the surface of the Earth leads to:
+\be
+4\pi R_\Earth^2 \left[ (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 \right]
+= 4\pi R_\Earth^2 \sigma T_\Earth^4
+\ee
+while radiative balance in the (cartoon-version) atmosphere leads to
+\be
+T_\Earth^4 = 2T_{atm}^4
+\ee
+where the factor of 2 accounts for the radiation emitted up and down from the atmosphere. This results in
+\be
+T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma} \big( 1-\frac12\big) \right]^{1/4} = 303K
+\ee
+
+
+
 
 \end{document}
