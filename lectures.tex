@@ -1,6 +1,8 @@
 \documentclass[11pt]{book}
 \usepackage{graphicx}
 \usepackage{amsmath,mathtools,mathabx}
+\usepackage{hyperref}
+
 \begin{document}
 \newcommand{\problem}[1]{%\addtocounter{problemc}{1}
 \item {#1}
@@ -30,7 +32,7 @@
 \newcommand{\Sfig}[2]{
    \begin{figure}[thbp]
    \begin{center}
-    \sfig{../Figures/#1.pdf}{0.7\columnwidth}
+    \sfig{Figures/#1.pdf}{0.7\columnwidth}
     \caption{{\small #2}}
     \label{fig:#1}
      \end{center}
@@ -39,7 +41,7 @@
 \newcommand{\Sfigl}[2]{
    \begin{figure}[thbp]
    \begin{center}
-    \sfig{../Figures/#1.pdf}{0.9\columnwidth}
+    \sfig{Figures/#1.pdf}{0.9\columnwidth}
     \caption{{\small #2}}
     \label{fig:#1}
      \end{center}
@@ -58,7 +60,7 @@
 \newcommand{\Spng}[2]{
    \begin{figure}[thbp]
    \begin{center}
-    \sfig{../Figures/#1.png}{0.8\columnwidth}
+    \sfig{Figures/#1.png}{0.8\columnwidth}
     \caption{{\small #2}}
     \label{fig:#1}
      \end{center}
@@ -142,10 +144,103 @@ T_\Earth^4 = 2T_{atm}^4
 \ee
 where the factor of 2 accounts for the radiation emitted up and down from the atmosphere. This results in
 \be
-T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma} \big( 1-\frac12\big) \right]^{1/4} = 303K
+T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma} \big( 1-\frac12\big) \right]^{1/4} = 303K.
 \ee
+This is the greenhouse effect: radiation from the Earth is trapped and serves to heat it. This assumes that the atmosphere is a single layer and absorbs all of the long wavelength radiation emitted from Earth.
 
 
+v4: Based on \href{https://brian-rose.github.io/ClimateLaboratoryBook/courseware/elementary-greenhouse.html}{The Climate Laboratory}, section 2, depicted in Fig.~\rf{2layerAtm_sketch}.
+\Spng{2layerAtm_sketch}{Simple two-layer model for the temperature.}
+Radiative equilibrium must hold at all 3 layers:
+\bei
+\item Surface: 
+\be
+\sigma T_s^4 = (1-\alpha) Q + \epsilon\sigma \left( T_0^4 + (1-\epsilon) T_1^4\right)\ee
+where $Q$ is the sunlight absorbed on Earth $I_\Sun/4$ and $\epsilon$ is the fraction of short wavelength radiation absorbed by each layer. Note that Kirschoff's Law is used here: the emitted radiation is at the temperature of interest but suppressed by $\epsilon$. If the gas absorbs a lot at the wavelengths of interest, it also emits a lot at those wavelengths.
+\item Layer 0:
+\be
+2\epsilon\sigma T_0^4 = \epsilon\sigma T_s^4 + \epsilon^2\sigma T_1^4\ee
+\item Layer 1:
+\be
+2\epsilon\sigma T_1^4 = (1-\epsilon)\epsilon \sigma T_s^4 + \epsilon^2\sigma T_0^4
+\ee
+\eei
+These are three 3 equations for 4 unknowns (taking $\alpha=0.3$. Fig.~\rf{twolayer} shows the results for the 3 temperatures as a function of the remaining free parameter $\epsilon$.
+\Spng{twolayer}{Prediction of the two-layer model for the temperatures of its 3 components as a function of $\epsilon$, the fraction of long wavelength radiation absorbed by the two atmospheric layers.}
+The limit $\epsilon=1$ means they absorb all the radiation so the temperatures are identical to the two-layer model in Example 34.2. The limit $\epsilon=0$ corresponds to no greenhouse effect so it recovers the prediction of v2, 254K for the surface.
 
+The horizontal dashed lines are the observed temperatures at the surface, about 3 km up and about 10km up. Clearly, this one-parameter model is not sufficient to fit all 3 data points. Roughly the best fit is at the vertical line, $\epsilon$ a bit lower than 0.6. The temperature there is a tad lower than 300K, getting closer to truth. This model goes beyond v3 in two ways: first, by putting in a second layer, and then by allowing the opacity to drop below 100\%. 
+
+These models are simple because (i) the radiation is not blackbody and the absorbers allow through more radiation at some wavelengths than at others and (ii) radiative transfer is not the only form of heat transfer: convection is also important. 
+
+\section{1D Radiative-Convective Equilibrium}
+
+In equilibrium the mass density $\rho$, pressure $P$, and temperature $T$ can be related to one another. In the 1D case, this become simple:
+\bei
+\item The upward force on a horizontal slab is $P(z)A-P(z+dz)A=-(dP/dz)A dz$. This is an upward force.This must be balanced by the force of gravity $\rho Adz g$, so
+\be
+dP = -\rho g dz.
+\ee
+\item Treating the gas as ideal leads to
+\be
+P=nk_BT=\frac{\rho}{m} k_BT\ee
+\item Therefore,
+\be
+\frac{dP}{\rho} = \frac{dP k_BT}{mP} = -gdz\ee
+or\be
+\frac{dP}{P} = -\frac{dz}{H}
+\ee
+with \be
+H\equiv \frac{mg}{k_BT}\ee
+\item The solution is therefore
+\be
+P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
+\ee
+\eei
+
+Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature wee constant, the pressure profile would look like Fig.~\rf{pressure}.
+\Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
+The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
+
+\subsection{Convective instability}
+
+To determine the pressure and density profile more accurately, we need to determine the temperature profile. For this, we can use the fact that the work done by the pressure of a small volume reduces the internal energy:
+\be
+dU = -PdV.
+\ee
+The internal energy drop means a drop in temperature ala $dU=c_VdT$. That is, if the actual drop in temperature is smaller than then the packet will be cooler than the surrounding air and will not rise further. 
+Define the actual temperature drop to be {\it lapse rate}
+\be
+\Gamma \equiv -\frac{dT}{dz}.
+\ee
+\bee
+\item If $|dT|$ from pressure differences is larger than $|\Gamma dz|$, then the packet will be cooler than the surrounding air and it will rise no further. 
+\item If $|dT|$ from pressure differences is smaller than $|\Gamma dz|$, then the packet will be hotter than the surrounding air and it will continue to rise, leading to convective instability. 
+\eee
+
+The work done can be obtained by taking the differential of the ideal gas law ($PV=Nk_BT)$:
+\be
+PdV+dPV=Nk_BdT\ee
+so
+\be
+c_VdT= -\left( Nk_BdT-VdP\right).
+\ee
+From Chapter 5 (5.32), $C_P=C_V+Nk_B$ for a monotomic ideal gas, so
+\be
+dT = \frac{VdP}{C_P} = \frac{ -\rho Vg dz}{C_P}
+\ee
+So, there will be convective instability and therefore heat propagation from lower to upper levels if
+\be
+\frac{ \rho Vg}{C_P} < \Gamma.
+\ee
+The adiabatic lapse rate \be
+\Gamma_d \equiv \frac{ \rho Vg}{C_P}
+\ee
+is the dividing line in the temperature change: if $\Gamma>\Gamma_d$ then convection occurs until the temperature gradient drops down to $\Gamma_d$. If $\Gamma< \Gamma_d$, then there is no convection.
+
+Near the Earth's surface, we can compute $\Gamma_d$ using the fact that $c_P=C_P/\rho V=1$ kJ/kg-K. We find $\Gamma_d=9.8$ K/km. It might be interesting to compare this to the very simple v3 model above, where the temperature in the ``atmosphere'' was $2^{1/4}=1.19$ smaller than that on Earth. In that model, that means a difference: 
+\be
+\Delta T = 303\left(1-\frac{1}{1.19}\right)= 48K.\ee
+So depending on where you put the top of the atmosphere in that simple model (somewhere between the tropopause at 20km and the stratosphere at 40km), it seems clear that the lapse rate will be roughly of order the adiabatic lapse rate, so convection will play some role.
 
 \end{document}
