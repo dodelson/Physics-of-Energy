@@ -130,7 +130,122 @@ The twiddle here reflects the fact that this is an approximation, rectified by i
 The total estimate is therefore about 220 MJ, which is roughly correct.
 
 \chapter{Heat and Thermal Energy}
+\section{Equipartition Theorem}
+The kinetic energy of a system of $N$ particles is equal to
+\be
+\langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
+\ee
+Here $f(v)$ is the velocity distribution normalized so that
+\be
+N = \int d^3v f(v)
+.\ee
+In equilibrium, $f\propto e^{-E/k_BT} = e^{-mv^2/2k_BT}$, so normalization leads to
+\bea
+N &=& C4\pi\int_0^\infty dv v^2 e^{-mv^2/2k_BT}
+\vs 
+&=& C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\int_0^\infty dx x^2 e^{-x^2}
+\vs
+&=&
+C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\,\frac{\sqrt{\pi}}4
+\vs
+&=&
+C \left(\frac{2\pi k_BT}{m} \right)^{3/2}.
+\eea
+So,
+\be
+f=N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, e^{-mv^2/2k_BT}.\ee
 
+We can now calculate the kinetic energy:
+\bea
+\langle E \rangle &=& N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\,  \int d^3v e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
+\vs &=& 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \int_0^\infty dv v^4 e^{-mv^2/2k_BT} \vs
+&=&
+2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\,\int_0^\infty dx x^4 e^{-x^2} 
+\vs
+&=&
+2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\, \frac{3\sqrt{\pi}}{8}
+\vs
+&=&
+\frac{3Nk_BT}{2}.
+\eea
+If we had done this in 1D, we would have gotten $k_BT/2$. In general, the variance of any one component of the velocity is $k_BT/m$, so in an isotropic equilibrium situation, there is a factor of 3. 
+
+The situation is more complex for more complex particles, starting with diatomic atoms. There, the book says you add $k_BT/2$ for each degree of freedom. Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: the energy of a harmonic oscillator is
+\be
+E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
+Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
+\be
+\langle E\rangle
+= N\frac{\sum_n E_n e^{-E_n/k_BT}}{\sum_n e^{-E_n/k_BT}}
+\ee
+or
+\be
+\langle E\rangle = -N\frac{\partial}{\partial\beta} \,\ln Z
+\ee
+where $\beta\equiv 1/k_BT$ and
+\be
+Z\equiv \sum_ne^{-E_n/k_BT}.\ee
+
+The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
+\be
+\langle E\rangle = NE_0\ee
+all the particles in the ground state. The other limit is the high temperature limit, in which case we can approximate the energy as $\hbar\omega n$ and write the sum as
+\be
+Z= \frac{1}{1-e^{-\hbar\omega\beta}}\simeq \frac{1}{\hbar\omega\beta}\ee
+Taking the derivative leads to
+\be
+\langle E\rangle_{hi\, T} =Nk_BT\ee
+The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
+
+You can go through the same exercise for any degrees of freedom: rotational or the energy levels in an atom. You do not always get $k_BT/2$ for each degree of freedom, but the probability of finding a particle in a given energy state is always proportional to $e^{-E/k_BT}$ when the system is in equilibrium.
+
+
+
+\section{Pressure and Efficiency}
+
+Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension,
+\bei
+\item Each particle that hits the wall has its energy remain the same (so $|v|$ is constant) but it changes direction. Therefore, the change in momentum in a given bounce off the wall is $2mv$. 
+\item The particle will then move in the other direction towards the fixed wall in a time $l/v$, and then return to the piston in the same time. So in a total time $2l/v$, the momentum that the particle gives to the piston is $2mv$. 
+\item The force is then 
+\be F = \frac{\Delta p}{\Delta t} = \frac{mv^2}{l}
+\ee
+\item The total force from $N$ particles drawn from a thermal distribution is
+\be
+F = \frac{Nm\langle v^2\rangle}{l} = \frac{Nk_BT}{l}
+\ee
+\item The pressure is the force per area, so
+\be
+PV = Nk_BT.
+\ee
+\eei
+This is the ideal gas law.
+
+If the region outside the piston is a vacuum such that its pressure is zero, then the work done on the piston pushing it a distance $dx$ is
+\be
+dW = Fdx=PAdx.\ee
+On the other hand, in the more realistic case that the region outside has a pressure smaller by only a smaller amount $\Delta P$ (if, e.g., the inner region is slightly heated), then the force is only $\Delta P A$. So, the efficiency -- the fraction of work done related to maximum possible is
+\be
+\eta = \frac{\Delta P}{P} = \frac{T_{in}-T_{out}}{T_{in}}
+\ee
+where the second equality holds in the case of an ideal gas.
+
+The internal energy of the gas in the inner region is reduced by the work it does, by an amount $PdV$ (some of this work serves to heat the gas on the other side of the piston, not just move the piston). But, it can also ain internal energy if it is heated so the total change in its internal energy is
+\be
+dU = dQ - PdV.\ee
+
+When heat is added ($dQ>0$), then temperature will rise, so that $dQ=CdT$. If the volume is fixed (the piston does not move in the above example, then all the heat will go into increasing the temperature, so the temperature should rise more than if the piston moved (and the pressure remained constant because the density went down). We distinguish therefore between two heat capacities:
+\bea
+C_V&\equiv& \frac{\partial U}{\partial T}\Big\vert_V
+\vs
+C_P&\equiv& \frac{\partial U}{\partial T}\Big\vert_P + P\frac{\partial V}{\partial T}\Big\vert_P.
+\eea
+
+We have already computed $U$ for an ideal monatomic and diatomic gas. 
+\bei
+\item Monatomic: $C_V = (3/2) Nk_B$
+\item Diatomic (high $T$): $C_V=(7/2) N k_B$ because of the 2 vibrational and 2 rotational degrees of freedom.
+\eei
 
 \chapter{Nuclear Power}
 
