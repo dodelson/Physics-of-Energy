@@ -92,6 +92,7 @@ Lecture #1
 \end{center}
 }
 \newcommand\conversion[1]{\fbox{#1}}
+%\newcommand\example[1]{\fbox{Example: #1}}
 
 \chapter{Overview}
 \lecture{1}
@@ -221,6 +222,15 @@ PV = Nk_BT.
 \eei
 This is the ideal gas law.
 
+\example{Consider Example 5.2 in the book. (see notebook chapter5)
+\bei
+\item What is the initial internal energy? (150 J)
+\item How much work is done to reduce the volume by a factor of 2? (50 J)
+\item What is the new temperature? ($4T_i/3=364K$)
+\item What is the pressure right after compression? ($8P_i/3=2.67\times 10^5$Pa)
+\eei
+}
+
 If the region outside the piston is a vacuum such that its pressure is zero, then the work done on the piston pushing it a distance $dx$ is
 \be
 dW = Fdx=PAdx.\ee
@@ -246,6 +256,25 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 \item Monatomic: $C_V = (3/2) Nk_B$
 \item Diatomic (high $T$): $C_V=(7/2) N k_B$ because of the 2 vibrational and 2 rotational degrees of freedom.
 \eei
+
+\chapter{Heat Transfer}
+
+Definitions:
+\bei
+\item Heat flux $\vec q$: energy flowing per time per area
+\item Rate of energy across a surface S: \be\frac{dQ}{dt} = \int_S d\vec S\cdot \vec q\ee
+\eei
+
+\section{Conduction}
+This is simply particles in regions with larger velocity dispersions leaking into regions with lower dispersions and visa versa.
+
+Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
+.\ee
+$k$ has dimensions of $E/(T\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
+
+\section{Convection}
+\section{Radiative Transfer}
+\section{Time Dependent Conduction}
 
 \chapter{Nuclear Power}
 
