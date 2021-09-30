@@ -389,6 +389,29 @@ P = E_f \frac{dN_f}{dt}
 \ee
 where $E_f$ is the energy released in one fission cascade ($\sim200$ MeV) and $dN_f/dT$ is the number of neutron-captured fission events per time. 
 
+\subsection{Safety}
+
+As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
+\be
+\sigma_0(E) = A\delta(E-E_0)
+\ee
+when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
+\be
+E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
+\ee
+assuming $v\gg V$. So, the total cross section has changed from
+$\sigma_0 $
+to
+\be
+\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
+\ee
+The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
+\be
+\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
+\ee
+so the cross section broadens with a width in energy of \be
+\sigma_E = mv \sqrt{k_BT/M}.\ee
+So, the width of the resonance scales as the square root of the temperature.
 
 \chapter{Climate}
 
