@@ -334,6 +334,8 @@ A more sophisticated insulation system reduces the heat loss by a factor of 20 (
 \example{Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.}
 
 \section{Convection}
+
+
 \section{Radiative Transfer}
 \section{Time Dependent Conduction}
 
@@ -491,7 +493,7 @@ P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
 \ee
 \eei
 
-Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature wee constant, the pressure profile would look like Fig.~\rf{pressure}.
+Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature were constant, the pressure profile would look like Fig.~\rf{pressure}.
 \Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
 The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
 
@@ -541,6 +543,25 @@ So depending on where you put the top of the atmosphere in that simple model (so
 \section{Radiative Forcing}
 
 \ipcc{A.4.1: Human caused radiative forcing of $2.72\pm 0.76$ W/m$^2$ in 2019 relative to 1750.}
+
+Some facts:
+\bee
+\item Human emit 10 GTon of carbon every year (Fig~\rf{emissions})
+\Spng{emissions}{Global Annual CO$_2$ emissions in tons of carbon.}
+\item This has led to an increase of 400 GTon since pre-industrial but only half of that has remained in the atmosphere (see Figs.~\rf{co2} and \rf{cum})
+\Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
+\Spng{cum}{Cumulative global emissions. Note that about half of this stays in the atmosphere.}
+\item According to 34.37, this corresponds to a forcing of about 2W/m$^2$.
+\item Without feedbacks, since $\lambda_0=-3.2$ W/m$^2$ K (34.32), the temperature increase due to this amount of carbon would be 0.6K.
+\item There are feedbacks, the most important of which is that warmer air can hold more water vapor, which itself absorbs a lot more IR radiation. This roughly doubles the predicted rise in temperature.
+\eee
+
+Radiation:
+\bee
+\item Optical depth less than one can be handled with an emissivity less than one as above. So, increase the amount of absorber would just reduce the amount of IR radiation linearly with the density
+\item An optically thick absorber like CO$_2$ is more complicated. There is the exponential suppression in the wings that leads to a logarithmic dependence on the density.
+\item Even in the trough though, the emissions in that band would come from higher up in the atmosphere so -- keeping the emission temperature fixed and the lapse rate fixed -- leads to a higher surface temperature.
+\eee 
 
 \appendix
 \newcommand\ans[1]{{\tt #1}}
