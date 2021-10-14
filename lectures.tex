@@ -335,7 +335,18 @@ A more sophisticated insulation system reduces the heat loss by a factor of 20 (
 
 \section{Convection}
 
-Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
+Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? The net force on a stable volume element vanishes; it is equal to 
+\be
+\Delta F_{net}= -\Delta P A - g\rho A\Delta z
+\ee
+where the first sign is negative because pressure that decreases with height corresponds to negative $\Delta P$, which leads to an upward force. In equilibrium, these two forces vanish so
+\be
+\frac{dP}{dz} = -g\rho
+.\ee
+The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
+
+
+If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
 \bea
 \rho_2^* &=& \rho_1^*\,\left(\frac{P_2^*}{P_1^*}\right)^{1/\gamma}
 \vs
@@ -366,12 +377,27 @@ In the case of the ideal gas law: $\rho= \frac{mP}{k_BT}$, so
 .\ee
 Plugging in leads to:
 \be
--\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dr} > -\frac{dT}{dr}
+-\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dr} > -\frac{dT}{dr}\eql{conveq}
 \ee
 The left hand side is called the adiabatic lapse rate or temperature gradient. Both left and right sides are positive because pressure and temperature decrease as you go up.
 So, this equation says that there is no instability, no convection, if the temperature gradient (absolute value) is smaller than the adiabatic value. If it is larger, then the cool air rises.
 
-
+There is another way to do this: apply the first law:
+\be
+dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
+where the last equality follows from $\rho\propto V^{-1}$.
+Then, for an ideal gas,
+\be
+dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
+=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
+\ee
+Consolidating leads to
+\be
+dP = dT \frac{\rho k_B}{m}\left[ 
+\frac{c_vT}{PV} + 1
+ \right] \ee
+ But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
+\ec{conveq}
 
 \section{Radiative Transfer}
 \section{Time Dependent Conduction}
