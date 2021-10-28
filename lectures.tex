@@ -130,6 +130,10 @@ The twiddle here reflects the fact that this is an approximation, rectified by i
 \eei
 The total estimate is therefore about 220 MJ, which is roughly correct.
 
+\section{Rotational Energy}
+
+Introduce $\vec\omega$ (points along axis of rotation $(v=\vec r\times \vec\omega)$ to be used when discussing Coriolis forces in ocean/wind chapters.
+
 \chapter{Heat and Thermal Energy}
 \section{Equipartition Theorem}
 The kinetic energy of a system of $N$ particles is equal to
@@ -262,7 +266,7 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 Definitions:
 \bei
 \item Heat flux $\vec q$: energy flowing per time per area
-\item Rate of energy across a surface S: \be\frac{dU}{dt} = \int_S d\vec S\cdot \vec q\eql{cont}\ee This is a form of the continuity equation: the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
+\item Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation: the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
 \eei
 
 \section{Conduction}
@@ -400,7 +404,103 @@ dP = dT \frac{\rho k_B}{m}\left[
 \ec{conveq}
 
 \section{Radiative Transfer}
+
+Derive Stefan-Boltzmann law:
+\bee
+\item Start with a sphere of radius $R$ containing photons of a given energy $E$ corresponding to momentum $pc$. 
+\item Suppose these are uniformly distributed with density $f(E)$  (similar to distribution of velocities for particles), so that each box in phase space with volume $d^3r d^3p = h^3$ has this number of photons in it
+\item At any point in the surface, the energy leaving the volume per time is
+\be
+ \frac{dQ}{dt} _r = \frac{dQ}{dR}\,\frac{dR}{dt} =  \vec p \cdot \hat r f(\vec p) cR^2 d\Omega d^3p \,\times c 
+\ee
+where the extra factor of $c$ is the velocity.
+\item The total energy carried by these photons with this energy passing through the surface is\footnote{This is not quite right because any value of $\theta<\pi/2$ does not escape, but that factor of 2 is compensated because there are two spin degrees of freedom for the photon.}
+\be
+ d^3p f(\vec p)pc^2R^2\int_0^\pi d\theta \int_0^{2\pi} d\phi  \cos\theta = d^3p 2\pi R^2  f(\vec p)pc
+ \ee
+ \item Now sum over all momentum: in a given small region of space and momentum, the {\it volume} of the phase space is $(2\pi \hbar)^3$. So instead of summing, when integrating, this leads to
+ \be
+  \frac{dQ}{dt}  = \frac{Ac^2}{2} \int \frac{d^3p}{(2\pi\hbar)^3}\, f(\vec p)p
+ \ee
+ \item Putting in the Bose-Einstein distribution leads to
+ \be
+  \frac{dQ}{dt} = \frac{Ac^2}{4\pi^2\hbar^3}\, \int_0^\infty \frac{dp\,p^3}{e^{pc/k_BT} - 1}.\ee
+ \item Changing variables to $x=pc/k_BT$ leads to 
+ \be
+  \frac{dQ}{dt} = \frac{A(k_BT)^4}{4\pi^2\hbar^3c^2}\, \int_0^\infty \frac{dx\,x^3}{e^{x} - 1}
+  .\ee
+  \item The integral is just a number $\pi^4/15$, so the flux is
+  \be
+   \frac{dQ}{dt}  = \frac{A\pi^2(k_BT)^4}{60\hbar^3c^2} = A\sigma T^4
+  \ee
+  where the Stefan-Boltzmann constant is defined as
+  \be
+  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\eee
+
+
 \section{Time Dependent Conduction}
+
+Applying Gauss's Law to \ec{cont} leads to
+\be
+\frac{\partial u(\vec x, t)}{\partial t} = -\nabla\cdot \vec q.\ee
+The time dependence is captured in the temperature dependence, and $dy/dT = \rho c_V$, so
+\be
+\rho c_V \dot T + \nabla\cdot \vec q = 0.\ee
+But then, there is Fourier's Law that $\vec q = -k \nabla T$, so
+\be
+\dot T - a\nabla^2 T=0,\ee
+with the thermal diffusivity $a$ defined as
+\be
+a \equiv \frac{k}{\rho c_V} .\ee
+
+Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
+\be
+\dot T + ak^2 T = 0.\ee
+The dimensions are right since $a$ has dimensions of $L^2/T$ and $k$ has dimensions of $L^{-1}$. Solving this lead to
+\be
+T_k(t) = T_0 + T_k(0) e^{-ak^2t}\ee
+where a constant value can be added, so really this is the sum of two plane waves, one with infinite wavelength. This generalizes to
+\be
+T(\vec x,t) = \sum_{\vec k} T_k e^{-i\vec k\cdot\vec x} e^{-ak^2t}.\eql{genheat}\ee
+So, in general, oscillations with wavelength $2\pi/k$ decay away on a time scale of order $1/k^2a$. The long wavelength oscillations take a longer time to decay. Similarly, a material with large diffusivity will come to equilibrium in very short times.
+
+Some examples, in units of $mm^2/s$:
+\bee
+\item Carbon: $a=217$
+\item Glass: 0.34
+\item Brick: 0.52
+\item Soil: 0.24
+\eee
+So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
+
+\subsection{Ground Temperature Seasonal Variation}
+Use the fact that
+\be T(z=0,t) = T_0 + \Delta T \sin(\omega t)
+\ee
+with $\Omega \equiv 2\pi/1$ year to determine the full solution as a function of depth below the soil (positive $z$). Focusing on the time-dependent part and decomposing into Fourier modes, we get
+\be
+i\omega T_\omega - a T''_\omega=0.\ee
+This has an exponential solution with $T_\omega \propto e^{\lambda z}$, with $\lambda$ a complex number satisfying
+\be
+i\omega - a\lambda^2 = 0.\ee
+Also, the real part of $\lambda$ must be negative so that the oscillations go away as you go deeper into the ground. The solution to this is
+\be
+\lambda = -\sqrt{\frac{\omega}{a}}\, e^{i\pi/4} = - \sqrt{\frac{\omega}{2a}}\, (1+i)
+\ee
+where the phase follows from $i^{1/2}$. The minus sign out front ensures that the real part is negative. We therefore have
+\be
+T(t,z) = C e^{i[\omega t- cz]}\,e^{-cz}
+\ee
+with
+\be
+c\equiv \sqrt{\omega/2a}\ee
+
+For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
+
+\chapter{Energy in Matter}
+
+\section{Latent Heat}
 
 \chapter{Nuclear Power}
 
@@ -478,11 +578,42 @@ so the cross section broadens with a width in energy of \be
 \sigma_E = mv \sqrt{k_BT/M}.\ee
 So, the width of the resonance scales as the square root of the temperature.
 
+\section{Fusion}
+
+\chapter{Ocean}
+
+\section{Energy Balance}
+\bei
+\item Input Solar Radiation
+\item Convection Down unimportant
+\item Radiative Heat
+\item Laten Heat Flux
+\item Currents from Tropics 
+\eei
+
+\section{Coriolis Force}
+
+\bei
+\item Start with Centrifugal Force
+\item Figure 27.4
+\item Throw something north: frequency increases to keep angular momentum constant
+\item Use 27.3 to show same increase in frequency
+\item Use 27.3 to show $F_{hc} = 2m\omega\sin\lambda \vec v\times\vec n$
+\eei
+
+\section{Surface Currents}
+\bei
+\item Iceberg at constant velocity at an angle to the direction of the wind
+\item Solve eqns of motion to get Ekman Spiral: drift at right angle to wind
+\item Mass Transport
+\eei
+
+
 \chapter{Climate}
 
 Useful sites:
 \bee
-\item\href{Cimateifomatics}{http://www.climateinformatics.org/}
+\item\href{Cimateinfomatics}{http://www.climateinformatics.org/}
 \item\href{The Climate Laboratory}{https://brian-rose.github.io/ClimateLaboratoryBook/home.html}
 \eee
 
