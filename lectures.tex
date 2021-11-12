@@ -608,6 +608,50 @@ So, the width of the resonance scales as the square root of the temperature.
 \item Mass Transport
 \eei
 
+\chapter{Wind}
+
+\section{Properties}
+\bee
+\item Geostophic winds (Box 28.1)
+\item Planetary Boundary Layer
+\item Power Density (28.2)
+\item Betz Limit (Box 28.3)
+\item Comparing Wind Locations (Ex 28.1, 28.2)
+\item Power Potential
+\eee
+
+\section{Fluids}
+
+\bee
+\item Continuity equation 
+\item Bernoulli's Principle
+\item Shear Stress: Horizontal Force (29.21)
+The no-slip condition is due to molecular interactions at the surface and requires the velocity of the fluid at a surface to be at rest with respect to the surface. That leads directly to the picture in Fig. 29.9. The fluid is moving faster as you move up, so for a fixed surface at height $z$, if we take the fluid at rest, above it the fluid is moving faster, therefore dragging it forward. The force on a small element $dA$ on this surface is in the $x$-direction and proportional to both $dA$ and $\partial v_x/\partial z$. Therefore, the drag force is
+\be
+\frac{dF_x}{dA} = \eta \frac{\partial v_x}{\partial z}.\ee
+\item Reynolds Number
+\item Shear Stress: Lift (29.26)
+In Fig. 29.13, the net force on the layer in the $\hat y$ (vertical) direction is 
+\be
+\frac{d\vec F_{lift}}{dz dx} = \hat y \left[P_--P_+\right]\ee
+From Bernoulli's eqn though $P+\rho v^2/2$ is constant, so perturbing leads to
+\be
+P(z^+,x) + \rho v(z_+,x) v_\infty = P(z^-,x) + \rho v(z_-,x) v_\infty.\ee
+Inserting that for the pressure difference leads to
+\bea
+\frac{d\vec F_{lift}}{dz} &=& \rho v_\infty \hat y \int_0^L dx\,\left[ v^+(x)-v^-(x)\right]\vs
+&\equiv &
+-\Gamma \rho v_\infty \hat y
+.\eea
+\item Airfoils: How does circulation develop?
+\eee
+
+\section{Wind Turbines}
+
+\bee
+\item Actuator Disk Analysis (30.7)
+\item 
+\eee
 
 \chapter{Climate}
 
