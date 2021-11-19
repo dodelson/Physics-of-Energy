@@ -786,17 +786,32 @@ So depending on where you put the top of the atmosphere in that simple model (so
 
 \section{Radiative Forcing}
 
+This is defined to be: ``The change in net irradiance (down -up) at the tropopause after allowing for stratospheric temperatures to readjust to radiative equilibrium, but with surface and tropospheric temperatures and state held fixed at the unperturbed values.'' 
+
+\example{If the albedo changes from 0.1 to 0.11; this means that an additional one percent of solar radiation is reflected back to space instead of absorbed. Since the total flux hitting Earth is about $341\times(1-0.21)$ W/m$^2$, where the 0.21 is the albedo due to the atmosphere and clouds; i.e., stuff that stops the solar flux from hitting Earth. Hence, the change in the Earth's albedo by 0.01 would reflect back an additional $0.01*.79*341=2.7$ W/m$^2$. So the forcing would be -2.7 W/m$^2$. Note that estimates for this vary, from Example 34.3, which I don't understand, to \href{https://en.wikipedia.org/wiki/Radiative_forcing}{the wikipedia article} that goes much lower.}
+
+\example{Box 34.2: Clouds are the hard problem. Thet reflect light with the solar spectrum with an albedo of 0.13, leading to upward forcing of $0.13\times1366/4=44$ W/m$^2$. But they also reflect infrared radiation from Earth back to the surface; the estimate the book gives is 31, so the net forcing would be -13W/m$^2$. This mean that if the cloud cover were to increase by a percent, the forcing would be quite small.}
+
 \ipcc{A.4.1: Human caused radiative forcing of $2.72\pm 0.76$ W/m$^2$ in 2019 relative to 1750.}
 
 Some facts:
 \bee
-\item Human emit 10 GTon of carbon every year (Fig~\rf{emissions})
+\item Human emit 10 GT of carbon every year (Fig~\rf{emissions}). This is often reported in units of parts per million. The conversion factor is
+\be
+1 {\rm ppm} =2.13 \,{\rm Tonnes\, of\, Carbon}.
+\ee
+The total amount of air in the atmosphere is about 5.15 quadrillion tonnes $=5.15\times 10^{18}$ kg. One part per million means that the number density of $CO_2$ particle is a millionth of the total density. Since the mass of carbon in $CO_2$ compared to the average mass ($N_2$ (78\%) and $O_2$ (21\%)) is $12/29$, 1 ppm is equivalent to 0.414ppmm (of Carbon, not $CO_2$), where the last 'm' stands for mass. This means that 1 ppm corresponds to $2.13\times10^{12}$ kg of $CO_2$. That in turn corresponds to $2.13$ Gigatonnes, since 1 tonne is equal to 1000 kg.
 \Spng{emissions}{Global Annual CO$_2$ emissions in tons of carbon.}
-\item This has led to an increase of 400 GTon since pre-industrial but only half of that has remained in the atmosphere (see Figs.~\rf{co2} and \rf{cum})
-\Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
+\item This has led to an increase of 400 GTC since pre-industrial but only half of that remains in the atmosphere with the other half going into the ocean (see Figs.~\rf{cum} and \rf{co2}).
 \Spng{cum}{Cumulative global emissions. Note that about half of this stays in the atmosphere.}
-\item According to 34.37, this corresponds to a forcing of about 2W/m$^2$.
-\item Without feedbacks, since $\lambda_0=-3.2$ W/m$^2$ K (34.32), the temperature increase due to this amount of carbon would be 0.6K.
+The bottom line though is that there is now 900 GTC in the atmosphere, corresponding to 420ppm.
+\Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
+\item According to 34.37, this corresponds to a forcing of about 2W/m$^2$. The underlying physics here is that the absorption cross section for $CO_2$ decays exponentially away from the central wavelength of 15 $\mu$m. There are several reasons for this broadening: thermal broadening, which we covered in nuclear physics, the intrinsic line width of the cross section, which is due to quantum mechanics, and the actual culprit here: what is called {\it pressure-broadening}. This is the hardest of the three to understand. \href{https://iopscience.iop.org/article/10.1088/1361-6463/aabac6#daabac6eqn037}{This article} has a nice treatment of the full effect.
+\item Without feedbacks, since $\lambda_0=-3.2$ W/m$^2$ K (34.32), the temperature increase due to this amount of carbon would be 0.6K. The blackbody version of this is to compute the forcing due to a temperature in the change of the Earth with everything else held fixed. A positive temperature change $\Delta T$ would lead to a larger upward (hence negative) flux via
+\be
+F = -4\sigma T^3 \Delta T = -4\times 5.67\times 10^{-8} \times 288^3 \times \frac{\Delta T}{K} \,W/m^2\eql{upward}\ee
+or
+$F=-5.4 (\Delta T/K) W/m^2$.However, the Earth's radiation does reach the tropopause cleanly. Rather with ``the state held fixed,'' quite a bit of the Earth's radiation is absorbed by the atmosphere. Therefore, a change in the Earth's temperature by $\Delta T$ would lead to a smaller upward flux than predicted by \ec{upward}. The book uses the heuristic that on average across wavelengths the radiation that reaches the tropopause comes from a height such that the atmosphere is about 255K, and that reduces the above estimate to 3.76 W/m$^2$ for each $\Delta T/K$. But this seems misleading. 
 \item There are feedbacks, the most important of which is that warmer air can hold more water vapor, which itself absorbs a lot more IR radiation. This roughly doubles the predicted rise in temperature.
 \eee
 
