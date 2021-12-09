@@ -80,6 +80,12 @@
 \newcommand\dirac{\delta_D}
 \newcommand{\rf}[1]{\ref{fig:#1}}
 \newcommand\example[1]{{\tt EXAMPLE: #1}}
+\newcommand\exercise[1]{{\bf EXERCISE: #1}}
+\newcommand\comment[1]{\fbox{ \parbox{\linewidth} {\bf
+Comment: #1
+		}
+}
+}
 \newcommand\expect[1]{{\tt {\bf Back of the Envelope:} #1}}
 \newcommand\theorem[1]{{\tt Theorem: #1}}
 \newcommand\bei{\begin{itemize}}
@@ -108,7 +114,40 @@ Global Energy Consumption is then 156138 TW-hours $=562$ EJ
 \item
 Daily Energy Use per capita is 200 MJ
 \eei
+
+There is some data \href{https://github.com/owid/co2-data}{here}.
+
+\Spng{world_energy_co2}{$CO_2$ emissions from all countries in the world plotted alongside all countries' energy use multiplied by intensity, 20 gm/MJ.}
+One interesting number from \href{https://www.science.org/doi/10.1126/science.abh0687}{here} (dashed line in first figure there) is that the amount of $CO_2$ emitted per energy for oil and gas is 69 grams per MJ. This is called the GHG intensity. Note that this is the weight of $CO_2$ and (a perennial problems is to convert) the corresponding weight of carbon is 12/44=0.272, so the intensity of carbon is about 20 grams per MJ. Multiplying by the annual use above leads to 
+\be
+562\times 10^{18} J \times 20 g/MJ \simeq 10^{13} kg
+\ee
+of carbon emitted in $CO_2$ every year. One metric tonne is 1000kg, so this does indeed correspond to the well-known 10Gt of carbon emitted every year.
+Fig.~\rf{world_energy_co2} shows that the energy consumed by the world multiplied by this intensity does indeed roughly track the actual $CO_2$ emissions.
+
+Note that this value of the intensity makes sense: roughly speaking, the orbital energy of electrons is shuffled during the reactions that produce $CO_2$. That means the typical energy gained is say 5 eV per molecule of $CO_2$. Therefore, to produce 5 eV requires $12\times 1.67\times 10^{-24}$gm, or roughly $2\times10^{-23}$gm. But 5 ev$=8\times 10^{-19}$J. So, one gm of carbon is required to produce 40kJ. To produce 1 MJ requires 25 gm of carbon, which pretty close to the observed intensity.
+
+The intensity can be computed for each country. Fig.~\rf{intensity18} shows that countries with more advanced economies (higher GDP/capita) tend to have lower intensities. They are generally moving to energy production that produces less $CO_2$ emissions. 
+\Spng{intensity18}{Intensity (the ratio of $CO_2$ emissions and energy consumed for some of the countries in the world in 2018.}
+
+Fig.~\rf{intensity_country} shows the evolution for several different countries. Brazil is interesting: most of their electricity comes from hydropower. France generates quite a bit of power from nuclear energy. Frustratingly, the US has not appreciably have reduced its intensity over the past 50 years. China has been making slow but steady progress as it modernizes, while India is on a reverse trajectory, similar to many other developing countries.
+\Spng{intensity_country}{Intensity as a function of time for different countries.}
+
+\exercise{Download \href{https://github.com/owid/co2-data}{this data set} and make the above plots.}
+
 \chapter{Mechanical Energy}
+
+\example{Kinetic energy of an airplane: with a mass of 68,000 kg (Airbus-A320). (This is the maximum mass the aircraft is allowed to take off with.) Flight time from Boston to New York is 30 minutes and the distance is 210 miles= 340km. Therefore, its kinetic energy is 
+\be
+\frac12 mv^2 = 0.5\times 6.8\times 10^4 \times \left(\frac{3.4\times 10^5}{30\times60} \right)^2 J.\ee
+Doing the multiplication leads to 1.2GJ. 
+
+There is also the potential energy $mgh$. Assuming the plane flies at 30,000 ft (9000m), this potential energy is about 500 MJ.
+\be
+V = 6.8\times 10^4\times 9.8\times 9000J = 6GJ\ee
+about 5 times the kinetic energy. So the total energy required is over 7 GJ (neglecting air resistance).
+The number of passengers on the plane is about 150. Dividing that up leads to 50 MJ per passenger.
+}
 
 Analyze the energetics of a car trip from Boston to New York. Since the distance is 210 miles and considering a car that gets 30 miles per gallon, the trip requires 7 gallons of gas. 
 
@@ -129,6 +168,8 @@ The twiddle here reflects the fact that this is an approximation, rectified by i
 \item {\bf Friction:} The energy lost to friction of the tires with the road is estimated in the text to be {\bf 50 MJ}.
 \eei
 The total estimate is therefore about 220 MJ, which is roughly correct.
+
+Go back to the airplane and estimate its energy lost due to air resistance. 
 
 \section{Rotational Energy}
 
@@ -175,7 +216,9 @@ We can now calculate the kinetic energy:
 \eea
 If we had done this in 1D, we would have gotten $k_BT/2$. In general, the variance of any one component of the velocity is $k_BT/m$, so in an isotropic equilibrium situation, there is a factor of 3. 
 
-The situation is more complex for more complex particles, starting with diatomic atoms. There, the book says you add $k_BT/2$ for each degree of freedom. Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: the energy of a harmonic oscillator is
+The situation is more complex for more complex particles, starting with diatomic atoms. There, the book says you add $k_BT/2$ for each degree of freedom. 
+\comment{Redo this for a diatomic molecule at temperatures in the atmosphere, presumably only rotational degrees of freedom excited. Work out the energy.}
+Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: the energy of a harmonic oscillator is
 \be
 E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
 Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
@@ -203,6 +246,11 @@ Taking the derivative leads to
 The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
 
 You can go through the same exercise for any degrees of freedom: rotational or the energy levels in an atom. You do not always get $k_BT/2$ for each degree of freedom, but the probability of finding a particle in a given energy state is always proportional to $e^{-E/k_BT}$ when the system is in equilibrium.
+
+\example{5.1: Heating one mole of the monatomic gas argon from 300 to 600K requires 
+\be
+E = \frac32 R\Delta T=3.7kJ\ee
+with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
 
 
 
@@ -244,7 +292,7 @@ On the other hand, in the more realistic case that the region outside has a pres
 \ee
 where the second equality holds in the case of an ideal gas.
 
-The internal energy of the gas in the inner region is reduced by the work it does, by an amount $PdV$ (some of this work serves to heat the gas on the other side of the piston, not just move the piston). But, it can also ain internal energy if it is heated so the total change in its internal energy is
+The internal energy of the gas in the inner region is reduced by the work it does, by an amount $PdV$ (some of this work serves to heat the gas on the other side of the piston, not just move the piston). But, it can also gain internal energy if it is heated so the total change in its internal energy is
 \be
 dU = dQ - PdV.\ee
 
@@ -258,9 +306,41 @@ C_P&\equiv& \frac{\partial U}{\partial T}\Big\vert_P + P\frac{\partial V}{\parti
 We have already computed $U$ for an ideal monatomic and diatomic gas. 
 \bei
 \item Monatomic: $C_V = (3/2) Nk_B$
+\item Note that using the ideal gas law, a gas has $C_P=(5/2)Nk_B$
 \item Diatomic (high $T$): $C_V=(7/2) N k_B$ because of the 2 vibrational and 2 rotational degrees of freedom.
 \eei
 
+\example{An 8-minute shower contains a volume of water equal to $9.5\times8$ liters.
+The specific heat of water is 4.18 kJ/(kg*K) from Table 5.2, while the density of water is
+997 $kg/m^3$. Therefore, the energy required is
+\be
+Q= c_p\times\rho\times V\times \Delta T.\ee
+Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of the average daily per capita use.}
+
+Note that the specific heat of water is quite high. If we write
+\be
+c_p = \frac{N_D k_B}{2m_{H_2O}}\ee
+which corresponds to $0.23 N_D$ kJ/kg/K, or 18 degrees of freedom. \href{http://galileo.phys.virginia.edu/classes/304/h2o.pdf}{Section 5 here} explains that this can be understood if we treat water as a solid. In general, there are 6 degrees of freedom for a monatomic atom in a solid, so multiply this by the 3 atoms to get 18. 
+
+\comment{This could also draw on the calculation in 8.7.3 and replace/supplement the one above.}
+ 
+ \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
+
+The heat added to the turbines by a mass $m$ is 
+\be
+c_p m\Delta T = 5.2\times 900\,\frac{m}{kg}\, kJ.\ee
+For this to be equal to $250MW$, we require 
+\be
+\frac{5.2\times 900kJ}{300 s} \,\frac{m}{kg} = 2.5\times 10^8J/s.\ee
+This corresponds to a mass of about $1.6\times 10^4$ kg.
+
+Check the value of $c_P=C_P/m=(5/2) N k_B/ m$ since $c_P$ is the specific heat capacity, which is per mass. Now $m/N$ is the total mass divided by the total number of particles, which is just the mass of a single helium atom, $4\times 1.67\times 10^{-27}$kg. Therefore, 
+\be
+c_P=\frac{2.5\times 1.38\times 10^{-23} J/K}{4\times 1.67\times 10^{-27} kg},\ee which is indeed 5.2 kJ/K/kg.
+}
+ 
+ 
+ 
 \chapter{Heat Transfer}
 
 Definitions:
@@ -594,25 +674,95 @@ So, the width of the resonance scales as the square root of the temperature.
 \section{Coriolis Force}
 
 \bei
-\item Start with Centrifugal Force
-\item Figure 27.4
-\item Throw something north: frequency increases to keep angular momentum constant
-\item Use 27.3 to show same increase in frequency
-\item Use 27.3 to show $F_{hc} = 2m\omega\sin\lambda \vec v\times\vec n$
+\item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with cirvular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = m\omega^2 \vec r$ to counter the fictional centrifugal force
+\be
+\vec F_{cent} = -m\omega^2\vec r.\ee
+\item {\bf Coriolis} Fig.~\rf{coriolis} shows the basic setup. The person perceives themselves walking along the red path and getting pushed by some external force towards the center. The frequency vector is pointing out of the plane of the paper, so $\vec v\times\vec\omega$ points in the direction in the plane of the paper perpendicular to the velocity. Therefore, in the top panel, the force acts to push the walker back towards the dotted line, and in the bottom panel, the force pushes the walker towards the solid black line.
+\Sfig{coriolis}{Black line shows path observed from outside observer as person walks from rim to center of rotating disk. The red shows the path taken on the disk by the walker.}
+
+\item Use $\Delta \vec L = \vec R\times\vec F \Delta t$ to infer the magnitude of the force due to the rotation of the Earth. Assume a parcel of air, say, moves from latitude $\lambda_i$ to $\lambda_f$. Since $\vec L = m\vec R\times  \vec v$ where $\vec R$ is the perpendicular distance from the axis of rotation, so $R=R_\Earth\cos\lambda$, where $\lambda$ is the latitude ($0$ at the equator). %For circular rotation, $\vec v= \vec\omega\times\vec r$, so the magnitude of the angular momentum is
+%\be
+%|L| = mR_\Earth^2\cos^2\lambda\omega_\Earth.\ee
+As a parcel changes latitude by a small amount $\Delta\lambda$, the change in angular momentum is
+\bea
+\Delta L &=& 2mR_\Earth^2\cos\lambda\sin\lambda\omega_\Earth \Delta\lambda\vs
+&=&
+2mR_\Earth\cos\lambda\sin\lambda\omega_\Earth v \Delta t
+\eea
+forgetting about the sign, because we know that. 
+The effective torque felt by the parcel is $\vec R\times\vec F$. Let's write $\vec F = A \vec v\times\vec\omega$ and try to figure out $A$. Again, just focusing on the magnitude, 
+take the velocity to be towards the North in the Northern hemisphere, so $\vec v\times\vec\omega$ has magnitude $v\omega_\Earth\sin\lambda$. Therefore, $|F|=Av\omega\sin\lambda$ pointing East. The torque then has magnitude $R_\Earth F\cos\lambda$. Therefore,
+\be
+2mR_\Earth\cos\lambda\sin\lambda\omega_\Earth v \Delta t = R_\Earth \cos\lambda Av\omega_\Earth\sin\lambda\Delta t
+.\ee
+Therefore, $A=2m$ and so
+\be
+F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
+\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. The latter is
+\be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
 \eei
 
 \section{Surface Currents}
 \bei
-\item Iceberg at constant velocity at an angle to the direction of the wind
-\item Solve eqns of motion to get Ekman Spiral: drift at right angle to wind
-\item Mass Transport
+\item Iceberg at constant velocity at an angle to the direction of the wind.
+To see this, consider Fig.~\rf{iceberg} drawn on the surface of the Earth. Since $\hat n$ is out of the paper, and the velocity is as shown, the coriolis force points downwards. Since the iceberg drifts at a constant velocity, the sum of the forces must vanish, so the force of wind must be equal and opposite to the sum of the coriolis and drag forces. This dictates the direction of the iceberg, which is clearly {\bf not} in the direction of the wind.
+\Sfig{iceberg}{Forces on an iceberg drifting with constant velocity on the plane of the Earth. Since the velocity is to the East, the Coriolis force is to the south, and that combined with the drag force serve to counter the force of the wind.}
+\item Now consider the coriolis force and the force of wind on a patch of water. This induces currents known as the Ekman Spiral. The equation for a patch of ocean surface is
+\bea
+m\vec a &=& \vec F_{\rm cor} + \vec F_{w}
+\vs
+&=& 2m\omega\sin\lambda \vec v\times\vec n + \vec F_{w}.
+\eea
+Choose the $y-$axis so it is along the direction of the wind (or simply consider what happens if the wind is blowing north). Then, the $x,y$ components are
+\bea
+\dot v_x &=& 2\omega\sin\lambda v_y \vs
+\dot v_y &=& - 2\omega\sin\lambda v_x +\frac{F_w}{m}
+\eea
+Differentiate the second of these and insert the first to get
+\be\ddot v_y = -\Omega^2 v_y
+\ee
+where $\Omega\equiv 2\omega\sin\lambda$. The solution to this is sinusoidal with a drift:
+\bea
+v_y &=& A\sin\Omega t\vs
+v_x&=&\frac{F_w}{m\Omega} t + A\cos\Omega t\eea
+I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
+\item {\it Mass Transport:}
+E.g., winds from the north along California drive ocean water away from the coast towards the west. Deeper, colder water rises to the surface so generates the cold, foggy weather in San Francisco.
 \eei
 
 \chapter{Wind}
 
 \section{Properties}
+\subsection{Geostophic winds (Box 28.1)}
+Force on a parcel of air per unit volume due to the pressure gradient is
+\be
+\vec f_p = -\nabla p.\ee
+Here we are considering only the horizontal component of the force. This must be balanced by the coriolis force per volume
+\be
+\vec F_{cor} = 2\rho\omega_\Earth\sin\lambda\,\vec v\times \hat n
+.\ee
+So,
+\be\vec v\times\hat n = \frac{\nabla p}{2\rho\omega_\Earth\sin\lambda}
+.\ee
+Take the cross product of both sides with $\hat n$. The left hand side then becomes $\vec v$, leading to
+\be
+\vec v = \frac{\hat n\times \nabla p}{2\rho\omega_\Earth\sin\lambda}.\ee
+The direction of $\vec v$ for different orientations of the pressure gradient is depicted in Fig.~\rf{geo1}.
+\Sfig{geo1}{In the horizontal plane, the direction of the wind velocity given the pressure gradient, using the fact that the Coriolis force balances the pressure force.}
+
+Consider the implied wind speeds from this formula. Use $\rho_{\rm air}=1$kg/m$^3$; $\omega_\Earth= 7.3\times 10^{-5}$ Hz. For simplicity, take $\sin\lambda=1/2$. Then,
+\be
+v \simeq 1.4\times 10^4 \left( \frac{m^3 s}{kg}\right)\, \nabla P.\ee
+Units of pressure: 1Pascal (Pa) $=0.01$millibar (mb) = kg/m/s$^2$. So, the term in parentheses is
+$m^2/s/Pa$. Let's normalize the gradient to its value over 1 km; i.e, $\nabla P =\frac{\Delta P_1}{1\,km}$; then
+\be
+v\simeq 14 \frac{\Delta P_1}{0.01\, mb}\, m/s 
+.\ee
+The vertical changes in pressure are of order 30 mb/km; to get wind speeds of the proper order of magnitude, we see that the horizontal gradients must be one thousand times smaller. 
+To see that this is true, look at Fig.~\rf{500_heights}.
+\Spng{500_heights}{Contours showing the altitude at which the pressure is equal to 500 mb. Add an extra 0 to the height to get the result in meters.}
+The horizontal pressure gradient is $dp/dx = dP/dz\, dz/dx$ and one can see that the vertical change $dz$ is of order 50 m over horizontal distances of order more than 100 km. For example, the lines labeled 546 and 552 correspond to regions where the pressure is equal to 500 mb at heights 60m apart. Yet they are separated by roughly half the width of Nebraska, so at least 100 km.
 \bee
-\item Geostophic winds (Box 28.1)
 \item Planetary Boundary Layer
 \item Power Density (28.2)
 \item Betz Limit (Box 28.3)
