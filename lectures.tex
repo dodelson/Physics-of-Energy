@@ -57,6 +57,15 @@
      \end{center}
    \end{figure}
 }
+\newcommand{\Sgif}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{Figures/#1.gif}{0.6\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
 \newcommand{\Spng}[2]{
    \begin{figure}[thbp]
    \begin{center}
@@ -70,7 +79,7 @@
 \newcommand{\Sfigr}[2]{
    \begin{figure}[thbp]
    \begin{center}
-    \sfigr{../Figures/#1.pdf}{0.5\columnwidth}
+    \sfigr{Figures/#1.pdf}{0.6\columnwidth}
     \caption{{\small #2}}
     \label{fig:#1}
      \end{center}
@@ -481,7 +490,22 @@ dP = dT \frac{\rho k_B}{m}\left[
 \frac{c_vT}{PV} + 1
  \right] \ee
  But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
-\ec{conveq}
+\ec{conveq}.
+
+We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
+\be
+\frac{dP}{P} = \frac{\gamma}{\gamma-1}\,\frac{dT}{T}
+\ee
+and then integrating leads to
+\be
+P = P_0 \left( \frac{T}{T_0} \right)^{\gamma/(\gamma-1)}.\ee
+Identifying $T_0$ with $\theta$, the potential temperature, and then inverting leads to 
+\be
+\theta = T\,\left( \frac{P_0}{P} \right)^{1-1/\gamma}
+\ee
+For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
+
+\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
 
 \section{Radiative Transfer}
 
@@ -762,6 +786,17 @@ The vertical changes in pressure are of order 30 mb/km; to get wind speeds of th
 To see that this is true, look at Fig.~\rf{500_heights}.
 \Spng{500_heights}{Contours showing the altitude at which the pressure is equal to 500 mb. Add an extra 0 to the height to get the result in meters.}
 The horizontal pressure gradient is $dp/dx = dP/dz\, dz/dx$ and one can see that the vertical change $dz$ is of order 50 m over horizontal distances of order more than 100 km. For example, the lines labeled 546 and 552 correspond to regions where the pressure is equal to 500 mb at heights 60m apart. Yet they are separated by roughly half the width of Nebraska, so at least 100 km.
+
+The physics behind this also makes sense. Hydrostatic equilibrium requires
+\be
+\frac{dP}{dz} = -g\rho = -\frac{gP}{RT}
+\ee
+where $R$ is mass dependent (typically inversely. proportional to the mass of the elements comprising the gas). Integrating from $z=0$ leads to
+\be
+z_P = \frac{R}{g} \int_{\ln P}^{\ln P_0} dx \,T
+.\ee
+So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. \comment{This should be done more carefully, deriving 3.29 in Wallace and Hobbs.}
+
 \bee
 \item Planetary Boundary Layer
 \item Power Density (28.2)
