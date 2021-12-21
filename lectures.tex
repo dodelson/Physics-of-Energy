@@ -102,49 +102,35 @@ Comment: #1
 \newcommand\bee{\begin{enumerate}}
 \newcommand\eee{\end{enumerate}}
 \newcommand\lecture[1]{\newpage
+\addtocounter{lectureno}{1}
+\setcounter{secno}{0}
 \begin{center}
-Lecture #1
+ {\bf Lecture \arabic{lectureno}: #1}
 \end{center}
 }
 \newcommand\conversion[1]{\fbox{#1}}
 %\newcommand\example[1]{\fbox{Example: #1}}
+\newcounter{lectureno}
+\newcounter{secno}
+\newcommand\homework[1]{{\tt HW for Lecture \arabic{lectureno}:} #1}
+%\chapter{Overview}
 
-\chapter{Overview}
-\lecture{1}
+\newcommand\lsection[1]{
+\addtocounter{secno}{1}
+{\bf \arabic{lectureno}.\alph{secno} #1:}}
+
+\lecture{Overview}
 
 \bei
-\item Annual Per Capita Energy Use is 73 GJ ($10^9$J)
-\item
-Annual World Energy Use in EJ is 562.1 EJ ($10^{18}$J)
-\item
-Global Power Use is 17.82 TW ($10^{12}$W)
-\item 
-Global Energy Consumption is then 156138 TW-hours $=562$ EJ
-\item
-Daily Energy Use per capita is 200 MJ
+\item Global Energy Use
+\item Sources of Energy: Fossil Fuels, Solar, Wind, Nuclear
+\item $CO_2$ Emissions
+\item $CO_2$ in the atmosphere
+\item Impact on temperature
 \eei
 
-There is some data \href{https://github.com/owid/co2-data}{here}.
-
-\Spng{world_energy_co2}{$CO_2$ emissions from all countries in the world plotted alongside all countries' energy use multiplied by intensity, 20 gm/MJ.}
-One interesting number from \href{https://www.science.org/doi/10.1126/science.abh0687}{here} (dashed line in first figure there) is that the amount of $CO_2$ emitted per energy for oil and gas is 69 grams per MJ. This is called the GHG intensity. Note that this is the weight of $CO_2$ and (a perennial problems is to convert) the corresponding weight of carbon is 12/44=0.272, so the intensity of carbon is about 20 grams per MJ. Multiplying by the annual use above leads to 
-\be
-562\times 10^{18} J \times 20 g/MJ \simeq 10^{13} kg
-\ee
-of carbon emitted in $CO_2$ every year. One metric tonne is 1000kg, so this does indeed correspond to the well-known 10Gt of carbon emitted every year.
-Fig.~\rf{world_energy_co2} shows that the energy consumed by the world multiplied by this intensity does indeed roughly track the actual $CO_2$ emissions.
-
-Note that this value of the intensity makes sense: roughly speaking, the orbital energy of electrons is shuffled during the reactions that produce $CO_2$. That means the typical energy gained is say 5 eV per molecule of $CO_2$. Therefore, to produce 5 eV requires $12\times 1.67\times 10^{-24}$gm, or roughly $2\times10^{-23}$gm. But 5 ev$=8\times 10^{-19}$J. So, one gm of carbon is required to produce 40kJ. To produce 1 MJ requires 25 gm of carbon, which pretty close to the observed intensity.
-
-The intensity can be computed for each country. Fig.~\rf{intensity18} shows that countries with more advanced economies (higher GDP/capita) tend to have lower intensities. They are generally moving to energy production that produces less $CO_2$ emissions. 
-\Spng{intensity18}{Intensity (the ratio of $CO_2$ emissions and energy consumed for some of the countries in the world in 2018.}
-
-Fig.~\rf{intensity_country} shows the evolution for several different countries. Brazil is interesting: most of their electricity comes from hydropower. France generates quite a bit of power from nuclear energy. Frustratingly, the US has not appreciably have reduced its intensity over the past 50 years. China has been making slow but steady progress as it modernizes, while India is on a reverse trajectory, similar to many other developing countries.
-\Spng{intensity_country}{Intensity as a function of time for different countries.}
-
-\exercise{Download \href{https://github.com/owid/co2-data}{this data set} and make the above plots.}
-
-\chapter{Mechanical Energy}
+\lecture{Mechanical Energy}
+%\chapter{Mechanical Energy}
 
 \example{Kinetic energy of an airplane: with a mass of 68,000 kg (Airbus-A320). (This is the maximum mass the aircraft is allowed to take off with.) Flight time from Boston to New York is 30 minutes and the distance is 210 miles= 340km. Therefore, its kinetic energy is 
 \be
@@ -188,7 +174,7 @@ Then, the density of air at 30,000 ft is about 1/3 of its ground value so
 .\ee
 The good news is that airplanes are designed to have \href{https://www.semanticscholar.org/paper/Aircraft-Drag-Polar-Estimation-Based-on-a-Model-Sun-Hoekstra/38ee841fa4dcc353a0ce2345cdc6e7d498b14a4e/figure/15}{very small drag coefficients, less than about 0.04}. So, the energy lost to air resistance does seem to be sub-dominant to that due to kinetic and potential energy. Note though that these losses increase with distance, so a flight ten times longer might need to account for them.}
 
-\section{Rotational Energy}
+\lecture{Rotational Energy}
 
 Point mass rotating in a circle 
 \bee
@@ -207,6 +193,14 @@ again with constant amplitude $\omega^2R$ and direction pointing inwards.
 \be
 \vec F = -m\omega^2 \vec r\ee
 to keep the particle in circular motion.
+\item Centrifugal force: In a rotating system, the mass feels a force
+\be
+\vec F_{\rm centrifugal} = m\omega^2 \vec r.\ee
+\example{Particle on surface of the Earth experiences a forces of magnitude $m\omega_\Earth^2 r$ where $r$ is the distance to the axis of rotation, equal to $R_\Earth\cos\lambda$, where $\lambda$ is the latitude, equal to zero at the equator. The acceleration due to this force is
+\be
+\omega_\Earth^2  R_\Earth\cos\lambda = 
+0.034\cos\lambda\,m\,s^{-2}\ee
+taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity.}
 \item The angular momentum of this is simple to calculate:
 \be
 \vec L = \vec r \times \vec p = - mR^2 \omega\hat z \ee
@@ -220,13 +214,64 @@ and $E=I\omega^2/2$. The moment of inertia is defined as
 \be
 I \equiv \sum_i m_ir_i^2 \rightarrow \int d^3x \rho(\vec x) \left( x^2+y^2\right)\ee
 when the relevant axis is the $z$-axis. I.e., the distance squared is the perpendicular distance to the axis, the shortest line connecting a point mass to the axis.
+\example{$CO_2$ molecule: The carbon atom is at the center and the 2 oxygens at the ends of a roughly linear configuration. The moment of inertia is roughly
+\be
+I=2m_{O} R^2\ee
+so its energy is equal to $L^2/2I$ or
+\be
+E = \hbar^2 \frac{(L/\hbar)^2}{4 m_O R^2}
+\ee
+where $\hbar=1.05\times 10^{-34}$ J-s. Taking the mass of oxygen to be 16 times the proton mass and the distance between the oxygen and carbon to be the typical atomic value of an angstrom leads to 
+\be
+E = \frac{L^2}{\hbar^2} \,4.12\times 10^{-23}\, J
+\ee}
 \eee
-Note that $(v=\vec r\times \vec\omega)$.
+Note that $(\vec v=\vec r\times \vec\omega)$.
 
-\example{Energy in wind circulation system.}
+\example{Energy in wind circulation system: Consider a parcel of air with $10^\circ$ radius at $40^\circ$ latitude over the Pacific Ocean up to 1 km above. Its' {\it zonal} (east-west) wind speed is about 20m/s. Let's calculate its rotational energy. Taking the density to be constant and all roughly the same distance from the axis of rotation, its moments of inertia is
+\bea
+I &=& \rho V R_\Earth^2\cos^2\phi\vs
+&=&\left[ R_\Earth^2\cos^2\phi\right]\, \left[ 1{\rm km}\times \pi R_\Earth^2 (0.177)^2 \right]
+\rho \eea
+since ten degrees is equal to 0.177 in radians. To get the energy we multiply this by $\omega^2/2=(v/r)^2/2$ so the first term in brackets cancels, and we're left with
+$E=8\times 10^{17}$J. This is not quite the right metric for wind power because the cross-sectional area here is huge, but it gives some sense of how much energy is available in wind.
+}
 
-\chapter{Heat and Thermal Energy}
-\section{Equipartition Theorem}
+\lecture{Energy Usage}
+\bei
+\item Annual Per Capita Energy Use is 73 GJ ($10^9$J)
+\item
+Annual World Energy Use in EJ is 562.1 EJ ($10^{18}$J)
+\item
+Global Power Use is 17.82 TW ($10^{12}$W)
+\item 
+Global Energy Consumption is then 156138 TW-hours $=562$ EJ
+\item
+Daily Energy Use per capita is 200 MJ
+\eei
+
+There is some data \href{https://github.com/owid/co2-data}{here}.
+
+\Spng{world_energy_co2}{$CO_2$ emissions from all countries in the world plotted alongside all countries' energy use multiplied by intensity, 20 gm/MJ.}
+One interesting number from \href{https://www.science.org/doi/10.1126/science.abh0687}{here} (dashed line in first figure there) is that the amount of $CO_2$ emitted per energy for oil and gas is 69 grams per MJ. This is called the GHG intensity. Note that this is the weight of $CO_2$ and (a perennial problems is to convert) the corresponding weight of carbon is 12/44=0.272, so the intensity of carbon is about 20 grams per MJ. Multiplying by the annual use above leads to 
+\be
+562\times 10^{18} J \times 20 g/MJ \simeq 10^{13} kg
+\ee
+of carbon emitted in $CO_2$ every year. One metric tonne is 1000kg, so this does indeed correspond to the well-known 10Gt of carbon emitted every year.
+Fig.~\rf{world_energy_co2} shows that the energy consumed by the world multiplied by this intensity does indeed roughly track the actual $CO_2$ emissions.
+
+Note that this value of the intensity makes sense: roughly speaking, the orbital energy of electrons is shuffled during the reactions that produce $CO_2$. That means the typical energy gained is say 5 eV per molecule of $CO_2$. Therefore, to produce 5 eV requires $12\times 1.67\times 10^{-24}$gm, or roughly $2\times10^{-23}$gm. But 5 ev$=8\times 10^{-19}$J. So, one gm of carbon is required to produce 40kJ. To produce 1 MJ requires 25 gm of carbon, which pretty close to the observed intensity.
+
+The intensity can be computed for each country. Fig.~\rf{intensity18} shows that countries with more advanced economies (higher GDP/capita) tend to have lower intensities. They are generally moving to energy production that produces less $CO_2$ emissions. 
+\Spng{intensity18}{Intensity (the ratio of $CO_2$ emissions and energy consumed for some of the countries in the world in 2018.}
+
+Fig.~\rf{intensity_country} shows the evolution for several different countries. Brazil is interesting: most of their electricity comes from hydropower. France generates quite a bit of power from nuclear energy. Frustratingly, the US has not appreciably have reduced its intensity over the past 50 years. China has been making slow but steady progress as it modernizes, while India is on a reverse trajectory, similar to many other developing countries.
+\Spng{intensity_country}{Intensity as a function of time for different countries.}
+
+\exercise{Download \href{https://github.com/owid/co2-data}{this data set} and make the above plots.}
+
+\lecture{Heat and Thermal Energy}
+\lsection{Equipartition Theorem}
 The kinetic energy of a system of $N$ particles is equal to
 \be
 \langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
@@ -304,7 +349,7 @@ with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total ma
 
 
 
-\section{Pressure and Efficiency}
+\lsection{Pressure and Efficiency}
 
 Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension,
 \bei
@@ -391,7 +436,7 @@ c_P=\frac{2.5\times 1.38\times 10^{-23} J/K}{4\times 1.67\times 10^{-27} kg},\ee
  
  
  
-\chapter{Heat Transfer}
+\lecture{Heat Transfer}
 
 Definitions:
 \bei
@@ -399,7 +444,7 @@ Definitions:
 \item Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation: the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
 \eei
 
-\section{Conduction}
+\lsection{Conduction}
 This is simply particles in regions with larger velocity dispersions leaking into regions with lower dispersions and visa versa.
 
 Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
@@ -467,7 +512,7 @@ A more sophisticated insulation system reduces the heat loss by a factor of 20 (
 
 \example{Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.}
 
-\section{Convection}
+\lsection{Convection}
 
 Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? The net force on a stable volume element vanishes; it is equal to 
 \be
@@ -478,6 +523,8 @@ where the first sign is negative because pressure that decreases with height cor
 \frac{dP}{dz} = -g\rho
 .\ee
 The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
+
+\homework{Consider a perfectly elastic ball of mass $m$ bouncing up and down on a horizontal surface under the influence of gravity. Prove that averaged over time, the downward force of the ball on the floor is equal to $mg$. Generalize that to show that the pressure of air on the surface of the Earth is equal to $\int dz \rho g$.}
 
 
 If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
@@ -548,7 +595,7 @@ For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature 
 
 \Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
 
-\section{Radiative Transfer}
+\lsection{Radiative Transfer}
 
 Derive Stefan-Boltzmann law:
 \bee
@@ -584,7 +631,7 @@ where the extra factor of $c$ is the velocity.
 \eee
 
 
-\section{Time Dependent Conduction}
+\lsection{Time Dependent Conduction}
 
 Applying Gauss's Law to \ec{cont} leads to
 \be
@@ -619,7 +666,7 @@ Some examples, in units of $mm^2/s$:
 \eee
 So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
 
-\subsection{Ground Temperature Seasonal Variation}
+\lsection{Ground Temperature Seasonal Variation}
 Use the fact that
 \be T(z=0,t) = T_0 + \Delta T \sin(\omega t)
 \ee
@@ -643,17 +690,47 @@ c\equiv \sqrt{\omega/2a}\ee
 
 For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
 
-\chapter{Energy in Matter}
+\lecture{Quantum Mechanics}
 
-\section{Latent Heat}
+\bei
+\item Light comprised of photons with energy
+\be
+E = \frac{\hbar c}{\lambda}
+.\ee
+\item Discrete energy levels: $E_n$. For atomos and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV range; vibrational levels have $E_n\propto \epsilon n$ with energies in the meV range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
+\example{We estimated earlier that for $CO_2$,
+\be
+E_{l}^{\rm rot} = l(l+1) \,4.12\times 10^{-23}\, J\eql{co2rot}
+\ee}
+\item Photons absorbed means atomic/molecular transition from one state to another, with 
+\be
+E_\gamma = E_2-E_1
+.\ee
+\example{Given the levels in \ec{co2rot}, we can calculate the energies of photons that will be absorbed. For example, the $l=0\rightarrow l=1$ transition is mediated by a photon with energy
+\be
+E_\gamma = 8.24\times 10^{-23} J\ee
+corresponding to a wavelength of 
+\be
+\lambda = \frac{\hbar c}{E_\gamma} = 127 \,{\rm microns}.\ee
+But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy of $E_0=1.32\times 10^{-19}$J. There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $2lE_\gamma=0.0006 l E_0$, so the fractional shift is the wavelength will be $0.0006l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 0.6\% or 4cm$^{-1}$ on the plot. And, indeed this is what is seen.
+\Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note 15 microns corresponds to 667 cm$^{-1}$.}
+Note finally that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
+\Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
+}
+\eei
 
-\chapter{Nuclear Power}
 
-\section{Overview}
+\lecture{Energy in Matter}
 
-\section{Nuclear Physics}
+\lsection{Latent Heat}
 
-\section{Fission}
+\lecture{Nuclear Power}
+
+\lsection{Overview}
+
+\lsection{Nuclear Physics}
+
+\lsection{Fission}
 
 Reaction rates are determined by cross-sections. For the reaction $B+T\rightarrow C$, the rate at which $C$ particles are produced is equal to
 \be
@@ -677,7 +754,7 @@ Key processes for neutrons:
 
 
 
-\section{Fission Reactors}
+\lsection{Fission Reactors}
 
 Follow the neutrons: $k$ is the number of thermal neutrons generated by the previous generation of 1 thermal neutron. If $k>1$, the reactor is supercritical; if it is less than 1, it is sub-critical. The goal is to keep $k$ very close to 1; or $\rho\equiv (k-1)/k$ close to zero.
 
@@ -699,7 +776,7 @@ P = E_f \frac{dN_f}{dt}
 \ee
 where $E_f$ is the energy released in one fission cascade ($\sim200$ MeV) and $dN_f/dT$ is the number of neutron-captured fission events per time. 
 
-\subsection{Safety}
+\lsection{Safety}
 
 As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
 \be
@@ -723,11 +800,11 @@ so the cross section broadens with a width in energy of \be
 \sigma_E = mv \sqrt{k_BT/M}.\ee
 So, the width of the resonance scales as the square root of the temperature.
 
-\section{Fusion}
+\lsection{Fusion}
 
-\chapter{Ocean}
+\lecture{Ocean}
 
-\section{Energy Balance}
+\lsection{Energy Balance}
 \bei
 \item Input Solar Radiation
 \item Convection Down unimportant
@@ -736,7 +813,7 @@ So, the width of the resonance scales as the square root of the temperature.
 \item Currents from Tropics 
 \eei
 
-\section{Coriolis Force}
+\lsection{Coriolis Force}
 
 \bei
 \item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with cirvular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = m\omega^2 \vec r$ to counter the fictional centrifugal force
@@ -767,7 +844,7 @@ F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
 \be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
 \eei
 
-\section{Surface Currents}
+\lsection{Surface Currents}
 \bei
 \item Iceberg at constant velocity at an angle to the direction of the wind.
 To see this, consider Fig.~\rf{iceberg} drawn on the surface of the Earth. Since $\hat n$ is out of the paper, and the velocity is as shown, the coriolis force points downwards. Since the iceberg drifts at a constant velocity, the sum of the forces must vanish, so the force of wind must be equal and opposite to the sum of the coriolis and drag forces. This dictates the direction of the iceberg, which is clearly {\bf not} in the direction of the wind.
@@ -791,14 +868,14 @@ where $\Omega\equiv 2\omega\sin\lambda$. The solution to this is sinusoidal with
 v_y &=& A\sin\Omega t\vs
 v_x&=&\frac{F_w}{m\Omega} t + A\cos\Omega t\eea
 I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
-\item {\it Mass Transport:}
+\item {\it Mass Transport:} 
 E.g., winds from the north along California drive ocean water away from the coast towards the west. Deeper, colder water rises to the surface so generates the cold, foggy weather in San Francisco.
 \eei
 
-\chapter{Wind}
+\lecture{Wind}
 
-\section{Properties}
-\subsection{Geostophic winds (Box 28.1)}
+\lsection{Properties}
+\lsection{Geostophic winds (Box 28.1)}
 Force on a parcel of air per unit volume due to the pressure gradient is
 \be
 \vec f_p = -\nabla p.\ee
@@ -838,6 +915,9 @@ z_P = \frac{R}{g} \int_{\ln P}^{\ln P_0} dx \,T
 .\ee
 So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. \comment{This should be done more carefully, deriving 3.29 in Wallace and Hobbs.}
 
+General circulation, as described in Wallace and Hobbs 1.3.5: wind blows clockwise in the Northern hemisphere around high pressure regions. There is a high pressure max around $30^\circ$N; above this, the wind blows to the east (westerly wind) and below, winds are easterly. Winds are strongest over the ocean where there is less surface friction. So, this explains the comments above that the winds off the coast of San Francisco come from the North (Fig.~\rf{wh115}): they move clockwise around the high pressure region in the center of the Pacific and therefore on the Eastern side of the ocean, the winds are moving towards the equator at the latitude of San Francisco ($38^\circ$).
+\Sjpg{wh115}{Circulation in the Northern Hemisphere. Note that the winds on the eastern side of the ocean at latitudes less than the high pressure belt at $45^\circ$ blow towards the equator, i.e., from the North. This is the cause of fog in San Francisco.}
+
 \bee
 \item Planetary Boundary Layer
 \item Power Density (28.2)
@@ -846,7 +926,7 @@ So, the difference in heights at which the pressure reaches $P$ is determined by
 \item Power Potential
 \eee
 
-\section{Fluids}
+\lsection{Fluids}
 
 \bee
 \item Continuity equation 
@@ -872,14 +952,14 @@ Inserting that for the pressure difference leads to
 \item Airfoils: How does circulation develop?
 \eee
 
-\section{Wind Turbines}
+\lsection{Wind Turbines}
 
 \bee
 \item Actuator Disk Analysis (30.7)
 \item 
 \eee
 
-\chapter{Climate}
+\lecture{Climate}
 
 Useful sites:
 \bee
@@ -887,7 +967,7 @@ Useful sites:
 \item\href{The Climate Laboratory}{https://brian-rose.github.io/ClimateLaboratoryBook/home.html}
 \eee
 
-\section{Simple Models}
+\lsection{Simple Models}
 
 \bei
 \item incoming solar radiation: $I_\Sun$=1366 W/m$^2$
@@ -938,7 +1018,7 @@ The horizontal dashed lines are the observed temperatures at the surface, about 
 
 These models are simple because (i) the radiation is not blackbody and the absorbers allow through more radiation at some wavelengths than at others and (ii) radiative transfer is not the only form of heat transfer: convection is also important. 
 
-\section{1D Radiative-Convective Equilibrium}
+\lsection{1D Radiative-Convective Equilibrium}
 
 In equilibrium the mass density $\rho$, pressure $P$, and temperature $T$ can be related to one another. In the 1D case, this become simple:
 \bei
@@ -967,7 +1047,7 @@ Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons 
 \Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
 The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
 
-\subsection{Convective instability}
+\lsection{Convective instability}
 
 To determine the pressure and density profile more accurately, we need to determine the temperature profile. For this, we can use the fact that the work done by the pressure of a small volume reduces the internal energy:
 \be
@@ -1010,7 +1090,7 @@ So depending on where you put the top of the atmosphere in that simple model (so
 
 \newcommand\ipcc[1]{{\tt IPCC Report: #1}}
 
-\section{Radiative Forcing}
+\lsection{Radiative Forcing}
 
 This is defined to be: ``The change in net irradiance (down -up) at the tropopause after allowing for stratospheric temperatures to readjust to radiative equilibrium, but with surface and tropospheric temperatures and state held fixed at the unperturbed values.'' 
 
@@ -1050,7 +1130,7 @@ Radiation:
 
 \appendix
 \newcommand\ans[1]{{\tt #1}}
-\chapter{Climate Class}
+\lecture{Climate Class}
 
 \bee
 \item What does IPCC say is the largest driver of climate change?
