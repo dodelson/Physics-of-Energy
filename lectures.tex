@@ -313,6 +313,7 @@ If we had done this in 1D, we would have gotten $k_BT/2$. In general, the varian
 
 The situation is more complex for more complex particles, starting with diatomic atoms. There, the book says you add $k_BT/2$ for each degree of freedom. 
 \comment{Redo this for a diatomic molecule at temperatures in the atmosphere, presumably only rotational degrees of freedom excited. Work out the energy.}
+
 Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: the energy of a harmonic oscillator is
 \be
 E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
@@ -327,20 +328,27 @@ or
 \ee
 where $\beta\equiv 1/k_BT$ and
 \be
-Z\equiv \sum_ne^{-E_n/k_BT}.\ee
+Z\equiv \sum_ne^{-E_n/k_BT}=\frac{e^{-\hbar\omega\beta/2}}{1-e^{-\hbar\omega\beta}}.\ee
+So,
+\be
+\langle E\rangle = N\left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\hbar\omega\beta}-1} \right).\eql{bare}\ee
+The first term is the zero-point energy and the second term is the energy due to thermal excitations.
 
 The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
 \be
 \langle E\rangle = NE_0\ee
-all the particles in the ground state. The other limit is the high temperature limit, in which case we can approximate the energy as $\hbar\omega n$ and write the sum as
-\be
-Z= \frac{1}{1-e^{-\hbar\omega\beta}}\simeq \frac{1}{\hbar\omega\beta}\ee
-Taking the derivative leads to
-\be
+all the particles in the ground state. The other limit is the high temperature limit, in which case \be
 \langle E\rangle_{hi\, T} =Nk_BT\ee
 The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
 
 You can go through the same exercise for any degrees of freedom: rotational or the energy levels in an atom. You do not always get $k_BT/2$ for each degree of freedom, but the probability of finding a particle in a given energy state is always proportional to $e^{-E/k_BT}$ when the system is in equilibrium.
+
+More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
+\be
+f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
+This turns out to be the Bose-Einstein occupation number.
+
+
 
 \example{5.1: Heating one mole of the monatomic gas argon from 300 to 600K requires 
 \be
