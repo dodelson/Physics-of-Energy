@@ -200,7 +200,7 @@ to keep the particle in circular motion.
 \be
 \omega_\Earth^2  R_\Earth\cos\lambda = 
 0.034\cos\lambda\,m\,s^{-2}\ee
-taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity.}
+taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity. Note that this force points from the surface of the Earth to the axis of rotation, so it is possible to decompose it into a vertical force (akin to gravity) and a horizontal component. E.g., in the Northern hemisphere it would be pointing Southward.}
 \item The angular momentum of this is simple to calculate:
 \be
 \vec L = \vec r \times \vec p = - mR^2 \omega\hat z \ee
@@ -698,6 +698,8 @@ c\equiv \sqrt{\omega/2a}\ee
 
 For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
 
+\comment{Do the ocean?}
+
 \lecture{Quantum Mechanics}
 
 \bei
@@ -705,7 +707,7 @@ For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
 \be
 E = \frac{\hbar c}{\lambda}
 .\ee
-\item Discrete energy levels: $E_n$. For atomos and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV range; vibrational levels have $E_n\propto \epsilon n$ with energies in the meV range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
+\item Discrete energy levels: $E_n$. For atomos and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
 \example{We estimated earlier that for $CO_2$,
 \be
 E_{l}^{\rm rot} = l(l+1) \,4.12\times 10^{-23}\, J\eql{co2rot}
@@ -720,13 +722,29 @@ E_\gamma = 8.24\times 10^{-23} J\ee
 corresponding to a wavelength of 
 \be
 \lambda = \frac{\hbar c}{E_\gamma} = 127 \,{\rm microns}.\ee
-But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy of $E_0=1.32\times 10^{-19}$J. There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $2lE_\gamma=0.0006 l E_0$, so the fractional shift is the wavelength will be $0.0006l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 0.6\% or 4cm$^{-1}$ on the plot. And, indeed this is what is seen.
+But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy of $E_0=1.32\times 10^{-20}$J. There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma=0.006 l E_0$, so the fractional shift is the wavelength will be $0.006l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 6\% or 40cm$^{-1}$ on the plot. This is not what is seen, presumably because the rotations here are around a different axis of rotation?
 \Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note 15 microns corresponds to 667 cm$^{-1}$.}
 Note finally that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
 \Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
-}
-\eei
+}\eei
+\comment{Check Neil's notes on this.}
 
+\lsection{Particle in a box}
+\be
+\frac{-\hbar^2}{2m} \psi'' =E\psi
+\ee
+so using boundary conditions
+\be
+\psi = A\sin(\sqrt{2mE_n}x/\hbar)
+\ee
+with 
+\be
+E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}
+.\ee
+\example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
+%Take $m=m_e$; $L=a_0$, the Bohr radius, 0.529$\AA$. Then the energy difference between the first two levels is }
+
+\lsection{Width of state: decays; section 15.4}
 
 \lecture{Energy in Matter}
 
