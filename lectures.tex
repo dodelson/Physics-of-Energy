@@ -122,11 +122,70 @@ Comment: #1
 \lecture{Overview}
 
 \bei
-\item Global Energy Use
-\item Sources of Energy: Fossil Fuels, Solar, Wind, Nuclear
-\item $CO_2$ Emissions
+\item Global Energy Production and Use: 600 EJ ($10^{18}$J) were produced in 2018, about half of which was {\it final}, consumed by end users. About 80\% of that is fossil fuels, which emit carbon dioxide. 
+\item $CO_2$ Emissions: 38 Gigatonnes of $CO_2$. 
+\bee
+\item 1 tonne = 1000 kg
+\item This is of $CO_2$, which is heavier than carbon by a factor of $(32+12)/12=3.67$, so about 10 GtC are emitted each year
+\item The ratio, 10 GtC/$6\times 10^{20}$J, is called the green house gas intensity, about 20 grams per MJ.
+\eee
 \item $CO_2$ in the atmosphere
-\item Impact on temperature
+\bee
+\item We have been doing this for about 100 years, starting at about 1 and only recently leveling off at about 10. 
+\item In total, we have emitted 450 GtC
+\item About half of this remains in the atmosphere, and indeed, the amount of carbon in the atmosphere has increased from a little above 600 GtC to a little below 900 GtC.
+\eee
+\item Basics:
+\bee
+\item Mechanical Energy (how much we use)
+\item Heat
+\bei
+\item Thermal Energy In terms of constituent atoms (stat mech)
+\item Pressure
+\item Specific Heat
+\eei
+\item Heat Transfer (statistical mechanics; to help understand energy use and the atmosphere)
+\bei
+\item Conduction
+\item Convection
+\item Radiative Transfer
+\eei
+\item Quantum Mechanics 
+\bei
+\item Radiation in terms of photons (wavelength, energy)
+\item Absorption/emission via transition between quantum states
+%\item Blackbody Radiation
+\item Wave functions (for nuclear decays)
+\eei 
+\eee
+\item Sources of Energy
+\bee
+\item Nuclear
+\item Solar
+\item Ocean
+\item Wind
+\eee 
+\item Climate
+\bee
+\item Radiative balance: Energy in from sun must equal energy emitted. 
+\bei
+\item Solar energy is short wavelength; energy emitted is long wavelength (infrared)
+\item Atmosphere absorbs long wavelength radiation (inducing quantum mechanical transitions in Water vapor and greenhouse gases)
+\item Vertical Structure: pressure, density, convection, radiative transfer
+\item Radiative Forcing: Change in radiation (out or in) due to a specific effect (e.g., an increase in solar luminosity would be a positive forcing)
+\item Radiative forcing due to $CO_2$ is
+\be
+F_{2x} = 3.7 W/m^2.\ee
+I.e., this leads to more radiation impinging on Earth (For reference, the total solar radiation at the top of the atmosphere is 1366 W/m$^2$ and the amount of solar radiation absorbed by Earth is 50-250 W/m$^2$.
+\item One of the impacts of a forcing is a change in the mean global temperature. The relation between the two is governed by
+\be
+\Delta T_0 = -\frac{F}{\lambda_0}.\ee 
+In order to balance this forcing then, the Earth's temperature must rise by $\Delta T_0$. It is simple to estimate $\lambda_0$ assuming blackbody radiation; the true value is slightly different (since different wavelengths have different opacities and hence are emitted at different $T$'s), and is equal to $3.2$W/K/m$^2$. 
+\item Feedbacks: for example, when $CO_2$ is added, the atmosphere warms and this allows it to hold more water vapor, which in turn absorbs more infrared radiation and leads to even more warming. The true change then is given by $\lambda_0\rightarrow\lambda \simeq 1.5$W/K/m$^2$. Hence, when the $CO_2$ abundance doubles from pre-industrial times, we expect the temperature to warm by $3.7/1.5=2.5^\circ$. The same formula predicts that the temperature should have risen by about $1^\circ$ since 1900, and it has. This is shown clearly in Fig.~\rf{ipcc_trise}.
+\Sfig{ipcc_trise}{Temperature increase as a function of $CO_2$ emissions. From the Intergovernmental Panel on Climate Change, 2021.%Note that the current value corresponds to 650 GtC, which is quite a bit higher than the number I gave earlier (and later using databases).
+}
+\eei 
+\eee
 \eei
 
 \lecture{Mechanical Energy}
@@ -455,9 +514,72 @@ Definitions:
 \lsection{Conduction}
 This is simply particles in regions with larger velocity dispersions leaking into regions with lower dispersions and visa versa.
 
+Derivation: Consider gas between two plates with fixed temperatures, the hotter one on the right. Consider a plate in the middle somewhere with area $dA$. The number of particles incident on this plane from both the left and the right in a time $dt$ within the velocity region $d^3v$ is
+\be
+\frac{f(\vec v)}{V}  v\cos\theta dA dt\,d^3v
+\ee
+where $\theta$ is the angle between the velocity and the $x$-axis; $f$ is the Maxwellian distribution function above. There it is normalized so that the integral over velocities is equal to the total number of particles. Hence, here I divided by $V$ to get the density.The energy carried by each molecule coming from the left (right) is
+\be
+m c_v T_{L,R} = m c_v \left[ T_0 \mp \frac{dT}{dx} \Delta x \right]
+\ee
+where $c_v$ is the specific heat per mass (hence the factor of $m$) and $\Delta x$ is the distance from where the molecule arrived. This distance is equal to $l\cos\theta$ where $l$ is the mean free path. The difference in energy coming in from the left compared to the right is then
+\be
+E_L - E_R = -2 \int d^3v\,\frac{f(\vec v)}{V}  v\cos\theta dA dt\,m c_v \left[ \frac{dT}{dx} l\cos\theta \right]
+.\ee
+The heat flux is this difference divided by the area and time so
+\be
+q= -2 m c_v l \int d^3v\,\frac{f(\vec v)}{V}  v\cos\theta \,\left[  \frac{dT}{dx} \cos\theta \right]
+.\ee
+Inserting for $f$ leads to
+\be
+q= -2 nm c_v l \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \frac{dT}{dx} \int  d^3v\,v\cos^2\theta \, e^{-mv^2/2k_BT}.\ee
+The one subtlety here is that the integral is restricted to cover $\theta<\pi/2$ (or greater than this for the left movers). Hence the angular integral becomes
+\be
+2\pi\int_0^{\pi/2} d\theta\sin\theta \cos^2\theta
+=\frac{2\pi}{3}
+.\ee
+Therefore, the heat flux is
+\bea
+q &=& -\frac{4\pi}{3} nm c_v l \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \frac{dT}{dx} \int_0^\infty  dv\, v^3 \, e^{-mv^2/2k_BT}\vs
+&=&
+-\frac{4}{3} nm c_v l \left( \frac{2k_BT}{m\pi}\right)^{1/2}\, \frac{dT}{dx} \int_0^\infty  dy\, y^3 \, e^{-y^2}\vs
+&=&
+-\frac{2}{3} nm c_v l \left( \frac{2k_BT}{m\pi}\right)^{1/2}\, \frac{dT}{dx}.
+\eea
+This is often expressed in terms of the average speed of the molecules, $\bar v$, which is equal to $\sqrt{8k_BT/\pi m}$, so that
+\be
+k = \frac13 nm c_v l\bar v.\ee
 Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
 .\ee
+
+
+It is hard to go much further than this without more details but a couple of notes:
+\bee
+\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
+\item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
+\item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
+\item For a liquid like water, the mean free path is rougly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
+\be
+k=0.25 {\rm W/kg\,m}\ee
+a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
+\item The electrical conductivity can be calculated in a similar way, and the relationship leads to
+\be
+\frac{\kappa}{\sigma} = LT\ee
+where $L$ is the Lorenz number. This empirical relation was discovered in the 1800's; the theoretical justification came from quantum mechanics. You can calculate that
+\be
+L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
+This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
+\eee
+
+
 $k$ has dimensions of $E/(T\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
+
+\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $26^\circ$. How long would it take conduction to equilibrate these? Heat flows at a rate of 
+\be
+q=0.026\times \frac{26}{1.2\times 10^6} W/m^2=5.6\times 10^{-7} W/m^2. \ee
+So a square region in front of Pittsburgh that is 10km high and wide will receive 56 W of heat from Atlanta. This is less than a light bulb.}
+
+
 
 \example{Large uniform area with two ends at temperatures $T_0$ and $T_1$, it is a 1D problem:
 \be
@@ -721,8 +843,10 @@ E_\gamma = E_2-E_1
 E_\gamma = 8.24\times 10^{-23} J\ee
 corresponding to a wavelength of 
 \be
-\lambda = \frac{\hbar c}{E_\gamma} = 127 \,{\rm microns}.\ee
-But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy of $E_0=1.32\times 10^{-20}$J. There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma=0.006 l E_0$, so the fractional shift is the wavelength will be $0.006l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 6\% or 40cm$^{-1}$ on the plot. This is not what is seen, presumably because the rotations here are around a different axis of rotation?
+\lambda = \frac{2\pi\hbar c}{E_\gamma} = 1.5 \,{\rm cm}.\ee
+But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=8.33\times 10^{-20}$J). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 10^{-3} l \Delta E_v$, so the fractional shift is the wavelength will be $0.001l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
+%Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 1\% or 6 cm$^{-1}$ on the plot. This is what is seen,.
+The wavenumbers due to rotational transitions should be of order 0.1\% the 15$\mu$ line at 666cm$^{-1}$. Indeed, they are spaced uniformly in intervals of 0.6 cm$^{-1}$.
 \Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note 15 microns corresponds to 667 cm$^{-1}$.}
 Note finally that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
 \Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
@@ -828,12 +952,24 @@ So, the width of the resonance scales as the square root of the temperature.
 
 \lsection{Fusion}
 
+\lecture{Solar Energy}
+
+\lsection{Production}
+
+\lsection{Variation of Insolation}
+
+\lsection{Absorbtion}
+
 \lecture{Ocean}
 
 \lsection{Energy Balance}
 \bei
-\item Input Solar Radiation
-\item Convection Down unimportant
+\item Input Solar Radiation: 1366 W/m$^2$ at the top of the atmosphere, but 30\% gets reflected by albedo. Another 20\% absorbed by the atmosphere, so the remaining 50\% reaches Earth. Together with the variation of the insolation this should get us to the 50-260 W/m$^2$ at latitudes below 50$^\circ$ mentioned on page 515.
+\item Most of the sunlight gets absorbed in the {\it mixed layer} which is of order 100m; it heats up the mixed layer so adds thermal energy. In the tropics the temperature of the mixed layer is a steady $\sim25^\circ$. From 100-1000 m deep, the {\it thermocline}, the temperature drops linearly until it reaches the {\it abyss}, in which the temperature is a constant $5^\circ$.
+\item Why doesn't heat flow from the mixed layer to the thermocline? There are two possibilities: convection or conduction. Convection works only if the hotter fluid on top is more dense than the fluid on the bottom. But in this case, the fluid on top is less dense than the fluid below. Conduction takes place at a rate
+\be
+q=k|\nabla T|.\ee
+For water, $k=0.6$ W/m K, and the gradient in the tropics is of order $20 K/800$m, so the rate of heat conduction is 0.015 W$/m^2$. 
 \item Radiative Heat
 \item Laten Heat Flux
 \item Currents from Tropics 
