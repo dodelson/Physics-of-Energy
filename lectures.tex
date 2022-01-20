@@ -191,30 +191,30 @@ In order to balance this forcing then, the Earth's temperature must rise by $\De
 \lecture{Mechanical Energy}
 %\chapter{Mechanical Energy}
 
-\example{Kinetic energy of an airplane: with a mass of 68,000 kg (Airbus-A320). (This is the maximum mass the aircraft is allowed to take off with.) Flight time from Boston to New York is 30 minutes and the distance is 210 miles= 340km. Therefore, its kinetic energy is 
-\be
-\frac12 mv^2 = 0.5\times 6.8\times 10^4 \times \left(\frac{3.4\times 10^5}{30\times60} \right)^2 J.\ee
-Doing the multiplication leads to 1.2GJ. 
-
-There is also the potential energy $mgh$. Assuming the plane flies at 30,000 ft (9000m), this potential energy is about 500 MJ.
-\be
-V = 6.8\times 10^4\times 9.8\times 9000J = 6GJ\ee
-about 5 times the kinetic energy. So the total energy required is over 7 GJ (neglecting air resistance).
-The number of passengers on the plane is about 150. Dividing that up leads to 50 MJ per passenger.
-}
 
 Analyze the energetics of a car trip from Boston to New York. Since the distance is 210 miles and considering a car that gets 30 miles per gallon, the trip requires 7 gallons of gas. 
 
-\conversion{1 Gallon = 3.78 Liters = 3780 cm$^3$}
 
-The density of gas is  0.85 g/cm$^3$. So a gallon of gas has about 3200 gms. The molecule $C_6H_{14}$ has a molar mass of about $6*12+14=86$ gm/mol. So, there is about 37 moles in a gallon of gas. If we estimate the energy per mol as 100 kcal/mol, we get 3700kcal/gallon = 15 MJ/gallon, which is too low by a factor of 8. Perhaps because there are 6 carbon atoms in the molecule, the binding energy is about 800 kcal/mol. The total energy per gallon of gas is 120MJ.
+\bei
+\item 1 Gallon = 3.78 Liters = $3.780\times 10^{-3} m^3$
+\item
+The density of gas is  850 kg/m$^3$. So a gallon of gas has about 3.2 kg. 
+\item 1 mole of carbon atoms has a mass of 12gms.
+\item The molecule $C_6H_{14}$ has a molar mass of about $6*12+14=86$ gm/mol. So, there are about 37 moles in a gallon of gas. 
+\item Each mole is $6\times 10^{23}$ particles, so there are $2.2\times 10^{25}$ molecules. 
+\item Alternatively, there are 86 protons and neutrons in the molecule, each of which has a mass of about $1.67\times 10^{-27}$kg, leading to a mass per molecule of $1.43\times 10^{-25}$kg/molecule, so 3.2kg corresponds to $2.2\times 10^{25}$ molecules.
+\item Estimate the electronic binding energy per carbon as 5 eV, so 30 eV per molecule or a total of $6.6\times 10^{26}$eV 
+\item 1 eV$=1.6\times 10^{-19}$J, so the estimate for a gallon of gas is 110MJ.
+\item The total energy per gallon of gas is 120MJ.
+\item Note that 1 gallon contains 2.67kg of carbon, and we said that the intensity was about 0.02kg/MJ ($10^{13}kg/6\times10^{14}$MJ = 1kg/60MJ), so we should have predicted this would lead to 130-140MJ
+\eei
 
 Seven gallons of gas therefore contain 840MJ of energy. However, transforming that energy into usable energy is not 100\% efficient. It is roughly 25\% efficient, so buying 7 gallons of gas gives you about 210MJ of energy. How is that used to get from Boston to New York?
 
 \bei
-\item {\bf Kinetic Energy} First calculate the difference between the kinetic energy of the car moving at 60mph and the car at rest (0). The energy in the gas must be used to give the car this kinetic energy, equal to 0.65 MJ. This is assuming no stops. Even assuming 20 stops, though, leads to only {\bf 13 MJ}, far smaller than the 210 we are trying to account for. 
+\item {\bf Kinetic Energy} First calculate the difference between the kinetic energy of the car moving at 60mph and the car at rest (0). The energy in the gas must be used to give the car this kinetic energy. One mph is equal to 0.45 m/s, so the speed is 27m/s. Suppose the car is 2 tons, or 4000 pounds; that corresponds to 1800kg. Therefore, $mv^2/2=0.65$ MJ. This is assuming no stops. Even assuming 20 stops, though, leads to only {\bf 13 MJ}, far smaller than the 210 we are trying to account for. 
 \item {\bf Potential Energy:} Going up a hill, the car gains potential energy $mgh$ and then loses it going down. The energy per mile gained and lost is 270kJ assuming an average hill height of 15m per mile. To ensure not going too slow or too fast, though, the driver will either have to provide more gas or more break to keep a stable speed. A rough estimate is that half of that 270kJ gets consumed, so the total energy used over the 210 miles is roughly {\bf 28 MJ}.
-\item {\bf Air Resistance:} Toy model has each air molecule picking up the velocity of the car, so the total kinetic energy transferred to the air (and therefore lost by the car) equal to $dMv^2/2$ where $dM$ is the mass in an infinitesmal volume $dV = Adx$ where $A$ is the cross-sectional area of the car. So, after traveling a total distance $D$, the energy lost to air friction is
+\item {\bf Air Resistance:} Toy model has each air molecule picking up the velocity of the car, so the total kinetic energy transferred to the air (and therefore lost by the car) equal to $dMv^2/2$ where $dM$ is the mass in an infinitesmal volume $dV = Adx$ where $A$ is the cross-sectional area of the car. So, after traveling a total distance $D=338km$, the energy lost to air friction is
 \be
 \Delta E \sim \frac12 \rho A D v^2
 .\ee 
@@ -222,6 +222,18 @@ The twiddle here reflects the fact that this is an approximation, rectified by i
 \item {\bf Friction:} The energy lost to friction of the tires with the road is estimated in the text to be {\bf 50 MJ}.
 \eei
 The total estimate is therefore about 220 MJ, which is roughly correct.
+
+\example{Kinetic energy of an airplane: with a mass of 68,000 kg (Airbus-A320). (This is the maximum mass the aircraft is allowed to take off with.) Flight time from Boston to New York is 30 minutes and the distance is 210 miles= 340km. Therefore, its kinetic energy is 
+\be
+\frac12 mv^2 = 0.5\times 6.8\times 10^4 \times \left(\frac{3.4\times 10^5}{30\times60} \right)^2 J.\ee
+Doing the multiplication leads to 1.2GJ. That (188km/h=110mph) probably an underestimate of the velocity; tripling it brings the energy up an order of magnitude.
+
+There is also the potential energy $mgh$. Assuming the plane flies at 30,000 ft (9000m), this potential energy is about 500 MJ.
+\be
+V = 6.8\times 10^4\times 9.8\times 9000J = 6GJ\ee
+about 5 times the kinetic energy. So the total energy required is over 7 GJ (neglecting air resistance).
+The number of passengers on the plane is about 150. Dividing that up leads to 50 MJ per passenger.
+}
 
 \example{Air resistance of airplane: take the width of the Airbus-A320 to be 3.7m, so that the cross-sectional area is $\pi\times 1.5^2m^2=11m^2$; the speed of a short flight to be again 200m/s (450 mi/hour). For the density, use the fact that
 \be
