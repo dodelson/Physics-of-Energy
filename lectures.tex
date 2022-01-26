@@ -153,9 +153,9 @@ Comment: #1
 \item Quantum Mechanics 
 \bei
 \item Radiation in terms of photons (wavelength, energy)
+\item Wave functions and discrete energy levels 
 \item Absorption/emission via transition between quantum states
 %\item Blackbody Radiation
-\item Wave functions (for nuclear decays)
 \eei 
 \eee
 \item Sources of Energy
@@ -259,11 +259,12 @@ to keep the particle in circular motion.
 \be
 \omega_\Earth^2  R_\Earth\cos\lambda = 
 0.034\cos\lambda\,m\,s^{-2}\ee
-taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity. Note that this force points from the surface of the Earth to the axis of rotation, so it is possible to decompose it into a vertical force (akin to gravity) and a horizontal component. E.g., in the Northern hemisphere it would be pointing Southward.}
+taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity. Note that this force points from the surface of the Earth to the axis of rotation, so it is possible to decompose it into a vertical force (akin to gravity) and a horizontal component. However, the shape of the Earth deforms so that the combined force in pointing inwards (see page 518).}
 \item The angular momentum of this is simple to calculate:
 \be
 \vec L = \vec r \times \vec p = - mR^2 \omega\hat z \ee
-as expected from the right-hand rule, pointing along the downwards $\hat z$-axis. It is natural to define the direction of the angular frequency to be with that same right-handed rule, here along $-\hat z$. Therefore,
+as expected from the right-hand rule, pointing along the downwards $\hat z$-axis. It is natural to define the direction of the angular frequency to be with that same right-handed rule, here along $-\hat z$. Note that $(\vec v=\vec r\times \vec\omega)$.
+Therefore,
 \be
 \vec L =mR^2\vec \omega
 \ee
@@ -273,27 +274,59 @@ and $E=I\omega^2/2$. The moment of inertia is defined as
 \be
 I \equiv \sum_i m_ir_i^2 \rightarrow \int d^3x \rho(\vec x) \left( x^2+y^2\right)\ee
 when the relevant axis is the $z$-axis. I.e., the distance squared is the perpendicular distance to the axis, the shortest line connecting a point mass to the axis.
+
+%\example{Hydrogen atom: 
+%\be
+%I=m_ea_0^2
+%\ee
+%where the Bohr radius is 0.5$\AA$. An electron travels around the proton with a speed of about $c/100$ so the frequency is $\omega\sim (c/100a_0)$, leading to
+%\be
+%L\simeq \frac{m_ea_0 c}{100} = 9.1\times 10^{-31} \times 0.5\times 10^{-10} \times 3\times 10^8 J-s = 1.4\times 10^{-32} J-s
+%\ee}
+
 \example{$CO_2$ molecule: The carbon atom is at the center and the 2 oxygens at the ends of a roughly linear configuration. The moment of inertia is roughly
 \be
-I=2m_{O} R^2\ee
-so its energy is equal to $L^2/2I$ or
-\be
-E = \hbar^2 \frac{(L/\hbar)^2}{4 m_O R^2}
+I=2m_{O} R^2.\ee
+A rough estimate for the angular frequency is $\omega\sim 100$GHz, from \href{https://cosmosmagazine.com/science/physics/filming-fast-scientists-capture-molecular-rotation/}{this paper}. Taking $R$, the distance between the oxygen and carbon, to be the typical atomic value of an angstrom leads to $I=5\times 10^{-46}$kg-m$^2$ (or $5\times 10^{-39}gm-cm^2$, which is pretty close to the true value of $7.17\times10^{-39}gm-cm^2$ given \href{https://cccbdb.nist.gov/exp2x.asp?casno=124389}{here}.)
+Taking the mass of oxygen to be 16 times the proton mass leads 
+to 
+\be 
+L\sim 5.3\times 10^{-46}\times 10^{11} J-s = 5\times 10^{-35} J-s
 \ee
-where $\hbar=1.05\times 10^{-34}$ J-s. Taking the mass of oxygen to be 16 times the proton mass and the distance between the oxygen and carbon to be the typical atomic value of an angstrom leads to 
+pretty close to $\hbar$, where $\hbar=1.05\times 10^{-34}$ J-s. 
+So its energy is equal to $L^2/2I$ or
 \be
-E = \frac{L^2}{\hbar^2} \,4.12\times 10^{-23}\, J
+E = \hbar^2 \frac{(L/\hbar)^2}{4 m_O R^2}.
+\ee
+or\be
+E = \frac{L^2}{\hbar^2} \,10^{-23}\, J
+\ee
+The true value is \be
+E = \frac{L^2}{\hbar^2} \,7.69\times 10^{-24}\, J
 \ee}
 \eee
-Note that $(\vec v=\vec r\times \vec\omega)$.
 
-\example{Energy in wind circulation system: Consider a parcel of air with $10^\circ$ radius at $40^\circ$ latitude over the Pacific Ocean up to 1 km above. Its' {\it zonal} (east-west) wind speed is about 20m/s. Let's calculate its rotational energy. Taking the density to be constant and all roughly the same distance from the axis of rotation, its moments of inertia is
+Consider the wind. Near the equator, the wind blows from east to west (``Northeasterlies'' in the northern hemispheric as it comes from the Northeast), as depicted in Fig.~\rf{winds}.
+\Sjpg{winds}{Cartoon version of wind. In the Northern hemisphere, the wind blows clockwise around high pressure regions and counter-clockwise around low pressure regions and the reverse is true in the Southern hemisphere.}
+
+\example{Energy in wind circulation system: Consider a parcel of air, annulus with $5^\circ$ width, at $40^\circ$ latitude over the Pacific Ocean up to 1 km above. Its' {\it zonal} (westerly) wind speed is about 10m/s. Let's calculate its rotational energy. Taking the density to be constant and all roughly the same distance from the axis of rotation, its moments of inertia is
 \bea
-I &=& \rho V R_\Earth^2\cos^2\phi\vs
-&=&\left[ R_\Earth^2\cos^2\phi\right]\, \left[ 1{\rm km}\times \pi R_\Earth^2 (0.177)^2 \right]
-\rho \eea
-since ten degrees is equal to 0.177 in radians. To get the energy we multiply this by $\omega^2/2=(v/r)^2/2$ so the first term in brackets cancels, and we're left with
-$E=8\times 10^{17}$J. This is not quite the right metric for wind power because the cross-sectional area here is huge, but it gives some sense of how much energy is available in wind.
+I &=& \rho V R_\Earth^2\cos^2\lambda\vs
+&=&\rho \, \left[ 1{\rm km}\times 2\pi R_\Earth^2 (0.09)\cos\lambda \right]\,\left[ R_\Earth^2\cos^2\lambda\right]\,
+ \eea
+since 5 degrees is equal to 0.09 in radians. To get the angular momentum we multiply by $\omega=v/R_\Earth\cos\lambda=2\times 10^{-6}$Hz, since $R_\Earth=6.4\times 10^6$m so
+\bea
+L&=&\rho \, \left[ 1{\rm km}\times \pi R_\Earth^2 (0.09)\sin\lambda \right]\,\left[ R_\Earth^2\cos^2\lambda\right]\,2\times 10^{-6}Hz\vs
+&\simeq& 10^{24} J-s = 10^{58}\hbar
+\eea
+To get the energy, we can simply use $L^2/2I$ or
+\be
+E = \frac{I\omega^2}{2} = 10^{18}J.\ee
+This is not quite the right metric for wind power. Better is the power density, the energy per volume multiplied by the speed. In this case the volume is $2\times10^{16}m^3$, so the power density is
+\be
+\mathcal{P} = 500 W/m^2
+.\ee
+The amount of power we could get out of this is limited by, among other things, how much of the area ($1.e3\times R_\Earth\time0.09=6\times 10^8m^2$) can be covered by wind turbines. In principle in this swath of the atmosphere, there is $3\times 10^{11}$W available, or about 1/3 of a TerraWatt.
 }
 
 \lecture{Energy Usage}
@@ -832,7 +865,7 @@ E = \frac{\hbar c}{\lambda}
 \item Discrete energy levels: $E_n$. For atomos and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
 \example{We estimated earlier that for $CO_2$,
 \be
-E_{l}^{\rm rot} = l(l+1) \,4.12\times 10^{-23}\, J\eql{co2rot}
+E_{l}^{\rm rot} = l(l+1) \,7.69\times 10^{-24}\, J\eql{co2rot}
 \ee}
 \item Photons absorbed means atomic/molecular transition from one state to another, with 
 \be
@@ -840,13 +873,13 @@ E_\gamma = E_2-E_1
 .\ee
 \example{Given the levels in \ec{co2rot}, we can calculate the energies of photons that will be absorbed. For example, the $l=0\rightarrow l=1$ transition is mediated by a photon with energy
 \be
-E_\gamma = 8.24\times 10^{-23} J\ee
+E_\gamma = 1.54\times 10^{-23} J\ee
 corresponding to a wavelength of 
 \be
-\lambda = \frac{2\pi\hbar c}{E_\gamma} = 1.5 \,{\rm cm}.\ee
-But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=8.33\times 10^{-20}$J). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 10^{-3} l \Delta E_v$, so the fractional shift is the wavelength will be $0.001l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
+\lambda = \frac{2\pi\hbar c}{E_\gamma} = 1.28 \,{\rm cm}.\ee
+But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=8.33\times 10^{-20}$J). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 1.8\times10^{-4} l \Delta E_v$, so the fractional shift is the wavelength will be $0.00018l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
 %Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 1\% or 6 cm$^{-1}$ on the plot. This is what is seen,.
-The wavenumbers due to rotational transitions should be of order 0.1\% the 15$\mu$ line at 666cm$^{-1}$. Indeed, they are spaced uniformly in intervals of 0.6 cm$^{-1}$.
+The wavenumbers due to rotational transitions should be of order 0.02\% the 15$\mu$ line at 666cm$^{-1}$. Indeed, they are spaced uniformly in intervals of 0.1 cm$^{-1}$.
 \Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note 15 microns corresponds to 667 cm$^{-1}$.}
 Note finally that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
 \Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
@@ -956,6 +989,15 @@ So, the width of the resonance scales as the square root of the temperature.
 
 \lsection{Production}
 
+\lsection{Insolation}
+
+\bei
+\item $T_\odot=5800$K
+\item This leads to a total radiation using Planck's Law of 63 million W/m$^2$ or a luminosity when integrating over the area of the Sun of $L_\odot=3.89\times 10^{26}$W.
+\Spng{solar_wavelength}{Emission from blackbody radiation as a function of wavelength.}
+\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1375 W/m$^2$.
+\item The very short wavelength part of this is absorbed in the upper atmosphere, say all wavelengths shorter than 0.3 microns, leading to 1331W/m$^2$.
+\eei
 \lsection{Variation of Insolation}
 
 \lsection{Absorbtion}
