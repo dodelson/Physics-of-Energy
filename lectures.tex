@@ -343,15 +343,19 @@ The amount of power we could get out of this is limited by, among other things, 
 
 \lecture{Energy Usage}
 \bei
-\item Annual Per Capita Energy Use is 73 GJ ($10^9$J)
 \item
-Annual World Energy Use in EJ is 562.1 EJ ($10^{18}$J)
+Annual World Energy Use in EJ is 600 EJ ($10^{18}$J)
 \item
-Global Power Use is 17.82 TW ($10^{12}$W)
+Global Power Use is $6.e20/(365*24*3600)$= 20 TW ($10^{12}$W)
 \item 
-Global Energy Consumption is then 156138 TW-hours $=562$ EJ
+J can be expressed as Watt-hours: 1W-hour=3.6kJ, or 1 MJ=278 W-hours
+\item 
+Global Energy Consumption, 600 EJ,  is then 170,000 TW-hours 
+\item Annual Per Capita Energy Use is 600/8 billion people = 75 GJ ($10^9$J)
 \item
-Daily Energy Use per capita is 200 MJ
+Daily Energy Use per capita is 75GJ/365=200 MJ=56kW-hours
+\item In the US, a kW-hour of electricity costs a little over 10cents, so we might expect an electric bill of order \$150/month.
+\item Many caveats to the above: more than one person in a house; lots of energy is expended in transportation; efficiency is not 100\%; commercial/industrial use  is large.
 \eei
 
 There is some data \href{https://github.com/owid/co2-data}{here}.
@@ -376,6 +380,9 @@ Fig.~\rf{intensity_country} shows the evolution for several different countries.
 
 \lecture{Heat and Thermal Energy}
 \lsection{Equipartition Theorem}
+
+\bei
+\item Translational Motion
 The kinetic energy of a system of $N$ particles is equal to
 \be
 \langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
@@ -399,7 +406,6 @@ C \left(\frac{2\pi k_BT}{m} \right)^{3/2}.
 So,
 \be
 f=N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, e^{-mv^2/2k_BT}.\ee
-
 We can now calculate the kinetic energy:
 \bea
 \langle E \rangle &=& N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\,  \int d^3v e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
@@ -415,10 +421,28 @@ We can now calculate the kinetic energy:
 \eea
 If we had done this in 1D, we would have gotten $k_BT/2$. In general, the variance of any one component of the velocity is $k_BT/m$, so in an isotropic equilibrium situation, there is a factor of 3. 
 
-The situation is more complex for more complex particles, starting with diatomic atoms. There, the book says you add $k_BT/2$ for each degree of freedom. 
-\comment{Redo this for a diatomic molecule at temperatures in the atmosphere, presumably only rotational degrees of freedom excited. Work out the energy.}
-
-Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: the energy of a harmonic oscillator is
+\example{5.1: How much energy does it take to heat the monatomic gas argon in the atmosphere by 1K?
+\bee 
+\item Mass of Atmosphere: 
+\be\rho=1.225 e^{-z/H} kg/m^3
+\ee
+with $H=8.5km\ll R_\Earth$. So,
+\be
+M = \rho_0 4\pi R_\Earth^2 \int_0^\infty e^{-z/H} = \rho_0 4\pi R_\Earth^2H
+\ee
+Taking $R_\Earth=6.37\times 10^6$m leads to $M=5.3\times 10^{18}$kg. 
+\item Argon atoms in atmosphere: Argon makes up about 1\% of this and the mass of a single argon atom is $6.63\times 10^{-26}$kg, so there are about $8\times 10^{41}$ argon atoms in the atmosphere.
+\item For each of these,
+\be
+\Delta E = \frac32 k_B\Delta T=1.5\times 1.38\times 10^{-23} J\ee
+So the total energy would be 17EJ.
+\eee
+}
+%with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
+\item Diatomic Molecule: Vibrational Motion
+The situation is more complex for more complex particles, starting with diatomic molecules. There, the book says you add $k_BT/2$ for each degree of freedom. 
+%Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: 
+The energy of a harmonic oscillator is
 \be
 E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
 Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
@@ -437,31 +461,65 @@ So,
 \be
 \langle E\rangle = N\left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\hbar\omega\beta}-1} \right).\eql{bare}\ee
 The first term is the zero-point energy and the second term is the energy due to thermal excitations.
-
 The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
 \be
 \langle E\rangle = NE_0\ee
 all the particles in the ground state. The other limit is the high temperature limit, in which case \be
 \langle E\rangle_{hi\, T} =Nk_BT\ee
 The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
-
-You can go through the same exercise for any degrees of freedom: rotational or the energy levels in an atom. You do not always get $k_BT/2$ for each degree of freedom, but the probability of finding a particle in a given energy state is always proportional to $e^{-E/k_BT}$ when the system is in equilibrium.
-
+Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
+\Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
+\item
 More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
 \be
 f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
 This turns out to be the Bose-Einstein occupation number.
-
-
-
-\example{5.1: Heating one mole of the monatomic gas argon from 300 to 600K requires 
+\item Diatomic Molecule: Rotational Energy. 
+\be E_{rot} = E_r L(L+1).\ee
+Our estimate for $CO_2$ was 
 \be
-E = \frac32 R\Delta T=3.7kJ\ee
-with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
+E_{rot}=7.69\times 10^{-24} J = 4.8\times 10^{-5} eV\ee
+so the corresponding temperature $T=E_{rot}/k_B=0.5K$. So, modes as large as $L=30$ can be excited. At all atmospheric temperatures, $k_bT\gg E_{rot}$. Hence, we can simply calculate the partition function:
+\be
+Z= \sum_l (2L+1)\,e^{-E_{rot}L(L+1)/k_BT} \rightarrow \int_0^\infty\, dx (2x+1)e^{-E_{rot}x(x+1)/k_bT}
+\ee
+where the $2L+1$ is the number of states for each level. Define $y\equiv E_{rot}x(x+1)/k_bT$. Then,
+\be
+Z= \frac{k_BT}{E_{rot}}\, \int dy e^{-y}
+.\ee
+The integral is equal to unity, so taking the derivative with respect to $\beta$ leads to
+\be
+\langle E_{rot}\rangle = k_BT.\ee
+Again, two degrees of freedom for the two modes of rotation.
+\item Solid: This follows simply from the vibrational calculation. No translational or rotational DOF, only 3 vibrational, so
+\be
+E_{lmn} = E_0\left (l+m+n+\frac32\right)\ee
+The partition function then becomes
+\be
+Z= \left( \frac{e^{-E_0\beta/2}}{1-e^{-E_0\beta}} \right)^3\ee
+so the internal energy becomes
+\be
+U - 3NE_0 \left( \frac12 + \frac1{e^{E_0\beta}-1} \right)\ee
+where asymptotes to $3Nk_BT$ in the limit of large temperature.
+\eei
+\example{
+Note that the specific heat of water is quite high. If we write
+\be
+c_p = \frac{N_D k_B}{2m_{H_2O}}\ee
+which corresponds to $0.23 N_D$ kJ/kg/K, or 18 degrees of freedom. \href{http://galileo.phys.virginia.edu/classes/304/h2o.pdf}{Section 5 here} explains that this can be understood if we treat water as a solid. In general, there are 6 degrees of freedom for a monatomic atom in a solid, so multiply this by the 3 atoms to get 18. 
+An 8-minute shower contains a volume of water equal to $9.5\times8$ liters.
+The specific heat of water is 4.18 kJ/(kg*K) from Table 5.2, while the density of water is
+997 $kg/m^3$. Therefore, the energy required is
+\be
+Q= c_p\times\rho\times V\times \Delta T.\ee
+Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of the average daily per capita use.}
+
+
+%\comment{This could also draw on the calculation in 8.7.3 and replace/supplement the one above.}
 
 
 
-\lsection{Pressure and Efficiency}
+\lecture{Pressure}
 
 Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension,
 \bei
@@ -517,19 +575,6 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 \item Diatomic (high $T$): $C_V=(7/2) N k_B$ because of the 2 vibrational and 2 rotational degrees of freedom.
 \eei
 
-\example{An 8-minute shower contains a volume of water equal to $9.5\times8$ liters.
-The specific heat of water is 4.18 kJ/(kg*K) from Table 5.2, while the density of water is
-997 $kg/m^3$. Therefore, the energy required is
-\be
-Q= c_p\times\rho\times V\times \Delta T.\ee
-Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of the average daily per capita use.}
-
-Note that the specific heat of water is quite high. If we write
-\be
-c_p = \frac{N_D k_B}{2m_{H_2O}}\ee
-which corresponds to $0.23 N_D$ kJ/kg/K, or 18 degrees of freedom. \href{http://galileo.phys.virginia.edu/classes/304/h2o.pdf}{Section 5 here} explains that this can be understood if we treat water as a solid. In general, there are 6 degrees of freedom for a monatomic atom in a solid, so multiply this by the 3 atoms to get 18. 
-
-\comment{This could also draw on the calculation in 8.7.3 and replace/supplement the one above.}
  
  \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
 
