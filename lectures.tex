@@ -780,6 +780,69 @@ A more sophisticated insulation system reduces the heat loss by a factor of 20 (
 
 \example{Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.}
 
+
+\lecture{Time Dependent Conduction}
+
+Applying Gauss's Law to \ec{cont} leads to
+\be
+\frac{\partial u(\vec x, t)}{\partial t} = -\nabla\cdot \vec q.\ee
+The time dependence is captured in the temperature dependence, and $dy/dT = \rho c_V$, so
+\be
+\rho c_V \dot T + \nabla\cdot \vec q = 0.\ee
+But then, there is Fourier's Law that $\vec q = -k \nabla T$, so
+\be
+\dot T - a\nabla^2 T=0,\ee
+with the thermal diffusivity $a$ defined as
+\be
+a \equiv \frac{k}{\rho c_V} .\ee
+
+Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
+\be
+\dot T + ak^2 T = 0.\ee
+The dimensions are right since $a$ has dimensions of $L^2/T$ and $k$ has dimensions of $L^{-1}$. Solving this lead to
+\be
+T_k(t) = T_0 + T_k(0) e^{-ak^2t}\ee
+where a constant value can be added, so really this is the sum of two plane waves, one with infinite wavelength. This generalizes to
+\be
+T(\vec x,t) = \sum_{\vec k} T_k e^{-i\vec k\cdot\vec x} e^{-ak^2t}.\eql{genheat}\ee
+So, in general, oscillations with wavelength $2\pi/k$ decay away on a time scale of order $1/k^2a$. The long wavelength oscillations take a longer time to decay. Similarly, a material with large diffusivity will come to equilibrium in very short times.
+
+Some examples, in units of $mm^2/s$:
+\bee
+\item Carbon: $a=217$
+\item Glass: 0.34
+\item Brick: 0.52
+\item Soil: 0.24
+\eee
+So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
+
+\lsection{Ground Temperature Seasonal Variation}
+Use the fact that
+\be T(z=0,t) = T_0 + \Delta T \sin(\omega t)
+\ee
+with $\Omega \equiv 2\pi/1$ year to determine the full solution as a function of depth below the soil (positive $z$). Focusing on the time-dependent part and decomposing into Fourier modes, we get
+\be
+i\omega T_\omega - a T''_\omega=0.\ee
+This has an exponential solution with $T_\omega \propto e^{\lambda z}$, with $\lambda$ a complex number satisfying
+\be
+i\omega - a\lambda^2 = 0.\ee
+Also, the real part of $\lambda$ must be negative so that the oscillations go away as you go deeper into the ground. The solution to this is
+\be
+\lambda = -\sqrt{\frac{\omega}{a}}\, e^{i\pi/4} = - \sqrt{\frac{\omega}{2a}}\, (1+i)
+\ee
+where the phase follows from $i^{1/2}$. The minus sign out front ensures that the real part is negative. We therefore have
+\be
+T(t,z) = C e^{i[\omega t- cz]}\,e^{-cz}
+\ee
+with
+\be
+c\equiv \sqrt{\omega/2a}\ee
+
+For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
+
+\comment{Do the ocean?}
+
+
 \lecture{Convection}
 
 Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? The net force on a stable volume element vanishes; it is equal to 
@@ -898,67 +961,6 @@ where the extra factor of $c$ is the velocity.
   \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
 \eee
 
-
-\lsection{Time Dependent Conduction}
-
-Applying Gauss's Law to \ec{cont} leads to
-\be
-\frac{\partial u(\vec x, t)}{\partial t} = -\nabla\cdot \vec q.\ee
-The time dependence is captured in the temperature dependence, and $dy/dT = \rho c_V$, so
-\be
-\rho c_V \dot T + \nabla\cdot \vec q = 0.\ee
-But then, there is Fourier's Law that $\vec q = -k \nabla T$, so
-\be
-\dot T - a\nabla^2 T=0,\ee
-with the thermal diffusivity $a$ defined as
-\be
-a \equiv \frac{k}{\rho c_V} .\ee
-
-Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
-\be
-\dot T + ak^2 T = 0.\ee
-The dimensions are right since $a$ has dimensions of $L^2/T$ and $k$ has dimensions of $L^{-1}$. Solving this lead to
-\be
-T_k(t) = T_0 + T_k(0) e^{-ak^2t}\ee
-where a constant value can be added, so really this is the sum of two plane waves, one with infinite wavelength. This generalizes to
-\be
-T(\vec x,t) = \sum_{\vec k} T_k e^{-i\vec k\cdot\vec x} e^{-ak^2t}.\eql{genheat}\ee
-So, in general, oscillations with wavelength $2\pi/k$ decay away on a time scale of order $1/k^2a$. The long wavelength oscillations take a longer time to decay. Similarly, a material with large diffusivity will come to equilibrium in very short times.
-
-Some examples, in units of $mm^2/s$:
-\bee
-\item Carbon: $a=217$
-\item Glass: 0.34
-\item Brick: 0.52
-\item Soil: 0.24
-\eee
-So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
-
-\lsection{Ground Temperature Seasonal Variation}
-Use the fact that
-\be T(z=0,t) = T_0 + \Delta T \sin(\omega t)
-\ee
-with $\Omega \equiv 2\pi/1$ year to determine the full solution as a function of depth below the soil (positive $z$). Focusing on the time-dependent part and decomposing into Fourier modes, we get
-\be
-i\omega T_\omega - a T''_\omega=0.\ee
-This has an exponential solution with $T_\omega \propto e^{\lambda z}$, with $\lambda$ a complex number satisfying
-\be
-i\omega - a\lambda^2 = 0.\ee
-Also, the real part of $\lambda$ must be negative so that the oscillations go away as you go deeper into the ground. The solution to this is
-\be
-\lambda = -\sqrt{\frac{\omega}{a}}\, e^{i\pi/4} = - \sqrt{\frac{\omega}{2a}}\, (1+i)
-\ee
-where the phase follows from $i^{1/2}$. The minus sign out front ensures that the real part is negative. We therefore have
-\be
-T(t,z) = C e^{i[\omega t- cz]}\,e^{-cz}
-\ee
-with
-\be
-c\equiv \sqrt{\omega/2a}\ee
-
-For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
-
-\comment{Do the ocean?}
 
 \lecture{Quantum Mechanics}
 
