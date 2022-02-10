@@ -588,9 +588,9 @@ The internal energy of the gas in the inner region is reduced by the work it doe
 dU = dQ - PdV.\ee
 When heat is added ($dQ>0$), then temperature will rise, so that $dQ=CdT$. If the volume is fixed (the piston does not move in the above example), then all the heat will go into increasing the temperature, so the temperature should rise more than if the piston moved (and the pressure remained constant because the density went down). We distinguish therefore between two heat capacities:
 \bea
-C_V&\equiv& \frac{\partial U}{\partial T}\Big\vert_V
+C_V&\equiv& \frac{\partial Q}{\partial T}\Big\vert_V
 \vs
-C_P&\equiv& \frac{\partial U}{\partial T}\Big\vert_P + P\frac{\partial V}{\partial T}\Big\vert_P.
+C_P&\equiv& \frac{\partial Q}{\partial T}\Big\vert_P + P\frac{\partial V}{\partial T}\Big\vert_P.
 \eea
 \item
 We have already computed $U$ for an ideal monatomic and diatomic gas. 
@@ -602,6 +602,11 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 \eee
  
  \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
+ 
+ The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
+ \be
+ Power = \frac{2.5N\times 1.38\times 10^{-23} \times 900}{300} W=10^{-22}NW\ee
+ So to get to 250MW, we require $N=2.5\times 10^{30}$ atoms. This corresponds to a mass of $1.67\times 10^{4}$kg.
 
 The heat added to the turbines by a mass $m$ is 
 \be
@@ -667,23 +672,25 @@ k = \frac13 nm c_v l\bar v.\ee
 Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
 .\ee
 
-
-It is hard to go much further than this without more details but a couple of notes:
-\bee
-\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
-\item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
-\item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
-\item For a liquid like water, the mean free path is rougly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
-\be
-k=0.25 {\rm W/kg\,m}\ee
-a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
-\item The electrical conductivity can be calculated in a similar way, and the relationship leads to
+The electrical conductivity can be calculated in a similar way, and the relationship leads to
 \be
 \frac{\kappa}{\sigma} = LT\ee
 where $L$ is the Lorenz number. This empirical relation was discovered in the 1800's; the theoretical justification came from quantum mechanics. You can calculate that
 \be
 L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
 This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
+\lecture{Conductivity}
+
+It is hard to go much further than this without more details but a couple of notes:
+\bee
+\item For a liquid like water, the mean free path is rougly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
+\be
+k=0.25 {\rm W/K\,m}\ee
+a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
+\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
+\item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
+\item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
+
 \eee
 
 
