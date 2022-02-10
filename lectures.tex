@@ -679,27 +679,35 @@ where $L$ is the Lorenz number. This empirical relation was discovered in the 18
 \be
 L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
 This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
-\lecture{Conductivity}
 
+\lecture{Conduction II}
+
+\be
+k = \frac13 nm c_v l\bar v.\ee
+Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
+.\ee
 It is hard to go much further than this without more details but a couple of notes:
 \bee
+\item $k$ has dimensions of $E/(t\times L\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, at fixed temperature difference, more heat flows  if glass separates the two regions than if air does. %meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
+\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
+\item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
+\item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
 \item For a liquid like water, the mean free path is rougly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
 \be
 k=0.25 {\rm W/K\,m}\ee
 a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
-\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
-\item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
-\item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
-
 \eee
 
 
-$k$ has dimensions of $E/(T\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
 
-\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $26^\circ$. How long would it take conduction to equilibrate these? Heat flows at a rate of 
+\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
+\bee
+\item Heat flows at a rate of 
 \be
-q=0.026\times \frac{26}{1.2\times 10^6} W/m^2=5.6\times 10^{-7} W/m^2. \ee
-So a square region in front of Pittsburgh that is 10km high and wide will receive 56 W of heat from Atlanta. This is less than a light bulb.}
+q=0.026\times \frac{13}{1.2\times 10^6} W/m^2=52.8\times 10^{-7} W/m^2. \ee
+So a square region in front of Pittsburgh that is 10km high and wide will receive 30 W of heat from Atlanta. This is less than a light bulb.
+\item How much heat flows into a volume of order $10^3km^3$ during a single day?  Multiply by the number of second in a day: $8.6\times 10^4$ to get 2.5MJ/day.
+\item How much does this increase the temperature: $\Delta T = Q/c_pm=2.5\times 10^6J/(10^3J/kg/K\times (1.25\times 10^{12}kg) =2\times 10^{-9}K$/day. So it makes sense that the South is colder than the North throughout the winter.\eee}
 
 
 
@@ -707,7 +715,7 @@ So a square region in front of Pittsburgh that is 10km high and wide will receiv
 \be
 q=-k\frac{dT}{dx}
 \ee
-If this is, for example, air flow through a wall or window, the heat coming in equal the heat coming out, so $dU/dt=0$ and applying Gauss's Law to the right hand side of \ec{cont} leads to
+If this is, for example, air flow through a wall or window, the temperature on either end is kept constant, so $dU/dt=0$ and applying Gauss's Law to the right hand side of \ec{cont} leads to
 \be
 \nabla\cdot \vec q = 0 \rightarrow \frac{dq}{dx}=0
 ,\ee i.e., $q$ is constant. The relevant differential equation is then
@@ -721,50 +729,58 @@ or
 \be
 q=k \frac{T_0-T_1}{L}
 .\ee
-For example, for glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature different, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. The final expression for the temperature gradient is
+The final expression for the temperature gradient is
 \be
 T=T_0 - x \frac{T_0-T_1}{L}.\ee
-Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.}
 
-Combine the impact of different materials in series leads to:
+For example, for glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature difference, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.}
+
+It is clear that the relevant variable is {\it thermal resistance}:
+\be
+R_{\rm thermal} \equiv \frac{L}{k}
+\ee
+so that the heat flux is
+\be
+q = \frac{\Delta T}{R}.\ee
+
+Combine the impact of different materials in series. Since $q$ is constant,
+\be
+qR_i= \Delta T_i
+\ee
+and summing up to get the full temperature difference leads to
 \be
 q=\frac{\Delta T}{R_{tot}}\ee
 with
 \be
-R_{total} = \sum_i \frac{L_i}{k_i}
+R_{total} = \sum_i R_i
 .\ee
-\example{In the example above, what was neglected was the boundary layer on either side of the window. The window itself contributes $R_w=0.005$ m$^2$K/W, but $R_{inside}=0.12$ m$^2$K/W and $R_{outside}=0.03$ m$^2$K/W, so $R_{tot}=0.16$ m$^2$K/W. This gets the loss down to 3kW-hours per day.}
+\example{In the example above, what was neglected was the boundary layer on either side of the window. The window itself contributes $R_w=0.005$ m$^2$K/W, but $R_{inside}=0.12$ m$^2$K/W and $R_{outside}=0.03$ m$^2$K/W, so $R_{tot}=0.155$ m$^2$K/W. This gets the heat flux down to $129$W/m$^2$, so a loss down to 3kW-hours per day.}
 
-In the above example, we can also estimate the temperature on the inside and outside of the window. Since air has $k=1$ in these units, 
+In the above example, we can also estimate the temperature on the inside and outside of the window. [Since air has $k=1$ in these units, 
 \bea
 L_i &=&0.12 m\vs
-L_0 &=& 0.03 m
-\eea
+L_o &=& 0.03 m
+\eea]
 Since the temperature follows the simple solution of \ec{fourier}, the temperature on the inside of the window
 satisfies
 \be
-T_0-T_i=\frac{qL_i}{k} = 0.12 q \frac{m^2K}{W}
+T_{\rm room}-T_i=qR_i = 0.12 \times 129K=15.5
 .\ee
-But, in this case,
-\be
-q= \frac{20}{.16} W/m^2
-= 125 W/m^2
-\ee
-so, the temperature right at the inner surface of the window is 15K cooler than in the rest of the room.
+So the temperature right on the window in the inside is 15.5$^\circ$C colder than the rest of the room. Then the temperature right on the outside of the window is $129\times .005K=.645^\circ$ cooler, a little lower than 4$^\circ$C.
 
 \example{Example 6.2 is a realistic estimate of how much heat it takes to warm an entire house $20^\circ$ C. 
 The average house size in the US is about 2000 square feet, call it $14\times 14$ m$^2$ for simplicity. This means the walls have an area of $14\times 3*2 + 14*3*2=168$ sq. ft (if the height is 3m) and the ceiling has area 196 m$^2$ for a total area emitting heat (apart from the ground) of about 365 m$^2$. 
 \bei
-\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 45kW.
+\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 33kW.
 \eei
 }
-To put this in context, over the course of one year, the energy required to heat this one house would be $1.4$ GJ. Assuming there are close to 100 million single family houses in the US, that leads to 140EJ, which itself would be 1/3 of the world's energy consumption. There are problems with the estimate: $\Delta T$ is not $20^\circ$C at all times and in all places, but it is clearly way too high. 
+To put this in context, over the course of one year, the energy required to heat this one house would be $10^{12}$J. Assuming there are close to 100 million single family houses in the US, that leads to 100EJ, which itself would be 1/5 of the world's energy consumption. There are problems with the estimate: $\Delta T$ is not $20^\circ$C at all times and in all places, but it is clearly way too high. 
 
-A more sophisticated insulation system reduces the heat loss by a factor of 20 (see next example), but this is still about 1 EJ, compared with 500 EJ for all humanity, so this is a fairly large chunk of energy.
+A more sophisticated insulation system reduces the heat loss by a factor of 20 (see next example), but this is still about 5 EJ, compared with 500 EJ for all humanity, so this is a fairly large chunk of energy.
 
 \example{Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.}
 
-\lsection{Convection}
+\lecture{Convection}
 
 Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? The net force on a stable volume element vanishes; it is equal to 
 \be
