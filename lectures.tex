@@ -845,6 +845,13 @@ For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
 
 \lecture{Convection}
 
+\bei
+\item Archimedes' Buoyancy Principle: Suppose a stationary fluid element is replaced by some object. The fluid initially was not moving because the force of gravity on it $\rho_aVg$ balanced the upwards force of pressure: $\Delta P A$. The new object will feel an effective force:
+\be
+F_{\rm o} = m_og - \Delta PA = gV\left(\rho_o-\rho_a\right).\ee
+So, if the density in the object is less than the ambient fluid, it will feel an upwards force. 
+\item Since density is inversely proportional to temperature, this means that typically hot air will rise.
+\item 
 Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? The net force on a stable volume element vanishes; it is equal to 
 \be
 \Delta F_{net}= -\Delta P A - g\rho A\Delta z
@@ -854,7 +861,7 @@ where the first sign is negative because pressure that decreases with height cor
 \frac{dP}{dz} = -g\rho
 .\ee
 The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
-
+\eei
 \homework{Consider a perfectly elastic ball of mass $m$ bouncing up and down on a horizontal surface under the influence of gravity. Prove that averaged over time, the downward force of the ball on the floor is equal to $mg$. Generalize that to show that the pressure of air on the surface of the Earth is equal to $\int dz \rho g$.}
 
 
@@ -910,6 +917,24 @@ dP = dT \frac{\rho k_B}{m}\left[
  \right] \ee
  But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
 \ec{conveq}.
+
+
+{\it Aside: Start from
+\be
+c_vdT=PVd\rho/\rho
+.\ee
+For an ideal gas $P=\rho c_v T$, do $dP=d\rho c_v T + \rho c_vdT$ so,
+\be
+c_v dT = \frac1{\rho}\,\left[ dP - d\rho c_v T\right]
+\ee
+Therefore,
+\be
+\left[ dP - d\rho c_v T\right] = PVd\rho.
+ \ee
+ This leads to 
+ \be
+ \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+\ee, the solution to which is $P\propto \rho^\gamma$.}
 
 We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
 \be
