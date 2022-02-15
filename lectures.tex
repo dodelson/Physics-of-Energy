@@ -781,7 +781,7 @@ A more sophisticated insulation system reduces the heat loss by a factor of 20 (
 \example{Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.}
 
 
-\lecture{Time Dependent Conduction}
+\lecture{Time Dependent Conduction and Convection}
 
 Applying Gauss's Law to \ec{cont} leads to
 \be
@@ -796,33 +796,33 @@ with the thermal diffusivity $a$ defined as
 \be
 a \equiv \frac{k}{\rho c_V} .\ee
 
-Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
-\be
-\dot T + ak^2 T = 0.\ee
-The dimensions are right since $a$ has dimensions of $L^2/T$ and $k$ has dimensions of $L^{-1}$. Solving this lead to
-\be
-T_k(t) = T_0 + T_k(0) e^{-ak^2t}\ee
-where a constant value can be added, so really this is the sum of two plane waves, one with infinite wavelength. This generalizes to
-\be
-T(\vec x,t) = \sum_{\vec k} T_k e^{-i\vec k\cdot\vec x} e^{-ak^2t}.\eql{genheat}\ee
-So, in general, oscillations with wavelength $2\pi/k$ decay away on a time scale of order $1/k^2a$. The long wavelength oscillations take a longer time to decay. Similarly, a material with large diffusivity will come to equilibrium in very short times.
-
-Some examples, in units of $mm^2/s$:
-\bee
-\item Carbon: $a=217$
-\item Glass: 0.34
-\item Brick: 0.52
-\item Soil: 0.24
-\eee
-So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
+%Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
+%\be
+%\dot T + ak^2 T = 0.\ee
+%The dimensions are right since $a$ has dimensions of $L^2/T$ and $k$ has dimensions of $L^{-1}$. Solving this lead to
+%\be
+%T_k(t) = T_0 + T_k(0) e^{-ak^2t}\ee
+%where a constant value can be added, so really this is the sum of two plane waves, one with infinite wavelength. This generalizes to
+%\be
+%T(\vec x,t) = \sum_{\vec k} T_k e^{-i\vec k\cdot\vec x} e^{-ak^2t}.\eql{genheat}\ee
+%So, in general, oscillations with wavelength $2\pi/k$ decay away on a time scale of order $1/k^2a$. The long wavelength oscillations take a longer time to decay. Similarly, a material with large diffusivity will come to equilibrium in very short times.
+%
+%Some examples, in units of $mm^2/s$:
+%\bee
+%\item Carbon: $a=217$
+%\item Glass: 0.34
+%\item Brick: 0.52
+%\item Soil: 0.24
+%\eee
+%So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
 
 \lsection{Ground Temperature Seasonal Variation}
 Use the fact that
-\be T(z=0,t) = T_0 + \Delta T \sin(\omega t)
+\be T(z=0,t) = T_0 + \Delta T \cos(\omega t) \rightarrow \Delta T {\rm Re}\left[ e^{i\omega t}\right]
 \ee
-with $\Omega \equiv 2\pi/1$ year to determine the full solution as a function of depth below the soil (positive $z$). Focusing on the time-dependent part and decomposing into Fourier modes, we get
+ focusing on the time-dependent part and writing it in a form that makes it easy to decompose into Fourier modes. The frequency $\Omega \equiv 2\pi/1$ year. To determine the full solution as a function of depth below the soil (positive $z$) write $T(z,t)=\sum_\omega T_\omega e^{i\omega t}$ with the understanding that we will take the real part at the end. Then, we get
 \be
-i\omega T_\omega - a T''_\omega=0.\ee
+i\omega T_\omega - a \frac{d^2T_\omega}{dz^2}=0.\ee
 This has an exponential solution with $T_\omega \propto e^{\lambda z}$, with $\lambda$ a complex number satisfying
 \be
 i\omega - a\lambda^2 = 0.\ee
@@ -832,27 +832,32 @@ Also, the real part of $\lambda$ must be negative so that the oscillations go aw
 \ee
 where the phase follows from $i^{1/2}$. The minus sign out front ensures that the real part is negative. We therefore have
 \be
-T(t,z) = C e^{i[\omega t- cz]}\,e^{-cz}
+T(t,z) = \Delta T e^{i[\omega t- cz]}\,e^{-cz}
 \ee
 with
 \be
 c\equiv \sqrt{\omega/2a}\ee
 
-For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m.
+\bee
+\item For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m. 
+\item Taking $T=10^\circ$C and $\Delta T=12^\circ$C and $t=0$ corresponds to the heat of the summer, you get exponential suppression with a length scale of 1.6m.
+\item Three months later, in Fall, $\omega t=\pi/2$, so the temperature at the surface is 10$^\circ$ but as you go down the temperature increases.
+\item In the winter, you get the exponential decrease in magnitude, but in the Spring again the surface temperature is the mean temperature than the ground temperature is lower than surface.
+\eee
 
-\comment{Do the ocean?}
+%\comment{Do the ocean?}
 
 
-\lecture{Convection}
+\lsection{Convection}
 
 \bei
 \item Archimedes' Buoyancy Principle: Suppose a stationary fluid element is replaced by some object. The fluid initially was not moving because the force of gravity on it $\rho_aVg$ balanced the upwards force of pressure: $\Delta P A$. The new object will feel an effective force:
 \be
 F_{\rm o} = m_og - \Delta PA = gV\left(\rho_o-\rho_a\right).\ee
 So, if the density in the object is less than the ambient fluid, it will feel an upwards force. 
-\item Since density is inversely proportional to temperature, this means that typically hot air will rise.
+\item Since density is inversely proportional to temperature, this means that hot air will rise as long as the density remains constant.
 \item 
-Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dr$ upwards? The net force on a stable volume element vanishes; it is equal to 
+Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The net force on a stable volume element vanishes; it is equal to 
 \be
 \Delta F_{net}= -\Delta P A - g\rho A\Delta z
 \ee
@@ -862,7 +867,6 @@ where the first sign is negative because pressure that decreases with height cor
 .\ee
 The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
 \eei
-\homework{Consider a perfectly elastic ball of mass $m$ bouncing up and down on a horizontal surface under the influence of gravity. Prove that averaged over time, the downward force of the ball on the floor is equal to $mg$. Generalize that to show that the pressure of air on the surface of the Earth is equal to $\int dz \rho g$.}
 
 
 If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
@@ -899,7 +903,11 @@ Plugging in leads to:
 -\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dr} > -\frac{dT}{dr}\eql{conveq}
 \ee
 The left hand side is called the adiabatic lapse rate or temperature gradient. Both left and right sides are positive because pressure and temperature decrease as you go up.
-So, this equation says that there is no instability, no convection, if the temperature gradient (absolute value) is smaller than the adiabatic value. If it is larger, then the cool air rises.
+So, this equation says that there is no instability, no convection, if the temperature gradient (absolute value) is smaller than the adiabatic value. If it is larger, then the hot air rises.
+
+\lecture{Convection, continued, and Quantum Mechanics}
+
+
 
 There is another way to do this: apply the first law:
 \be
@@ -919,22 +927,35 @@ dP = dT \frac{\rho k_B}{m}\left[
 \ec{conveq}.
 
 
-{\it Aside: Start from
+{\it Aside: In the adiabatic case, $dQ=0$, so 
 \be
-c_vdT=PVd\rho/\rho
+c_vdT= - PdV=PVd\rho/\rho
 .\ee
-For an ideal gas $P=\rho c_v T$, do $dP=d\rho c_v T + \rho c_vdT$ so,
+For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
 \be
-c_v dT = \frac1{\rho}\,\left[ dP - d\rho c_v T\right]
-\ee
-Therefore,
+c_v dT  = PV [\frac{dP}P - dT/T] \ee
+or
 \be
-\left[ dP - d\rho c_v T\right] = PVd\rho.
- \ee
- This leads to 
- \be
- \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
-\ee, the solution to which is $P\propto \rho^\gamma$.}
+dT \left[ c_v + \frac{PV}{T} \right] = V dP
+.\ee
+But the term in square brackets is $c_p$, so
+\be
+c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
+or
+\be
+\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
+%
+%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
+%\ee
+%Therefore,
+%\be
+%\left[ dP - d\rho c_v T\right] = PVd\rho.
+% \ee
+% This leads to 
+% \be
+% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+%\ee, 
+the solution to which is $P\propto \rho^\gamma$.}
 
 We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
 \be
