@@ -1051,7 +1051,24 @@ with
 \be
 E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}
 .\ee
-\example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
+\example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm, roughly true when $A\sim100$; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
+
+\example{Nucleus, Take 2:} There are $Z$ protons and $N$ neutrons. No state can be occupied by more than one identical particle, although a 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
+\be
+E = 2\frac{\hbar^2\pi^2}{2ML^2}\, \left( \sum_{n=1}^{Z/2} n^2 + \sum_{n=1}^{N/2} n^2 \right).\ee
+Approximate the sum as an integral (good approximation for large $Z,N$ so that each is equal $(X/2)^3/3=(Z,N)^3/24$. Then the energy of this ground state is
+\be
+E = \frac{\hbar^2\pi^2}{24ML^2} \left( Z^3 + (A-Z)^3 \right)\ee
+Now, because of the repulsive short range force,  the density is fixed even as the number of nucleons increases. So set the number of nucleons per length to be $\rho=A/L$; then
+\be
+E = \frac{\hbar^2\pi^2\rho^2}{24MA^2} \left( Z^3 + (A-Z)(A^2-2AZ+Z^2).  \right)\ee
+The term in parentheses is 
+\be
+A^3 -ZA^2 -2A^2Z + 2AZ^2 + AZ^2 = A^3 + 3AZ(Z-A)\ee
+So,
+\be
+E = \frac{\hbar^2\pi^2\rho^2}{24M} \left( A -3ZN).  \right)\ee
+
 %Take $m=m_e$; $L=a_0$, the Bohr radius, 0.529$\AA$. Then the energy difference between the first two levels is }
 
 \lsection{Width of state: decays; section 15.4}
@@ -1063,6 +1080,20 @@ E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}
 \lecture{Nuclear Power}
 
 \lsection{Overview}
+\bei
+\item Current capacity is about 400 GW (compared to 15TW required), so currently about 3\% of power generated.
+\item Nuclei that decay produce neutrons with energies of order 1 MeV per nucleon, about 200MeV for heavy nuclei.
+\item Neutrons can collide with heavy nuclei and induce more decays
+\item Slow neutrons are most effective at this, so a reactor requires a {\it moderator}, a material like water that the neutrons collide with and lose energy to (thermalize!).
+\item The {\it coolant} transports the energy out of the core of the reactor to turbines that generate electricity.
+\eei
+
+Notation: each element contains $Z$ protons and $N$ neutrons for a total of $A$ nuclei. $A$ is usually written as the superscript with either $Z$ or the chemical symbol coming after it. For example, the isotope $^{235}U= {}^{235}{92} = {}^{235}_{92}U$ of uranium is less than 1\% of naturally occurring uranium, but it is the most efficient fuel. \example{Energy produced by 1 kg of $^{235}$U: each decay produces about 235 MeV, and each element weighs $235\times 1.67\times 10^{-27}$kg. So, 1kg produces $.6\times 10^{27}$ MeV, which corresponds to $.6\times 10^{27}\times 10^6 \times 1.6\times 10^{-19}$ J/eV, or about $10^{14}$J. Typically these plants are only about 33\% efficient so 1kg  can generate about $3\times 10^{13}$J per year. Compare this to total usage: $6\times 10^{20}J$.}
+
+\bee
+\item The take-away is that 1 tonne of $^{235}$ can produce $3\times 10^{16}$J/year; since 1GW-year = $3\times 10^{16}$J, 1 tonne can produce about 1 GW-yrs. Since $^{235}$U is only 0.72\% of all uranium, a 1GW plant requires 140 tonnes of uranium. It's a bit worse than this because not all the $^{235}$U is used as fuel, so a rough estimate is 200 tonnes of natural uranium for a GW plant.
+\item Getting say 10\% of current 15 TW then would require $1500\times 200=3\times 10^5$ tonnes mined per year. This is a larger rate than say tin so seems unlikely. The suggests that 1/3 of this is not unreasonable.Total resources are uncertain but rough estimates put it at $10^7$ tonnes, which  would last 100 years if we could extract it at a higher rate than today, and even that produces only 10\% of our needs.
+\eee
 
 \lsection{Nuclear Physics}
 
