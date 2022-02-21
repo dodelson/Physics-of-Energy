@@ -907,115 +907,98 @@ So, this equation says that there is no instability, no convection, if the tempe
 
 \lecture{Convection, continued, and Quantum Mechanics}
 
+Reading: Finish Chapter 6, Chapter 7, Section 22.3
 
-
-There is another way to do this: apply the first law:
-\be
-dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
-where the last equality follows from $\rho\propto V^{-1}$.
-Then, for an ideal gas,
-\be
-dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
-=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
-\ee
-Consolidating leads to
-\be
-dP = dT \frac{\rho k_B}{m}\left[ 
-\frac{c_vT}{PV} + 1
- \right] \ee
- But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
-\ec{conveq}.
-
-
-{\it Aside: In the adiabatic case, $dQ=0$, so 
-\be
-c_vdT= - PdV=PVd\rho/\rho
-.\ee
-For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
-\be
-c_v dT  = PV [\frac{dP}P - dT/T] \ee
-or
-\be
-dT \left[ c_v + \frac{PV}{T} \right] = V dP
-.\ee
-But the term in square brackets is $c_p$, so
-\be
-c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
-or
-\be
-\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
-%
-%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
-%\ee
-%Therefore,
-%\be
-%\left[ dP - d\rho c_v T\right] = PVd\rho.
-% \ee
-% This leads to 
-% \be
-% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
-%\ee, 
-the solution to which is $P\propto \rho^\gamma$.}
-
-We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
-\be
-\frac{dP}{P} = \frac{\gamma}{\gamma-1}\,\frac{dT}{T}
-\ee
-and then integrating leads to
-\be
-P = P_0 \left( \frac{T}{T_0} \right)^{\gamma/(\gamma-1)}.\ee
-Identifying $T_0$ with $\theta$, the potential temperature, and then inverting leads to 
-\be
-\theta = T\,\left( \frac{P_0}{P} \right)^{1-1/\gamma}
-\ee
-For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
-
-\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
-
-\lsection{Radiative Transfer}
-
-Derive Stefan-Boltzmann law:
+Heat Loss Mechanisms:
 \bee
-\item Start with a sphere of radius $R$ containing photons of a given energy $E$ corresponding to momentum $pc$. 
-\item Suppose these are uniformly distributed with density $f(E)$  (similar to distribution of velocities for particles), so that each box in phase space with volume $d^3r d^3p = h^3$ has this number of photons in it
-\item At any point in the surface, the energy leaving the volume per time is
-\be
- \frac{dQ}{dt} _r = \frac{dQ}{dR}\,\frac{dR}{dt} =  \vec p \cdot \hat r f(\vec p) cR^2 d\Omega d^3p \,\times c 
-\ee
-where the extra factor of $c$ is the velocity.
-\item The total energy carried by these photons with this energy passing through the surface is\footnote{This is not quite right because any value of $\theta<\pi/2$ does not escape, but that factor of 2 is compensated because there are two spin degrees of freedom for the photon.}
-\be
- d^3p f(\vec p)pc^2R^2\int_0^\pi d\theta \int_0^{2\pi} d\phi  \cos\theta = d^3p 2\pi R^2  f(\vec p)pc
- \ee
- \item Now sum over all momentum: in a given small region of space and momentum, the {\it volume} of the phase space is $(2\pi \hbar)^3$. So instead of summing, when integrating, this leads to
- \be
-  \frac{dQ}{dt}  = \frac{Ac^2}{2} \int \frac{d^3p}{(2\pi\hbar)^3}\, f(\vec p)p
- \ee
- \item Putting in the Bose-Einstein distribution leads to
- \be
-  \frac{dQ}{dt} = \frac{Ac^2}{4\pi^2\hbar^3}\, \int_0^\infty \frac{dp\,p^3}{e^{pc/k_BT} - 1}.\ee
- \item Changing variables to $x=pc/k_BT$ leads to 
- \be
-  \frac{dQ}{dt} = \frac{A(k_BT)^4}{4\pi^2\hbar^3c^2}\, \int_0^\infty \frac{dx\,x^3}{e^{x} - 1}
-  .\ee
-  \item The integral is just a number $\pi^4/15$, so the flux is
-  \be
-   \frac{dQ}{dt}  = \frac{A\pi^2(k_BT)^4}{60\hbar^3c^2} = A\sigma T^4
-  \ee
-  where the Stefan-Boltzmann constant is defined as
-  \be
-  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\item Conduction: Fast Molecules from hot region randomly migrate to cooler region and vise versa
+\item Convection: Whole parcels of fluids move up or down due to gravity {\bf if} the temperature drops too steeply as you go up: the hot air from the ground moves up to reduce this steep drop.
+\item Radiative Heating (coming)
 \eee
 
+Condition for convective stability:
+\be
+\Gamma_{\rm adiabatic} > -\frac{dT}{dz}\ee
+where the adiabatic lapse rate is defined as
+\bea
+-\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dz} &=& \left(\frac{C_P-C_V}{C_P}\right) \frac{T}{P}\, \rho g
+\vs
+&=&
+ \frac{Nk_BT}{P}\, \frac{\rho}{C_P}\, g
+\vs
+&=&
+\frac{M}{C_P}\,g\vs&=&
+c_p g.\eea
+For air, $c_p=10^3$J/kg/K, so
+$\Gamma_{\rm adiabatic} \simeq 10K/km$. 
 
-\lecture{Quantum Mechanics}
+Three possible temperature profiles:
+\bee
+\item Isothermal
+\item Adiabatic, $T=T_0-\Gamma_{\rm ad} z$
+\item Actual, somewhere in between, on average with $\Gamma\simeq 6.5$K/km. If the lapse rate were larger than the adiabatic lapse rate, convection would push it back to the adiabatic rate.  %Because the pressure is decreasing with distance $dP/dz=-\rho g$, an ideal gas ($P\propto \rho T$)
+\eee
+
+%
+%There is another way to do this: apply the first law:
+%\be
+%dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
+%where the last equality follows from $\rho\propto V^{-1}$.
+%Then, for an ideal gas,
+%\be
+%dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
+%=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
+%\ee
+%Consolidating leads to
+%\be
+%dP = dT \frac{\rho k_B}{m}\left[ 
+%\frac{c_vT}{PV} + 1
+% \right] \ee
+% But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
+%\ec{conveq}.
+%
+%
+%{\it Aside: In the adiabatic case, $dQ=0$, so 
+%\be
+%c_vdT= - PdV=PVd\rho/\rho
+%.\ee
+%For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
+%\be
+%c_v dT  = PV [\frac{dP}P - dT/T] \ee
+%or
+%\be
+%dT \left[ c_v + \frac{PV}{T} \right] = V dP
+%.\ee
+%But the term in square brackets is $c_p$, so
+%\be
+%c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
+%or
+%\be
+%\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
+%%
+%%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
+%%\ee
+%%Therefore,
+%%\be
+%%\left[ dP - d\rho c_v T\right] = PVd\rho.
+%% \ee
+%% This leads to 
+%% \be
+%% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+%%\ee, 
+%the solution to which is $P\propto \rho^\gamma$.}
+
+
+
+
+\lsection{Quantum Mechanics}
 
 \bei
 \item Light comprised of photons with energy
 \be
-E = \frac{\hbar c}{\lambda}
+E = pc = \frac{hc}{\lambda} =h\nu = \hbar\omega
 .\ee
-\item Discrete energy levels: $E_n$. For atomos and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
+\item Discrete energy levels: $E_n$. For atoms and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
 \example{We estimated earlier that for $CO_2$,
 \be
 E_{l}^{\rm rot} = l(l+1) \,7.69\times 10^{-24}\, J\eql{co2rot}
@@ -1030,14 +1013,93 @@ E_\gamma = 1.54\times 10^{-23} J\ee
 corresponding to a wavelength of 
 \be
 \lambda = \frac{2\pi\hbar c}{E_\gamma} = 1.28 \,{\rm cm}.\ee
-But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=8.33\times 10^{-20}$J). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 1.8\times10^{-4} l \Delta E_v$, so the fractional shift is the wavelength will be $0.00018l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
+But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=1.33\times 10^{-20}$J or $0.083$ eV). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 1.2\times10^{-3} l \Delta E_v$, so the fractional shift is the wavelength should be $0.0012l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
 %Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 1\% or 6 cm$^{-1}$ on the plot. This is what is seen,.
-The wavenumbers due to rotational transitions should be of order 0.02\% the 15$\mu$ line at 666cm$^{-1}$. Indeed, they are spaced uniformly in intervals of 0.1 cm$^{-1}$.
-\Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note 15 microns corresponds to 667 cm$^{-1}$.}
+The wavenumbers due to rotational transitions should be of order 0.1\% the 15$\mu$ line at $1/\lambda=$666cm$^{-1}$ or about .7cm$^{-1}$. They are a bit smaller than this suggesting that the situation is more complicated. 
+\Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note the fundamental 15 micron line ($n=0\rightarrow n=1$) lies at $1/\lambda=$ 667.5 cm$^{-1}$.}
+}\eei
+%\comment{Check Neil's notes on this.}
+
+
+\lsection{Radiative Transfer}
+
+Derive Stefan-Boltzmann law:
+\bee
+%\item Start with a sphere of radius $R$ containing photons of a given energy $E$ corresponding to momentum $pc$. 
+\item Suppose these are uniformly distributed with density $f(E)$  (similar to distribution of velocities for particles), so that each box in phase space with volume $d^3r d^3p = h^3$ has this number of photons in it
+\item The energy density therefore is
+\bea
+U(\omega) &=& 2 \frac{d^3p}{(2\pi\hbar)^3}\, f(p) \, pc \vs
+&=&
+\frac{2\hbar}{(2\pi c)^3}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\, d\Omega
+\eea
+\item This already carries a lot of information about the {\it spectrum}. It peaks at $\hbar\omega=2.82k_BT$ and falls off exponentially after that. Plotted vs. wavelength, it peaks at $5k_BT$. For example, if the temperature were $6000$K, it would peak at \bea
+\lambda &=& \frac{c}{\nu} \vs
+&=& \frac{hc}{\hbar\omega}\vs
+&=&
+\frac{h c}{5k_BT}
+\vs
+&=&
+\frac{6.63\times 10^{-34}J-s 3\times 10^8m/s}{5*1.38*10^{-23} * 6000 J} =500 nm
+\eea\eee
+
+\lecture{Quantum Mechanics II}
+\bee
+\item The energy emitted per time per frequency is just obtained by multiply by $c\cos\theta$ and integrating over angles $\theta<\pi/2$:
+\be
+\int d\Omega = 2\pi \int_0^{\pi/2} d\theta\sin\theta\cos\theta = \pi.\ee
+Therefore,
+\be
+\frac{dE}{dtdA} = \frac{\hbar}{(2\pi c)^2}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\ee
+Note that this has units of W/m$^2$, our usual metric for how energy is transported.
+\item Finally, we can carry out the integral. It becomes
+\bea
+\frac{dE}{dtdA} &=&  \frac{\hbar}{(2\pi c)^2}\, \int_0^\infty   \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}
+\vs
+&=&
+  \frac{\hbar}{(2\pi c)^2}\, \left(\frac{k_BT}{\hbar}\right)^4\,\int_0^\infty \frac{x^3 dx}{e^x-1}
+  \vs
+  &=& 
+  \frac{(k_BT)^4}{\hbar^3c^2}\, \frac{\pi^4}{15}\,\frac1{4\pi^2}
+  \vs
+&  \equiv& \sigma T^4
+\eea
+with the Stefan-Boltzmann constant
+\be
+\sigma = \frac{\pi^2 k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} W/m^2/K^4.\ee
+%\item At any point in the surface, the energy leaving the volume per time is
+%\be
+% \frac{dQ}{dt} _r = \frac{dQ}{dR}\,\frac{dR}{dt} =  \vec p \cdot \hat r f(\vec p) cR^2 d\Omega d^3p \,\times c 
+%\ee
+%where the extra factor of $c$ is the velocity.
+%\item The total energy carried by these photons with this energy passing through the surface is\footnote{This is not quite right because any value of $\theta<\pi/2$ does not escape, but that factor of 2 is compensated because there are two spin degrees of freedom for the photon.}
+%\be
+% d^3p f(\vec p)pc^2R^2\int_0^\pi d\theta \int_0^{2\pi} d\phi  \cos\theta = d^3p 2\pi R^2  f(\vec p)pc
+% \ee
+% \item Now sum over all momentum: in a given small region of space and momentum, the {\it volume} of the phase space is $(2\pi \hbar)^3$. So instead of summing, when integrating, this leads to
+% \be
+%  \frac{dQ}{dt}  = \frac{Ac^2}{2} \int \frac{d^3p}{(2\pi\hbar)^3}\, f(\vec p)p
+% \ee
+% \item Putting in the Bose-Einstein distribution leads to
+% \be
+%  \frac{dQ}{dt} = \frac{Ac^2}{4\pi^2\hbar^3}\, \int_0^\infty \frac{dp\,p^3}{e^{pc/k_BT} - 1}.\ee
+% \item Changing variables to $x=pc/k_BT$ leads to 
+% \be
+%  \frac{dQ}{dt} = \frac{A(k_BT)^4}{4\pi^2\hbar^3c^2}\, \int_0^\infty \frac{dx\,x^3}{e^{x} - 1}
+%  .\ee
+%  \item The integral is just a number $\pi^4/15$, so the flux is
+%  \be
+%   \frac{dQ}{dt}  = \frac{A\pi^2(k_BT)^4}{60\hbar^3c^2} = A\sigma T^4
+%  \ee
+%  where the Stefan-Boltzmann constant is defined as
+%  \be
+%  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\eee
 Note finally that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
 \Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
-}\eei
-\comment{Check Neil's notes on this.}
+
+
+%\lecture{Quantum Mechanics II}
 
 \lsection{Particle in a box}
 \be
@@ -1283,7 +1345,7 @@ The direction of $\vec v$ for different orientations of the pressure gradient is
 
 Consider the implied wind speeds from this formula. Use $\rho_{\rm air}=1$kg/m$^3$; $\omega_\Earth= 7.3\times 10^{-5}$ Hz. For simplicity, take $\sin\lambda=1/2$. Then,
 \be
-v \simeq 1.4\times 10^4 \left( \frac{m^3 s}{kg}\right)\, \nabla P.\ee
+v \simeq 1.4\times 10^4 \left( \frac{m^3 s}{kg}\right)\, \nabla P.\eql{vgradp}\ee
 Units of pressure: 1Pascal (Pa) $=0.01$millibar (mb) = kg/m/s$^2$. So, the term in parentheses is
 $m^2/s/Pa$. Let's normalize the gradient to its value over 1 km; i.e, $\nabla P =\frac{\Delta P_1}{1\,km}$; then
 \be
@@ -1302,7 +1364,44 @@ where $R$ is mass dependent (typically inversely. proportional to the mass of th
 \be
 z_P = \frac{R}{g} \int_{\ln P}^{\ln P_0} dx \,T
 .\ee
-So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. \comment{This should be done more carefully, deriving 3.29 in Wallace and Hobbs.}
+So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. 
+
+\comment{This should be done more carefully, deriving 3.29 in Wallace and Hobbs.} Generally, we have
+\be
+\int_{P_0}^P\frac{dP'}{P'} = -\frac{g}{R}\, \int_0^z \frac{dz'}{T(z')}.\ee
+The two limiting possibilities are isothermal and adiabatic:
+\be
+P^{iso} = P_0 e^{-z/H}\ee
+with $H\equiv g/RT_0=\frac{m_{\rm air}g}{k_BT}.$ 
+If the temperature falls adiabatically, then the integral on the right becomes
+\be
+\frac{g}{R\Gamma}\,\ln\left( T_0-\Gamma z\right)\vert_0^z
+= \frac{g}{R\Gamma}\,\ln\left(1-\frac{\Gamma z}{T_0}\right).\ee
+Therefore, the pressure is
+\be P^{ad}(z)=P_0 \left(1-\frac{\Gamma z}{T_0}\right)^{g/R\Gamma}.\eql{pad}\ee
+These two limits are shown in Fig.~\rf{pisoad}.
+\Spng{pisoad}{Pressure profile for isothermal and adiabatic temperature profiles. The true temperature profile falls somewhere in between.}
+Note that since $R=k_B/m_{air}$ %and $\Gamma_{ad}=g/c_p$
+, the first order term in the Taylor expansion in \ec{pad} is $z/H$, exactly like the small $z$ isothermal expansion. 
+
+
+\comment{We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
+\be
+\frac{dP}{P} = \frac{\gamma}{\gamma-1}\,\frac{dT}{T}
+\ee
+and then integrating leads to
+\be
+P = P_0 \left( \frac{T}{T_0} \right)^{\gamma/(\gamma-1)}.\ee
+Identifying $T_0$ with $\theta$, the potential temperature, and then inverting leads to 
+\be
+\theta = T\,\left( \frac{P_0}{P} \right)^{1-1/\gamma}
+\ee
+For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
+}\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
+
+\Spng{dpdt}{Difference in pressure as a function of height when the ground temperature differs by 10$^\circ$C. Both the adiabatic and isothermal limits are shown.}
+Since the wind velocity depends on the horizontal gradient of $P$, it is useful to look at pressure differences over land surfaces with different temperatures. Fig.~\rf{dpdt} shows this difference for a 10$^\circ$ ground temperature difference for adiabatic and isothermal profiles; they are not much different. If we take the typical horizontal scale over the which the temperature varies by 10$^\circ$C as 1000km, then $\nabla P\sim 10hPa/10^3km = 10^{-3}$Pa/m. Therefore, \ec{vgradp} suggests that typical wind speeds will be 15 m/s, which is roughly correct.
+
 
 General circulation, as described in Wallace and Hobbs 1.3.5: wind blows clockwise in the Northern hemisphere around high pressure regions. There is a high pressure max around $30^\circ$N; above this, the wind blows to the east (westerly wind) and below, winds are easterly. Winds are strongest over the ocean where there is less surface friction. So, this explains the comments above that the winds off the coast of San Francisco come from the North (Fig.~\rf{wh115}): they move clockwise around the high pressure region in the center of the Pacific and therefore on the Eastern side of the ocean, the winds are moving towards the equator at the latitude of San Francisco ($38^\circ$).
 \Sjpg{wh115}{Circulation in the Northern Hemisphere. Note that the winds on the eastern side of the ocean at latitudes less than the high pressure belt at $45^\circ$ blow towards the equator, i.e., from the North. This is the cause of fog in San Francisco.}
