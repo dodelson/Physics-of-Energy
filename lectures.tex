@@ -1052,7 +1052,15 @@ Therefore,
 \be
 \frac{dE}{dtdA} = \frac{\hbar}{(2\pi c)^2}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\ee
 Note that this has units of W/m$^2$, our usual metric for how energy is transported.
-\item Finally, we can carry out the integral. It becomes
+\item We can plot this vs frequency or vs the more common wavelength, recalling that $\omega=2\pi c/\lambda$. Therefore,
+\be
+\frac{dE}{dt dA d\lambda} = \frac{\hbar (2\pi c)^2}{\lambda^5} \,\frac{1}{e^{hc/\lambda k_BT}-1}.
+\ee
+Fig.~\rf{bb} shows the spectra for two objects, one with a temperature roughly equal to the Sun and the other roughly equal to the Earth.
+\Spng{bb}{Flux per wavelength for an object the temperature of the Sun and one the temperature of the Earth.}
+Note that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
+\Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
+\item We can carry out the integral. It becomes
 \bea
 \frac{dE}{dtdA} &=&  \frac{\hbar}{(2\pi c)^2}\, \int_0^\infty   \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}
 \vs
@@ -1094,52 +1102,52 @@ with the Stefan-Boltzmann constant
 %  where the Stefan-Boltzmann constant is defined as
 %  \be
 %  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\item One of the key facts about climate is that the energy flowing into the Earth must equal the energy going out. The simplest implementation of this is to ignore the atmosphere and set the energy per time leaving the Earth in the form of long wavelength radiation equal to the incoming short wavelength solar radiation
+\be
+L_{OLR}=L_{in}.
+\ee
+The former is simply $\sigma T_\Earth^4 \times 4\pi R_\Earth^2$. The latter is the luminosity emerging from the Sun ($\sigma T_\odot^4 \times 4\pi R_\odot^2$) but suppressed by the fraction of the area at the orbital distance that is covered by the Earth: $\pi R_\Earth^2/(4\pi R_{orbit}^2)$. We therefore have our first simple climate model for the temperature of the Earth:
+\be
+T_\Earth = T_\odot \, \left(\frac{R_\odot}{2R_{orbit}}\right)^{1/2}=291K\ee
+which is frighteningly accurate but missing all kinds of details. $R_\odot=7.e8m$ and
+$R_{orbit}=1.5e11$m.
 \eee
-Note finally that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
-\Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
+
+
+\lsection{Intrinsic line width.} There will be many reasons, but one is that the energy of a given state is fundamentally uncertain via $\Delta t\Delta E >\hbar$. This means that the width of a given line will be inversely proportional to the lifetime of the state. For example, a given $CO_2$ state can decay to the ground state in 1 sec. The uncertainty on its energy is therefore, $\Delta E = \hbar/1sec = 4\times 10^{-15}$eV. But $\Delta\lambda/\lambda = \Delta E/E$ so this is only one part in a trillion.
 
 
 %\lecture{Quantum Mechanics II}
 
 \lsection{Particle in a box}
+The particle of mass $m$ is in a potential that is infinite everywhere except in the range $0\le x\le L$, where it vanishes, so the particle must be in that range. 
+\bee
+\item {\it Schrodinger Eqn:}
 \be
 \frac{-\hbar^2}{2m} \psi'' =E\psi
 \ee
-so using boundary conditions
+where the wave function $\psi$ can be a complex number and $\psi(x)^*\psi(x) dx$ is the probability that the particle is at the position $x$ in a range $x\rightarrow x+dx$. 
+\item
+Using boundary conditions
 \be
-\psi = A\sin(\sqrt{2mE_n}x/\hbar)
+\psi_n = A\sin(\sqrt{2mE_n}x/\hbar) = \sqrt{2/L}\,\sin(n\pi x/L)
 \ee
 with 
 \be
-E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}
+E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}\qquad n=1,2,\ldots
 .\ee
+\item The probability of finding the particle in a given region is $(2/L) \sin^(n\pi x/L)$. So it vanishes at the ends and peaks in the middle for $n=1$. For $n=2$, it vanishes in the middle (!) even though it is moving. On average, $\langle p^2\rangle = 2mE = (\hbar n\pi)^2/L^2$.
+\item If there are many identical particles, if the particles are bosons, as many particles as possible can coexist in the same level, but if they are fermions, each state may be occupied by at most one particle.
+\eee
 \example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm, roughly true when $A\sim100$; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
 
-\example{Nucleus, Take 2:} There are $Z$ protons and $N$ neutrons. No state can be occupied by more than one identical particle, although a 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
-\be
-E = 2\frac{\hbar^2\pi^2}{2ML^2}\, \left( \sum_{n=1}^{Z/2} n^2 + \sum_{n=1}^{N/2} n^2 \right).\ee
-Approximate the sum as an integral (good approximation for large $Z,N$ so that each is equal $(X/2)^3/3=(Z,N)^3/24$. Then the energy of this ground state is
-\be
-E = \frac{\hbar^2\pi^2}{24ML^2} \left( Z^3 + (A-Z)^3 \right).\ee
-This is minimized for fixed $A$ when $Z=N$ as expected.
-Now, because of the repulsive short range force,  the density is fixed even as the number of nucleons increases. So set the number of nucleons per length to be $\rho=A/L$; then
-\be
-E = \frac{\hbar^2\pi^2\rho^2}{24MA^2} \left( Z^3 + (A-Z)(A^2-2AZ+Z^2).  \right)\ee
-The term in parentheses is 
-\be
-A^3 -ZA^2 -2A^2Z + 2AZ^2 + AZ^2 = A^3 + 3AZ(Z-A)\ee
-So,
-\be
-E = \frac{\hbar^2\pi^2\rho^2}{24M} \left( A -\frac{3ZN}{A}  \right).\ee
 
 %Take $m=m_e$; $L=a_0$, the Bohr radius, 0.529$\AA$. Then the energy difference between the first two levels is }
 
-\lsection{Width of state: decays; section 15.4}
-
-\lecture{Energy in Matter}
-
-\lsection{Latent Heat}
-
+%\lecture{Energy in Matter}
+%
+%\lsection{Latent Heat}
+%
 \lecture{Nuclear Power}
 
 \lsection{Overview}
@@ -1159,6 +1167,58 @@ Notation: each element contains $Z$ protons and $N$ neutrons for a total of $A$ 
 \eee
 
 \lsection{Nuclear Physics}
+
+\example{Nucleus, Take 2: There are $Z$ protons and $N$ neutrons. No state can be occupied by more than one identical particle, although a 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
+\be
+E = 2\frac{\hbar^2\pi^2}{2ML^2}\, \left( \sum_{n=1}^{Z/2} n^2 + \sum_{n=1}^{N/2} n^2 \right).\ee
+Approximate the sum as an integral (good approximation for large $Z,N$ so that each is equal $(X/2)^3/3=(Z,N)^3/24$. Then the energy of this ground state is
+\be
+E = \frac{\hbar^2\pi^2}{24ML^2} \left( Z^3 + (A-Z)^3 \right).\ee
+This is minimized for fixed $A$ when $Z=N$ as expected.
+Now, because of the repulsive short range force,  the density is fixed even as the number of nucleons increases. So set the number of nucleons per length to be $\rho=A/L$; then
+\be
+E = \frac{\hbar^2\pi^2\rho^2}{24MA^2} \left( Z^3 + (A-Z)(A^2-2AZ+Z^2).  \right)\ee
+The term in parentheses is 
+\bea
+A^3 -ZA^2 -2A^2Z &+& 2AZ^2 + AZ^2 = A^3 + 3AZ(Z-A)\vs
+&=& A^3/4 + 3A[A^2/4 + Z^2-AZ]
+\vs
+&=&
+A^3/4 + 3A [(N+Z)^2/4+Z^2 -(N+Z)Z ]
+\vs
+&=&
+A^3/4 + 3A (N-Z)^2/4\eea
+So,
+\be
+E = \frac{\hbar^2\pi^2\rho^2}{96M} \left( A + 3\frac{(N-Z)^2}{A}  \right).\ee
+Taking $\rho=1/fm=10^{15}m^{-1}$; $Mc^2=10^9$eV and $\hbar c = 2\times 10^{-7}$eV-m leads to
+\be
+E = \epsilon_V A + 3\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
+where we have identified a leading term in the binding energy of the nucleus: $\epsilon_V=4$ MeV, only a factor of 4 too small.}
+
+
+Some basic principles that determine the binding energy of a given nucleus:
+\bei
+\item Strong force is very attractive in the range of about 1fm but repulsive on smaller scales and falls off exponentially on large scales
+\item Coulomb force repulsive between protons
+\item Due to the Pauli exclusion principle and the fact that the pn attractive force is highest, there is a term that drive the number of neutrons and protons to be equal.
+\eei
+The first fact leads to the notion that each nucleon feels an attractive force from its neighbors but must maintain a distance of about 1 fm, so the density is constant, meaning that $V(A)\propto R^3(A) \propto A$. 
+\bee
+\item The binding energy then for each nucleon is the sum of the local forces, so the total binding energy picks up a term \
+\be
+B_V=\epsilon_VA
+\ee
+\item Nucleons on the surface don't get the full benefit of this so we must subtract off a surface term
+\be
+B_S=-\epsilon_SA^{2/3}.\ee
+\item The Coulomb energy is just due to protons so 
+\be
+B_C \propto Z^2/R = -\epsilon_C Z^2/A^{1/3}\ee
+\item As estimated earlier, the symmetry term scale as
+\be
+B_{sym}=-\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
+\eee
 
 \lsection{Fission}
 
