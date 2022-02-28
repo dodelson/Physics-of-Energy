@@ -3,7 +3,8 @@
 \usepackage{hyperref}
 \begin{document}
 \newcommand{\problem}[1]{%\addtocounter{problemc}{1}
-\item {#1}
+\newpage
+Problem\ {#1}
 }
 \newcommand{\probl}[1]{\label{#1}}
 \def\be{\begin{equation}}
@@ -30,12 +31,31 @@
 \newcommand{\Sfig}[2]{
    \begin{figure}[thbp]
    \begin{center}
-    \sfig{#1.pdf}{0.5\columnwidth}
+    \sfig{../Figures/#1.pdf}{0.5\columnwidth}
     \caption{{\small #2}}
     \label{fig:#1}
      \end{center}
    \end{figure}
 }
+\newcommand{\Sjpeg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.jpeg}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
 
 \newcommand\dirac{\delta_D}
 \newcommand{\rf}[1]{\ref{fig:#1}}
@@ -50,25 +70,46 @@
 \newcommand\spsf{\sigma_{\rm PSF}}
 \newcommand\bei{\begin{itemize}}
 \newcommand\eei{\end{itemize}}
-\begin{centering}
-{\bf Homework 1: Due Thursday, February 24, 2022}
-\end{centering}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
 
-\begin{enumerate}
+
+\begin{centering}
+{\bf Midterm, Physics of Energy 33-226}
+\end{centering}
+There are 5 problems in total. Each of the 5 problems is worth the same number of points.
+
+%\begin{enumerate}
 
 %\problem{Problem 2.1 in the book}
-\problem{Consider a perfectly elastic ball of mass $m$ bouncing up and down on a horizontal surface under the influence of gravity. Prove that averaged over time, the downward force of the ball on the floor is equal to $mg$. Generalize that to show that the pressure of air on the surface of the Earth is equal to $\int dz \rho g$.}
-\problem{A hot air balloon has a volume of 3000 m$^3$ and carries a mass (including basket, people, etc.) of 600 kg at a height of 900 meters above the surface of the Earth. Atmospheric pressure depends on altitude via
+\problem{1. Fig.~1 shows that the amount of $CO_2$ in the atmosphere in 2020 was about 420 ppm, so that for every million molecules in the atmosphere, there were 420 $CO_2$ molecules. Take the density of molecules in the atmosphere to depend only on the distance from the surface of the Earth, $z$:
 \be
-P(z) = P_0 e^{-z/H}\ee
-with $P_0$ equal to 1 atmosphere and $H=8.5$km, and assume that the pressure inside the balloon is equal to that outside. Assume that the atmospheric temperature is 20$^\circ$C with zero lapse rate. What is the temperature of the air inside the balloon?}
-\problem{Problem 6.1}
-\problem{Problem 6.4 }
-\problem{Problem 6.6}
-\problem{Problem 6.15}
-\problem{Accessing the data set we have been using, make a more refined estimate of how much $CO_2$ every country will emit for each of the next 50 years. For example, a simple thing to do would be to find the slope of emissions (change in emissions per year) over the past 10 years say and use that to extrapolate forwards. Slightly more complex would be to use this estimate for half of the countries with low emissions per capita (``under-developed'' countries) on the assumption that their emissions will continue to go up and keep the other half of the countries flat. Or try something more ambitious.}
+n(z) = n_0 e^{-z/H}\ee
+where $H=8.5$km, and $n_0=2\times 10^{25}$ air molecules per $m^3$.
+\Sjpeg{co2ppm}{Fraction of $CO_2$ in the atmosphere as a function of time. The units are parts per million: the number of $CO_2$ molecules as a fraction of all the molecules in the atmosphere.}
+\bee
+\item What is the mass of one $CO_2$ molecule in kg?
+\item How many $CO_2$ molecules are in 1 GtC (Gigatonnes of carbon)?
+\item What is the total number of air molecules in the atmosphere?
+\item Use your answer from (c) to convert 420 ppm into GtC .
+\eee
+}
 
-\end{enumerate}
+
+\problem{2. In class, we found that equating the radiation coming in from the Sun and the radiation leaving the Earth led -- under simplifying conditions -- to a temperature on Earth of 291K. That calculation assumed that the Earth absorbed {\it all} of the incoming radiation.
+How would the temperature change if we accounted for the fact that ice on Earth reflects back 10\% of the incoming solar radiation?
+}
+
+\problem{3. \Sfig{sh1}{Heat capacity in units of $Nk_B$ for a given molecule.}
+\bee
+\item Why is the value at very low temperature equal to 1.5?
+\item Why does it rise to 2.5 at higher temperatures?
+\item Why does it rise to 3.5 at the highest temperature?
+\item From this graph, estimate the value of the first excited rotational state of the molecule (in J).
+\item Estimate the ground state vibrational energy (in J).
+\eee}
+
+%\end{enumerate}
 \newpage
 \appendix
 \section{Formula Sheet}
@@ -87,6 +128,7 @@ k_B=1.38\times 10^{-23} J/K \ee
 \sigma = 5.67\times 10^{-8} W/m^2/K^4\ee
 \item Proton Mass
 \be m_p=1.67\times 10^{-27} kg\ee
+\item Common elements (if asked for their mass, just multiply the number of nucleons by the mass of the proton): Carbon (12 nucleons); Oxygen (16); Nitrogen (14); Iron (56)
 \eei
 \subsection{Equations}
 \bei
@@ -96,6 +138,12 @@ k_B=1.38\times 10^{-23} J/K \ee
 \item First Law of Thermodynamics
 \be dU = dQ - PdV
 \ee
+\item Internal Energy, $U$: Every degree of freedom that is accessible at a given temperature contributes $k_BT/2$ to $U$.
+\item Rotational Energy Levels ($I$ is the moment of inertia)
+\be E_{R,L} = E_R \frac{L(L+1)}{2I}\qquad L=0,1,2,\ldots\ee
+\item Vibrational Energy Levels ($\omega$ is the frequency)
+\be
+E_{v,n} = {\hbar\omega}\left[ n + \frac12\right].\qquad n=0,1,2,\ldots\ee
 \item Heat Capacities:
 \bea
 C_V &=& \frac{dQ}{dT}\Big\vert_V = \frac{\partial U}{\partial T}\Big\vert_V \vs
@@ -109,7 +157,11 @@ C_P &=& \frac{dQ}{dT}\Big\vert_P = \frac{\partial U}{\partial T}\Big\vert_P + P 
 \frac{\partial u(\vec x,t)}{\partial T} = -\nabla\cdot \vec q(\vec x).\ee
 \item Thermal Resistance
 \be R_{\rm thermal} = \frac{L}{k}.\ee
-\item Stefan-Boltzmann Law
+\item Stefan-Boltzmann Law for Emission of Thermal Radiation
 \be \frac{dQ}{dt} = \sigma T^4 A\ee
+\item Spectrum of Thermal Radiation (with dimensions of Energy per time per area per frequency)
+\be
+\frac{dP}{dAd\omega} = \frac{\hbar\omega^3}{4\pi^2c^2}\,\frac1{e^{\hbar\omega/k_BT}-1}.\ee
 \eei
+%\Spng{periodic}{Periodic Table: You can assume that each element has mass equal to its atomic weight (without the decimal points) times the mass of the proton.}
 \end{document}
