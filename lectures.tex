@@ -939,54 +939,54 @@ Three possible temperature profiles:
 \item Actual, somewhere in between, on average with $\Gamma\simeq 6.5$K/km. If the lapse rate were larger than the adiabatic lapse rate, convection would push it back to the adiabatic rate.  %Because the pressure is decreasing with distance $dP/dz=-\rho g$, an ideal gas ($P\propto \rho T$)
 \eee
 
+
+\comment{There is another way to do this: apply the first law:
+\be
+dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
+where the last equality follows from $\rho\propto V^{-1}$.
+Then, for an ideal gas,
+\be
+dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
+=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
+\ee
+Consolidating leads to
+\be
+dP = dT \frac{\rho k_B}{m}\left[ 
+\frac{c_vT}{PV} + 1
+ \right] \ee
+ But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
+\ec{conveq}.}
+
+
+{\it Aside: In the adiabatic case, $dQ=0$, so 
+\be
+c_vdT= - PdV=PVd\rho/\rho
+.\ee
+For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
+\be
+c_v dT  = PV [\frac{dP}P - dT/T] \ee
+or
+\be
+dT \left[ c_v + \frac{PV}{T} \right] = V dP
+.\ee
+But the term in square brackets is $c_p$, so
+\be
+c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
+or
+\be
+\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
 %
-%There is another way to do this: apply the first law:
-%\be
-%dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
-%where the last equality follows from $\rho\propto V^{-1}$.
-%Then, for an ideal gas,
-%\be
-%dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
-%=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
+%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
 %\ee
-%Consolidating leads to
+%Therefore,
 %\be
-%dP = dT \frac{\rho k_B}{m}\left[ 
-%\frac{c_vT}{PV} + 1
-% \right] \ee
-% But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
-%\ec{conveq}.
-%
-%
-%{\it Aside: In the adiabatic case, $dQ=0$, so 
-%\be
-%c_vdT= - PdV=PVd\rho/\rho
-%.\ee
-%For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
-%\be
-%c_v dT  = PV [\frac{dP}P - dT/T] \ee
-%or
-%\be
-%dT \left[ c_v + \frac{PV}{T} \right] = V dP
-%.\ee
-%But the term in square brackets is $c_p$, so
-%\be
-%c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
-%or
-%\be
-%\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
-%%
-%%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
-%%\ee
-%%Therefore,
-%%\be
-%%\left[ dP - d\rho c_v T\right] = PVd\rho.
-%% \ee
-%% This leads to 
-%% \be
-%% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
-%%\ee, 
-%the solution to which is $P\propto \rho^\gamma$.}
+%\left[ dP - d\rho c_v T\right] = PVd\rho.
+% \ee
+% This leads to 
+% \be
+% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+%\ee, 
+the solution to which is $P\propto \rho^\gamma$.}
 
 
 
@@ -1271,7 +1271,13 @@ We need to understand the decay process.
 \item What determines the lifetime of a given nucleus?
 \item Why do neutrons speed up the process?
 \eee
-We have a model for binding energy.
+
+\lsection{Binding Energy} 
+\bei
+\item We have a model for binding energy. 
+\item States with higher energy can decay into states with lower energy.
+\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
+\eei
 
 \lsection{Decay Products and Energy}
 Fission occurs when the decay products have lower energy than the parent particle. The total binding energy of the daughters must be greater than the binding energy of the parent. A rough estimate for the energy released is to assume the particle splits in half. Then the energy released is
@@ -1280,12 +1286,20 @@ Q = 2B(Z/2,A/2) - B(Z,A)
 \ee
 with $Z$ set to the minimum energy number of protons for the nuclei with mass number $A$. This leads to Fig. 18.2 and the fact that large $A>200$ make the best candidates for fuel, emitting up to 200 MeV of energy.
 
-\example{Decay of $^{235}$}
+\example{Decay of $^{235}$U: There are many possibilities; example 18.1 follows one of them
+\be
+{}^{235}_{92}U + n\rightarrow {}^{144}_{56}Ba + {}^{90}_{36}Kr + 2n.\ee
+The SEMF we are using predicts about 170 MeV released. This is mostly given to the kinetic energy of the products, which are quickly cooled down to the temperature of the moderator. Subsequently, the nuclei decay further via $\beta$ decay:
+\be
+Ba \rightarrow La \rightarrow Ce\rightarrow Pr \rightarrow Nd (stable)
+\ee
+Note that Fig.~\rf{bachain} has $Ce$ coded red because its lifetime is 285 days, whereas the others are less than an hour, so this could stay around and cause problems in the reactor even after the fuel is removed.
+\Sfig{bachain}{Chain of decays that emerge from one decay product (Ba) of U.}}
 
 \lsection{Lifetimes}
 
 \bee
-\item Surface area vs. volume leads to spherical nuclei
+\item Surface area vs. volume leads to spherical nuclei: e.g., surface area of cube is $6V^{2/3}$ while the surface area of a sphere is $4\pi R^2 = 4\pi (V3/4\pi)^{2/3}$, so the coefficient is $(36\pi)^{1/3}=4.8$.
 \item This breaks down for large $A$ when Coulomb force favors elongated nuclei
 \item Figure with barrier
 \item QM decay rates with barrier
