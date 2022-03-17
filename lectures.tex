@@ -1164,7 +1164,7 @@ Notation: each element contains $Z$ protons and $N$ neutrons for a total of $A$ 
 \example{Energy produced by 1 kg of $^{235}$U: each decay produces about 235 MeV, and each element weighs $235\times 1.67\times 10^{-27}$kg. So, 1kg produces $.6\times 10^{27}$ MeV, which corresponds to $.6\times 10^{27}\times 10^6 \times 1.6\times 10^{-19}$ J/eV, or about $10^{14}$J. Typically these plants are only about 33\% efficient so 1kg  can generate about $3\times 10^{13}$J per year. Compare this to total usage: $6\times 10^{20}J$.}
 
 \bee
-\item The take-away is that 1 tonne of $^{235}$ can produce $3\times 10^{16}$J/year; since 1GW-year = $3\times 10^{16}$J, 1 tonne can produce about 1 GW-yrs. Since $^{235}$U is only 0.72\% of all uranium, a 1GW plant requires 140 tonnes of uranium. It's a bit worse than this because not all the $^{235}$U is used as fuel, so a rough estimate is 200 tonnes of natural uranium for a GW plant.
+\item The take-away is that 1 tonne of $^{235}$U can produce $3\times 10^{16}$J/year; since 1GW-year = $3\times 10^{16}$J, 1 tonne can produce about 1 GW-yrs. Since $^{235}$U is only 0.72\% of all uranium, a 1GW plant requires 140 tonnes of uranium. It's a bit worse than this because not all the $^{235}$U is used as fuel, so a rough estimate is 200 tonnes of natural uranium for a GW plant.
 \item Getting say 10\% of current 15 TW then would require $1500\times 200=3\times 10^5$ tonnes mined per year. This is a larger rate than say tin so seems unlikely. The suggests that 1/3 of this is not unreasonable.Total resources are uncertain but rough estimates put it at $10^7$ tonnes, which  would last 100 years if we could extract it at a higher rate than today, and even that produces only 10\% of our needs.
 \eee
 
@@ -1296,13 +1296,12 @@ Ba \rightarrow La \rightarrow Ce\rightarrow Pr \rightarrow Nd\, (stable)
 Note that Fig.~\rf{bachain} has $Ce$ coded red because its lifetime is 285 days, whereas the others are less than an hour, so this could stay around and cause problems in the reactor even after the fuel is removed.
 \Sfig{bachain}{Chain of decays that emerge from one decay product (Ba) of U.}}
 
-\lecture{Nuclear Decays and Reactors}
+\lecture{Nuclear Decays}
 
 Goals:
 \bei
 \item Demonstrate what controls the lifetime of heavy elements, such $^{235}$U 
 \item Why slow neutrons lead to instantaneous decay
-\item Work through Details of Reactor
 \eei
 
 \lsection{Lifetimes}
@@ -1330,24 +1329,25 @@ where $L$ is the length of the box.
 \item Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
 \be
 \tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
-\item Bottom line: the difference between the potential at its peak and $Q$ is akin to $V_0-E$ and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
+\item Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
 
-Very rough estimate: take the height to be roughly $Z\alpha\hbar c/R$; the mass equal to half the mass of the nucleus; and the distance
- If we estimate the barrier as the Coulomb barrier, so that 
+Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
 \be
-V_C(r) \sim\,\frac{Z \hbar c\alpha}{r}
+V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
 \ee
-then the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
+%hen the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  
+The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
 \be
- \frac{Z \alpha\hbar c}{L} = Q.\ee
- For $Q=200$ MeV, this sets $L\simeq 10^{-15}$m up to 100 times larger than that if the full Coulomb charge is felt.
- So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-14}$m, 
- \bea
- \frac2{\hbar}\,\sqrt{2(M/2) E_B} \, L
- &\simeq& \frac2{\hbar c}\,10^9 {\rm MeV}\, \, 10^{-14} m
-  \vs
- &=& 100
- \eea
+ \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
+ So the argument of the exponential can be as large as several hundred,
+% For $Q=200$ MeV, this sets $L\simeq 10^{-13}$m.
+% So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-15}$m, 
+% \bea
+% \frac2{\hbar}\,Q\, L
+% &\simeq& \frac2{\hbar c}\,10^9 {\rm MeV}\, \, 10^{-14} m
+%  \vs
+% &=& 100
+% \eea
  enough to extend the lifetime to much longer than the age of the universe.
 \eee
 
@@ -1357,87 +1357,118 @@ then the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong 
 \item The fission barrier energy for $^{235}U$ is 5.9 MeV, and the lifetime is $7\times 10^8$ years; i.e., still enough are around.
 \item If they capture a neutron, then even using the SEMF gives a binding energy change of 6MeV, above the fission barrier energy (the actual value is 6.5MeV)
 \item The energy released when the neutron is absorbed is therefore {\it larger} than the barrier energy; it is spread out over all the nucleons and enables the nucleus to decay by going over the barrier instead of under it. That happens instantaneously.
-\item Slow neutrons are better: the cross section is $10^4$ barns at $E=10^{-4}$ eV and about 100 times lower at 1 eV, so roughly it scales as $E^{-1/2}$. roughly speaking, the increase is because the cross section scales as $R^2$ and the Compton radius of the neutron is $h/p=2\pi\hbar/\sqrt{2mE}$.
+\item What dictates that slow neutrons are more effective? which follows from considering a box of length $dx$ and total area $A$. The number of $U$ atoms in that box is $nAdx$; they each have a cross section $\sigma$, so the chance of being absorbed is $nAdx \times \sigma/A = n\sigma dx$. 
+\item Slow neutrons have larger cross sections: the cross section is $10^4$ barns\footnote{1 barn = $10^{-28}m^2$.} at $E=10^{-4}$ eV and about 100 times lower at 1 eV, so roughly it scales as $E^{-1/2}$. roughly speaking, the increase is because the cross section scales as $R^2$ and the Compton radius of the neutron is $h/p=2\pi\hbar/\sqrt{2mE}$.
 \eei
 
 
-\lsection{Fission}
+\lecture{Nuclear Reactors}
 
 
 
 Follow the neutrons: {\bf $k$ is the number of thermal neutrons generated by the previous generation of 1 thermal neutron}. If $k>1$, the reactor is supercritical; if it is less than 1, it is sub-critical. The goal is to keep $k$ very close to 1; or $\rho\equiv (k-1)/k$ close to zero.
 
-Fundamental equation
+Fundamental equation:
+
+{\bf Number of slow neutrons generated = (number of fast neutrons the initial thermal neutron will generate when it gets captured by the fuel) $\times$ (probability that the neutron gets thermalized before being captured) $\times$ (fraction of slow neutrons that are captured by the fuel)}
+
 \be
 k=\eta\epsilon p f
 \ee
 where
 \bei
 \item $\eta$ is the number of fast neutrons the initial thermal neutron will generate when it gets captured by a U nucleus. Fig.~\rf{f191} shows the possibilities. For it to ``succeed,'' it has to get captured by $^{235}$U and induce fission. The numerator then is the rate at which the neutron gets absorbed and causes fission by $^{235}$U (as opposed to $^{238}$U) and the denominator is all the possible reactions for the thermal neutron:
-\be
-\eta = 2.42\,\left( \frac{x\sigma_f(^{235}U)}{x\sigma_a(^{235}U) + (1-x)\sigma_a(^{238}U)}
+\bea
+\eta &=& 2.42\,\left( \frac{x\sigma_f(^{235}U)}{x\sigma_a(^{235}U) + (1-x)\sigma_a(^{238}U)}\right)
+\vs
+&=&
+2.42\,\left( \frac{585x}{684x + 2.68(1-x)}
 \right)
-.\ee
+.\eea
 \Sfig{f191}{This governs $\eta$, roughly equal to $B/A$.}
-This assumes that the rate for neutron capture to fission is $n_U\sigma v$, which follows from considering a box of length $vdt$ and total area $A$. The number of $U$ atoms in that box is $nAvdt$; they each have a cross section $\sigma$, so the chance of being absorbed is $nAvdt \times \sigma/A$. Then the factors follows by the definition of $x\equiv 235/238$.
+This assumes that the rate for neutron capture to fission is proportional to $n_U\sigma$. Then the factors follows by the definition of $x\equiv 235/238$.
 \item $\epsilon$ is basically 1, but can be slightly larger as it counts the very few fast neutrons that cause fission (off of $^{238}U$)
-\item $p$ is the probability that the neutron gets thermalized before being captured 
-\item $f$ is the fraction of thermal neutrons that induce fission (some are captured by the moderator)
-\eei
-
-
-
-Reaction rates are determined by cross-sections. For the reaction $B+T\rightarrow C$, the rate at which $C$ particles are produced is equal to
+\item $p$ is the probability that the neutron gets thermalized before being captured. The formula for this is
 \be
-\frac{dN_C}{dt} = \Phi_B \sigma_{BT\rightarrow C} \ee
-where $\Phi_B$ is the flux, the number of particles per unit area per time. 
-
-
-Key processes for neutrons:
-\bei
-\item Scattering off $^{238}U$; $\sigma\sim 10$ barns
-\item destruction via absorption by $^{238}U$: $\sigma\sim 1$ barn
-\item fission via $^{238}U$ capture: $\sigma\sim 10^{-5}$ barns for thermal neutrons but up to one barn for $E>1$ MeV
-\item fission via $^{235}U$ capture: $\sigma\sim600$ barns for thermal neutrons
-\item energy loss off moderator, governed by energy loss per collision (roughly $\xi$) and cross-section
+p \simeq \exp\left\{-\frac{0.61}{\langle\xi\rangle}\,\Big[ \frac{n(^{238}U) \sigma_c}{\Sigma_s}\Big]^{0.514}
+\right\}\ee
+where $\xi$ is the fractional energy lost in each scatter with the moderator; $\sigma_c$ is the cross-section for capture in $^{238}$U which does not lead to fission but rather photon emission; the denominator is the total cross section for scattering. There is a very rough way to understand this: with each interaction, the neutron loses a fraction $\xi$ of its energy, so 
+\be
+\frac{dE}{dN} = -\xi E
+\ee
+the solution to which is \be
+\frac{E}{E_0} = e^{-N\xi}\ee, so to lose 8 orders of magnitude of energy requires $N\sim 18/\xi$ scatters. The probability of the neutron remaining uncaptured after one scatter is 
+$1-\Sigma_c/\Sigma_s$ assuming $\Sigma_s$ is much less than $\Sigma_c$. The probability of not being captured after $N$ scatters -- i.e., the probability that the neutron thermalizes -- is therefore
+\be
+p \sim \left( 1-\Sigma_s/\Sigma_c\right)^N = e^{N\ln(1-\Sigma_s/\Sigma_c)} \simeq e^{-C \Sigma_s/\xi\Sigma_c} .\ee
+Not quite right, but captures some of the qualitative dependence.
+\item $f$ is the fraction of thermal neutrons that are captured by the fuel (some are captured by the moderator), so (neglecting the few $^{238}$U that capture nuclei),
+\bea
+f  &\simeq &\frac{n_{U}\sigma_a(U)}{n_{U}\sigma_a(U) + n_m \sigma_a({\rm moderator})} \vs
+&=& \frac{684x}{684x+.664y}
+\eea
+where the $.664$ is for water.
 \eei
+
+
+
+%Reaction rates are determined by cross-sections. For the reaction $B+T\rightarrow C$, the rate at which $C$ particles are produced is equal to
+%\be
+%\frac{dN_C}{dt} = \Phi_B \sigma_{BT\rightarrow C} \ee
+%where $\Phi_B$ is the flux, the number of particles per unit area per time. 
+%
+%
+%Key processes for neutrons:
+%\bei
+%\item Scattering off $^{238}U$; $\sigma\sim 10$ barns
+%\item destruction via absorption by $^{238}U$: $\sigma\sim 1$ barn
+%\item fission via $^{238}U$ capture: $\sigma\sim 10^{-5}$ barns for thermal neutrons but up to one barn for $E>1$ MeV
+%\item fission via $^{235}U$ capture: $\sigma\sim600$ barns for thermal neutrons
+%\item energy loss off moderator, governed by energy loss per collision (roughly $\xi$) and cross-section
+%\eei
 
 
 In a state where $k$ is close to one, the power generated by the reactor is
 \be
 P = E_f \frac{dN_f}{dt}
 \ee
-where $E_f$ is the energy released in one fission cascade ($\sim200$ MeV) and $dN_f/dT$ is the number of neutron-captured fission events per time. 
+where $E_f$ is the energy released in one fission cascade ($\sim200$ MeV) and $dN_f/dt$ is the number of neutron-captured fission events per time. But that rate is equal to $\Delta M/m\Delta t$, so roughly,
+\bea
+P&\simeq & E_f\, \frac{\Delta M}{m\Delta t}\vs
+&=&
+\frac{\Delta M}{1 tonne}\,\frac{1 year}{\Delta t}\, \frac{200 MeV\times 10^3 }{1.67\times 235\times 10^{-27}\times 3\times 10^7 s}\,1.6\times 10^{-13} J/MeV
+\vs
+&=&
+\frac{\Delta M}{1 tonne}\,\frac{1 year}{\Delta t}\, 3GW.
+\eea
 
-\lsection{Safety}
-
-As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
-\be
-\sigma_0(E) = A\delta(E-E_0)
-\ee
-when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
-\be
-E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
-\ee
-assuming $v\gg V$. So, the total cross section has changed from
-$\sigma_0 $
-to
-\be
-\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
-\ee
-The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
-\be
-\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
-\ee
-so the cross section broadens with a width in energy of \be
-\sigma_E = mv \sqrt{k_BT/M}.\ee
-So, the width of the resonance scales as the square root of the temperature.
-
-\lsection{Fusion}
+%\lsection{Safety}
+%
+%As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
+%\be
+%\sigma_0(E) = A\delta(E-E_0)
+%\ee
+%when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
+%\be
+%E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
+%\ee
+%assuming $v\gg V$. So, the total cross section has changed from
+%$\sigma_0 $
+%to
+%\be
+%\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
+%\ee
+%The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
+%\be
+%\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
+%\ee
+%so the cross section broadens with a width in energy of \be
+%\sigma_E = mv \sqrt{k_BT/M}.\ee
+%So, the width of the resonance scales as the square root of the temperature.
+%
+%\lsection{Fusion}
 
 \lecture{Solar Energy}
-
-\lsection{Production}
 
 \lsection{Insolation}
 
@@ -1445,12 +1476,32 @@ So, the width of the resonance scales as the square root of the temperature.
 \item $T_\odot=5800$K
 \item This leads to a total radiation using Planck's Law of 63 million W/m$^2$ or a luminosity when integrating over the area of the Sun of $L_\odot=3.89\times 10^{26}$W.
 \Spng{solar_wavelength}{Emission from blackbody radiation as a function of wavelength.}
-\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1375 W/m$^2$.
-\item The very short wavelength part of this is absorbed in the upper atmosphere, say all wavelengths shorter than 0.3 microns, leading to 1331W/m$^2$.
+\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1366 W/m$^2$.
+\Spng{balance}{Power per wavelength per area incoming on the Earth from the Sun and outgoing as a function of wavelength.}
 \eei
-\lsection{Variation of Insolation}
 
-\lsection{Absorbtion}
+
+
+
+
+\lsection{Variation of Insolation}
+\bei
+\item The Earth is tilted at an angle $\epsilon=23^\circ$ with respect to the normal to the plan of the orbit.
+\item This tilt leads to the seasons.
+\item The insolation, or radiance, is
+\be
+I=I_0\cos\beta
+\ee
+where $I_0\simeq 1366 W/m^2$ with variation on the order of a few percent over the course of the year due to the elliptical orbit of the Earth and variations in the solar output. The angle of incidence $\beta$ determines how much power a given area receives: if $\beta=90^\circ$, the radiation is perpendicular to the area and therefore does not heat it at all. 
+\item At noon, $\cos\beta=\cos(\lambda-\delta)$, where $\lambda$ is the latitude (0 at the equator) and $\delta$ is the latitude at which the Sun is directly overhead. So, at the vernal and autumnal equinoxes, $\delta=0^\circ$. On those days, the equator gets the maximum isolation and the poles get 0. At the summer solstice (June), $\delta=\epsilon$, so the Northern hemisphere gets the most insolation, as shown in Fig.~\rf{insolation}.
+\Spng{insolation}{Insolation as a function of latitude at different seasons.}
+\eei
+
+\lsection{Power Potential}
+
+Consider placing photovoltaic cells in the deserts. Including the effect of leaving space for optimal configuration, the efficiency of these is of order 6\%. Therefore, if the average daily insolation is 300W/m$^2$ in the desert, then we would extract 18W/m$^2$. The world uses 3TW of electricity every day and that could go up to 4 if electric vehicles become more common. So, to get to 4TW, requires $4.e12/18=2\times 10^{11}m^2$ of desert. The third largest desert -- after the ones in the poles -- is the Sahara, with an area of $9\times 10^{12}m^2$. After that, things drop sharply, with the Austrailian and Arabian deserts having $5\times 10^{12}m^2$ between them. Taking these 3 means that less than 1\% of the land area would need to be covered by solar cells.
+
+\lsection{Absorption}
 
 \lecture{Ocean}
 
