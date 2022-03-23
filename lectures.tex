@@ -1513,15 +1513,25 @@ Consider placing photovoltaic cells in the deserts. Including the effect of leav
 \be
 q=k|\nabla T|.\ee
 For water, $k=0.6$ W/m K, and the gradient in the tropics is of order $20 K/800$m, so the rate of heat conduction is 0.015 W$/m^2$. 
-\item Radiative Heat
-\item Latent Heat Flux
-\item Currents from Tropics 
+\eei
+
+Where does the thermal energy absorbed by the ocean go? 
+\bei
+\item {\it Latent Heat} 
+\bee
+\item The primary mechanism of heat loss from the ocean is evaporation. Liquid water has lower energy than water vapor, so to evaporate it needs to absorb heat, the heat from the sun. 
+\item A steady rate of evaporation across the ocean surface is responsible for removal of roughly half of the ocean thermal energy absorbed from sunlight. 
+\item This energy is put back in the atmosphere when the water vapor subsequently condenses. 
+\item This latent heat flux (because it doesn't change the temperature) drives winds and powers storms.
+\eee
+\item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
+\item Conduction, or {\it Sensible Heat}, but it is very small.
 \eei
 
 \lsection{Coriolis Force}
 
 \bei
-\item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with cirvular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = m\omega^2 \vec r$ to counter the fictional centrifugal force
+\item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with circular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = m\omega^2 \vec r$ to counter the fictional centrifugal force
 \be
 \vec F_{cent} = -m\omega^2\vec r.\ee
 \item {\bf Coriolis} Fig.~\rf{coriolis} shows the basic setup. The person perceives themselves walking along the red path and getting pushed by some external force towards the center. The frequency vector is pointing out of the plane of the paper, so $\vec v\times\vec\omega$ points in the direction in the plane of the paper perpendicular to the velocity. Therefore, in the top panel, the force acts to push the walker back towards the dotted line, and in the bottom panel, the force pushes the walker towards the solid black line.
