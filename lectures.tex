@@ -1507,7 +1507,10 @@ Consider placing photovoltaic cells in the deserts. Including the effect of leav
 
 \lsection{Energy Balance}
 \bei
-\item Input Solar Radiation: 1366 W/m$^2$ at the top of the atmosphere, but 30\% gets reflected by albedo. Another 20\% absorbed by the atmosphere, so the remaining 50\% reaches Earth. Together with the variation of the insolation this should get us to the 50-260 W/m$^2$ at latitudes below 50$^\circ$ mentioned on page 515.
+\item Input Solar Radiation: 1366 W/m$^2$ at the top of the atmosphere.
+\item In the absence of any reflection or absorption by clouds, only some fraction of this hits any particular region, modulated by the $\cos\beta$ fraction. The ensuing insolation is shown in Fig.~\rf{davidbice}. Integrating over all altitudes gives about 340W/m$^2$. 
+\Spng{davidbice}{Solar insolation after integrating over the time-dependent $\cos\beta$ factor. Credit: \href{https://www.e-education.psu.edu/earth103/node/1004}{David Bice}.}
+\item About 30\% gets reflected by albedo. Another 20\% absorbed by the atmosphere, so the remaining 50\% reaches Earth. Together with the variation of the insolation with latitude and season, this gets us to the 50-260 W/m$^2$ at latitudes below 50$^\circ$ mentioned on page 515.
 \item Most of the sunlight gets absorbed in the {\it mixed layer} which is of order 100m; it heats up the mixed layer so adds thermal energy. In the tropics the temperature of the mixed layer is a steady $\sim25^\circ$. From 100-1000 m deep, the {\it thermocline}, the temperature drops linearly until it reaches the {\it abyss}, in which the temperature is a constant $5^\circ$.
 \item Why doesn't heat flow from the mixed layer to the thermocline? There are two possibilities: convection or conduction. Convection works only if the hotter fluid on top is more dense than the fluid on the bottom. But in this case, the fluid on top is less dense than the fluid below. Conduction takes place at a rate
 \be
@@ -1527,10 +1530,11 @@ Where does the thermal energy absorbed by the ocean go?
 \eee
 \item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
 \item Conduction, or {\it Sensible Heat}, but it is very small.
+\item Some of the heat is transported via currents from the tropics to the poles.
 \eei
 
 
-Potential resource of energy due to temperature difference between mixed layer and abyss: 
+\lsection{Potential resource of energy due to temperature difference between mixed layer and abyss}
 \bei
 \item $\Delta T=20$K
 \item Consider all the water in the top 100m in the tropics, total volume of $100m\,\times 2\pi R_\Earth^2  \times 2\times\int_0^{\pi/8} d\theta\,\sin\theta$ since the angle that subtends the tropics is about 23$^\circ$ or $\pi/8$. The integral is about 0.08. Therefore, $V=4\times 10^{15}m^3$
@@ -1541,17 +1545,6 @@ Potential resource of energy due to temperature difference between mixed layer a
 %with $A=7\times 10^6 km^2$.
 \eei
 
-
-
-\lsection{Global Circulation}
-\bei
-\item Circulation of air leads to winds which in turn drive ocean currents
-\item Air circulation globally is in hadley and polar cells. The former have warm air rising from the ocean near the equator towards the tropopause, moving northward (perhaps adiabatically following lines of constant potential?), and then dropping back to surface at latitudes of order 30$^\circ$ because it is now colder and drier. The air is then driven along the surface of the ocean back to the equator.
-\item polar cells: again rising at 60$^\circ$ towards the tropopause; flowing towards the poles and then dropping down to surface and returning to its origin.
-\item For the Hadley cell, when the air comes back towards the equator, it drives winds to the west; while at mid-latitudes, the wind blows to the east.
-\item There is vorticity so wind blows north on the western side and south on the eatern side (p. 524). 
-\item This produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
-\eei
 
 
 \lsection{Coriolis Force}
@@ -1620,6 +1613,17 @@ I.e., apart from the drift, the current moves in a circular orbit with speed $\s
 So, there is substantial mass transport to the right of the wind velocity (in the Northern hemisphere). 
 \item E.g., winds from the north along California drive ocean water away from the coast towards the west. Deeper, colder water rises to the surface so generates the cold, foggy weather in San Francisco.
 \eee
+\eei
+
+
+\lsection{Global Circulation}
+\bei
+\item Circulation of air leads to winds which in turn drive ocean currents
+\item Air circulation globally is in hadley and polar cells. The former have warm air rising from the ocean near the equator towards the tropopause, moving northward (perhaps adiabatically following lines of constant potential?), and then dropping back to surface at latitudes of order 30$^\circ$ because it is now colder and drier. The air is then driven along the surface of the ocean back to the equator.
+\item polar cells: again rising at 60$^\circ$ towards the tropopause; flowing towards the poles and then dropping down to surface and returning to its origin.
+\item For the Hadley cell, when the air comes back towards the equator, it drives winds to the west; while at mid-latitudes, the wind blows to the east.
+\item There is vorticity so wind blows north on the western side and south on the eatern side (p. 524). 
+\item This produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
 \eei
 
 
