@@ -1578,12 +1578,24 @@ F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
 \be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
 \eei
 
+\lecture{Impact of Coriolis force on Currents}
+
+{\bf Coriolis Force} 
+\bei
+\item \be
+F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
+\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. The latter is
+\be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
+\eei
+
+
 \lsection{Surface Currents}
 \bei
 \item Iceberg at constant velocity at an angle to the direction of the wind.
 To see this, consider Fig.~\rf{iceberg} drawn on the surface of the Earth. Since $\hat n$ is out of the paper, and the velocity is as shown, the coriolis force points downwards. Since the iceberg drifts at a constant velocity, the sum of the forces must vanish, so the force of wind must be equal and opposite to the sum of the coriolis and drag forces. This dictates the direction of the iceberg, which is clearly {\bf not} in the direction of the wind.
 \Sfig{iceberg}{Forces on an iceberg drifting with constant velocity on the plane of the Earth. Since the velocity is to the East, the Coriolis force is to the south, and that combined with the drag force serve to counter the force of the wind.}
-\item Now consider the coriolis force and the force of wind on a patch of water. This induces currents known as the Ekman Spiral. The equation for a patch of ocean surface is
+\item Now consider an initial force from a gust of wind on the water, say to the North (always in the Northern hemisphere). Ignore drag because it is very small. The water starts with initial velocity North, but then is acted on with acceleration pointing perpendicular to its velocity. Hence, it will move in circular motion.
+\item Now consider the impact of constant wind on a patch of water. This induces currents known as the Ekman Spiral. The equation for a patch of ocean surface is
 \bea
 m\vec a &=& \vec F_{\rm cor} + \vec F_{w}
 \vs
@@ -1604,7 +1616,8 @@ v_x&=&\frac{F_w}{m\Omega} t + A\cos\Omega t\eea
 I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
 \item {\it Ekman Mass Transport:} 
 \bee
-\item For wind speed $v_s$ due North ($\hat y$), the ocean velocity is
+\item Including the impact of viscosity and depth changes these idealized examples.
+\item For wind speed $v_s$ due North ($\hat y$), after averaging over rotation, the ocean velocity is
 \be \vec v = v_s \left [ \hat y {\rm Re} + \hat x {\rm Im} \right] e^{-z/z_0} e^{i[\pi/4+z/z_0]}\ee
 \item Integrating over $z$ (the depth of the ocean) leads to $v_y=0$ so no total mass transport to the North
 \item The perpendicular component however is non-zero:
@@ -1619,11 +1632,16 @@ So, there is substantial mass transport to the right of the wind velocity (in th
 \lsection{Global Circulation}
 \bei
 \item Circulation of air leads to winds which in turn drive ocean currents
-\item Air circulation globally is in hadley and polar cells. The former have warm air rising from the ocean near the equator towards the tropopause, moving northward (perhaps adiabatically following lines of constant potential?), and then dropping back to surface at latitudes of order 30$^\circ$ because it is now colder and drier. The air is then driven along the surface of the ocean back to the equator.
+\item Air circulation globally is in hadley and polar cells. 
+\item Hadley cells have warm air rising from the ocean near the equator towards the tropopause due to convection, moving northward (perhaps adiabatically following lines of constant potential?), and then dropping back to surface at latitudes of order 30$^\circ$ because the ambient air is now colder and drier. 
+The air is then driven along the surface of the ocean back to the equator.
 \item polar cells: again rising at 60$^\circ$ towards the tropopause; flowing towards the poles and then dropping down to surface and returning to its origin.
+\item The net impact for both sets of cells is to transport heat from the equator towards the poles.
+\item Air at the surface returning Southward experiences the Coriolis force pushing it west.
 \item For the Hadley cell, when the air comes back towards the equator, it drives winds to the west; while at mid-latitudes, the wind blows to the east.
-\item There is vorticity so wind blows north on the western side and south on the eatern side (p. 524). 
-\item This produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
+\item The land masses induce vorticity so wind blows north on the western side and south on the eatern side (p. 524). 
+\item In a vacuum, this pattern of wind flow would exert a Southern force on the ocean because the Coriolis force at $30^\circ$ points Southward with an amplitude proportional to $\sin 30^\circ$ while at the equator it vanishes. 
+\item In the presence of the land masses, this produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
 \eei
 
 
@@ -1632,12 +1650,17 @@ So, there is substantial mass transport to the right of the wind velocity (in th
 
 \lecture{Wind}
 
-\lsection{Properties}
-\lsection{Geostophic winds (Box 28.1)}
+%\lsection{Properties}
+%\lsection{Global winds} %(Box 28.1)}
+\lsection{Fundamentals Considerations}
+\bei
+\item
 Force on a parcel of air per unit volume due to the pressure gradient is
 \be
 \vec f_p = -\nabla p.\ee
-Here we are considering only the horizontal component of the force. This must be balanced by the coriolis force per volume
+Here we are considering only the horizontal component of the force. 
+\item At the equator, winds are oriented along lines of constant gradient; i.e., perpendicular to lines of constant pressure
+\item When $\sin\lambda$ is not small, this must be balanced by the coriolis force per volume
 \be
 \vec F_{cor} = 2\rho\omega_\Earth\sin\lambda\,\vec v\times \hat n
 .\ee
@@ -1646,40 +1669,74 @@ So,
 .\ee
 Take the cross product of both sides with $\hat n$. The left hand side then becomes $\vec v$, leading to
 \be
-\vec v = \frac{\hat n\times \nabla p}{2\rho\omega_\Earth\sin\lambda}.\ee
-The direction of $\vec v$ for different orientations of the pressure gradient is depicted in Fig.~\rf{geo1}.
+\vec v = \frac{\hat n\times \nabla p}{2\rho\omega_\Earth\sin\lambda}.\eql{geo}\ee
+\item 
+The direction of $\vec v$ for different orientations of the pressure gradient is depicted in Fig.~\rf{geo1}. In the Northern hemisphere, perpendicular to the left of the temperature gradient, or along the lines of constant pressure, {\it isobars}.
 \Sfig{geo1}{In the horizontal plane, the direction of the wind velocity given the pressure gradient, using the fact that the Coriolis force balances the pressure force.}
+\eei
 
-Consider the implied wind speeds from this formula. Use $\rho_{\rm air}=1$kg/m$^3$; $\omega_\Earth= 7.3\times 10^{-5}$ Hz. For simplicity, take $\sin\lambda=1/2$. Then,
+\lsection{Observed Pressure}
+\bei
+\item
+Fig.~\rf{pressure-sea-level} shows that there are high pressure centers at $\sim\pm30^\circ$ latitude, where the air from the Hadley cells sinks. 
+\item This makes sense because we learned that the hydrostatic equation is
+\be
+\frac{dP}{dz} = -\rho g
+.\ee
+Therefore, integrating from $z=\infty$ where $P=0$, we get
+\be
+P_0 = \int_0^\infty dz \rho g
+\ee
+and it is not surprising that the total mass above the Hadley cell end is largest.
+\item Units of pressure: 1Pascal (Pa) $=0.01$millibar (mb) = kg/m/s$^2$. Equivalently 1 hectoPa  (hPa) = 1 mb.
+\item Note that the differences at sea level are of order 10 mbar per about 3000km.
+%\item This level of variation is also seen at higher altitudes, where the pressure has dropped to 500 mbars. E.g., see Fig.~\rf{500_heights}.
+\eei
+\Spng{pressure-sea-level}{Lines of constant pressure. Note that the highest pressure is where the air flows down in the Hadley cells, at $\pm 30^\circ$.}
+
+\lsection{Ensuing Wind Patterns}
+The ensuing wind patterns are what you would expect: 
+\bei
+\item above the high pressure region at 30$^\circ$, the pressure gradient points South, so the winds blow to the East. Below are the trade winds. This is depicted in Fig.~\rf{windspeed}.
+\Spng{windspeed}{Wind velocity map.}
+\item 
+Wind speeds over land at 80m height are shown in Fig.~\rf{wind80}. They are much lower than over the oceans because of friction.
+\item Fig. 28.12 in the book shows that wind speeds decline with height as friction becomes more important.
+\eei
+\Spng{wind80}{Wind speeds at 80 m.} 
+
+\lsection{Wind Speeds}
+We can estimate the expected wind speeds from \ec{geo}. Use $\rho_{\rm air}=1$kg/m$^3$; $\omega_\Earth= 7.3\times 10^{-5}$ Hz. For simplicity, take $\sin\lambda=1/2$. Then,
 \be
 v \simeq 1.4\times 10^4 \left( \frac{m^3 s}{kg}\right)\, \nabla P.\eql{vgradp}\ee
-Units of pressure: 1Pascal (Pa) $=0.01$millibar (mb) = kg/m/s$^2$. So, the term in parentheses is
+So, the term in parentheses is
 $m^2/s/Pa$. Let's normalize the gradient to its value over 1 km; i.e, $\nabla P =\frac{\Delta P_1}{1\,km}$; then
 \be
 v\simeq 14 \frac{\Delta P_1}{0.01\, mb}\, m/s 
 .\ee
-The vertical changes in pressure are of order 30 mb/km; to get wind speeds of the proper order of magnitude, we see that the horizontal gradients must be one thousand times smaller. 
-To see that this is true, look at Fig.~\rf{500_heights}.
-\Spng{500_heights}{Contours showing the altitude at which the pressure is equal to 500 mb. Add an extra 0 to the height to get the result in meters.}
-The horizontal pressure gradient is $dp/dx = dP/dz\, dz/dx$ and one can see that the vertical change $dz$ is of order 50 m over horizontal distances of order more than 100 km. For example, the lines labeled 546 and 552 correspond to regions where the pressure is equal to 500 mb at heights 60m apart. Yet they are separated by roughly half the width of Nebraska, so at least 100 km.
+But we know from above that typical changes in sea level pressure are of order .003 mbar/km, so indeed we expect wind speeds of order 5 m/s, at least over the ocean.
 
-The physics behind this also makes sense. Hydrostatic equilibrium requires
+\lsection{Physics of the Pressure field}
+The winds depend on the pressure field. Let's work out the physics of pressure variation.
+Hydrostatic equilibrium requires
 \be
 \frac{dP}{dz} = -g\rho = -\frac{gP}{RT}
 \ee
-where $R$ is mass dependent (typically inversely. proportional to the mass of the elements comprising the gas). Integrating from $z=0$ leads to
-\be
-z_P = \frac{R}{g} \int_{\ln P}^{\ln P_0} dx \,T
-.\ee
-So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. 
-
-\comment{This should be done more carefully, deriving 3.29 in Wallace and Hobbs.} Generally, we have
+where $R=k_B/m_{air}$. 
+%Integrating from $z=0$ leads to
+%\be
+%z_P = \frac{R}{g} \int_{\ln P}^{\ln P_0} dx \,T
+%.\ee
+%So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. 
+%
+%Generally, we have
+Integrating from the ground gives
 \be
 \int_{P_0}^P\frac{dP'}{P'} = -\frac{g}{R}\, \int_0^z \frac{dz'}{T(z')}.\ee
 The two limiting possibilities are isothermal and adiabatic:
 \be
 P^{iso} = P_0 e^{-z/H}\ee
-with $H\equiv g/RT_0=\frac{m_{\rm air}g}{k_BT}.$ 
+with $H\equiv RT_0/g=\frac{k_BT}{m_{\rm air}g}.$ 
 If the temperature falls adiabatically, then the integral on the right becomes
 \be
 \frac{g}{R\Gamma}\,\ln\left( T_0-\Gamma z\right)\vert_0^z
@@ -1691,35 +1748,82 @@ These two limits are shown in Fig.~\rf{pisoad}.
 Note that since $R=k_B/m_{air}$ %and $\Gamma_{ad}=g/c_p$
 , the first order term in the Taylor expansion in \ec{pad} is $z/H$, exactly like the small $z$ isothermal expansion. 
 
+Note from Fig.~\rf{pt} that for either isothermal or adiabatic,  $P$ drops much faster than $T$ . This is obviously true for isothermal, but for adiabatic, considering the ground  20$^\circ$C curve, when the temperature drops to 220K (i.e., by 73/293), the pressure has dropped by about 2/3 (from 1000 to 350).
+\Spng{pt}{Variation of pressure vs. temperature for 2 different ground temperatures in the isothermal and adiabatic case.}
 
-\comment{We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
-\be
-\frac{dP}{P} = \frac{\gamma}{\gamma-1}\,\frac{dT}{T}
-\ee
-and then integrating leads to
-\be
-P = P_0 \left( \frac{T}{T_0} \right)^{\gamma/(\gamma-1)}.\ee
-Identifying $T_0$ with $\theta$, the potential temperature, and then inverting leads to 
-\be
-\theta = T\,\left( \frac{P_0}{P} \right)^{1-1/\gamma}
-\ee
-For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
-}\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
+%To get wind speeds of the proper order of magnitude, we see that the horizontal gradients must be one thousand times smaller. 
+%Consider Fig.~\rf{500_heights}.
+%\Spng{500_heights}{Contours showing the altitude at which the pressure is equal to 500 mb. Add an extra 0 to the height to get the result in meters.}
+%The horizontal pressure gradient is $dp/dx = dP/dz\, dz/dx$ and one can see that the vertical change $dz$ is of order 50 m over horizontal distances of order more than 100 km. For example, the lines labeled 546 and 552 correspond to regions where the pressure is equal to 500 mb at heights 60m apart. Yet they are separated by roughly half the width of Nebraska, so at least 100 km.
 
-\Spng{dpdt}{Difference in pressure as a function of height when the ground temperature differs by 10$^\circ$C. Both the adiabatic and isothermal limits are shown.}
+
+
+%\comment{We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
+%\be
+%\frac{dP}{P} = \frac{\gamma}{\gamma-1}\,\frac{dT}{T}
+%\ee
+%and then integrating leads to
+%\be
+%P = P_0 \left( \frac{T}{T_0} \right)^{\gamma/(\gamma-1)}.\ee
+%Identifying $T_0$ with $\theta$, the potential temperature, and then inverting leads to 
+%\be
+%\theta = T\,\left( \frac{P_0}{P} \right)^{1-1/\gamma}
+%\ee
+%For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
+%}\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
+
 Since the wind velocity depends on the horizontal gradient of $P$, it is useful to look at pressure differences over land surfaces with different temperatures. Fig.~\rf{dpdt} shows this difference for a 10$^\circ$ ground temperature difference for adiabatic and isothermal profiles; they are not much different. If we take the typical horizontal scale over the which the temperature varies by 10$^\circ$C as 1000km, then $\nabla P\sim 10hPa/10^3km = 10^{-3}$Pa/m. Therefore, \ec{vgradp} suggests that typical wind speeds will be 15 m/s, which is roughly correct.
+\Spng{dpdt}{Difference in pressure as a function of height when the ground temperature differs by 10$^\circ$C. Both the adiabatic and isothermal limits are shown.}
 
 
-General circulation, as described in Wallace and Hobbs 1.3.5: wind blows clockwise in the Northern hemisphere around high pressure regions. There is a high pressure max around $30^\circ$N; above this, the wind blows to the east (westerly wind) and below, winds are easterly. Winds are strongest over the ocean where there is less surface friction. So, this explains the comments above that the winds off the coast of San Francisco come from the North (Fig.~\rf{wh115}): they move clockwise around the high pressure region in the center of the Pacific and therefore on the Eastern side of the ocean, the winds are moving towards the equator at the latitude of San Francisco ($38^\circ$).
-\Sjpg{wh115}{Circulation in the Northern Hemisphere. Note that the winds on the eastern side of the ocean at latitudes less than the high pressure belt at $45^\circ$ blow towards the equator, i.e., from the North. This is the cause of fog in San Francisco.}
+%General circulation, as described in Wallace and Hobbs 1.3.5: wind blows clockwise in the Northern hemisphere around high pressure regions. There is a high pressure max around $30^\circ$N; above this, the wind blows to the east (westerly wind) and below, winds are easterly. Winds are strongest over the ocean where there is less surface friction. So, this explains the comments above that the winds off the coast of San Francisco come from the North (Fig.~\rf{wh115}): they move clockwise around the high pressure region in the center of the Pacific and therefore on the Eastern side of the ocean, the winds are moving towards the equator at the latitude of San Francisco ($38^\circ$).
+%\Sjpg{wh115}{Circulation in the Northern Hemisphere. Note that the winds on the eastern side of the ocean at latitudes less than the high pressure belt at $45^\circ$ blow towards the equator, i.e., from the North. This is the cause of fog in San Francisco.}
 
+\lecture{Wind Power}
+
+Wind as a resource:
 \bee
-\item Planetary Boundary Layer
-\item Power Density (28.2)
-\item Betz Limit (Box 28.3)
-\item Comparing Wind Locations (Ex 28.1, 28.2)
-\item Power Potential
+\item Power Density (28.2): Each parcel of wind carries kinetic energy $mv^2/2$ with a speed of $v$
+\item Consider a box of area $A$ and length $dx$. The parcel of wind in that box has total energy equal to $mv^2/2$ where $m$ is the total mass in the box, equal to $\rho Adx$. All that energy moves out of the box in a time $dt=dx/v$, so the rate at which energy flows out of the box per area (and is potentially captured for use) is 
+\be
+\frac{\frac12 \rho  [A dx] v^2}{A\,dt}= \frac12\,\rho v^3\equiv \mathcal{P},
+\ee
+the power density.
+\item Power density has units of energy per time per area, so the power that you extract is the power density times the area of the device that collects the energy.
 \eee
+\example{Put a 100 square meter wind turbine in an area where the wind speed is typically 10 m/s. Then, the optimal power you would get is
+\be
+P = \frac12\,{\rm kg/m}^3\, 10^3 m^3/s^3\, 100 m^2 = 50 kW
+\ee}
+
+Two caveats to this: wind speed is not constant. This actually helps because the relevant average is not the average wind speed but the average of $v^3$, which is larger than the average of $v$. 
+\example{Two regions, one with constant wind speed of 5m/s and another with }
+
+The second caveat is that you cannot access all of the power due to the Betz limit. The simplest proof of this is to consider only elastic collisions.
+\bei
+\item In the limit that the device is unmoved by the wind (hard wall), the wind bounces off with the same speed it entered with, so retains all the energy, and the device gets none of the incoming energy.
+\item In the limit that the device is moving with the wind, again it gets no energy as no particles hit it.
+\item Consider then a more general detector speed $w$ in the same direction as the wind speed $v$ but not equal to it.
+\item In the rest frame of the detector, a molecule in the wind moves towards it with speed $v-w$
+\item After the elastic collision, the molecule moves away with speed $v-w$ or negative velocity in this 1D case $w-v$. 
+\item Move back to the original reference frame and the molecule is moving away with speed $2w-v$.
+\item So the change in the kinetic energy of the molecule is 
+\be
+\Delta E = \frac12mv^2 - \frac12m(2w-v)^2=2mw(v-w).\ee
+\item The flux of molecules is $n(v-w)$, so the power density is
+\be
+\mathcal{P} = 2\rho w(v-w)^2.\ee
+\item In the limit that $w=v$ or $w=0$ the power density vanishes. The maximum values of the power density is obtained when $w=v/3$. 
+\item Plugging this in, gives the maximum power that can be extracted as a ratio of the incoming power density
+\bea
+\frac{\mathcal{P}_{max}}{\mathcal{P}_{in}} &=& \frac{(2/3)^3}{1/2}
+\vs
+&=&
+\frac{16}{27}=0.59,
+\eea
+the Betz limit.
+\eei
+
 
 \lsection{Fluids}
 
