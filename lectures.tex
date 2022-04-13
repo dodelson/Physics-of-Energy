@@ -1797,7 +1797,10 @@ P = \frac12\,{\rm kg/m}^3\, 10^3 m^3/s^3\, 100 m^2 = 50 kW
 \ee}
 
 Two caveats to this: wind speed is not constant. This actually helps because the relevant average is not the average wind speed but the average of $v^3$, which is larger than the average of $v$. 
-\example{Two regions, one with constant wind speed of 5m/s and another with }
+\example{Two regions, one with constant wind speed of 5m/s and another with zero wind 2/3 of the time but 10m/s 1/3 of the time. Using
+\be
+\bar{v^3} = \frac1T\,\int_0^T dt v^3(t)\ee
+leads to a ratio of $375/1000$; the steady wind area provides much less power.}
 
 The second caveat is that you cannot access all of the power due to the Betz limit. The simplest proof of this is to consider only elastic collisions.
 \bei
@@ -1824,41 +1827,113 @@ The second caveat is that you cannot access all of the power due to the Betz lim
 the Betz limit.
 \eei
 
+\lsection{Wind Turbines: Actuator Disk}
 
-\lsection{Fluids}
+\Sjpg{turbine}{Air flowing through the actuator slows down; the energy is converted into electrical energy.}
 
-\bee
-\item Continuity equation 
-\item Bernoulli's Principle
-\item Shear Stress: Horizontal Force (29.21)
-The no-slip condition is due to molecular interactions at the surface and requires the velocity of the fluid at a surface to be at rest with respect to the surface. That leads directly to the picture in Fig. 29.9. The fluid is moving faster as you move up, so for a fixed surface at height $z$, if we take the fluid at rest, above it the fluid is moving faster, therefore dragging it forward. The force on a small element $dA$ on this surface is in the $x$-direction and proportional to both $dA$ and $\partial v_x/\partial z$. Therefore, the drag force is
-\be
-\frac{dF_x}{dA} = \eta \frac{\partial v_x}{\partial z}.\ee
-\item Reynolds Number
-\item Shear Stress: Lift (29.26)
-In Fig. 29.13, the net force on the layer in the $\hat y$ (vertical) direction is 
-\be
-\frac{d\vec F_{lift}}{dz dx} = \hat y \left[P_--P_+\right]\ee
-From Bernoulli's eqn though $P+\rho v^2/2$ is constant, so perturbing leads to
-\be
-P(z^+,x) + \rho v(z_+,x) v_\infty = P(z^-,x) + \rho v(z_-,x) v_\infty.\ee
-Inserting that for the pressure difference leads to
+Recall that power can be written as
 \bea
-\frac{d\vec F_{lift}}{dz} &=& \rho v_\infty \hat y \int_0^L dx\,\left[ v^+(x)-v^-(x)\right]\vs
-&\equiv &
--\Gamma \rho v_\infty \hat y
-.\eea
-\item Airfoils: How does circulation develop?
-\eee
+\frac{dE}{dt} &=& \frac{d}{dt}\,\left[ \frac 12 mv^2\right]\vs
+&=& mv \frac{dv}{dt} = Fv.\eea
 
-\lsection{Wind Turbines}
-
+Two basic laws:
 \bee
-\item Actuator Disk Analysis (30.7)
-\item 
+\item  Since the mass density is constant, $dm/dt=$constant, mass flow is constant. Therefore, 
+\be
+\frac{\rho dV}{dt} = \rho A v = {\rm Constant}
+\ee
+or in the incompressible limit we will be working in, $Av=constant$.
+\item Bernoulli equation. This is simple energy conservation. As mass enters a small volume $dV$ its kinetic energy changes (from $dm v_1^2/2$ to $dm v_2^2/2$). This is due to the work done on the fluid by the pressure difference: $(P_2-P_1)dV = (P_2-P_1)dm/\rho$. Equation the two leads to
+\be
+\frac12 v_1^2 + \frac{P_1}\rho = \frac12 v_2^2 + \frac{P_2}\rho .\ee
 \eee
+
+Apply this to the actuator to get the following set of equations:
+\bea
+p_0 + \frac12\rho v_1^2 &=& p_2 + \frac12\rho v_2^2\vs
+p_3+ \frac12\rho v_3^2 &=& p_0 + \frac12\rho v_4^2.\eea
+Subtracting these 2 and setting $v_2=v_3$ leads to
+\be
+P_2-P_3 = \frac12\rho\left(v_1^2-v_4^2\right).
+\ee
+This though is proportional to the power, since the pressure difference is equal to Force per area, so the power density is this multiplied by the velocity
+\be
+\mathcal{P} =  \frac12\rho\left(v_1^2-v_4^2\right)\,v_2
+.\ee
+
+Equate this to the power obtained via the change in momentum going out and coming in:
+\bea
+\Delta p &=&  \Delta (\rho V v)\vs
+&=& \rho dt \left( A_4 v_4^2 - A_1 v_1^2 \right).\eea
+Dimensionally, momentum has units of M-L/T. If we divide by $dt$, we have something with dimensions of $M-L/T^2$, the momentum transfer per time, or the force. Multiplying force by distance gives work and force by velocity gives power. So the power extracted from the wind is
+\be
+{\rm Power} = \rho Av \left( v_1-v_4\right)v_2.\ee
+Equating leads to
+\be
+v_2 = \frac{v_1+v_4}2,\ee
+the velocity at the turbine is the average of the velocity on either end.
+
+In the homework, you will be able to show that these equations lead to
+\be
+A\mathcal{P}= \frac12\rho v_1^3A_T4a(1-a)^2
+\ee
+where $A_T$ is the area of the turbine and 
+\be
+a\equiv \frac{v_1-v_2}{v_1}.\ee
+
+Note:
+\bee
+\item The power is proportional to the area of the turbine
+\item It scales as the incoming wind speed $v_1^3$ as expected
+\item In the limit $a$ goes to zero, the turbine does not slow the wind down at all so no energy is extracted
+\item In the limit that $a$ goes to 1, $v_2=0$, and the air does not pass through the turbine so again so energy can be extracted.
+\item The power is maximized when $a=1/3$, at which point 
+\be
+\frac{A\mathcal{P}}{\frac12\rho v_1^3A_T} = \frac{16}{27}
+\ee
+the Betz limit again.
+\eee
+
+%\lsection{Fluids}
+
+%\bee
+%\item Continuity equation 
+%\item Bernoulli's Principle
+%\item Shear Stress: Horizontal Force (29.21)
+%The no-slip condition is due to molecular interactions at the surface and requires the velocity of the fluid at a surface to be at rest with respect to the surface. That leads directly to the picture in Fig. 29.9. The fluid is moving faster as you move up, so for a fixed surface at height $z$, if we take the fluid at rest, above it the fluid is moving faster, therefore dragging it forward. The force on a small element $dA$ on this surface is in the $x$-direction and proportional to both $dA$ and $\partial v_x/\partial z$. Therefore, the drag force is
+%\be
+%\frac{dF_x}{dA} = \eta \frac{\partial v_x}{\partial z}.\ee
+%\item Reynolds Number
+%\item Shear Stress: Lift (29.26)
+%In Fig. 29.13, the net force on the layer in the $\hat y$ (vertical) direction is 
+%\be
+%\frac{d\vec F_{lift}}{dz dx} = \hat y \left[P_--P_+\right]\ee
+%From Bernoulli's eqn though $P+\rho v^2/2$ is constant, so perturbing leads to
+%\be
+%P(z^+,x) + \rho v(z_+,x) v_\infty = P(z^-,x) + \rho v(z_-,x) v_\infty.\ee
+%Inserting that for the pressure difference leads to
+%\bea
+%\frac{d\vec F_{lift}}{dz} &=& \rho v_\infty \hat y \int_0^L dx\,\left[ v^+(x)-v^-(x)\right]\vs
+%&\equiv &
+%-\Gamma \rho v_\infty \hat y
+%.\eea
+%\item Airfoils: How does circulation develop?
+%\eee
+
 
 \lecture{Climate}
+
+Overview of next lectures:
+\bei
+\item  Energy Balance I: Zeroth Order (review)
+\item Energy Balance II: Corrections
+\item Convection
+\item $CO_2$ production and absorption 
+\item Radiative Transfer
+\item Energy Balance III: Full Accounting
+\item Climate Forcing
+\item Feedbacks
+\eei
 
 Useful sites:
 \bee
@@ -1866,21 +1941,34 @@ Useful sites:
 \item\href{The Climate Laboratory}{https://brian-rose.github.io/ClimateLaboratoryBook/home.html}
 \eee
 
-\lsection{Simple Models}
+\lsection{Energy Balance I}
 
 \bei
 \item incoming solar radiation: $I_\Sun$=1366 W/m$^2$
-\item Earth absorbs $\pi R_\Earth^2$ of this (the cross-sectional area), so total absorbed is $I_\Sun \pi R_\Earth^2$
-\item This must equal the radiation emitted from Earth: $4\pi R_\Earth^2 \sigma T_\Earth^4$, so
-\item $T_\Earth=278.6K=5.43$C, not bad
+\item In any one area the incoming flux is 1/4 of this, since Earth absorbs over $\pi R^2$ and emits over $4\pi R^2$
+\item Flux of interest then is $340 W/m^2$
+\item Simple balance: $\sigma T_\Earth^4 = 340 W/m^2$, so $T_\Earth=278K=5$C, not bad
+\item Divided up into incoming (short wabelength) and outgoing (long wavelength) as in Fig.~\rf{balance1}. The log-plot is a convenient way to display this because you can integrate by eye: just multiply the height by the width. Roughly the height is 100 W/m$^2$ and the width is $d\ln\lambda \simeq 2$. More precisely it is clear that the outgoing infrared emission is equal to the incoming short wavelength emission.
+\Spng{balance1}{Incoming and outgoing radiation. Note that both curves integrate to 340W/m$^2$ and that there is very little overlap. Also, note that the 15 micron line of $CO_2$ falls right at the peak of the infrared emission.}
+\item Because there is little overlap, many figures and write-ups will often treat them independently, but of course all a photon or an absorber cares about is the wavelength of the photon, not where it came from.
 \eei 
 
-v2: not all of the radiation from the sun reaches Earth: about 6\% is absorbed by the atmosphere; clouds absorb another 14\% and the surface reflects 10\%. Technically, this is called the {\it albedo}: $a_\Earth=0.3$. Taken at face value, this reduces the total absorbed by $0.7$ and therefore the temperature is smaller by $0.7^{1/4}$, leading to a revised estimate: $T_\Earth=254K=-18$C, much worse.
+\example{Venus: Orbital radius is 0.72 AU, so the flux is larger by $(1/.72)^2$, so the temperature should be larger by $1/.72^{0.5}$, or 328K or $56^\circ$C. Actual temperature is 450$^\circ$C.}
 
-v3: Account for the fact that some of the radiation emitted by Earth is reflected by the atmosphere back down to Earth, so radiative balance at the surface of the Earth leads to:
+\example{Mars: 1.5 further away, so its temperature should be cooler by $1/1.5^{.5}$; it should have a temperature of 227K=-46$^\circ$C. Pretty close to the actual -61.}
+
+\lsection{Energy Balance II: Corrections}
+
+\bei
+\item {\bf Albedo:} Some of the radiation from the sun is reflected back into space: a total of about 100W/m$^2$. The breakdown is 24:76 for surface reflection:cloud/atmosphere reflection (that is from Fig.34.7; the text says surface albedo is closer to 0.1, but the total is not in doubt). Technically, this is called the {\it albedo}: $a_\Earth=100/340=0.3$. Taken at face value, this reduces the total absorbed by $0.7$ and therefore the temperature is smaller by $0.7^{1/4}$, leading to a revised estimate: $T_\Earth=254K=-18$C, much worse.
+\example{Venus is blanketed by reflecting clouds so its albedo is much higher, $a\sim 0.75$. This should reduce the temperature by a factor of $0.25^{.25}=0.7$, leading to a predicted temperature of 230K, a much worse prediction than before!}
+\item
+{\bf Atmosphere, Radiative Heating:} Account for the fact that some of the radiation emitted by Earth is reflected by the atmosphere back down to Earth, so radiative balance at the surface of the Earth leads to:
 \be
-4\pi R_\Earth^2 \left[ (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 \right]
-= 4\pi R_\Earth^2 \sigma T_\Earth^4
+%4\pi R_\Earth^2 
+\left[ (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 \right]
+= %4\pi R_\Earth^2 
+\sigma T_\Earth^4
 \ee
 while radiative balance in the (cartoon-version) atmosphere leads to
 \be
@@ -1888,108 +1976,173 @@ T_\Earth^4 = 2T_{atm}^4
 \ee
 where the factor of 2 accounts for the radiation emitted up and down from the atmosphere. This results in
 \be
-T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma} \big( 1-\frac12\big) \right]^{1/4} = 303K.
+T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma}\times 2 \right]^{1/4} = 303K,
 \ee
+a factor of $2^{1/4}$ larger than before. 
 This is the greenhouse effect: radiation from the Earth is trapped and serves to heat it. This assumes that the atmosphere is a single layer and absorbs all of the long wavelength radiation emitted from Earth.
-
-
-v4: Based on \href{https://brian-rose.github.io/ClimateLaboratoryBook/courseware/elementary-greenhouse.html}{The Climate Laboratory}, section 2, depicted in Fig.~\rf{2layerAtm_sketch}.
-\Spng{2layerAtm_sketch}{Simple two-layer model for the temperature.}
-Radiative equilibrium must hold at all 3 layers:
-\bei
-\item Surface: 
-\be
-\sigma T_s^4 = (1-\alpha) Q + \epsilon\sigma \left( T_0^4 + (1-\epsilon) T_1^4\right)\ee
-where $Q$ is the sunlight absorbed on Earth $I_\Sun/4$ and $\epsilon$ is the fraction of short wavelength radiation absorbed by each layer. Note that Kirschoff's Law is used here: the emitted radiation is at the temperature of interest but suppressed by $\epsilon$. If the gas absorbs a lot at the wavelengths of interest, it also emits a lot at those wavelengths.
-\item Layer 0:
-\be
-2\epsilon\sigma T_0^4 = \epsilon\sigma T_s^4 + \epsilon^2\sigma T_1^4\ee
-\item Layer 1:
-\be
-2\epsilon\sigma T_1^4 = (1-\epsilon)\epsilon \sigma T_s^4 + \epsilon^2\sigma T_0^4
-\ee
+Note that the temperature of the atmosphere is lower than the surface temperature by a factor of $2^{1/4}$, so it is equal to our previous estimate of the surface temperature, 255K. If we take the lapse rate to be the observed lapse rate in the atmosphere $6.5K/km$, this temperature difference of 48K would correspond to a height of 7 km.
+\example{Venus: Applying the same argument to Venus leads to $T_{\rm Venus} = 276$K, still much lower than the actual temperature.}
 \eei
-These are three 3 equations for 4 unknowns (taking $\alpha=0.3$. Fig.~\rf{twolayer} shows the results for the 3 temperatures as a function of the remaining free parameter $\epsilon$.
-\Spng{twolayer}{Prediction of the two-layer model for the temperatures of its 3 components as a function of $\epsilon$, the fraction of long wavelength radiation absorbed by the two atmospheric layers.}
-The limit $\epsilon=1$ means they absorb all the radiation so the temperatures are identical to the two-layer model in Example 34.2. The limit $\epsilon=0$ corresponds to no greenhouse effect so it recovers the prediction of v2, 254K for the surface.
+%
+%v4: Based on \href{https://brian-rose.github.io/ClimateLaboratoryBook/courseware/elementary-greenhouse.html}{The Climate Laboratory}, section 2, depicted in Fig.~\rf{2layerAtm_sketch}.
+%\Spng{2layerAtm_sketch}{Simple two-layer model for the temperature.}
+%Radiative equilibrium must hold at all 3 layers:
+%\bei
+%\item Surface: 
+%\be
+%\sigma T_s^4 = (1-\alpha) Q + \epsilon\sigma \left( T_0^4 + (1-\epsilon) T_1^4\right)\ee
+%where $Q$ is the sunlight absorbed on Earth $I_\Sun/4$ and $\epsilon$ is the fraction of short wavelength radiation absorbed by each layer. Note that Kirschoff's Law is used here: the emitted radiation is at the temperature of interest but suppressed by $\epsilon$. If the gas absorbs a lot at the wavelengths of interest, it also emits a lot at those wavelengths.
+%\item Layer 0:
+%\be
+%2\epsilon\sigma T_0^4 = \epsilon\sigma T_s^4 + \epsilon^2\sigma T_1^4\ee
+%\item Layer 1:
+%\be
+%2\epsilon\sigma T_1^4 = (1-\epsilon)\epsilon \sigma T_s^4 + \epsilon^2\sigma T_0^4
+%\ee
+%\eei
+%These are three 3 equations for 4 unknowns (taking $\alpha=0.3$. Fig.~\rf{twolayer} shows the results for the 3 temperatures as a function of the remaining free parameter $\epsilon$.
+%\Spng{twolayer}{Prediction of the two-layer model for the temperatures of its 3 components as a function of $\epsilon$, the fraction of long wavelength radiation absorbed by the two atmospheric layers.}
+%The limit $\epsilon=1$ means they absorb all the radiation so the temperatures are identical to the two-layer model in Example 34.2. The limit $\epsilon=0$ corresponds to no greenhouse effect so it recovers the prediction of v2, 254K for the surface.
+%
+%The horizontal dashed lines are the observed temperatures at the surface, about 3 km up and about 10km up. Clearly, this one-parameter model is not sufficient to fit all 3 data points. Roughly the best fit is at the vertical line, $\epsilon$ a bit lower than 0.6. The temperature there is a tad lower than 300K, getting closer to truth. This model goes beyond v3 in two ways: first, by putting in a second layer, and then by allowing the opacity to drop below 100\%. 
+%
+%These models are simple because (i) the radiation is not blackbody and the absorbers allow through more radiation at some wavelengths than at others and (ii) radiative transfer is not the only form of heat transfer: convection is also important. 
 
-The horizontal dashed lines are the observed temperatures at the surface, about 3 km up and about 10km up. Clearly, this one-parameter model is not sufficient to fit all 3 data points. Roughly the best fit is at the vertical line, $\epsilon$ a bit lower than 0.6. The temperature there is a tad lower than 300K, getting closer to truth. This model goes beyond v3 in two ways: first, by putting in a second layer, and then by allowing the opacity to drop below 100\%. 
+\lecture{Convection and Radiative Transfer}
 
-These models are simple because (i) the radiation is not blackbody and the absorbers allow through more radiation at some wavelengths than at others and (ii) radiative transfer is not the only form of heat transfer: convection is also important. 
+Review of previous results
+%\bei
+%\item The upward force on a horizontal slab is $P(z)A-P(z+dz)A=-(dP/dz)A dz$. This is an upward force.This must be balanced by the force of gravity $\rho Adz g$, so
+%\be
+%dP = -\rho g dz.
+%\ee
+%\item Treating the gas as ideal leads to
+%\be
+%P=nk_BT=\frac{\rho}{m} k_BT\ee
+%\item Therefore,
+%\be
+%\frac{dP}{\rho} = \frac{dP k_BT}{mP} = -gdz\ee
+%or\be
+%\frac{dP}{P} = -\frac{dz}{H}
+%\ee
+%with \be
+%H\equiv \frac{mg}{k_BT}\ee
+%\item The solution is therefore
+%\be
+%P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
+%\ee
+%\item Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature were constant, the pressure profile would look like Fig.~\rf{pressure}.
+%\Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
+%The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
+%\eei
 
-\lsection{1D Radiative-Convective Equilibrium}
-
-In equilibrium the mass density $\rho$, pressure $P$, and temperature $T$ can be related to one another. In the 1D case, this become simple:
 \bei
-\item The upward force on a horizontal slab is $P(z)A-P(z+dz)A=-(dP/dz)A dz$. This is an upward force.This must be balanced by the force of gravity $\rho Adz g$, so
-\be
-dP = -\rho g dz.
-\ee
-\item Treating the gas as ideal leads to
-\be
-P=nk_BT=\frac{\rho}{m} k_BT\ee
-\item Therefore,
-\be
-\frac{dP}{\rho} = \frac{dP k_BT}{mP} = -gdz\ee
-or\be
-\frac{dP}{P} = -\frac{dz}{H}
-\ee
-with \be
-H\equiv \frac{mg}{k_BT}\ee
-\item The solution is therefore
-\be
-P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
-\ee
-\eei
-
-Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature were constant, the pressure profile would look like Fig.~\rf{pressure}.
-\Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
-The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
-
-\lsection{Convective instability}
-
-To determine the pressure and density profile more accurately, we need to determine the temperature profile. For this, we can use the fact that the work done by the pressure of a small volume reduces the internal energy:
-\be
-dU = -PdV.
-\ee
-The internal energy drop means a drop in temperature ala $dU=c_VdT$. That is, if the actual drop in temperature is smaller than then the packet will be cooler than the surrounding air and will not rise further. 
-Define the actual temperature drop to be {\it lapse rate}
+\item
+The actual temperature drop is defined to be {\it lapse rate}
 \be
 \Gamma \equiv -\frac{dT}{dz}.
 \ee
-\bee
-\item If $|dT|$ from pressure differences is larger than $|\Gamma dz|$, then the packet will be cooler than the surrounding air and it will rise no further. 
-\item If $|dT|$ from pressure differences is smaller than $|\Gamma dz|$, then the packet will be hotter than the surrounding air and it will continue to rise, leading to convective instability. 
-\eee
+\item There is convective instability (e.g., air will rise) if
+\be
+\Gamma > \Gamma_d
+\ee
+where
+\be
+\Gamma_d = \frac{g}{c_p} = 9.5 K/km
+\ee
+if $\Gamma>\Gamma_d$ then convection occurs until the temperature gradient drops down to $\Gamma_d$. If $\Gamma< \Gamma_d$, then there is no convection.
+\eei
 
-The work done can be obtained by taking the differential of the ideal gas law ($PV=Nk_BT)$:
-\be
-PdV+dPV=Nk_BdT\ee
-so
-\be
-c_VdT= -\left( Nk_BdT-VdP\right).
-\ee
-From Chapter 5 (5.32), $C_P=C_V+Nk_B$ for a monotomic ideal gas, so
-\be
-dT = \frac{VdP}{C_P} = \frac{ -\rho Vg dz}{C_P}
-\ee
-So, there will be convective instability and therefore heat propagation from lower to upper levels if
-\be
-\frac{ \rho Vg}{C_P} < \Gamma.
-\ee
-The adiabatic lapse rate \be
-\Gamma_d \equiv \frac{ \rho Vg}{C_P}
-\ee
-is the dividing line in the temperature change: if $\Gamma>\Gamma_d$ then convection occurs until the temperature gradient drops down to $\Gamma_d$. If $\Gamma< \Gamma_d$, then there is no convection.
+When accounting for the latent heat associated with water, the moist adiabatic lapse rate is smaller, 6.5K/km, and this is roughly what is observed in the atmosphere.
 
-Near the Earth's surface, we can compute $\Gamma_d$ using the fact that $c_P=C_P/\rho V=1$ kJ/kg-K. We find $\Gamma_d=9.8$ K/km. It might be interesting to compare this to the very simple v3 model above, where the temperature in the ``atmosphere'' was $2^{1/4}=1.19$ smaller than that on Earth. In that model, that means a difference: 
+%The work done can be obtained by taking the differential of the ideal gas law ($PV=Nk_BT)$:
+%\be
+%PdV+dPV=Nk_BdT\ee
+%so
+%\be
+%c_VdT= -\left( Nk_BdT-VdP\right).
+%\ee
+%From Chapter 5 (5.32), $C_P=C_V+Nk_B$ for a monotomic ideal gas, so
+%\be
+%dT = \frac{VdP}{C_P} = \frac{ -\rho Vg dz}{C_P}
+%\ee
+%So, there will be convective instability and therefore heat propagation from lower to upper levels if
+%\be
+%\frac{ \rho Vg}{C_P} < \Gamma.
+%\ee
+%The adiabatic lapse rate \be
+%\Gamma_d \equiv \frac{ \rho Vg}{C_P}
+%\ee
+%is the dividing line in the temperature change: 
+%Near the Earth's surface, we can compute $\Gamma_d$ using the fact that $c_P=C_P/\rho V=1$ kJ/kg-K. We find $\Gamma_d=9.8$ K/km. It might be interesting to compare this to the very simple v3 model above, where the temperature in the ``atmosphere'' was $2^{1/4}=1.19$ smaller than that on Earth. In that model, that means a difference: 
+%\be
+%\Delta T = 303\left(1-\frac{1}{1.19}\right)= 48K.\ee
+%So depending on where you put the top of the atmosphere in that simple model (somewhere between the tropopause at 20km and the stratosphere at 40km), it seems clear that the lapse rate will be roughly of order the adiabatic lapse rate, so convection will play some role.
+
+The balance equation above neglects heating via evaporation and then convection. We can estimate this by simply using the fixed lapse rate and redoing the balance equations:
+\bea
+ \sigma T_\Earth^4 + Q_{convection}&=& 2\sigma T_{atm}^4 \vs
+ \sigma T_\Earth^4 + Q_{convection}&=&  (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 .\eea
+ This does not change the atmospheric temperature; it is fixed at 255K to balance the incoming 240W/m$^2$. This is based on the assumption that {\it no} radiation emitted from the Earth escapes the atmosphere. Therefore, the only way to balance the incoming is for it to come from the atmosphere. However, this does change the temperature on Earth. If we assume the globally averaged temperature is 287K, then the heat carried by convection is fixed to be
+ \be
+ Q_{convection} = 95 W/m^2\ee
+ which is very close to correct. Finally, this fixes the height of the atmosphere to be $(287-255)/6.5=4.9$ km, which turns out also to be correct.
+ 
+ \lsection{Radiative Transfer}
+ 
+ \bei
+ \item In small distance $dz$, the fraction of radiation that is lost is $n\sigma dz$
+ \item The loss term therefore is 
+ \be
+ \frac{dI_\nu}{d|z|} = -I_\nu n\sigma_\nu .\ee
+ \item If this was all, then the solution would be 
+ \be
+ I_\nu(z_2) = I_\nu(z_1) e^{-\tau(z_1,z_2)} \ee
+ with
+the optical depth is defined as
+ \be
+ \tau_\nu(z_1,z_2) = \left\vert  \int_{z_1}^{z_2} dz n\sigma_\nu. \right\vert\ee
+ We'll drop the absolute value sign and simply remember that the initial intensity is always suppressed by $e^{-\tau}$. We will also drop the $\nu$ subscript but it is very important to remember that the optical depth, which depends on the cross section, is very sensitive to the frequency.
+ \item As an example, consider $O_2$ in the upper atmosphere. A photon can dissociate $O_2$ into two oxygen atoms if its energy is above the binding energy $E=5.2$eV. This leads to all photons with wavelengths shorter than 240nm being absorbed. The cross-section is very sensitive to wavelength but a lower bound is $10^{-27}$m$^2$. Multiply this by the density $n_{O_2} = 0.21\times 1.2 \times e^{-z/H}/(32\times 1.67\times 10^{-27})$/m$^3=4\times 10^{24} m^{-3}$. So cross sections above $10^{-27}m^2$ lead to an optical depth 
+ \be
+ \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
+ \ee
+ So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
+ \item There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
+ \be
+ \frac{dI_\nu}{dz} = -I_\nu n \sigma + {\rm Gain\ Term}.
+ \ee
+ We know that in equilibrium the intensity will simply equal that of a blackbody, $B_\nu$. This fixes the gain term to be $n \sigma B_\nu$.
+ \eei
+ 
+ Solve the radiative transfer, the Schwarzschild, equation:
+$$ dI_\nu = (-I_\nu + B_\nu(T)) n\sigma_\nu dz $$
+This has the analytical solution:
+$$ I_\nu(z) = I_\nu(z_0) e^{-\tau} + \int_{0}^\tau d\tau'\,e^{-(\tau-\tau')}\, B_\nu\left(T(z[\tau'])\right)$$
+where $$\tau(z)\equiv \int_{z_0}^z  n\sigma_\nu(z') dz'.$$
+\bei
+\item Limit $\tau$ is large: the initial flux goes away and the exponential in the integrand keeps $\tau'$ very close to $\tau$, so $B_\nu$ can be removed from the integrand. The integral is essentially one, so in this limit
 \be
-\Delta T = 303\left(1-\frac{1}{1.19}\right)= 48K.\ee
-So depending on where you put the top of the atmosphere in that simple model (somewhere between the tropopause at 20km and the stratosphere at 40km), it seems clear that the lapse rate will be roughly of order the adiabatic lapse rate, so convection will play some role.
+\lim_{\tau\rightarrow\infty} I_\nu(z) = B_\nu(z)
+\ee
+exactly as we had it before: the slab just emits at the temperature it is at.
+\item In the limit that $\tau=0$, all the flux escapes and 
+\be
+\lim_{\tau\rightarrow 0} I_\nu(z) = I_\nu(z_0)
+.\ee
+\eei
+
+
+If we take a simple expression for absorption rate based on the density decrease, $n\sigma=\kappa e^{-z/H}$, then
+$$ \mu(z) = \kappa H \left( 1- e^{-z/H}\right)$$
+
+\Spng{co2flux}{Impact of absorption and emission for different opacities in the region of the 15 micron line.}
+\Spng{co2doubling}{Impact of doubling the $CO_2$ concentration for different opacities..}
+
 
 \newcommand\ipcc[1]{{\tt IPCC Report: #1}}
 
-\lsection{Radiative Forcing}
+\lecture{Radiative Forcing}
 
 This is defined to be: ``The change in net irradiance (down -up) at the tropopause after allowing for stratospheric temperatures to readjust to radiative equilibrium, but with surface and tropospheric temperatures and state held fixed at the unperturbed values.'' 
 

@@ -1,0 +1,70 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\item {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\begin{centering}
+{\bf Homework 5: Due Thursday, March 17, 2022}
+\end{centering}
+
+\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+\problem{Problem 16.3}
+\problem{Write a short code that inputs $Z$ and $A$ and outputs the binding energy, using the semi-empirical mass formula described in section 17.2 with parameters in Table 17.2. Use the code to plot the binding energy per nucleon as a function of $A$ using $Z=Z_{\rm min}$ from Eq. 17.20.}
+\problem{Problem 17.2 using the binding energies from your code. }
+\problem{Problem 17.6}
+\problem{Problem 17.12}
+\problem{Problem 18.1}
+\problem{Problem 18.7; you may use your binding energy code to estimate the energy released.}
+
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,73 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\item {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\begin{centering}
+{\bf Homework 1: Due Thursday, February 24, 2022}
+\end{centering}
+
+\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+\problem{Consider a perfectly elastic ball of mass $m$ bouncing up and down on a horizontal surface under the influence of gravity. Prove that averaged over time, the downward force of the ball on the floor is equal to $mg$. Generalize that to show that the pressure of air on the surface of the Earth is equal to $\int dz \rho g$.}
+\problem{A hot air balloon has a volume of 3000 m$^3$ and carries a mass (including basket, people, etc.) of 600 kg at a height of 900 meters above the surface of the Earth. Atmospheric pressure depends on altitude via
+\be
+P(z) = P_0 e^{-z/H}\ee
+with $P_0$ equal to 1 atmosphere and $H=8.5$km, and assume that the pressure inside the balloon is equal to that outside. Assume that the atmospheric temperature is 20$^\circ$C with zero lapse rate. What is the temperature of the air inside the balloon?}
+\problem{Problem 6.1}
+\problem{Problem 6.4 }
+\problem{Problem 6.6}
+\problem{Problem 6.15}
+\problem{Accessing the data set we have been using, make a more refined estimate of how much $CO_2$ every country will emit for each of the next 50 years. For example, a simple thing to do would be to find the slope of emissions (change in emissions per year) over the past 10 years say and use that to extrapolate forwards. Slightly more complex would be to use this estimate for half of the countries with low emissions per capita (``under-developed'' countries) on the assumption that their emissions will continue to go up and keep the other half of the countries flat. Or try something more ambitious.}
+
+\end{enumerate}
+
+\end{document}

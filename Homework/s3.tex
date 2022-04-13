@@ -1,0 +1,129 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\item {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\begin{centering}
+{\bf Solution Set 3}
+\end{centering}
+
+\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+\problem{Problem 5.1}
+The work done by the gas can be computed from 
+\be
+W = \intdV p(V).\eeSince $(p_0 , V_0)$ and $(p, V)$ are both known and the quantity of gas $n$does not change, we can compute $n$ from $n = p_0V_0/RT_0$ and thenfind $T$ using $T = pV/nR$. Knowing $T-T_0$ and the heat capacity ofargon (a monatomic ideal gas) we can find the increase in thermalenergy content of the gas. This plus the work done by the gas mustsum to the total energy added to the gas.First compute the work done: we are given $p = p_0V/V_0$, so
+\beaW &=&\int_{V_0}^V dV'P(V') = \frac{p_0}{2V_0}\left((2V_0)^2-V_0^2\right)
+\vs
+&=&
+\left( \frac{ 10^5 Pa}{2\times 10^{-3} m^3} \right)\,3\times 10^{-6} m^3 = 150 J.
+\eeaThe temperature $T$ is obtained from the ideal gas law:
+\beT = (pV/p_0V_0)\,T_0 = 4(273 K) = 1092 K.\eeThe internal (thermal) energy of argon (a monatomic, ideal gas) attemperature$T$ is $U = (3/2)nRT$. We get $n$ from $n = p_0V_0/RT_0 =0.0446$ mol. So\bea
+\Delta U&=& \frac32nR\Delta T\vs
+&=& \frac32(0.0446 mol)(8.31J/K mol)(1092-273)K=455J\eeamust have been added to increase the temperature of the gas. Sincethe gas also did $W = 150$ J of work, the total thermal energy addedto the gas must have been $Q_{tot} = 455 + 150 = 605$ J.
+\problem{Problem 5.2}
+At 0$^\circ$C and 1 atm, $\rho_{air}=1.275$kg/m$^3$. To lift $m=5825$ kg requires a force $mg$, so 
+\be
+(\rho_{air}-\rho_{He})Vg=mg. \ee
+Therefore the density of helium is $\rho_{air}-m/V=0.26$kg/m$^3$. 
+
+At any given $T$ and $p$,$ \rho_{He}/\rho_{air} = (4/29)$, the ratio of their molecularmasses, so at p = 1 atm, $ \rho_{He} = (4/29)1.275 kg/m^3 = 0.176 kg/m^3$.
+
+Using the ideal gas law, we can then solve for the pressure at whichthe density of helium is $0.260 kg/m^3$,
+\be
+ \rho_{He}  = \frac{0.260 kg/m^3}{0.176 kg/m^3}\,1 atm = 1.48 atm.\eeIf the temperature increases to 20$^\circ$C while volume remains constant,then the density of helium does not change, but the densityof the outside air drops to $\rho_{air}=(273/293)1.275 = 1.188 kg/m^3$,so the mass that can be lifted is
+ \bem = (\rho_{air}-\rho_{He})V = (1.188 kg/m^3-0.260 kg/m^3)\,5740m^3 = 5330 kg .\ee
+\problem{Problem 5.3 }
+As volume is assumed constant, the ideal gas law implies\be
+p_{lung} = \frac{T_{lung}}{T_{air}}\, p_{air} .\eeIn all cases $T_{lung} = 310 $K. For case a) $p_{air} = 1 $atm and $T_{air} =293 K$, hence $p_{lung} = (310/294) atm = 1.05$ atm. For case b) $T_{air}= 268 K,p_{lung}= 1.20 $atm. For case c) $T_{air} = T_{lung}$, so $p_{lung} = 1$ atm.
+\problem{Problem 5.7}
+The water is heated up by approximately $\Delta T=30 $K, and theaverage shower takes 8 min. Water has a heat capacity of $c_V =4.18 $kJ/kg/K, so the total energy savings for the US (population$3 \times10^8$) per year is
+\be
+\Delta E=
+c_V\Delta M \Delta T\ee where $\Delta M$ is the difference in the total mass of water used inshowers between the normal and low-flow shower heads:
+\bea
+\Delta M &=& (4.8L/{\rm min} - 9.5 L/{\rm min})\times (8 {\rm min}/{\rm shower})\times (365\, {\rm showers})/year\vs
+&&\times 3\times 10^8\,{\rm people}\times 1kg/L = -4.12\times 10^{12}kg/y.\eea
+Multiplying this mass by the specific heat and $\Delta T$ leads to 0.52EJ/y saved energy. This is about half a percent of US annual energy use.
+\problem{Problem 5.9}
+The company claims that the heat stored by graphite at a temperature difference of $1780^\circ$ (since room temperature is $20^\circ$) is $100kW$-hours/tonne. Converting hours to seconds and using the fact that a tonne is equal to $10^3$kg leads to a claimed capacity of $3.6\times ^6$J/kg. Dividing by the temperature difference leads to a claimed heat capacity of $2000$J/kg/K, about three times higher than the room temperature value quoted in the problem. Table 2 from Ref.~\href{https://cdn-uploads.piazza.com/paste/k7uoaerjfpk4s3/631689f297ee5e92b10022c629bff9fe7187af5cece6702afe02d288a46eb5bc/je60026a011.pdf}{26} does indeed show that the heat capacity is about 3 times larger at these high temperatures so that claim makes sense.
+
+The power plant will receive nearly all of its energy during theday. We assume that night covers about half the time that the plantis operating. Thus of the 30MkWh/y generated, half can be distributedduring the day and half, $\sim15 $MkWh/y, is distributedat night from stored energy. This means that the plant will needto store around 41,000 kWh/day of energy for use at night. Thegraphite is heated during the day and cools off at night as the plantsupplies energy, so this means that the plant will need to have atleast
+\be
+M= \frac{41,000\,{\rm kWh}}{1000\, {\rm kWh/t}} = 41\,{\rm tonnes}\ee
+of graphite to provide this much power\footnote{In reality, if the plantis to provide a fairly constant amount of energy throughout theyear, much more graphite would likely be required since there willbe large variations in the amount of incident solar energy due toseasonal variations and local weather conditions.}.
+
+Assuming Australians use about as much energy as Americans (1GJ/day) and also realizing that 14\% (see Figure 1.2 in the book) is provided by electrical power, we expect the needs of one person to be about 140MJ/day. The plant supplies a total of $8.2\times 10^4$kWh/day, which is $3\times 10^5$MJ/day. So it will supply the energy needs of about 4000 people.
+
+
+
+\problem{Problem 5.11}
+Melting ice requires 334kJ for every kg of ice. The density of water is about 1000kg/m$^3$, so each cubic meter of melting ice requires $334$MJ. Raising the sea level by 1m adds a volume of 
+\be
+\Delta V = 1m\times 0.7\times 5\times 10^{14}m^2= 3.5\times 10^{14}m^3.\ee
+So raising sea levels by 1m requires $1.2\times 10^{23}$J of heat. We use about 600EJ of heat every year; one percent of that is $6\times 10^{18}$J/yr. So if we melted ice by using that energy, it would take 21,000 years. The point of the problem is to show that the actual amount of energy we use is not the problem. The problem is that energy dumps $CO_2$ into the atmosphere and that stops radiation from escaping, thereby upsetting the balance between incoming radiation from the Sun and outgoing radiation. If that balance was upset by just a little (in the problem just by $20TW=2\times 10^{13}$J/s. Over the course of a year ($3\times 10^7$ sec) this equates to an added amount of heat equal to $6\times 10^{20}$J. That extra heat would melt enough ice to raise sea level by 1m in just 190 years.
+
+
+\problem{Accessing the data set we have been using, assume that every country will, for each of the next 50 years, contribute producing the same amount of $CO_2$ it produced in the latest year available. How much $CO_2$ would be emitted over this 50-year time span? Again assuming constant conditions (same amount of greenery on Earth, etc.), how much $CO_2$ would be in the atmosphere in 2072?}
+\Spng{sol3}{Solution to problem 7 in the form of a notebook.}
+
+\end{enumerate}
+
+\end{document}
