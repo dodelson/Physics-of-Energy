@@ -2010,32 +2010,9 @@ Note that the temperature of the atmosphere is lower than the surface temperatur
 
 \lecture{Convection and Radiative Transfer}
 
-Review of previous results
-%\bei
-%\item The upward force on a horizontal slab is $P(z)A-P(z+dz)A=-(dP/dz)A dz$. This is an upward force.This must be balanced by the force of gravity $\rho Adz g$, so
-%\be
-%dP = -\rho g dz.
-%\ee
-%\item Treating the gas as ideal leads to
-%\be
-%P=nk_BT=\frac{\rho}{m} k_BT\ee
-%\item Therefore,
-%\be
-%\frac{dP}{\rho} = \frac{dP k_BT}{mP} = -gdz\ee
-%or\be
-%\frac{dP}{P} = -\frac{dz}{H}
-%\ee
-%with \be
-%H\equiv \frac{mg}{k_BT}\ee
-%\item The solution is therefore
-%\be
-%P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
-%\ee
-%\item Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature were constant, the pressure profile would look like Fig.~\rf{pressure}.
-%\Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
-%The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
-%\eei
 
+
+Including convection:
 \bei
 \item
 The actual temperature drop is defined to be {\it lapse rate}
@@ -2051,9 +2028,9 @@ where
 \Gamma_d = \frac{g}{c_p} = 9.5 K/km
 \ee
 if $\Gamma>\Gamma_d$ then convection occurs until the temperature gradient drops down to $\Gamma_d$. If $\Gamma< \Gamma_d$, then there is no convection.
+\item When accounting for the latent heat associated with water, the moist adiabatic lapse rate is smaller, 6.5K/km, and this is roughly what is observed in the atmosphere.
 \eei
 
-When accounting for the latent heat associated with water, the moist adiabatic lapse rate is smaller, 6.5K/km, and this is roughly what is observed in the atmosphere.
 
 %The work done can be obtained by taking the differential of the ideal gas law ($PV=Nk_BT)$:
 %\be
@@ -2086,7 +2063,8 @@ The balance equation above neglects heating via evaporation and then convection.
  This does not change the atmospheric temperature; it is fixed at 255K to balance the incoming 240W/m$^2$. This is based on the assumption that {\it no} radiation emitted from the Earth escapes the atmosphere. Therefore, the only way to balance the incoming is for it to come from the atmosphere. However, this does change the temperature on Earth. If we assume the globally averaged temperature is 287K, then the heat carried by convection is fixed to be
  \be
  Q_{convection} = 95 W/m^2\ee
- which is very close to correct. Finally, this fixes the height of the atmosphere to be $(287-255)/6.5=4.9$ km, which turns out also to be correct.
+ which is very close to correct. Finally, this fixes the height of the atmosphere to be $(287-255)/6.5=4.9$ km, which turns out also to be correct. Fig.~\rf{toa} show this approximation.
+ \Spng{toa}{Solar influx accounting for the albedo is exactly matched by the ``top of the atmosphere'' approximation in which the temperature is 255K. The temperature at the surface of the Earth is much higher. The yellow curve is roughly correct, as is the total amount that gets out -- the integral of the green -- but there is much wavelength dependence scrubbed away here.}
  
  \lsection{Radiative Transfer}
  
@@ -2108,6 +2086,7 @@ the optical depth is defined as
  \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
  \ee
  So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
+ \item This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
  \item There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
  \be
  \frac{dI_\nu}{dz} = -I_\nu n \sigma + {\rm Gain\ Term}.
@@ -2132,6 +2111,44 @@ exactly as we had it before: the slab just emits at the temperature it is at.
 .\ee
 \eei
 
+To do the integration, we have to assume something about the density. In principle this is done together, but a rough estimate can be gleaned from previous results
+\bei
+\item The upward force on a horizontal slab is $P(z)A-P(z+dz)A=-(dP/dz)A dz$. This is an upward force.This must be balanced by the force of gravity $\rho Adz g$, so
+\be
+dP = -\rho g dz.
+\ee
+\item Treating the gas as ideal leads to
+\be
+P=nk_BT=\frac{\rho}{m} k_BT\ee
+\item Therefore,
+\be
+\frac{dP}{\rho} = \frac{dP k_BT}{mP} = -gdz\ee
+or\be
+\frac{dP}{P} = -\frac{dz}{H}
+\ee
+with \be
+H\equiv \frac{mg}{k_BT}\ee
+\item The solution is therefore
+\be
+P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
+\ee
+\item Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature were constant, the pressure profile would look like Fig.~\rf{pressure}.
+\Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
+The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
+\item The pressure profile in the more realistic limit of linearly dropping temperature, at least out to the top of the troposphere (the point at which the temperature stops decreasing due to heating by ozone and oxygen dissociation) is then
+\bea
+P(z) &=& P_0 \exp\left\{ -\int_0^z \frac{dz'}{H(z')} \right\}
+\vs
+&=&P_0 \exp\left\{ -\frac{k_B}{mg}\,\int_0^z dz' (T_0-\Gamma z') \right\}\vs
+&=&
+P_0 \exp\left\{ -\frac{z}{H_0}\,\left( 1- \frac{\Gamma z}{2T_0}\right)\right\}
+\eea
+\item This also impacts the density profile:
+\be
+\frac{\rho}{\rho_0} = \frac{P}{P_0}\,{T_0}{T}\ee
+This leads to the profiles shown in Fig.~\rf{isoad}.
+\Spng{isoad}{Profiles of pressure, density, and temperature in the adiabatic case, contrasted with the exponentially suppressed isothermal case.}
+\eei
 
 If we take a simple expression for absorption rate based on the density decrease, $n\sigma=\kappa e^{-z/H}$, then
 $$ \mu(z) = \kappa H \left( 1- e^{-z/H}\right)$$
