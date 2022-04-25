@@ -2121,9 +2121,26 @@ $$ \tau(z) = \kappa H \left( 1- e^{-z/H}\right).$$
 
 \lecture{Energy Balance, Forcing,  and $CO_2$}
 
+\lsection{Energy Balance}
+
+Fig.~\rf{earthbalance} summarizes the balance.  
 \Spng{earthbalance}{Balance}
 \bei
-\item Fig.~\rf{earthbalance} summarizes the balance. If this balance is upset by some {\it forcing}, e.g., more sunlight; more albedo; more atmospheric absorption, then the temperature will change. 
+\item 340 in from the Sun
+\item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the gorund
+\item Atmosphere absorbs 80
+\item The remaining 160 is absorbed by the Earth.
+\item Convection spits out 100
+\item The Earth's temperature is a less less than 290, leading to 400 OLR
+\item Since 240 comes in in short wavelength radiation, 240 must go out from the atmosphere. 
+\item For the atmosphere to be in equilibrium then, it must balance: 80 absorbed in short wavelength; 100 in convection; (400-240) in long wavelength. So it spits down 340.
+\item Note that this leads to balance at the Earth: 160 from the sun together with 340 from the atmosphere is 500. That is equal to 100 from convection and 400 in IR radiation.
+\eei
+
+\lsection{Radiative Forcing}
+
+If this balance is upset by some {\it forcing}, e.g., more sunlight; more albedo; more atmospheric absorption, then the temperature will change. 
+\bei
 \item How much will the temperature change for a given forcing (in W/m$^2$)? If less gets out, so the forcing is negative, the temperature will have to rise:
 \be
 \Delta(\sigma T^4) = -F.\ee
@@ -2136,9 +2153,25 @@ $$ \tau(z) = \kappa H \left( 1- e^{-z/H}\right).$$
 where the denominator comes from solving for $T_e$.
 \item As we know, not everything is emitted at that temperature, so the actual value of 
 \be
-\lambda_0=-3.2 W/m^2/K\ee
+\lambda_0=-3.2 W/m^2/K\eql{lambda}\ee
 \eei
 
+\lsection{$CO_2$ Increase, Review}
+\bei
+\item
+Human emit 10 GT of carbon every year (Fig~\rf{emissions}). This is often reported in units of parts per million. The conversion factor is
+\be
+1 {\rm ppm} =2.13 \,{\rm GigaTonnes\, of\, Carbon}.
+\ee
+The total amount of air in the atmosphere is about 5.15 quadrillion tonnes $=5.15\times 10^{18}$ kg. One part per million means that the number density of $CO_2$ particle is a millionth of the total density. Since the mass of carbon in $CO_2$ compared to the average mass ($N_2$ (78\%) and $O_2$ (21\%)) is $12/29$, 1 ppm is equivalent to 0.414ppmm (of Carbon, not $CO_2$), where the last 'm' stands for mass. This means that 1 ppm corresponds to $2.13\times10^{12}$ kg of $CO_2$. That in turn corresponds to $2.13$ Gigatonnes, since 1 tonne is equal to 1000 kg.
+\Spng{emissions}{Global Annual CO$_2$ emissions in tons of carbon.}
+\item This has led to an increase of 400 GTC since pre-industrial but only half of that remains in the atmosphere with the other half going into the ocean (see Figs.~\rf{cum} and \rf{co2}).
+\Spng{cum}{Cumulative global emissions. Note that about half of this stays in the atmosphere.}
+The bottom line though is that there is now 900 GTC in the atmosphere, corresponding to 420ppm.
+\Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
+\eei
+
+\lsection{$CO_2$ Radiative Forcing}
 Consider the region around 15 microns due to $CO_2$ absorption.
 \bee
 \item The transition from vibrational number $\nu=0\rightarrow \nu=1$ corresponds to 15 microns, or $\Delta E = 0.08$ eV
@@ -2153,17 +2186,6 @@ with $B=4.8\times 10^{-5}$ eV.
 \ee
 with $r=0.089$ cm; $s_0=3.71\times 10^{-23}m^2$;  $k=1/\lambda$; and $k_0=1/15 \mu=667$ cm$^{-1}$. Fig.~\rf{co2cross} shows this.
 \Spng{co2cross}{Cross section approximation as well as Boltzmann weighted transitions.}
-\item
-Human emit 10 GT of carbon every year (Fig~\rf{emissions}). This is often reported in units of parts per million. The conversion factor is
-\be
-1 {\rm ppm} =2.13 \,{\rm Tonnes\, of\, Carbon}.
-\ee
-The total amount of air in the atmosphere is about 5.15 quadrillion tonnes $=5.15\times 10^{18}$ kg. One part per million means that the number density of $CO_2$ particle is a millionth of the total density. Since the mass of carbon in $CO_2$ compared to the average mass ($N_2$ (78\%) and $O_2$ (21\%)) is $12/29$, 1 ppm is equivalent to 0.414ppmm (of Carbon, not $CO_2$), where the last 'm' stands for mass. This means that 1 ppm corresponds to $2.13\times10^{12}$ kg of $CO_2$. That in turn corresponds to $2.13$ Gigatonnes, since 1 tonne is equal to 1000 kg.
-\Spng{emissions}{Global Annual CO$_2$ emissions in tons of carbon.}
-\item This has led to an increase of 400 GTC since pre-industrial but only half of that remains in the atmosphere with the other half going into the ocean (see Figs.~\rf{cum} and \rf{co2}).
-\Spng{cum}{Cumulative global emissions. Note that about half of this stays in the atmosphere.}
-The bottom line though is that there is now 900 GTC in the atmosphere, corresponding to 420ppm.
-\Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
 \item Optical depth as a function of wavelength, shown in Fig.~\rf{opticaldepth} assuming the cross section depicted in Fig.~\rf{co2cross}. 
 \Spng{opticaldepth}{Optical depth due to $CO_2$ near the 15 micron line.}
 The resulting impact on $CO_2$ emission is depicted in Fig.~\rf{co2doubling}, as well as the impact of doubling the concentration.
@@ -2173,21 +2195,57 @@ The resulting impact on $CO_2$ emission is depicted in Fig.~\rf{co2doubling}, as
 \item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
 \be
 \Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
-\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} }
+\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
+\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
+%Forcing
+%\bei
+%%\item According to 34.37, this corresponds to a forcing of about 2W/m$^2$. The underlying physics here is that the absorption cross section for $CO_2$ decays exponentially away from the central wavelength of 15 $\mu$m. There are several reasons for this broadening: thermal broadening, which we covered in nuclear physics, the intrinsic line width of the cross section, which is due to quantum mechanics, and the actual culprit here: what is called {\it pressure-broadening}. This is the hardest of the three to understand. \href{https://iopscience.iop.org/article/10.1088/1361-6463/aabac6#daabac6eqn037}{This article} has a nice treatment of the full effect.
+%\item Without feedbacks, since $\lambda_0=-3.2$ W/m$^2$ K (34.32), the temperature increase due to this amount of carbon would be 0.6K. The blackbody version of this is to compute the forcing due to a temperature in the change of the Earth with everything else held fixed. A positive temperature change $\Delta T$ would lead to a larger upward (hence negative) flux via
+%\be
+%F = -4\sigma T^3 \Delta T = -4\times 5.67\times 10^{-8} \times 288^3 \times \frac{\Delta T}{K} \,W/m^2\eql{upward}\ee
+%or
+%$F=-5.4 (\Delta T/K) W/m^2$.However, the Earth's radiation does reach the tropopause cleanly. Rather with ``the state held fixed,'' quite a bit of the Earth's radiation is absorbed by the atmosphere. Therefore, a change in the Earth's temperature by $\Delta T$ would lead to a smaller upward flux than predicted by \ec{upward}. The book uses the heuristic that on average across wavelengths the radiation that reaches the tropopause comes from a height such that the atmosphere is about 255K, and that reduces the above estimate to 3.76 W/m$^2$ for each $\Delta T/K$. But this seems misleading. 
+\item There are feedbacks, the most important of which is that warmer air can hold more water vapor, which itself absorbs a lot more IR radiation. This roughly doubles the predicted rise in temperature.
 \eee
 
+\lecture{Feedbacks}
 
-Forcing
+Review about $CO_2$ forcing:
 \bei
-%\item According to 34.37, this corresponds to a forcing of about 2W/m$^2$. The underlying physics here is that the absorption cross section for $CO_2$ decays exponentially away from the central wavelength of 15 $\mu$m. There are several reasons for this broadening: thermal broadening, which we covered in nuclear physics, the intrinsic line width of the cross section, which is due to quantum mechanics, and the actual culprit here: what is called {\it pressure-broadening}. This is the hardest of the three to understand. \href{https://iopscience.iop.org/article/10.1088/1361-6463/aabac6#daabac6eqn037}{This article} has a nice treatment of the full effect.
-\item Without feedbacks, since $\lambda_0=-3.2$ W/m$^2$ K (34.32), the temperature increase due to this amount of carbon would be 0.6K. The blackbody version of this is to compute the forcing due to a temperature in the change of the Earth with everything else held fixed. A positive temperature change $\Delta T$ would lead to a larger upward (hence negative) flux via
+\item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
+\Spng{olr}{Outgoing long wavelength radiation as a function of wavelength}
+\item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
 \be
-F = -4\sigma T^3 \Delta T = -4\times 5.67\times 10^{-8} \times 288^3 \times \frac{\Delta T}{K} \,W/m^2\eql{upward}\ee
-or
-$F=-5.4 (\Delta T/K) W/m^2$.However, the Earth's radiation does reach the tropopause cleanly. Rather with ``the state held fixed,'' quite a bit of the Earth's radiation is absorbed by the atmosphere. Therefore, a change in the Earth's temperature by $\Delta T$ would lead to a smaller upward flux than predicted by \ec{upward}. The book uses the heuristic that on average across wavelengths the radiation that reaches the tropopause comes from a height such that the atmosphere is about 255K, and that reduces the above estimate to 3.76 W/m$^2$ for each $\Delta T/K$. But this seems misleading. 
-\item There are feedbacks, the most important of which is that warmer air can hold more water vapor, which itself absorbs a lot more IR radiation. This roughly doubles the predicted rise in temperature.
+\Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
+\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
+\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
 \eei
 
+Feedbacks:
+\bei
+\item Initial forcing $F$ leads to initial temperature change
+\be
+\Delta T_0 = -F/\lambda_0.\ee
+\item But then this temperature change leads to a new forcing $F_1=\lambda \Delta T_0$; this in turns leads to a new temperature change:
+\be
+\Delta T_1 = -F_1/\lambda_0 = -\frac{\lambda}{\lambda_0}\, \Delta T_0 = \frac{\lambda}{\lambda_0^2}\,F.\ee 
+\item This leads to a new forcing $F_2=\lambda \Delta T_1 = (\lambda/\lambda_0)^2 F$ and a new temperature response
+\be
+\Delta T_2 = -F_2/\lambda_0 = -(\lambda^2/\lambda_0^3) F
+\ee
+\item so the total change in temperature is
+\be
+\Delta T_0 + \Delta T_1 + \Delta T_2 + \ldots = -\frac{F}{\lambda_0}\, \left[ 1 - \frac{\lambda}{\lambda_0} + \left( \frac{\lambda}{\lambda_0} \right)^2 + \ldots \right].
+\ee
+\item The sum is equal to $1/(1+x)$, so the total change in temperature is
+\be
+\Delta T = -\frac{F}{\lambda_0 + \lambda}.\ee
+\eei
+
+\Spng{1990}{1990 IPCC prediction}
+
+
+\Sfig{ipcc6fig}{Different scenarios}
 
 To do the integration, we have to assume something about the density. In principle this is done together, but a rough estimate can be gleaned from previous results
 \bei
