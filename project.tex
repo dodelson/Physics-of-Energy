@@ -82,6 +82,7 @@
 \title{Global Warming}
 \author{Scott Dodelson}
 \begin{abstract}
+This paper traces a direct line from energy consumption to global warming.
 \end{abstract}
 
 \maketitle
@@ -89,7 +90,9 @@
 \section{Introduction}
 
 \section{Impact of $CO_2$ on global temperature}
-Review about $CO_2$ forcing:
+
+\subsection{$CO_2$ forcing}
+ {\it Radiative forcing} is the change in energy impinging on the surface of the Earth due to a certain effect, e.g., more sunlight; more albedo; more atmospheric absorption. The change is computed keeping all other components of the system (temperature, density, pressure, etc.) constant.  
 \bei
 \item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
 \Spng{olr}{Outgoing long wavelength radiation as a function of wavelength}
@@ -97,16 +100,25 @@ Review about $CO_2$ forcing:
 \be
 \Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
 \Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
-\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
+\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. 
+\item A given forcing $F$ leads to a temperature change:
+\be
+\Delta T = -F/\lambda_0
+\ee
+where
+\be
+\lambda_0=-3.2 W/m^2/K\eql{lambda}\ee
+Note the sign: when the forcing is positive, more radiation impinges on the surface of the Earth so the temperature rises.
+\item Therefore, the increase in $CO_2$ should have led to a temperature increase of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
 \eei
 
-Feedbacks:
+\subsection{Feedbacks}
 \bei
 \item Initial forcing $F$ leads to initial temperature change
 \be
 \Delta T_0 = -F/\lambda_0.\ee
 \item But then this temperature change leads to a new forcing $F_1=\lambda \Delta T_0$. For example, $\lambda$ could quantify the impact of the increase in water vapor due to the rise in temperature.  Note from Fig.~\rf{ghg} that this will decrease amount of radiation out and therefore lead to a positive forcing. The estimate of this forcing is $\lambda_{wv}=+1.6 W/m^2/K$.
-\Spng{ghg}{Absorption as a function of wavelength for different green house gasses.}
+\Spng{ghg}{Absorption as a function of wavelength for different green house gasses. From \href{https://wattsupwiththat.com/2014/04/11/methane-the-irrelevant-greenhouse-gas/}{this web page}.}
 \item This in turns leads to a new temperature change:
 \be
 \Delta T_1 = -F_1/\lambda_0 = -\frac{\lambda}{\lambda_0}\, \Delta T_0 = \frac{\lambda}{\lambda_0^2}\,F.\ee 
