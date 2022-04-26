@@ -1,4 +1,94 @@
+%\documentclass[twocolumn,secnumarabic,amssymb, nobibnotes, aps, prd]{revtex4-2}
+\documentclass[tsecnumarabic,amssymb, nobibnotes, aps, prd]{revtex4-2}
 
+\usepackage{graphicx}
+\usepackage{amsmath,mathtools,mathabx}
+\usepackage{hyperref}
+
+
+%%%%%%%%%%%%%%%
+%%%%  Scott's macros
+%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+%%%% Equations
+%%%%%%%%%%%%%%%
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+
+
+%%%%%%%%%%%%%%%
+%%%%% Figures
+%%%%%%%%%%%%%%%
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{Figures/#1.pdf}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sjpg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{Figures/#1.jpg}{0.6\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sgif}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{Figures/#1.gif}{0.6\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{Figures/#1.png}{0.8\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
+
+
+
+
+\begin{document}
+\title{Global Warming}
+\author{Scott Dodelson}
+\begin{abstract}
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+\section{Impact of $CO_2$ on global temperature}
 Review about $CO_2$ forcing:
 \bei
 \item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
@@ -42,4 +132,6 @@ To date, the impact from $CO_2$ increase from 280 to 420 ppm then led to a forci
 It also predicts that when the concentration doubles, the forcing will be 3.7 W/m$^2$, leading to a temperature increase of 3.7/1.6=2.3$^\circ$C. Fig.~\rf{ipcc6fig} shows some different scenarios for when this will happen.
 
 \Sfig{ipcc6fig}{Different scenarios}
+
+\end{document}
 
