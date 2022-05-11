@@ -1,0 +1,179 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathabx}
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\newpage
+Problem\ {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sjpeg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.jpeg}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
+
+\renewcommand{\theenumi}{\Alph{enumi}}
+\begin{centering}
+{\bf Midterm, Physics of Energy 33-226}
+\end{centering}
+There are 5 problems in total. Each of the 5 problems is worth the same number of points.
+
+%\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+\problem{1. Suppose the seawater in the Pacific Ocean at the surface has a temperature of 30$^\circ$C and suppose that it receives radiation from the atmosphere that has a temperature of 20$^\circ$C. What is the net radiation flux (incoming minus outgoing)?}
+
+
+\problem{2. The distance between Venus and the Sun is 72\% that of the Earth-Sun difference. Using that fact alone, what should the surface temperature of Venus be assuming neither planet has an atmosphere and recalling that our estimate for the temperature of the Earth under this simplifying assumption was $T=291$K?}
+
+\problem{3. Two boards, each with area $A=1m^2$ has thermal resistances $R_1=0.2 m^2K/W$ and $R_2=0.08m^2K/W$. Suppose they are combined in series to make a single insulator of area $A$. What is the heat flux across this insulator if the temperature on either side is 10$^\circ$ and 20$^\circ$C? Now, suppose they are placed side by side (to make a total area of $2A$); what is the heat flux across them?}
+
+\problem{4. A dishwasher completes a cycle in one hour using 2kW of energy. 
+\bee
+\item How much energy is used in the cycle (in J)?
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item Water flows from a faucet at 2 gallons\footnote{1 Gallon is $0.00379m^3$.} per minute. If you wash dishes yourself using hot water (the same as the shower in the problem in class $T=40^\circ$C vs. room temperature of $10^\circ$) from the faucet in the sink, how much energy do you use if you wash dishes for 15 minutes? (The specific heat capacity of water is 4.2 kJ/kg/K and the density of water is $1000kg/m^3$.)
+\eee
+}
+
+\problem{5. Consider a disk of radius 1m held at a constant temperature of 20$^\circ$ surrounded by an insulating material with thermal conductivity $k=0.2W/m/K$. The insulating material is also confined to a 2D plane (in fact for this problem, ignore the third dimension completely, assuming that heat flows only in the 2D plane). The radius of this small annulus of insulating material is 0.1 cm. The temperature outside is held fixed at 10$^\circ$C. What is the rate of heat flow from the inner disk to the outside region (in Watts)?}
+
+%\end{enumerate}
+\newpage
+\appendix
+\section{Formula Sheet}
+\subsection{Fundamental Constants}
+\bei
+\item Speed of Light\be
+c=3\times 10^8 m/s\ee
+\item Boltzmann Constant\be
+k_B=1.38\times 10^{-23} J/K \ee
+\item Reduced\ Planck's constant
+\be
+\hbar\equiv \frac{h}{2\pi} = 1.05\times 10^{-34} J-s
+\ee
+\item Stefan-Boltzmann\, constant
+\be
+\sigma = 5.67\times 10^{-8} W/m^2/K^4\ee
+\item Proton Mass
+\be m_p=1.67\times 10^{-27} kg\ee
+\item Common elements (if asked for their mass, just multiply the number of nucleons by the mass of the proton): Carbon (12 nucleons); Oxygen (16); Nitrogen (14); Iron (56)
+\item Radius of Earth, Sun
+\be R_\Earth = 6.4\times 10^6 m.
+\ee
+\be R_\odot = 7\times 10^8 m\ee
+\eei
+\subsection{Equations}
+\bei
+\item Properties of Photons
+\be
+E = \hbar\omega = h\nu = h\frac{c}{\lambda} .\ee
+\item Ideal Gas Law
+\be PV = Nk_BT\ee
+\item Pressure = Force Per Area
+\item First Law of Thermodynamics
+\be dQ = dU + PdV
+\ee
+\item Internal Energy, $U$: Every degree of freedom that is accessible at a given temperature contributes $k_BT/2$ to $U$.
+\item Rotational Energy Levels ($I$ is the moment of inertia)
+\be E_{R,L} = E_R \frac{L(L+1)}{2I}\qquad L=0,1,2,\ldots\ee
+\item Vibrational Energy Levels ($\omega$ is the frequency)
+\be
+E_{v,n} = {\hbar\omega}\left[ n + \frac12\right].\qquad n=0,1,2,\ldots\ee
+\item Heat Capacities:
+\bea
+C_V &=& \frac{dQ}{dT}\Big\vert_V = \frac{\partial U}{\partial T}\Big\vert_V \Rightarrow \Delta Q = C_V \Delta T\vs
+C_P &=& \frac{dQ}{dT}\Big\vert_P = \frac{\partial U}{\partial T}\Big\vert_P + P \frac{\partial V}{\partial T}\Big\vert_P
+\eea
+\item Fourier's Law
+\be
+\vec q(\vec x) = -k \nabla T(\vec x)\ee
+\item Conservation Law for heat flow
+\be
+\frac{\partial u(\vec x,t)}{\partial T} = -\nabla\cdot \vec q(\vec x).\ee
+\item Hydrostatic Equilibrium
+\be
+\frac{dP}{dz} = -\rho g.\ee
+\item Thermal Resistance
+\be R_{\rm thermal} = \frac{L}{k}.\ee
+\item Stefan-Boltzmann Law for Emission of Thermal Radiation
+\be \frac{dQ}{dt} = \sigma T^4 A\ee
+\item Spectrum of Thermal Radiation (with dimensions of Energy per time per area per frequency)
+\be
+\frac{dP}{dAd\omega} = \frac{\hbar\omega^3}{4\pi^2c^2}\,\frac1{e^{\hbar\omega/k_BT}-1}.\ee
+\eei
+%\Spng{periodic}{Periodic Table: You can assume that each element has mass equal to its atomic weight (without the decimal points) times the mass of the proton.}
+\end{document}

@@ -1,0 +1,399 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathabx}
+\usepackage{xcolor}
+
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\newpage
+Problem\ {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sjpeg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.jpeg}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
+
+\renewcommand{\theenumi}{\Alph{enumi}}
+{\bf Name:}
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+
+\begin{centering}
+{\bf Final, Physics of Energy 33-226}
+\end{centering}
+%There are 5 problems in total. Each of the 5 problems is worth the same number of points.
+
+%\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+
+\problem{1. A hot-water radiator with area 1 m$^2$ has a temperature of $80^\circ$C in a room with temperature $25^\circ$C.
+
+\bee
+\item How much radiative energy does the radiator emit per time (express your answer in Watts)?
+{\color{red}
+\be \sigma T^4 \times 1m^2 = 880W.\ee}
+\item Accounting for the radiation it receives from the room, what is the net rate of thermal radiation?
+
+{\color{red}
+Subtract 447W to get 433W net.}
+\eee}
+
+\problem{2. Assume that the temperature of the Sun is 5800K and that Neptune has the following properties: distance from Sun is $4.5\times 10^9$ km; tilt with respect to its axis of revolution is 28$^\circ$; radius of 25,000 km
+\bee
+\item How much solar radiation impinges on a 1m$^2$ region on Neptune (ignore any atmospheric effects and express your answer in Watts)?
+{\color{red}
+\be
+F=\frac{\sigma T^4 R_\odot^2}{4\pi R_o^2}
+=5.67e-8\times 5800^4*(7e8)^2/(4\pi (4.5e12)^2) W/m^2\ee
+So 0.12W.}
+
+\item When the Sun is at its highest in the sky during the winter or summer solstice, how much radiation impinges on the surface at the equator?
+{\color{red}
+\be
+I_0\cos\beta=0.12*.92W/m^2=0.11W/m^2.\ee}
+\item Averaging over the whole surface, what is the solar insolation (in $W/m^2$)?
+
+{\color{red}
+It is reduced by the cross sectional area ($\pi R_U^2$) divided by the surface area, which is 4 times larger, so the insolation is $0.12/4\,W/m^2=0.03W/m^2$.}
+
+\item To maintain radiative equilibrium, what should the temperature of the surface be?
+{\color{red}
+\be T_U=\left( \frac{0.03 W/m^2}{5.67e-8 W/m^2/K^4}\right)^{1/4} =27K\ee}
+\eee}
+
+
+
+\problem{3. Consider a beam of neutrons with initial flux $I_0=10^{12} m^{-2}\ s^{-1}$ traveling through a slab of $^{235}$U with density $n=10^{27} m^{-3}$ and absorption cross section $10^{-28} m^2$. What is the intensity of the beam a distance 20m away from point of entry?
+
+{\color{red}
+\be I=I_0e^{-n\sigma x} = 10^{12} m^{-2} s^{-1} e^{-2}=1.35\times 10^{11} m^{-2}\,s^{-1}.\ee}
+}
+
+\problem{4. In 2020, humans emitted 35 Gigatonnes of $CO_2$ into the atmosphere.
+\bee
+\item Express this as Gigatonnes of carbon (GtC).
+{\color{red}
+Every tonne of $CO_2$ contains 12/44=0.27 tonnes of carbon, so 9.5GtC.}
+\item How many $CO_2$ molecules were emitted?
+{\color{red}
+Each molecule weighs $1.67\times 10^{-27} kg\times 44=7.35\times 10^{-26}$kg. So the number of molecules emitted is
+\be
+\frac{35\times 10^9\times 10^3}{7.35\times 10^{-26}}
+=4.8\times 10^{38}\ee}
+\item If this corresponds to 4.7 parts per million (fraction of $CO_2$ molecules in the atmosphere), how many air molecules are in the atmosphere?
+{\color{red}
+Divide the answer above by $4.7e-6$ to get $10^{44}$.}
+\eee
+}
+
+
+\problem{5. The binding energy of $^4$He (2 neutrons and 2 protons) is equal to 28.3 MeV. The binding energy of $^3$He is equal to 7.7 MeV.
+\bee\item What is $X$ in the reaction
+\be
+X + ^3He \rightarrow ^4He + \gamma\ee
+where $\gamma$ is a photon?
+{\color{red}
+neutron}
+\item Ignoring the kinetic energies of all other particles (because they are very small), what is the energy of the photon that emerges from this reaction?
+{\color{red}
+28.3-7.7=20.6 MeV}
+\eee}
+
+\problem{6. Consider a collection of water molecules (specific heat capacity $c_P=4.18$ kJ/kg/K) all moving with the same velocity $\vec v=200$m/s. An energy conserving process leads them to thermalize. 
+\bee
+\item What is the temperature of the water after thermalization?
+
+{\color{red}
+The total energy injected is $Mv^2/2$. This is turned into heat: $c_PT M$. Relating the two leads to
+\be
+T = \frac{v^2}{2c_P} = \frac{40 kJ}{2\times 4.18 kJ}\,K = 4.8 K\ee
+where I used $J=kg\,m^2/s^2$.}
+
+\item Make a plot that shows the velocity distribution before and after thermalization. Make sure the $x$-axis (the velocity) is labelled.
+{\color{red}
+Initial distribution is peaked at 200m/s. Final distribution is 
+\be
+f\propto v^2e^{-mv^2/2k_BT}
+\ee
+so peaks at $mv^2=2k_BT$ where $m$ is the mass of a water molecule, so 
+\be
+v= \left( \frac{2k_BT}{m} \right)^{1/2} = \left( \frac{2\times 1.38\times 10^{-23} \times 4.8 K }{34\times 1.67\times 10^{-27} kg} \right)^{1/2} =48m/s\ee}
+\eee}
+
+\problem{7. Consider a flying bird with mass 15 grams and velocity $\vec v$ at latitude $\lambda=40^\circ$ parallel to the surface of the Earth. Take $\vert\vec v\vert=25m/s$.
+\bee
+\item What is the magnitude of the horizontal component parallel to the surface of the Earth) of the Coriolis force experienced by the bird?
+{\color{red}
+From the formula sheet,
+\be
+F_{hc} = 2m\omega_\Earth\sin\lambda v
+= 2\times 0.015 kg \times \frac{2\pi}{24\times 3600 s}\, (\sin 40^\circ)\times\, 25 m/s
+.\ee
+This gives $3.5\times 10^{-6}N$.}
+\item Does the horizontal component of the Coriolis force depend on the direction of the horizontal component (of $\vec v$? If so, how? If not, why not?
+{\color{red}
+No, since it is stated that $\vec v$ is parallel to the surface of the Earth, it is perpendicular to $\hat n$. Therefore the amplitude of $|\vec v\times \hat n|$ is always equal to v.
+}
+\item What are the 3 components of $\vec\omega_\Earth$ in a coordinate system in which East is $\hat x$; North is $\hat y$; and vertical is $\hat z$? Express your answer as a function of the Earth's rotation speed $\omega_\Earth$ and latitude $\lambda$.
+{\color{red}
+The vector $\vec\omega_\Earth$ points out of the plane of the Earth along the axis of rotation. So, at the equator, it is parallel to the Northern direction and as you get close to the North pole it is perpendicular to $\hat y$. It never has an East-West component. So, 
+\be
+\vec\omega_\Earth =\omega_\Earth \left(0,\cos\lambda,\sin\lambda\right).\ee
+}
+\item Now allow the bird's velocity to include a vertical component. What are the 3 components of bird's velocity required so that the Coriolis force vanishes?
+{\color{red}
+Require $\vec v\times \vec\omega_\Earth=0$, so 
+\bea
+\vec v \times \vec\omega_\Earth &=& (v_y\omega_z-v_z\omega_y,v_z\omega_x-v_x\omega_z,v_x\omega_y-v_y\omega_x)\vs
+&=& \omega_\Earth(v_y\sin\lambda-v_z\cos\lambda,-v_x\sin\lambda,v_x\cos\lambda)=0.\eea
+To get the 3rd component equal to zero, $v_x=0$, so we require
+\be
+\frac{v_z}{v_y} = \tan\lambda.\ee
+Since $v=\sqrt{v_y^2+v_z^2}=v_y\sqrt{1+\tan^2(\lambda)}$=25m/s, we can solve and find that $v_y=19.2m/s$ and $v_z=16.1$m/s}
+\eee}
+\problem{8. Assuming hydrostatic equilibrium and a lapse rate $\Gamma$ such that $T=T_0-\Gamma z$, determine the pressure as a function of height $z$ above the surface of the Earth. Assume the pressure at the surface is equal to $P_0$and that the atmosphere is an ideal gas..
+{\color{red}
+\be
+\frac{dP}{dz} = -\rho g = -\frac{mg N}{V} = -\frac{mgP}{k_BT}.\ee
+So,
+\be
+\frac{dP}P=-\frac{mgdz}{k_BT}.\ee
+Integrating leads to
+\be
+ln(P/P_0) = -(mg/k_B) \int_0^z\frac{dz'}{T_0-\gamma z}.\ee
+or
+\be
+P=P_0 \exp\left\{\frac{mg}{k_B\Gamma} \ln(1-\Gamma z/T_0). \right\}
+=P_0(1-\Gamma z/T_0)^p\ee
+wirh the power $p=mg/k_B\Gamma$.
+}
+}
+
+\problem{9. Optical depth depends on frequency. Consider photons emitted in 2 narrow frequency bands, one of which has optical depth $\tau_1(z) = 0$ and the other has absorption coefficient $\kappa_2(z)=n(z)\sigma_2=.02 {\rm km}^{-1} \,e^{-z/H}$ where $H=10km$. Suppose the Earth emits radiation in both of these bands at the rate of 100W/m$^2$. Assume that the temperature in the atmosphere is $T_0-\Gamma z$ with $T_0=290K$ and $\Gamma=7 K/km$.
+\bee
+\item How much energy per time is received by a detector above the atmosphere with area 1 m$^2$ tuned to receive light from photons in the first frequency band?
+{\color{red}
+100W}
+\item What is the optical depth starting from the ground in the second frequency band as a function of $z$?
+{\color{red}
+Do the integral
+\bea
+\tau(0,z) &=& \int_0^z dz'\, 0.02\,{\rm km}^{-1}\,e^{-z'/H}\vs
+&=&
+2\left[1-e^{-z/H}\right].\eea
+}
+\item Calculate the optical depth for a photon (again in the second frequency band) to escape from the atmosphere if it starts at a height z. Calculate the height at which this optical depth reaches 1. What is the temperature at that height?
+
+{\color{red}
+\bea
+\tau(z,\infty) &=& \int_z^\infty dz' \, 0.02\,{\rm km}^{-1}\,e^{-z'/H}\vs
+&=& 2 e^{-z/H}.\eea
+This reach 1 when $z=H\ln(2)=6.9$km. The temperature at that height is $290-7*6.9=242$K.
+}
+\eee}
+{\problem{10.} Use the parameters from the previous problem.
+
+\bee
+\item Suppose that the wavelength of the radiation in the second frequency band is 10 microns. What is the frequency?
+ {\color{red}
+\be
+\nu=c/\lambda=3.e8/15e-6=20,000GHz.\ee}
+\item What fraction of the initial radiation from the Earth's surface is detected above the atmosphere in this band.
+  {\color{red}
+\be e^{-\tau(0,\infty)} =e^{-2} = 0.136.\ee
+}
+
+\item Using your results from the previous problem and from part B, estimate how much energy per time is received by a detector above the atmosphere with area 1 m$^2$ tuned to receive light from photons in the second frequency band assuming a bandwidth of 10\% (i.e. $\Delta\nu=\nu/10$).
+ {\color{red}
+Use \ec{rt}. The first term is simple, using the results from B: 0.136$\times 100 W/m^2$, so the initial radiation contribute 13.6 W to this detector.
+The second term is harder; a simple estimate is that all the radiation comes out at the height when the optical depth is equal to 1. So,
+\be
+I_v(\infty) \simeq B_\nu(242K)
+\ee
+using the results of the previous problem. We now need to evaluate this. 
+\bea
+B_\nu &=& \frac{4\pi^21.05\times 10^{-34} J-s (2\times 10^{13} s^{-1})^3}{(3\times 10^8m/s)^2} \,\frac{1}{e^x-1}\vs
+&=&
+\frac{3.7\times 10^{-10} J/m^2}{e^x-1}
+\eea
+where $x=h\nu/k_BT=3.9$, so $B_\nu=7.3\times 10^{-12} J/m^2/(Hz-sec)$. I put in the $Hz-sec$ factor since then J/sec gives us Watts and the answer is in W/m$^2$ per frequency. The entire band has a width of $\Delta\nu=2\times 10^{12}Hz$, so the emission from the atmosphere is 14.6W/m$^2$ leading to total emission of 28.2 W/m$^2$.
+}
+\eee}
+%\end{second}
+\newpage
+\appendix
+\section{Formula Sheet}
+\subsection{Fundamental Constants}
+\bei
+\item 1 Gigatonne = $10^9$ tonnes = $10^9\times 10^3$ kg
+\item Temperature: T $^\circ$C = (T+273.15)K
+\item Speed of Light\be
+c=3\times 10^8 m/s\ee
+\item Boltzmann Constant\be
+k_B=1.38\times 10^{-23} J/K \ee
+\item Reduced\ Planck's constant
+\be
+\hbar\equiv \frac{h}{2\pi} = 1.05\times 10^{-34} J-s
+\ee
+\item Stefan-Boltzmann\, constant
+\be
+\sigma = 5.67\times 10^{-8} W/m^2/K^4\ee
+\item Proton Mass
+\be m_p=1.67\times 10^{-27} kg\ee
+\item Common elements (if asked for their mass, just multiply the number of nucleons by the mass of the proton): Carbon (12 nucleons); Oxygen (16); Nitrogen (14); Iron (56)
+\item Radius of Earth, Sun
+\be R_\Earth = 6.4\times 10^6 m.
+\ee
+\be R_\odot = 7\times 10^8 m\ee
+\eei
+\subsection{Equations}
+\bei
+\item Properties of Photons
+\be
+E = \hbar\omega = h\nu = h\frac{c}{\lambda} .\ee
+\item Ideal Gas Law
+\be PV = Nk_BT\ee
+\item Pressure = Force Per Area
+\item First Law of Thermodynamics
+\be dQ = dU + PdV
+\ee
+\item Internal Energy, $U$: Every degree of freedom that is accessible at a given temperature contributes $k_BT/2$ to $U$.
+\item Rotational Energy Levels ($I$ is the moment of inertia)
+\be E_{R,L} = E_R \frac{L(L+1)}{2I}\qquad L=0,1,2,\ldots\ee
+\item Vibrational Energy Levels ($\omega$ is the frequency)
+\be
+E_{v,n} = {\hbar\omega}\left[ n + \frac12\right].\qquad n=0,1,2,\ldots\ee
+\item Heat Capacities:
+\bea
+C_V &=& \frac{dQ}{dT}\Big\vert_V = \frac{\partial U}{\partial T}\Big\vert_V \Rightarrow \Delta Q = C_V \Delta T\vs
+C_P &=& \frac{dQ}{dT}\Big\vert_P = \frac{\partial U}{\partial T}\Big\vert_P + P \frac{\partial V}{\partial T}\Big\vert_P
+\eea
+\item Specific Heat Capacity $c=C/M$ where $M$ is the total mass being heated.
+\item Fourier's Law
+\be
+\vec q(\vec x) = -k \nabla T(\vec x)\ee
+\item Conservation Law for heat flow
+\be
+\frac{\partial u(\vec x,t)}{\partial T} = -\nabla\cdot \vec q(\vec x).\ee
+\item Hydrostatic Equilibrium
+\be
+\frac{dP}{dz} = -\rho g.\eql{hydro}\ee
+\item Thermal Resistance
+\be R_{\rm thermal} = \frac{L}{k}.\ee
+\item Stefan-Boltzmann Law for Emission of Thermal Radiation
+\be \frac{dQ}{dt} = \sigma T^4 A\ee
+\item Spectrum of Thermal Radiation (with dimensions of Energy per time per area per frequency)
+\be
+\frac{dP}{dAd\omega} = \frac{\hbar\omega^3}{4\pi^2c^2}\,\frac1{e^{\hbar\omega/k_BT}-1}.\ee
+\item {\bf Cross section} Probability per length of an incoming particle interacting with a target is 
+\be
+\frac{dP}{dx} = n\sigma
+\ee
+where $n$ is the number density of the target and $\sigma$ the cross section.
+\item {\it Optical Depth} The intensity of a beam of particles or radiation is suppressed by $e^{-\tau(x)}$ after traveling a distance $x$, where
+\be
+\tau(x) \equiv \int_0^x dx' n(x') \sigma.\ee
+%\Spng{periodic}{Periodic Table: You can assume that each element has mass equal to its atomic weight (without the decimal points) times the mass of the proton.}
+\item Solar Insolation
+\be
+I=I_0\cos\beta\ee
+where $I_0=1366 W/m^2$ and $\beta$ is the angle between the incident radiation and the perpendicular to the ground.
+\item Centrifugal Force
+\be\vec F_{cent} = -m\omega^2 \vec r.\ee
+\item Coriolis Force
+\be
+\vec F_{coriolis} = 2m\vec v\times\vec\omega_\Earth.\ee
+\item Horizontal Component of Coriolis Force
+\be \vec F_{hc} = 2m\omega_\Earth(\sin\lambda)\,\vec v\times\vec n.\ee
+\item Wind Power 
+\be\mathcal{P} = \frac12\rho v^3.\ee
+\item Betz limit
+\be
+\frac{\mathcal{P}_{max}}{\mathcal{P}_{in}} =\frac{16}{27}.\ee
+\item Lapse rate governing convection
+\be
+\Gamma_d = \frac{g}{c_p} 
+.\ee
+\item Radiative Transfer Solution
+\be
+I_\nu(z) = I_\nu(z_0) e^{-\tau} + \int_{0}^\tau d\tau'\,e^{-(\tau-\tau')}\, B_\nu\left(T(z[\tau'])\right)\eql{rt}\ee
+with
+\be
+B_\nu(T) = \frac{2\pi h\nu^3}{c^2}\,\frac{1}{e^{h\nu/k_BT}-1}.\ee
+\item Forcing due to uniform temperature change $\Delta T$:
+\be
+F_0=\lambda_0\Delta T
+\ee
+with $\lambda_0=-3.2W/m^2/K$.
+\item Temperature change due to increase in $CO_2$ concentration $c$ above pre-industrial value $c_0=280$ppm:
+\be
+\Delta T = 2.3^\circ C\,\log_2\left(\frac{c}{c_0}\right).\ee
+\eei
+\end{document}
