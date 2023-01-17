@@ -1,0 +1,2354 @@
+\documentclass[11pt]{book}
+\usepackage{graphicx}
+\usepackage{amsmath,mathtools,mathabx}
+\usepackage{hyperref}
+
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\item {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.pdf}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sfigl}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{Figures/#1.pdf}{0.9\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\
+\newcommand{\Sjpg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.jpg}{0.6\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sgif}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.gif}{0.6\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{0.8\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand{\Sfigr}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfigr{Figures/#1.pdf}{0.6\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\example[1]{{\tt EXAMPLE: #1}}
+\newcommand\exercise[1]{{\bf EXERCISE: #1}}
+\newcommand\comment[1]{\fbox{ \parbox{.5\linewidth} {\bf
+Comment: #1
+		}
+}
+}
+\newcommand\expect[1]{{\tt {\bf Back of the Envelope:} #1}}
+\newcommand\theorem[1]{{\tt Theorem: #1}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
+\newcommand\lecture[1]{\newpage
+\addtocounter{lectureno}{1}
+\setcounter{secno}{0}
+\begin{center}
+ {\bf Lecture \arabic{lectureno}: #1}
+\end{center}
+}
+\newcommand\conversion[1]{\fbox{#1}}
+%\newcommand\example[1]{\fbox{Example: #1}}
+\newcounter{lectureno}
+\newcounter{secno}
+\newcommand\homework[1]{{\tt HW for Lecture \arabic{lectureno}:} #1}
+%\chapter{Overview}
+
+\newcommand\lsection[1]{
+\addtocounter{secno}{1}
+{\bf \arabic{lectureno}.\alph{secno} #1:}}
+
+\lecture{Overview}
+
+\bei
+\item Global Energy Production and Use: 600 EJ ($10^{18}$J) were produced in 2018, about half of which was {\it final}, consumed by end users. About 80\% of that is fossil fuels, which emit carbon dioxide. 
+\item $CO_2$ Emissions: 38 Gigatonnes of $CO_2$. 
+\bee
+\item 1 tonne = 1000 kg
+\item This is of $CO_2$, which is heavier than carbon by a factor of $(32+12)/12=3.67$, so about 10 GtC are emitted each year
+\item The ratio, 10 GtC/$6\times 10^{20}$J, is called the green house gas intensity, about 20 grams per MJ.
+\eee
+\item $CO_2$ in the atmosphere
+\bee
+\item We have been doing this for about 100 years, starting at about 1 and only recently leveling off at about 10. 
+\item In total, we have emitted 450 GtC
+\item About half of this remains in the atmosphere, and indeed, the amount of carbon in the atmosphere has increased from a little above 600 GtC to a little below 900 GtC.
+\eee
+\item Basics:
+\bee
+\item Mechanical Energy (how much we use)
+\item Heat
+\bei
+\item Thermal Energy In terms of constituent atoms (stat mech)
+\item Pressure
+\item Specific Heat
+\eei
+\item Heat Transfer (statistical mechanics; to help understand energy use and the atmosphere)
+\bei
+\item Conduction
+\item Convection
+\item Radiative Transfer
+\eei
+\item Quantum Mechanics 
+\bei
+\item Radiation in terms of photons (wavelength, energy)
+\item Wave functions and discrete energy levels 
+\item Absorption/emission via transition between quantum states
+%\item Blackbody Radiation
+\eei 
+\eee
+\item Sources of Energy
+\bee
+\item Nuclear
+\item Solar
+\item Ocean
+\item Wind
+\eee 
+\item Climate
+\bee
+\item Radiative balance: Energy in from sun must equal energy emitted. 
+\bei
+\item Solar energy is short wavelength; energy emitted is long wavelength (infrared)
+\item Atmosphere absorbs long wavelength radiation (inducing quantum mechanical transitions in Water vapor and greenhouse gases)
+\item Vertical Structure: pressure, density, convection, radiative transfer
+\item Radiative Forcing: Change in radiation (out or in) due to a specific effect (e.g., an increase in solar luminosity would be a positive forcing)
+\item Radiative forcing due to $CO_2$ is
+\be
+F_{2x} = 3.7 W/m^2.\ee
+I.e., this leads to more radiation impinging on Earth (For reference, the total solar radiation at the top of the atmosphere is 1366 W/m$^2$ and the amount of solar radiation absorbed by Earth is 50-250 W/m$^2$.
+\item One of the impacts of a forcing is a change in the mean global temperature. The relation between the two is governed by
+\be
+\Delta T_0 = -\frac{F}{\lambda_0}.\ee 
+In order to balance this forcing then, the Earth's temperature must rise by $\Delta T_0$. It is simple to estimate $\lambda_0$ assuming blackbody radiation; the true value is slightly different (since different wavelengths have different opacities and hence are emitted at different $T$'s), and is equal to $3.2$W/K/m$^2$. 
+\item Feedbacks: for example, when $CO_2$ is added, the atmosphere warms and this allows it to hold more water vapor, which in turn absorbs more infrared radiation and leads to even more warming. The true change then is given by $\lambda_0\rightarrow\lambda \simeq 1.6$W/K/m$^2$. Hence, when the $CO_2$ abundance doubles from pre-industrial times, we expect the temperature to warm by $3.7/1.6=2.3^\circ$. The key formula then is
+\be
+\Delta T = 2.3K\,\log_2\left(\frac{c}{c_0}\right)\ee
+where $c$ is the current $CO_2$ abundance and $c_0$ is the pre-industrial abundance.
+same formula predicts that the temperature should have risen by about $1^\circ$ since 1900, and it has. This is shown clearly in Fig.~\rf{TA_CO2}. 
+\Spng{TA_CO2}{Annual temperature increase relative to preindustrial times and predicted increase given the increase in $CO_2$ in the atmosphere.}
+Fig.~\rf{ipcc_trise} shows a more official version from the IPCC along with projections for the future.
+\Sfig{ipcc_trise}{Temperature increase as a function of $CO_2$ emissions. From the Intergovernmental Panel on Climate Change, 2021.%Note that the current value corresponds to 650 GtC, which is quite a bit higher than the number I gave earlier (and later using databases).
+}
+\eei 
+\eee
+\eei
+
+\lecture{Mechanical Energy}
+%\chapter{Mechanical Energy}
+
+
+Analyze the energetics of a car trip from Boston to New York. Since the distance is 210 miles and considering a car that gets 30 miles per gallon, the trip requires 7 gallons of gas. 
+
+
+\bei
+\item 1 Gallon = 3.78 Liters = $3.780\times 10^{-3} m^3$
+\item
+The density of gas is  850 kg/m$^3$. So a gallon of gas has about 3.2 kg. 
+\item 1 mole of carbon atoms has a mass of 12gms.
+\item The molecule $C_6H_{14}$ has a molar mass of about $6*12+14=86$ gm/mol. So, there are about 37 moles in a gallon of gas. 
+\item Each mole is $6\times 10^{23}$ particles, so there are $2.2\times 10^{25}$ molecules. 
+\item Alternatively, there are 86 protons and neutrons in the molecule, each of which has a mass of about $1.67\times 10^{-27}$kg, leading to a mass per molecule of $1.43\times 10^{-25}$kg/molecule, so 3.2kg corresponds to $2.2\times 10^{25}$ molecules.
+\item Estimate the electronic binding energy per carbon as 5 eV, so 30 eV per molecule or a total of $6.6\times 10^{26}$eV 
+\item 1 eV$=1.6\times 10^{-19}$J, so the estimate for a gallon of gas is 110MJ.
+\item The total energy per gallon of gas is 120MJ.
+\item Note that 1 gallon contains 2.67kg of carbon, and we said that the intensity was about 0.02kg/MJ ($10^{13}kg/6\times10^{14}$MJ = 1kg/60MJ), so we should have predicted this would lead to 130-140MJ
+\eei
+
+Seven gallons of gas therefore contain 840MJ of energy. However, transforming that energy into usable energy is not 100\% efficient. It is roughly 25\% efficient, so buying 7 gallons of gas gives you about 210MJ of energy. How is that used to get from Boston to New York?
+
+\bei
+\item {\bf Kinetic Energy} First calculate the difference between the kinetic energy of the car moving at 60mph and the car at rest (0). The energy in the gas must be used to give the car this kinetic energy. One mph is equal to 0.45 m/s, so the speed is 27m/s. Suppose the car is 2 tons, or 4000 pounds; that corresponds to 1800kg. Therefore, $mv^2/2=0.65$ MJ. This is assuming no stops. Even assuming 20 stops, though, leads to only {\bf 13 MJ}, far smaller than the 210 we are trying to account for. 
+\item {\bf Potential Energy:} Going up a hill, the car gains potential energy $mgh$ and then loses it going down. The energy per mile gained and lost is 270kJ assuming an average hill height of 15m per mile. To ensure not going too slow or too fast, though, the driver will either have to provide more gas or more break to keep a stable speed. A rough estimate is that half of that 270kJ gets consumed, so the total energy used over the 210 miles is roughly {\bf 28 MJ}.
+\item {\bf Air Resistance:} Toy model has each air molecule picking up the velocity of the car, so the total kinetic energy transferred to the air (and therefore lost by the car) equal to $dMv^2/2$ where $dM$ is the mass in an infinitesmal volume $dV = Adx$ where $A$ is the cross-sectional area of the car. So, after traveling a total distance $D=338km$, the energy lost to air friction is
+\be
+\Delta E \sim \frac12 \rho A D v^2
+.\ee 
+The twiddle here reflects the fact that this is an approximation, rectified by inserting a fudge factor, $c_d$, the drag coefficient, which is of order 1/3 for cars. Putting in $c_d$, and taking $A=2.7$m$^2; \rho=1.2$kg/m$^3$ (for air) leads to an energy loss of {\bf 130 MJ}.
+\item {\bf Friction:} The energy lost to friction of the tires with the road is estimated in the text to be {\bf 50 MJ}.
+\eei
+The total estimate is therefore about 220 MJ, which is roughly correct.
+
+\example{Kinetic energy of an airplane: with a mass of 68,000 kg (Airbus-A320). (This is the maximum mass the aircraft is allowed to take off with.) Flight time from Boston to New York is 30 minutes and the distance is 210 miles= 340km. Therefore, its kinetic energy is 
+\be
+\frac12 mv^2 = 0.5\times 6.8\times 10^4 \times \left(\frac{3.4\times 10^5}{30\times60} \right)^2 J.\ee
+Doing the multiplication leads to 1.2GJ. That (188km/h=110mph) probably an underestimate of the velocity; tripling it brings the energy up an order of magnitude.
+
+There is also the potential energy $mgh$. Assuming the plane flies at 30,000 ft (9000m), this potential energy is about 500 MJ.
+\be
+V = 6.8\times 10^4\times 9.8\times 9000J = 6GJ\ee
+about 5 times the kinetic energy. So the total energy required is over 7 GJ (neglecting air resistance).
+The number of passengers on the plane is about 150. Dividing that up leads to 50 MJ per passenger.
+}
+
+\example{Air resistance of airplane: take the width of the Airbus-A320 to be 3.7m, so that the cross-sectional area is $\pi\times 1.5^2m^2=11m^2$; the speed of a short flight to be again 200m/s (450 mi/hour). For the density, use the fact that
+\be
+\rho = \rho_0e^{-z/H}\ee
+with $H=8.5$km.
+Then, the density of air at 30,000 ft is about 1/3 of its ground value so
+\be
+\Delta E = c_d 0.5\times 0.4kg/m^3 \times 11\times 3.4e5 m^3\times 200^2 m^2/s^2=30c_dGJ
+.\ee
+The good news is that airplanes are designed to have \href{https://www.semanticscholar.org/paper/Aircraft-Drag-Polar-Estimation-Based-on-a-Model-Sun-Hoekstra/38ee841fa4dcc353a0ce2345cdc6e7d498b14a4e/figure/15}{very small drag coefficients, less than about 0.04}. So, the energy lost to air resistance does seem to be sub-dominant to that due to kinetic and potential energy. Note though that these losses increase with distance, so a flight ten times longer might need to account for them.}
+
+\lecture{Rotational Energy}
+
+Point mass rotating in a circle 
+\bee
+\item 
+\be\vec r= R(\sin\omega t,\cos\omega t)\ee
+so $|\vec r|=R$, a constant.
+\item
+\be\vec v = \omega R\,\left(\cos\omega t, -\sin\omega t\right)\ee
+so $|\vec v| = \omega R$, a constant. Therefore,
+\be
+E = \frac12 mR^2\omega^2\ee
+\item 
+\be\vec a=-\omega^2 R(\sin\omega t,\cos\omega t) = -\omega^2 \vec r\ee
+again with constant amplitude $\omega^2R$ and direction pointing inwards.
+\item Newton's second Law requires a force
+\be
+\vec F = -m\omega^2 \vec r\ee
+to keep the particle in circular motion.
+\item Centrifugal force: In a rotating system, the mass feels a force
+\be
+\vec F_{\rm centrifugal} = m\omega^2 \vec r.\ee
+\example{Particle on surface of the Earth experiences a forces of magnitude $m\omega_\Earth^2 r$ where $r$ is the distance to the axis of rotation, equal to $R_\Earth\cos\lambda$, where $\lambda$ is the latitude, equal to zero at the equator. The acceleration due to this force is
+\be
+\omega_\Earth^2  R_\Earth\cos\lambda = 
+0.034\cos\lambda\,m\,s^{-2}\ee
+taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity. Note that this force points from the surface of the Earth to the axis of rotation, so it is possible to decompose it into a vertical force (akin to gravity) and a horizontal component. However, the shape of the Earth deforms so that the combined force in pointing inwards (see page 518).}
+\item The angular momentum of this is simple to calculate:
+\be
+\vec L = \vec r \times \vec p = - mR^2 \omega\hat z \ee
+as expected from the right-hand rule, pointing along the downwards $\hat z$-axis. It is natural to define the direction of the angular frequency to be with that same right-handed rule, here along $-\hat z$. Note that $(\vec v=\vec r\times \vec\omega)$.
+Therefore,
+\be
+\vec L =mR^2\vec \omega
+\ee
+\item Generalize for multiple particles:
+\be \vec L = I\vec \omega\ee
+and $E=I\omega^2/2$. The moment of inertia is defined as
+\be
+I \equiv \sum_i m_ir_i^2 \rightarrow \int d^3x \rho(\vec x) \left( x^2+y^2\right)\ee
+when the relevant axis is the $z$-axis. I.e., the distance squared is the perpendicular distance to the axis, the shortest line connecting a point mass to the axis.
+
+%\example{Hydrogen atom: 
+%\be
+%I=m_ea_0^2
+%\ee
+%where the Bohr radius is 0.5$\AA$. An electron travels around the proton with a speed of about $c/100$ so the frequency is $\omega\sim (c/100a_0)$, leading to
+%\be
+%L\simeq \frac{m_ea_0 c}{100} = 9.1\times 10^{-31} \times 0.5\times 10^{-10} \times 3\times 10^8 J-s = 1.4\times 10^{-32} J-s
+%\ee}
+
+\example{$CO_2$ molecule: The carbon atom is at the center and the 2 oxygens at the ends of a roughly linear configuration. The moment of inertia is roughly
+\be
+I=2m_{O} R^2.\ee
+A rough estimate for the angular frequency is $\omega\sim 100$GHz, from \href{https://cosmosmagazine.com/science/physics/filming-fast-scientists-capture-molecular-rotation/}{this paper}. Taking $R$, the distance between the oxygen and carbon, to be the typical atomic value of an angstrom leads to $I=5\times 10^{-46}$kg-m$^2$ (or $5\times 10^{-39}gm-cm^2$, which is pretty close to the true value of $7.17\times10^{-39}gm-cm^2$ given \href{https://cccbdb.nist.gov/exp2x.asp?casno=124389}{here}.)
+Taking the mass of oxygen to be 16 times the proton mass leads 
+to 
+\be 
+L\sim 5.3\times 10^{-46}\times 10^{11} J-s = 5\times 10^{-35} J-s
+\ee
+pretty close to $\hbar$, where $\hbar=1.05\times 10^{-34}$ J-s. 
+So its energy is equal to $L^2/2I$ or
+\be
+E = \hbar^2 \frac{(L/\hbar)^2}{4 m_O R^2}.
+\ee
+or\be
+E = \frac{L^2}{\hbar^2} \,10^{-23}\, J
+\ee
+The true value is \be
+E = \frac{L^2}{\hbar^2} \,7.69\times 10^{-24}\, J
+\ee}
+\eee
+
+Consider the wind. Near the equator, the wind blows from east to west (``Northeasterlies'' in the northern hemispheric as it comes from the Northeast), as depicted in Fig.~\rf{winds}.
+\Sjpg{winds}{Cartoon version of wind. In the Northern hemisphere, the wind blows clockwise around high pressure regions and counter-clockwise around low pressure regions and the reverse is true in the Southern hemisphere.}
+
+\example{Energy in wind circulation system: Consider a parcel of air, annulus with $5^\circ$ width, at $40^\circ$ latitude over the Pacific Ocean up to 1 km above. Its' {\it zonal} (westerly) wind speed is about 10m/s. Let's calculate its rotational energy. Taking the density to be constant and all roughly the same distance from the axis of rotation, its moments of inertia is
+\bea
+I &=& \rho V R_\Earth^2\cos^2\lambda\vs
+&=&\rho \, \left[ 1{\rm km}\times 2\pi R_\Earth^2 (0.09)\cos\lambda \right]\,\left[ R_\Earth^2\cos^2\lambda\right]\,
+ \eea
+since 5 degrees is equal to 0.09 in radians. To get the angular momentum we multiply by $\omega=v/R_\Earth\cos\lambda=2\times 10^{-6}$Hz, since $R_\Earth=6.4\times 10^6$m so
+\bea
+L&=&\rho \, \left[ 1{\rm km}\times \pi R_\Earth^2 (0.09)\sin\lambda \right]\,\left[ R_\Earth^2\cos^2\lambda\right]\,2\times 10^{-6}Hz\vs
+&\simeq& 10^{24} J-s = 10^{58}\hbar
+\eea
+To get the energy, we can simply use $L^2/2I$ or
+\be
+E = \frac{I\omega^2}{2} = 10^{18}J.\ee
+This is not quite the right metric for wind power. Better is the power density, the energy per volume multiplied by the speed. In this case the volume is $2\times10^{16}m^3$, so the power density is
+\be
+\mathcal{P} = 500 W/m^2
+.\ee
+The amount of power we could get out of this is limited by, among other things, how much of the area ($1.e3\times R_\Earth\time0.09=6\times 10^8m^2$) can be covered by wind turbines. In principle in this swath of the atmosphere, there is $3\times 10^{11}$W available, or about 1/3 of a TerraWatt.
+}
+
+\lecture{Energy Usage}
+\bei
+\item
+Annual World Energy Use in EJ is 600 EJ ($10^{18}$J)
+\item
+Global Power Use is $6.e20/(365*24*3600)$= 20 TW ($10^{12}$W)
+\item 
+J can be expressed as Watt-hours: 1W-hour=3.6kJ, or 1 MJ=278 W-hours
+\item 
+Global Energy Consumption, 600 EJ,  is then 170,000 TW-hours 
+\item Annual Per Capita Energy Use is 600/8 billion people = 75 GJ ($10^9$J)
+\item
+Daily Energy Use per capita is 75GJ/365=200 MJ=56kW-hours
+\item In the US, a kW-hour of electricity costs a little over 10cents, so we might expect an electric bill of order \$150/month.
+\item Many caveats to the above: more than one person in a house; lots of energy is expended in transportation; efficiency is not 100\%; commercial/industrial use  is large.
+\eei
+
+There is some data \href{https://github.com/owid/co2-data}{here}.
+
+\Spng{world_energy_co2}{$CO_2$ emissions from all countries in the world plotted alongside all countries' energy use multiplied by intensity, 20 gm/MJ.}
+One interesting number from \href{https://www.science.org/doi/10.1126/science.abh0687}{here} (dashed line in first figure there) is that the amount of $CO_2$ emitted per energy for oil and gas is 69 grams per MJ. This is called the GHG intensity. Note that this is the weight of $CO_2$ and (a perennial problems is to convert) the corresponding weight of carbon is 12/44=0.272, so the intensity of carbon is about 20 grams per MJ. Multiplying by the annual use above leads to 
+\be
+562\times 10^{18} J \times 20 g/MJ \simeq 10^{13} kg
+\ee
+of carbon emitted in $CO_2$ every year. One metric tonne is 1000kg, so this does indeed correspond to the well-known 10Gt of carbon emitted every year.
+Fig.~\rf{world_energy_co2} shows that the energy consumed by the world multiplied by this intensity does indeed roughly track the actual $CO_2$ emissions.
+
+Note that this value of the intensity makes sense: roughly speaking, the orbital energy of electrons is shuffled during the reactions that produce $CO_2$. That means the typical energy gained is say 5 eV per molecule of $CO_2$. Therefore, to produce 5 eV requires $12\times 1.67\times 10^{-24}$gm, or roughly $2\times10^{-23}$gm. But 5 ev$=8\times 10^{-19}$J. So, one gm of carbon is required to produce 40kJ. To produce 1 MJ requires 25 gm of carbon, which pretty close to the observed intensity.
+
+The intensity can be computed for each country. Fig.~\rf{intensity18} shows that countries with more advanced economies (higher GDP/capita) tend to have lower intensities. They are generally moving to energy production that produces less $CO_2$ emissions. 
+\Spng{intensity18}{Intensity (the ratio of $CO_2$ emissions and energy consumed for some of the countries in the world in 2018.}
+
+Fig.~\rf{intensity_country} shows the evolution for several different countries. Brazil is interesting: most of their electricity comes from hydropower. France generates quite a bit of power from nuclear energy. Frustratingly, the US has not appreciably have reduced its intensity over the past 50 years. China has been making slow but steady progress as it modernizes, while India is on a reverse trajectory, similar to many other developing countries.
+\Spng{intensity_country}{Intensity as a function of time for different countries.}
+
+\exercise{Download \href{https://github.com/owid/co2-data}{this data set} and make the above plots.}
+
+\lecture{Heat and Thermal Energy}
+\lsection{Equipartition Theorem}
+
+\bei
+\item Translational Motion
+The kinetic energy of a system of $N$ particles is equal to
+\be
+\langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
+\ee
+Here $f(v)$ is the velocity distribution normalized so that
+\be
+N = \int d^3v f(v)
+.\ee
+In equilibrium, $f\propto e^{-E/k_BT} = e^{-mv^2/2k_BT}$, so normalization leads to
+\bea
+N &=& C4\pi\int_0^\infty dv v^2 e^{-mv^2/2k_BT}
+\vs 
+&=& C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\int_0^\infty dx x^2 e^{-x^2}
+\vs
+&=&
+C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\,\frac{\sqrt{\pi}}4
+\vs
+&=&
+C \left(\frac{2\pi k_BT}{m} \right)^{3/2}.
+\eea
+So,
+\be
+f=N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, e^{-mv^2/2k_BT}.\ee
+We can now calculate the kinetic energy:
+\bea
+\langle E \rangle &=& N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\,  \int d^3v e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
+\vs &=& 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \int_0^\infty dv v^4 e^{-mv^2/2k_BT} \vs
+&=&
+2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\,\int_0^\infty dx x^4 e^{-x^2} 
+\vs
+&=&
+2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\, \frac{3\sqrt{\pi}}{8}
+\vs
+&=&
+\frac{3Nk_BT}{2}.
+\eea
+If we had done this in 1D, we would have gotten $k_BT/2$. In general, the variance of any one component of the velocity is $k_BT/m$, so in an isotropic equilibrium situation, there is a factor of 3. 
+
+\example{5.1: How much energy does it take to heat the monatomic gas argon in the atmosphere by 1K?
+\bee 
+\item Mass of Atmosphere: 
+\be\rho=1.225 e^{-z/H} kg/m^3
+\ee
+with $H=8.5km\ll R_\Earth$. So,
+\be
+M = \rho_0 4\pi R_\Earth^2 \int_0^\infty e^{-z/H} = \rho_0 4\pi R_\Earth^2H
+\ee
+Taking $R_\Earth=6.37\times 10^6$m leads to $M=5.3\times 10^{18}$kg. 
+\item Argon atoms in atmosphere: Argon makes up about 1\% of this and the mass of a single argon atom is $6.63\times 10^{-26}$kg, so there are about $8\times 10^{41}$ argon atoms in the atmosphere.
+\item For each of these,
+\be
+\Delta E = \frac32 k_B\Delta T=1.5\times 1.38\times 10^{-23} J\ee
+So the total energy would be 17EJ.
+\eee
+}
+%with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
+\item Order of magnitude:
+\bee
+\item Electronic Energy levels: $E_e\sim p^2/m\sim \hbar^2/mR^2 \sim 8 eV$.
+\item Vibrational Energy: $E_v=\hbar \sqrt{k/M}\left( n+ \frac12\right)$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
+\be
+E_v \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV.\ee
+\item Rotational: $E_r\sim \hbar^2/MR^2 = (m/M) E_e \sim 10^{-3}$ eV
+\eee
+\item Diatomic Molecule: Vibrational Motion
+The situation is more complex for more complex particles, starting with diatomic molecules. There, the book says you add $k_BT/2$ for each degree of freedom. 
+%Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: 
+The energy of a harmonic oscillator is
+\be
+E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
+Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
+\be
+\langle E\rangle
+= N\frac{\sum_n E_n e^{-E_n/k_BT}}{\sum_n e^{-E_n/k_BT}}
+\ee
+or
+\be
+\langle E\rangle = -N\frac{\partial}{\partial\beta} \,\ln Z
+\ee
+where $\beta\equiv 1/k_BT$ and
+\be
+Z\equiv \sum_ne^{-E_n/k_BT}=\frac{e^{-\hbar\omega\beta/2}}{1-e^{-\hbar\omega\beta}}.\ee
+So,
+\be
+\langle E\rangle = N\left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\hbar\omega\beta}-1} \right).\eql{bare}\ee
+The first term is the zero-point energy and the second term is the energy due to thermal excitations.
+The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
+\be
+\langle E\rangle = NE_0\ee
+all the particles in the ground state. The other limit is the high temperature limit, in which case \be
+\langle E\rangle_{hi\, T} =Nk_BT\ee
+The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
+Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
+\Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
+\item
+More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
+\be
+f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
+This turns out to be the Bose-Einstein occupation number.
+\eei
+
+
+\lecture{Thermal Energy 2}
+
+\bei
+\item Diatomic Molecule: Rotational Energy. 
+\be E^{rot}_L = \frac{\hbar^2}{2I} \vec L^2 = E_r L(L+1).\ee
+Our estimate for $CO_2$ was 
+\be
+E_{rot}=7.69\times 10^{-24} J = 4.8\times 10^{-5} eV\ee
+so the corresponding temperature $T=E_{rot}/k_B=0.5K$. So, modes as large as $L=30$ can be excited. At all atmospheric temperatures, $k_bT\gg E_{rot}$. Hence, we can simply calculate the partition function:
+\be
+Z= \sum_l (2L+1)\,e^{-E_{rot}L(L+1)/k_BT} \rightarrow \int_0^\infty\, dx (2x+1)e^{-E_{rot}x(x+1)/k_bT}
+\ee
+where the $2L+1$ is the number of states for each level. Define $y\equiv E_{rot}x(x+1)/k_bT$. Then,
+\be
+Z= \frac{k_BT}{E_{rot}}\, \int dy e^{-y}
+.\ee
+The integral is equal to unity, so taking the derivative with respect to $\beta$ leads to
+\be
+\langle E_{rot}\rangle = k_BT.\ee
+Again, two degrees of freedom for the two modes of rotation.
+\item Solid: This follows simply from the vibrational calculation. No translational or rotational DOF, only 3 vibrational, so
+\be
+E_{lmn} = E_0\left (l+m+n+\frac32\right)\ee
+The partition function then becomes
+\be
+Z= \left( \frac{e^{-E_0\beta/2}}{1-e^{-E_0\beta}} \right)^3\ee
+so the internal energy becomes
+\be
+U - 3NE_0 \left( \frac12 + \frac1{e^{E_0\beta}-1} \right)\ee
+where asymptotes to $3Nk_BT$ in the limit of large temperature.
+\item Heat Capacity:
+In all of these cases, $U\rightarrow N\frac{k_BT}2\,N_{DOF}$ as long as the temperature is much larger than the energy splitting so that increasing the temperature will increase the internal energy. In that limit, $U$ is just linearly proportional to the temperature, so the coefficient is quite relevant. It is called the heat capacity:
+\be
+C \equiv \frac{\partial U}{\partial T} \rightarrow  N\frac{k_BT}2\,N_{DOF}.\ee
+More generally, we can turn the plot in Fig.~\rf{dof} into the specific heat by simply differentiating \ec{bare}. The result is plotted in Fig.~\rf{sh}.
+\Spng{sh}{Heat Capacity of a diatomic molecule with vibrational energy $E_00.08$ eV (like $CO_2$, except it's not a diatomic molecule.}
+The {\it specific heat capacity}, $c_p$,  is the heat capacity per mass of each molecule.
+\example{
+Note that the specific heat of water is $c=4.18$kJ/kg/K. If we write
+\be
+c = \frac{N_D k_B}{2m_{H_2O}}\ee
+which corresponds to $0.23 N_D$ kJ/kg/K. We can take 18 degrees of freedom since \href{http://galileo.phys.virginia.edu/classes/304/h2o.pdf}{Section 5 here} explains that this can be understood if we treat water as a solid. In general, there are 6 degrees of freedom for a monatomic atom in a solid, so multiply this by the 3 atoms to get 18. 
+An 8-minute shower contains a volume of water equal to $2.1\times 8$ gallons of hot water $=9.5\times8\times 10^{-3}m^3$.
+%The specific heat of water is 4.18 kJ/(kg*K) from Table 5.2, 
+The density of water is
+997 $kg/m^3$. Therefore, the energy required is
+\be
+Q= c_p\times\rho\times V\times \Delta T.\ee
+Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of the average daily per capita use.}
+\eei
+
+%\comment{This could also draw on the calculation in 8.7.3 and replace/supplement the one above.}
+
+
+
+\lsection{Pressure and Energy Conversion}
+
+Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension, with fixed walls
+\bee 
+\item Ideal Gas Law
+\bei
+\item Each particle that hits the wall has its energy remain the same (so $|v|$ is constant) but it changes direction. Therefore, the change in momentum in a given bounce off the wall is $2mv$. 
+\item The particle will then move in the other direction towards the fixed wall in a time $l/v$, and then return to the piston in the same time. So in a total time $2l/v$, the momentum that the particle gives to the piston is $2mv$. 
+\item The force is then 
+\be F = \frac{\Delta p}{\Delta t} = \frac{mv^2}{l}
+\ee
+\item The total force from $N$ particles drawn from a thermal distribution is
+\be
+F = \frac{Nm\langle v^2\rangle}{l} = \frac{Nk_BT}{l}
+\ee
+\item The pressure is the force per area, so
+\be
+PV = Nk_BT.
+\ee
+\eei
+This is the ideal gas law.
+\item Work and energy conversion
+If the walls are fixed, e.g., if there is a piston, then the thermal motion does work pushing the piston a distance $dx$
+\be
+dW = Fdx=PAdx = PdV.\ee
+Energy is hence converted from thermal energy to mechanical energy.
+\item Converting Mechanical Energy to Thermal Energy
+Consider Example 5.2 in the book. 
+ What is the initial internal energy? (150 J)
+How much work is done to reduce the volume by a factor of 2? (50 J)
+What is the new temperature? ($4T_i/3=364K$)
+What is the pressure right after compression? ($8P_i/3=2.67\times 10^5$Pa)
+\item 
+On the other hand, in the more realistic case that the region outside has a pressure smaller by only a smaller amount $\Delta P$ (if, e.g., the inner region is slightly heated), then the force is only $\Delta P A$. So, the efficiency -- the fraction of work done related to maximum possible is
+\be
+\eta = \frac{\Delta P}{P} = \frac{T_{in}-T_{out}}{T_{in}}
+\ee
+where the second equality holds in the case of an ideal gas.
+\eee
+
+\lecture{Heat $\rightarrow$ Heat Transfer}
+\bee
+\item 
+The internal energy of the gas in the inner region is reduced by the work it does, by an amount $PdV$ (some of this work serves to heat the gas on the other side of the piston, not just move the piston). But, it can also gain internal energy if it is heated so the total change in its internal energy is
+\be
+dU = dQ - PdV.\ee
+When heat is added ($dQ>0$), then temperature will rise, so that $dQ=CdT$. If the volume is fixed (the piston does not move in the above example), then all the heat will go into increasing the temperature, so the temperature should rise more than if the piston moved (and the pressure remained constant because the density went down). We distinguish therefore between two heat capacities:
+\bea
+C_V&\equiv& \frac{\partial Q}{\partial T}\Big\vert_V
+\vs
+C_P&\equiv& \frac{\partial Q}{\partial T}\Big\vert_P + P\frac{\partial V}{\partial T}\Big\vert_P.
+\eea
+\item
+We have already computed $U$ for an ideal monatomic and diatomic gas. 
+\bei
+\item Monatomic: $C_V = (3/2) Nk_B$
+\item Note that using the ideal gas law, a gas has $C_P=(5/2)Nk_B$
+%\item Diatomic (high $T$): $C_V=(7/2) N k_B$ because of the 2 vibrational and 2 rotational degrees of freedom.
+\eei
+\eee
+ 
+ \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
+ 
+ The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
+ \be
+ Power = \frac{2.5N\times 1.38\times 10^{-23} \times 900}{300} W=10^{-22}NW\ee
+ So to get to 250MW, we require $N=2.5\times 10^{30}$ atoms. This corresponds to a mass of $1.67\times 10^{4}$kg.
+
+The heat added to the turbines by a mass $m$ is 
+\be
+c_p m\Delta T = 5.2\times 900\,\frac{m}{kg}\, kJ.\ee
+For this to be equal to $250MW$, we require 
+\be
+\frac{5.2\times 900kJ}{300 s} \,\frac{m}{kg} = 2.5\times 10^8J/s.\ee
+This corresponds to a mass of about $1.6\times 10^4$ kg.
+
+Check the value of $c_P=C_P/m=(5/2) N k_B/ m$ since $c_P$ is the specific heat capacity, which is per mass. Now $m/N$ is the total mass divided by the total number of particles, which is just the mass of a single helium atom, $4\times 1.67\times 10^{-27}$kg. Therefore, 
+\be
+c_P=\frac{2.5\times 1.38\times 10^{-23} J/K}{4\times 1.67\times 10^{-27} kg},\ee which is indeed 5.2 kJ/K/kg.
+}
+ 
+ 
+ 
+\lsection{Heat Transfer}
+
+Definitions:
+\bei
+\item Heat flux $\vec q$: energy flowing per time per area
+\item Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation: the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
+\eei
+
+\lsection{Conduction}
+This is simply particles in regions with larger velocity dispersions leaking into regions with lower dispersions and visa versa.
+
+Derivation: Consider gas between two plates with fixed temperatures, the hotter one on the right. Consider a plate in the middle somewhere with area $dA$. The number of particles incident on this plane from both the left and the right in a time $dt$ within the velocity region $d^3v$ is
+\be
+\frac{f(\vec v)}{V}  v\cos\theta dA dt\,d^3v
+\ee
+where $\theta$ is the angle between the velocity and the $x$-axis; $f$ is the Maxwellian distribution function above. There it is normalized so that the integral over velocities is equal to the total number of particles. Hence, here I divided by $V$ to get the density.The energy carried by each molecule coming from the left (right) is
+\be
+m c_v T_{L,R} = m c_v \left[ T_0 \mp \frac{dT}{dx} \Delta x \right]
+\ee
+where $c_v$ is the specific heat per mass (hence the factor of $m$) and $\Delta x$ is the distance from where the molecule arrived. This distance is equal to $l\cos\theta$ where $l$ is the mean free path. The difference in energy coming in from the left compared to the right is then
+\be
+E_L - E_R = -2 \int d^3v\,\frac{f(\vec v)}{V}  v\cos\theta dA dt\,m c_v \left[ \frac{dT}{dx} l\cos\theta \right]
+.\ee
+The heat flux is this difference divided by the area and time so
+\be
+q= -2 m c_v l \int d^3v\,\frac{f(\vec v)}{V}  v\cos\theta \,\left[  \frac{dT}{dx} \cos\theta \right]
+.\ee
+Inserting for $f$ leads to
+\be
+q= -2 nm c_v l \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \frac{dT}{dx} \int  d^3v\,v\cos^2\theta \, e^{-mv^2/2k_BT}.\ee
+The one subtlety here is that the integral is restricted to cover $\theta<\pi/2$ (or greater than this for the left movers). Hence the angular integral becomes
+\be
+2\pi\int_0^{\pi/2} d\theta\sin\theta \cos^2\theta
+=\frac{2\pi}{3}
+.\ee
+Therefore, the heat flux is
+\bea
+q &=& -\frac{4\pi}{3} nm c_v l \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \frac{dT}{dx} \int_0^\infty  dv\, v^3 \, e^{-mv^2/2k_BT}\vs
+&=&
+-\frac{4}{3} nm c_v l \left( \frac{2k_BT}{m\pi}\right)^{1/2}\, \frac{dT}{dx} \int_0^\infty  dy\, y^3 \, e^{-y^2}\vs
+&=&
+-\frac{2}{3} nm c_v l \left( \frac{2k_BT}{m\pi}\right)^{1/2}\, \frac{dT}{dx}.
+\eea
+This is often expressed in terms of the average speed of the molecules, $\bar v$, which is equal to $\sqrt{8k_BT/\pi m}$, so that
+\be
+k = \frac13 nm c_v l\bar v.\ee
+Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
+.\ee
+
+The electrical conductivity can be calculated in a similar way, and the relationship leads to
+\be
+\frac{\kappa}{\sigma} = LT\ee
+where $L$ is the Lorenz number. This empirical relation was discovered in the 1800's; the theoretical justification came from quantum mechanics. You can calculate that
+\be
+L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
+This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
+
+\lecture{Conduction II}
+
+\be
+k = \frac13 nm c_v l\bar v.\ee
+Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
+.\ee
+It is hard to go much further than this without more details but a couple of notes:
+\bee
+\item $k$ has dimensions of $E/(t\times L\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, at fixed temperature difference, more heat flows  if glass separates the two regions than if air does. %meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
+\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
+\item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
+\item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
+\item For a liquid like water, the mean free path is rougly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
+\be
+k=0.25 {\rm W/K\,m}\ee
+a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
+\eee
+
+
+
+\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
+\bee
+\item Heat flows at a rate of 
+\be
+q=0.026\times \frac{13}{1.2\times 10^6} W/m^2=52.8\times 10^{-7} W/m^2. \ee
+So a square region in front of Pittsburgh that is 10km high and wide will receive 30 W of heat from Atlanta. This is less than a light bulb.
+\item How much heat flows into a volume of order $10^3km^3$ during a single day?  Multiply by the number of second in a day: $8.6\times 10^4$ to get 2.5MJ/day.
+\item How much does this increase the temperature: $\Delta T = Q/c_pm=2.5\times 10^6J/(10^3J/kg/K\times (1.25\times 10^{12}kg) =2\times 10^{-9}K$/day. So it makes sense that the South is colder than the North throughout the winter.\eee}
+
+
+
+\example{Large uniform area with two ends at temperatures $T_0$ and $T_1$, it is a 1D problem:
+\be
+q=-k\frac{dT}{dx}
+\ee
+If this is, for example, air flow through a wall or window, the temperature on either end is kept constant, so $dU/dt=0$ and applying Gauss's Law to the right hand side of \ec{cont} leads to
+\be
+\nabla\cdot \vec q = 0 \rightarrow \frac{dq}{dx}=0
+,\ee i.e., $q$ is constant. The relevant differential equation is then
+\be
+T = T_0 - x\frac{q}{k}
+.\ee
+Setting $T=T_1$ at $x=L$ leads to
+\be
+T_1-T_0= -qL/k \eql{fourier}\ee
+or
+\be
+q=k \frac{T_0-T_1}{L}
+.\ee
+The final expression for the temperature gradient is
+\be
+T=T_0 - x \frac{T_0-T_1}{L}.\ee
+
+For example, for glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature difference, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.}
+
+It is clear that the relevant variable is {\it thermal resistance}:
+\be
+R_{\rm thermal} \equiv \frac{L}{k}
+\ee
+so that the heat flux is
+\be
+q = \frac{\Delta T}{R}.\ee
+
+Combine the impact of different materials in series. Since $q$ is constant,
+\be
+qR_i= \Delta T_i
+\ee
+and summing up to get the full temperature difference leads to
+\be
+q=\frac{\Delta T}{R_{tot}}\ee
+with
+\be
+R_{total} = \sum_i R_i
+.\ee
+\example{In the example above, what was neglected was the boundary layer on either side of the window. The window itself contributes $R_w=0.005$ m$^2$K/W, but $R_{inside}=0.12$ m$^2$K/W and $R_{outside}=0.03$ m$^2$K/W, so $R_{tot}=0.155$ m$^2$K/W. This gets the heat flux down to $129$W/m$^2$, so a loss down to 3kW-hours per day.}
+
+In the above example, we can also estimate the temperature on the inside and outside of the window. [Since air has $k=1$ in these units, 
+\bea
+L_i &=&0.12 m\vs
+L_o &=& 0.03 m
+\eea]
+Since the temperature follows the simple solution of \ec{fourier}, the temperature on the inside of the window
+satisfies
+\be
+T_{\rm room}-T_i=qR_i = 0.12 \times 129K=15.5
+.\ee
+So the temperature right on the window in the inside is 15.5$^\circ$C colder than the rest of the room. Then the temperature right on the outside of the window is $129\times .005K=.645^\circ$ cooler, a little lower than 4$^\circ$C.
+
+\example{Example 6.2 is a realistic estimate of how much heat it takes to warm an entire house $20^\circ$ C. 
+The average house size in the US is about 2000 square feet, call it $14\times 14$ m$^2$ for simplicity. This means the walls have an area of $14\times 3*2 + 14*3*2=168$ sq. ft (if the height is 3m) and the ceiling has area 196 m$^2$ for a total area emitting heat (apart from the ground) of about 365 m$^2$. 
+\bei
+\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 33kW.
+\eei
+}
+To put this in context, over the course of one year, the energy required to heat this one house would be $10^{12}$J. Assuming there are close to 100 million single family houses in the US, that leads to 100EJ, which itself would be 1/5 of the world's energy consumption. There are problems with the estimate: $\Delta T$ is not $20^\circ$C at all times and in all places, but it is clearly way too high. 
+
+A more sophisticated insulation system reduces the heat loss by a factor of 20 (see next example), but this is still about 5 EJ, compared with 500 EJ for all humanity, so this is a fairly large chunk of energy.
+
+\example{Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.}
+
+
+\lecture{Time Dependent Conduction and Convection}
+
+Applying Gauss's Law to \ec{cont} leads to
+\be
+\frac{\partial u(\vec x, t)}{\partial t} = -\nabla\cdot \vec q.\ee
+The time dependence is captured in the temperature dependence, and $dy/dT = \rho c_V$, so
+\be
+\rho c_V \dot T + \nabla\cdot \vec q = 0.\ee
+But then, there is Fourier's Law that $\vec q = -k \nabla T$, so
+\be
+\dot T - a\nabla^2 T=0,\ee
+with the thermal diffusivity $a$ defined as
+\be
+a \equiv \frac{k}{\rho c_V} .\ee
+
+%Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
+%\be
+%\dot T + ak^2 T = 0.\ee
+%The dimensions are right since $a$ has dimensions of $L^2/T$ and $k$ has dimensions of $L^{-1}$. Solving this lead to
+%\be
+%T_k(t) = T_0 + T_k(0) e^{-ak^2t}\ee
+%where a constant value can be added, so really this is the sum of two plane waves, one with infinite wavelength. This generalizes to
+%\be
+%T(\vec x,t) = \sum_{\vec k} T_k e^{-i\vec k\cdot\vec x} e^{-ak^2t}.\eql{genheat}\ee
+%So, in general, oscillations with wavelength $2\pi/k$ decay away on a time scale of order $1/k^2a$. The long wavelength oscillations take a longer time to decay. Similarly, a material with large diffusivity will come to equilibrium in very short times.
+%
+%Some examples, in units of $mm^2/s$:
+%\bee
+%\item Carbon: $a=217$
+%\item Glass: 0.34
+%\item Brick: 0.52
+%\item Soil: 0.24
+%\eee
+%So, a temperature difference across a pane of glass 10 mm thick will decay away in about 10 seconds, while it would take decay in only a fraction of that time.
+
+\lsection{Ground Temperature Seasonal Variation}
+Use the fact that
+\be T(z=0,t) = T_0 + \Delta T \cos(\omega t) \rightarrow \Delta T {\rm Re}\left[ e^{i\omega t}\right]
+\ee
+ focusing on the time-dependent part and writing it in a form that makes it easy to decompose into Fourier modes. The frequency $\Omega \equiv 2\pi/1$ year. To determine the full solution as a function of depth below the soil (positive $z$) write $T(z,t)=\sum_\omega T_\omega e^{i\omega t}$ with the understanding that we will take the real part at the end. Then, we get
+\be
+i\omega T_\omega - a \frac{d^2T_\omega}{dz^2}=0.\ee
+This has an exponential solution with $T_\omega \propto e^{\lambda z}$, with $\lambda$ a complex number satisfying
+\be
+i\omega - a\lambda^2 = 0.\ee
+Also, the real part of $\lambda$ must be negative so that the oscillations go away as you go deeper into the ground. The solution to this is
+\be
+\lambda = -\sqrt{\frac{\omega}{a}}\, e^{i\pi/4} = - \sqrt{\frac{\omega}{2a}}\, (1+i)
+\ee
+where the phase follows from $i^{1/2}$. The minus sign out front ensures that the real part is negative. We therefore have
+\be
+T(t,z) = \Delta T e^{i[\omega t- cz]}\,e^{-cz}
+\ee
+with
+\be
+c\equiv \sqrt{\omega/2a}\ee
+
+\bee
+\item For soil, with $a=0.24$ mm$^2$/s, the length scale $c^{-1}= 1.6$m. 
+\item Taking $T=10^\circ$C and $\Delta T=12^\circ$C and $t=0$ corresponds to the heat of the summer, you get exponential suppression with a length scale of 1.6m.
+\item Three months later, in Fall, $\omega t=\pi/2$, so the temperature at the surface is 10$^\circ$ but as you go down the temperature increases.
+\item In the winter, you get the exponential decrease in magnitude, but in the Spring again the surface temperature is the mean temperature than the ground temperature is lower than surface.
+\eee
+
+%\comment{Do the ocean?}
+
+
+\lsection{Convection}
+
+\bei
+\item Archimedes' Buoyancy Principle: Suppose a stationary fluid element is replaced by some object. The fluid initially was not moving because the force of gravity on it $\rho_aVg$ balanced the upwards force of pressure: $\Delta P A$. The new object will feel an effective force:
+\be
+F_{\rm o} = m_og - \Delta PA = gV\left(\rho_o-\rho_a\right).\ee
+So, if the density in the object is less than the ambient fluid, it will feel an upwards force. 
+\item Since density is inversely proportional to temperature, this means that hot air will rise as long as the density remains constant.
+\item 
+Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The net force on a stable volume element vanishes; it is equal to 
+\be
+\Delta F_{net}= -\Delta P A - g\rho A\Delta z
+\ee
+where the first sign is negative because pressure that decreases with height corresponds to negative $\Delta P$, which leads to an upward force. In equilibrium, these two forces vanish so
+\be
+\frac{dP}{dz} = -g\rho
+.\ee
+The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
+\eei
+
+
+If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
+\bea
+\rho_2^* &=& \rho_1^*\,\left(\frac{P_2^*}{P_1^*}\right)^{1/\gamma}
+\vs
+&=&
+ \rho_1\,\left(\frac{P_2}{P_1}\right)^{1/\gamma}\eea
+ since the pressures inside and outside are equal, as are the initial densities before the perturbation.
+
+\Sjpg{convection}{A small volume element displaced upwards will experience a restoring force due to gravity if $\rho_2^*>\rho_2$. That is the stability condition; if not satisfied, then there will be convective transport.}
+
+Now perturb:
+\be\rho_2=\rho+\rho' dr
+\ee
+so
+\be
+\rho_2^*= \rho \,\left(\frac{P+P'dr}{P}\right)^{1/\gamma}\ee
+So, the density inequality becomes
+\be
+\rho \,\left(\frac{P+P'dr}{P}\right)^{1/\gamma}> \rho + \rho' dr\ee
+Expanding the term in parentheses leads to
+\be
+\frac{P'}{\gamma P} > \frac{\rho'}{\rho}.
+\ee
+If this is satisfied, then the system is in convective equilibrium.
+
+In the case of the ideal gas law: $\rho= \frac{mP}{k_BT}$, so
+\be
+\rho' = \frac{mP'}{k_BT} - \frac{mPT'}{k_BT^2}
+.\ee
+Plugging in leads to:
+\be
+-\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dr} > -\frac{dT}{dr}\eql{conveq}
+\ee
+The left hand side is called the adiabatic lapse rate or temperature gradient. Both left and right sides are positive because pressure and temperature decrease as you go up.
+So, this equation says that there is no instability, no convection, if the temperature gradient (absolute value) is smaller than the adiabatic value. If it is larger, then the hot air rises.
+
+\lecture{Convection, continued, and Quantum Mechanics}
+
+Reading: Finish Chapter 6, Chapter 7, Section 22.3
+
+Heat Loss Mechanisms:
+\bee
+\item Conduction: Fast Molecules from hot region randomly migrate to cooler region and vise versa
+\item Convection: Whole parcels of fluids move up or down due to gravity {\bf if} the temperature drops too steeply as you go up: the hot air from the ground moves up to reduce this steep drop.
+\item Radiative Heating (coming)
+\eee
+
+Condition for convective stability:
+\be
+\Gamma_{\rm adiabatic} > -\frac{dT}{dz}\ee
+where the adiabatic lapse rate is defined as
+\bea
+-\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dz} &=& \left(\frac{C_P-C_V}{C_P}\right) \frac{T}{P}\, \rho g
+\vs
+&=&
+ \frac{Nk_BT}{P}\, \frac{\rho}{C_P}\, g
+\vs
+&=&
+\frac{M}{C_P}\,g\vs&=&
+c_p g.\eea
+For air, $c_p=10^3$J/kg/K, so
+$\Gamma_{\rm adiabatic} \simeq 10K/km$. 
+
+Three possible temperature profiles:
+\bee
+\item Isothermal
+\item Adiabatic, $T=T_0-\Gamma_{\rm ad} z$
+\item Actual, somewhere in between, on average with $\Gamma\simeq 6.5$K/km. If the lapse rate were larger than the adiabatic lapse rate, convection would push it back to the adiabatic rate.  %Because the pressure is decreasing with distance $dP/dz=-\rho g$, an ideal gas ($P\propto \rho T$)
+\eee
+
+
+\comment{There is another way to do this: apply the first law:
+\be
+dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
+where the last equality follows from $\rho\propto V^{-1}$.
+Then, for an ideal gas,
+\be
+dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
+=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
+\ee
+Consolidating leads to
+\be
+dP = dT \frac{\rho k_B}{m}\left[ 
+\frac{c_vT}{PV} + 1
+ \right] \ee
+ But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
+\ec{conveq}.}
+
+
+{\it Aside: In the adiabatic case, $dQ=0$, so 
+\be
+c_vdT= - PdV=PVd\rho/\rho
+.\ee
+For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
+\be
+c_v dT  = PV [\frac{dP}P - dT/T] \ee
+or
+\be
+dT \left[ c_v + \frac{PV}{T} \right] = V dP
+.\ee
+But the term in square brackets is $c_p$, so
+\be
+c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
+or
+\be
+\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
+%
+%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
+%\ee
+%Therefore,
+%\be
+%\left[ dP - d\rho c_v T\right] = PVd\rho.
+% \ee
+% This leads to 
+% \be
+% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+%\ee, 
+the solution to which is $P\propto \rho^\gamma$.}
+
+
+
+
+\lsection{Quantum Mechanics}
+
+\bei
+\item Light comprised of photons with energy
+\be
+E = pc = \frac{hc}{\lambda} =h\nu = \hbar\omega
+.\ee
+\item Discrete energy levels: $E_n$. For atoms and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
+\example{We estimated earlier that for $CO_2$,
+\be
+E_{l}^{\rm rot} = l(l+1) \,7.69\times 10^{-24}\, J\eql{co2rot}
+\ee}
+\item Photons absorbed means atomic/molecular transition from one state to another, with 
+\be
+E_\gamma = E_2-E_1
+.\ee
+\example{Given the levels in \ec{co2rot}, we can calculate the energies of photons that will be absorbed. For example, the $l=0\rightarrow l=1$ transition is mediated by a photon with energy
+\be
+E_\gamma = 1.54\times 10^{-23} J\ee
+corresponding to a wavelength of 
+\be
+\lambda = \frac{2\pi\hbar c}{E_\gamma} = 1.28 \,{\rm cm}.\ee
+But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=1.33\times 10^{-20}$J or $0.083$ eV). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 1.2\times10^{-3} l \Delta E_v$, so the fractional shift is the wavelength should be $0.0012l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
+%Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 1\% or 6 cm$^{-1}$ on the plot. This is what is seen,.
+The wavenumbers due to rotational transitions should be of order 0.1\% the 15$\mu$ line at $1/\lambda=$666cm$^{-1}$ or about .7cm$^{-1}$. They are a bit smaller than this suggesting that the situation is more complicated. 
+\Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note the fundamental 15 micron line ($n=0\rightarrow n=1$) lies at $1/\lambda=$ 667.5 cm$^{-1}$.}
+}\eei
+%\comment{Check Neil's notes on this.}
+
+
+\lsection{Radiative Transfer}
+
+Derive Stefan-Boltzmann law:
+\bee
+%\item Start with a sphere of radius $R$ containing photons of a given energy $E$ corresponding to momentum $pc$. 
+\item Suppose these are uniformly distributed with density $f(E)$  (similar to distribution of velocities for particles), so that each box in phase space with volume $d^3r d^3p = h^3$ has this number of photons in it
+\item The energy density therefore is
+\bea
+U(\omega) &=& 2 \frac{d^3p}{(2\pi\hbar)^3}\, f(p) \, pc \vs
+&=&
+\frac{2\hbar}{(2\pi c)^3}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\, d\Omega
+\eea
+\item This already carries a lot of information about the {\it spectrum}. It peaks at $\hbar\omega=2.82k_BT$ and falls off exponentially after that. Plotted vs. wavelength, it peaks at $5k_BT$. For example, if the temperature were $6000$K, it would peak at \bea
+\lambda &=& \frac{c}{\nu} \vs
+&=& \frac{hc}{\hbar\omega}\vs
+&=&
+\frac{h c}{5k_BT}
+\vs
+&=&
+\frac{6.63\times 10^{-34}J-s 3\times 10^8m/s}{5*1.38*10^{-23} * 6000 J} =500 nm
+\eea\eee
+
+\lecture{Quantum Mechanics II}
+\bee
+\item The energy emitted per time per frequency is just obtained by multiply by $c\cos\theta$ and integrating over angles $\theta<\pi/2$:
+\be
+\int d\Omega = 2\pi \int_0^{\pi/2} d\theta\sin\theta\cos\theta = \pi.\ee
+Therefore,
+\be
+\frac{dE}{dtdA} = \frac{\hbar}{(2\pi c)^2}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\ee
+Note that this has units of W/m$^2$, our usual metric for how energy is transported.
+\item We can plot this vs frequency or vs the more common wavelength, recalling that $\omega=2\pi c/\lambda$. Therefore,
+\be
+\frac{dE}{dt dA d\lambda} = \frac{\hbar (2\pi c)^2}{\lambda^5} \,\frac{1}{e^{hc/\lambda k_BT}-1}.
+\ee
+Fig.~\rf{bb} shows the spectra for two objects, one with a temperature roughly equal to the Sun and the other roughly equal to the Earth.
+\Spng{bb}{Flux per wavelength for an object the temperature of the Sun and one the temperature of the Earth.}
+Note that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
+\Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
+\item We can carry out the integral. It becomes
+\bea
+\frac{dE}{dtdA} &=&  \frac{\hbar}{(2\pi c)^2}\, \int_0^\infty   \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}
+\vs
+&=&
+  \frac{\hbar}{(2\pi c)^2}\, \left(\frac{k_BT}{\hbar}\right)^4\,\int_0^\infty \frac{x^3 dx}{e^x-1}
+  \vs
+  &=& 
+  \frac{(k_BT)^4}{\hbar^3c^2}\, \frac{\pi^4}{15}\,\frac1{4\pi^2}
+  \vs
+&  \equiv& \sigma T^4
+\eea
+with the Stefan-Boltzmann constant
+\be
+\sigma = \frac{\pi^2 k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} W/m^2/K^4.\ee
+%\item At any point in the surface, the energy leaving the volume per time is
+%\be
+% \frac{dQ}{dt} _r = \frac{dQ}{dR}\,\frac{dR}{dt} =  \vec p \cdot \hat r f(\vec p) cR^2 d\Omega d^3p \,\times c 
+%\ee
+%where the extra factor of $c$ is the velocity.
+%\item The total energy carried by these photons with this energy passing through the surface is\footnote{This is not quite right because any value of $\theta<\pi/2$ does not escape, but that factor of 2 is compensated because there are two spin degrees of freedom for the photon.}
+%\be
+% d^3p f(\vec p)pc^2R^2\int_0^\pi d\theta \int_0^{2\pi} d\phi  \cos\theta = d^3p 2\pi R^2  f(\vec p)pc
+% \ee
+% \item Now sum over all momentum: in a given small region of space and momentum, the {\it volume} of the phase space is $(2\pi \hbar)^3$. So instead of summing, when integrating, this leads to
+% \be
+%  \frac{dQ}{dt}  = \frac{Ac^2}{2} \int \frac{d^3p}{(2\pi\hbar)^3}\, f(\vec p)p
+% \ee
+% \item Putting in the Bose-Einstein distribution leads to
+% \be
+%  \frac{dQ}{dt} = \frac{Ac^2}{4\pi^2\hbar^3}\, \int_0^\infty \frac{dp\,p^3}{e^{pc/k_BT} - 1}.\ee
+% \item Changing variables to $x=pc/k_BT$ leads to 
+% \be
+%  \frac{dQ}{dt} = \frac{A(k_BT)^4}{4\pi^2\hbar^3c^2}\, \int_0^\infty \frac{dx\,x^3}{e^{x} - 1}
+%  .\ee
+%  \item The integral is just a number $\pi^4/15$, so the flux is
+%  \be
+%   \frac{dQ}{dt}  = \frac{A\pi^2(k_BT)^4}{60\hbar^3c^2} = A\sigma T^4
+%  \ee
+%  where the Stefan-Boltzmann constant is defined as
+%  \be
+%  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\item One of the key facts about climate is that the energy flowing into the Earth must equal the energy going out. The simplest implementation of this is to ignore the atmosphere and set the energy per time leaving the Earth in the form of long wavelength radiation equal to the incoming short wavelength solar radiation
+\be
+L_{OLR}=L_{in}.
+\ee
+The former is simply $\sigma T_\Earth^4 \times 4\pi R_\Earth^2$. The latter is the luminosity emerging from the Sun ($\sigma T_\odot^4 \times 4\pi R_\odot^2$) but suppressed by the fraction of the area at the orbital distance that is covered by the Earth: $\pi R_\Earth^2/(4\pi R_{orbit}^2)$. We therefore have our first simple climate model for the temperature of the Earth:
+\be
+T_\Earth = T_\odot \, \left(\frac{R_\odot}{2R_{orbit}}\right)^{1/2}=291K\ee
+which is frighteningly accurate but missing all kinds of details. $R_\odot=7.e8m$ and
+$R_{orbit}=1.5e11$m.
+\eee
+
+
+\lsection{Intrinsic line width.} There will be many reasons, but one is that the energy of a given state is fundamentally uncertain via $\Delta t\Delta E >\hbar$. This means that the width of a given line will be inversely proportional to the lifetime of the state. For example, a given $CO_2$ state can decay to the ground state in 1 sec. The uncertainty on its energy is therefore, $\Delta E = \hbar/1sec = 4\times 10^{-15}$eV. But $\Delta\lambda/\lambda = \Delta E/E$ so this is only one part in a trillion.
+
+
+%\lecture{Quantum Mechanics II}
+
+\lsection{Particle in a box}
+The particle of mass $m$ is in a potential that is infinite everywhere except in the range $0\le x\le L$, where it vanishes, so the particle must be in that range. 
+\bee
+\item {\it Schrodinger Eqn:}
+\be
+\frac{-\hbar^2}{2m} \psi'' =E\psi
+\ee
+where the wave function $\psi$ can be a complex number and $\psi(x)^*\psi(x) dx$ is the probability that the particle is at the position $x$ in a range $x\rightarrow x+dx$. 
+\item
+Using boundary conditions
+\be
+\psi_n = A\sin(\sqrt{2mE_n}x/\hbar) = \sqrt{2/L}\,\sin(n\pi x/L)
+\ee
+with 
+\be
+E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}\qquad n=1,2,\ldots
+.\ee
+\item The probability of finding the particle in a given region is $(2/L) \sin^(n\pi x/L)$. So it vanishes at the ends and peaks in the middle for $n=1$. For $n=2$, it vanishes in the middle (!) even though it is moving. On average, $\langle p^2\rangle = 2mE = (\hbar n\pi)^2/L^2$.
+\item If there are many identical particles, if the particles are bosons, as many particles as possible can coexist in the same level, but if they are fermions, each state may be occupied by at most one particle.
+\eee
+\example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm, roughly true when $A\sim100$; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
+
+
+%Take $m=m_e$; $L=a_0$, the Bohr radius, 0.529$\AA$. Then the energy difference between the first two levels is }
+
+%\lecture{Energy in Matter}
+%
+%\lsection{Latent Heat}
+%
+\lecture{Nuclear Power}
+
+\lsection{Overview}
+\bei
+\item Current capacity is about 400 GW (compared to 15TW required), so currently about 3\% of power generated.
+\item Nuclei that decay produce lighter nuclei and neutrons with total energies of order 1 MeV per nucleon, about 200MeV. \comment{We will go into this.}
+\item Neutrons can collide with heavy nuclei and induce more decays. 
+\comment{We will go into this.}
+\item Slow neutrons are most effective at this, so a reactor requires a {\it moderator}, a material like water that the neutrons collide with and lose energy to (thermalize!). \comment{We will go into this.}
+\item The {\it coolant} transports the energy out of the core of the reactor to turbines that generate electricity.
+\eei
+
+Notation: each element contains $Z$ protons and $N$ neutrons for a total of $A$ nuclei. $A$ is usually written as the superscript with either $Z$ or the chemical symbol coming after it. For example, the isotope $^{235}U= {}^{235}{92} = {}^{235}_{92}U$ of uranium is less than 1\% of naturally occurring uranium, but it is the most efficient fuel. \comment{We will go into this.}
+\example{Energy produced by 1 kg of $^{235}$U: each decay produces about 235 MeV, and each element weighs $235\times 1.67\times 10^{-27}$kg. So, 1kg produces $.6\times 10^{27}$ MeV, which corresponds to $.6\times 10^{27}\times 10^6 \times 1.6\times 10^{-19}$ J/eV, or about $10^{14}$J. Typically these plants are only about 33\% efficient so 1kg  can generate about $3\times 10^{13}$J per year. Compare this to total usage: $6\times 10^{20}J$.}
+
+\bee
+\item The take-away is that 1 tonne of $^{235}$U can produce $3\times 10^{16}$J/year; since 1GW-year = $3\times 10^{16}$J, 1 tonne can produce about 1 GW-yrs. Since $^{235}$U is only 0.72\% of all uranium, a 1GW plant requires 140 tonnes of uranium. It's a bit worse than this because not all the $^{235}$U is used as fuel, so a rough estimate is 200 tonnes of natural uranium for a GW plant.
+\item Getting say 10\% of current 15 TW then would require $1500\times 200=3\times 10^5$ tonnes mined per year. This is a larger rate than say tin so seems unlikely. The suggests that 1/3 of this is not unreasonable.Total resources are uncertain but rough estimates put it at $10^7$ tonnes, which  would last 100 years if we could extract it at a higher rate than today, and even that produces only 10\% of our needs.
+\eee
+
+\lsection{Overview, Take 2}
+We need to understand the decay process.
+\bee
+\item Why are some nuclei unstable? This involves building a model for the {\bf binding energy.}
+\item What are the products of a decay and how much energy is released?
+\item What determines the lifetime of a given nucleus?
+\item Why do neutrons speed up the process?
+\eee
+
+\lsection{Binding Energy}
+
+Some basic principles that determine the binding energy of a given nucleus:
+\bei
+\item Strong force is very attractive in the range of about 1fm but repulsive on smaller scales and falls off exponentially on large scales
+\item Coulomb force repulsive between protons
+\item Due to the Pauli exclusion principle and the fact that the pn attractive force is highest, there is a term that drive the number of neutrons and protons to be equal.
+\eei
+
+
+Toy model in 1D: There are $Z$ protons and $N$ neutrons, each with mass $M$ in a box of size $L=A\times 1fm$. No state can be occupied by more than one identical particle, although 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
+\be
+E = 2\frac{\hbar^2\pi^2}{2ML^2}\, \left( \sum_{n=1}^{Z/2} n^2 + \sum_{n=1}^{N/2} n^2 \right).\ee
+Approximate the sum as an integral (good approximation for large $Z,N$ so that each is equal $(X/2)^3/3=(Z,N)^3/24$. Then the energy of this ground state is
+\be
+E = \frac{\hbar^2\pi^2}{24ML^2} \left( Z^3 + (A-Z)^3 \right).\ee
+This is minimized for fixed $A$ when $Z=N$ as expected.
+Now, because of the repulsive short range force,  the density is fixed even as the number of nucleons increases. So set the number of nucleons per length to be $\rho=A/L$; then
+\be
+E = \frac{\hbar^2\pi^2\rho^2}{24MA^2} \left( Z^3 + (A-Z)(A^2-2AZ+Z^2).  \right)\ee
+The term in parentheses is 
+\bea
+A^3 -ZA^2 -2A^2Z &+& 2AZ^2 + AZ^2 = A^3 + 3AZ(Z-A)\vs
+&=& A^3/4 + 3A[A^2/4 + Z^2-AZ]
+\vs
+&=&
+A^3/4 + 3A [(N+Z)^2/4+Z^2 -(N+Z)Z ]
+\vs
+&=&
+A^3/4 + 3A (N-Z)^2/4\eea
+So,
+\be
+E = \frac{\hbar^2\pi^2\rho^2}{96M} \left( A + 3\frac{(N-Z)^2}{A}  \right).\ee
+Taking $\rho=1/fm=10^{15}m^{-1}$; $Mc^2=10^9$eV and $\hbar c = 2\times 10^{-7}$eV-m leads to
+\be
+E = \epsilon_V A + 3\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
+where we have identified a leading term in the binding energy of the nucleus: $\epsilon_V=4$ MeV, only a factor of 4 too small.
+
+
+Semi-Empirical Mass Formula
+\bee
+\item Another way of deriving the first term above is to recall that the density is constant, so the total energy is proportional to the volume, and $V(A)\propto R^3(A) \propto A$. 
+The binding energy then for each nucleon is the sum of the local forces, so the total binding energy picks up a term 
+\be
+B_V=\epsilon_VA.
+\ee
+the best fit gives $\epsilon_V=15.56$ MeV.
+\item Nucleons on the surface don't get the full benefit of this so we must subtract off a surface term
+\be
+B_S=-\epsilon_SA^{2/3}.\ee
+$\epsilon_S=17.23$ MeV.
+\item The Coulomb energy is just due to protons so 
+\be
+B_C \propto Z^2/R = -\epsilon_C Z^2/A^{1/3}\ee
+with $\epsilon_C=0.7$ MeV. Note that this is much smaller so becomes important only at large values of $A$, and indeed those tend to have more neutrons than protons.
+\item As estimated earlier, the symmetry term scale as
+\be
+B_{sym}=-\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
+with $\epsilon_{sym}=23.28$ MeV.
+\eee
+Some examples for fixed $Z$ are shown in Fig.~\rf{bez}. Since iron is the most tightly bound nucleus, energy can be extracted from {\it fusion}, reactions in which lighter elements fuse to form heavier elements until the end product is iron; similarly elements heavier than iron can decay into lighter ones in {\it fission}.
+\Spng{bez}{Binding energy per nucleon as a function of $A$ for nuclei with a fixed number of protons. Note that iron has the largest binding energy of the 3 and indeed of any nucleus and therefore it is the most tightly bound nucleus.}
+
+Alternatively, for fixed $A$, we can find the number of protons that produce the largest binding energy and therefore represent the most stable configuration. Note that this will often be the dominant element since protons and neutrons can transform into one another via $\beta$ decay:
+\bea
+n &\rightarrow &p + e^- +\bar\nu
+\vs
+p &\rightarrow& n+ e^+ + \nu
+\eea
+
+The only $Z$ dependence is in the last two terms; minimizing those leads to
+\bea
+\frac{\partial B}{\partial Z}&=& -2\epsilon_C Z/A^{1/3} + 4\epsilon_{sym}\frac{A-2Z}{A}
+\vs
+&=&
+-2Z\left( \epsilon_C/A^{1/3} + 4\epsilon_{sym}/A\right) + 4\epsilon_{sym}\vs
+&=& -\frac{8\epsilon_{sym}}{A} \left[ Z\left( \epsilon_CA^{2/3}/4\epsilon_{sym} + 1\right) - A/2 \right].
+\eea
+Setting this equal to 0 leads to
+\be
+Z_{min} = \frac{A/2}{1+  \epsilon_CA^{2/3}/4\epsilon_{sym} }.\ee
+This enforces that at low $A$, there are an equal number of neutrons and protons and at large $A$, the number of protons is less than half $A$. Plugging this in leads to Fig~\rf{bea}, plot of the binding energy as a function of $A$ and confirms that iron is the most stable and that the typical binding energy per nucleon is of order 8 MeV. Note that when elements with $A$ of order 100 have binding energies per nucleon of about 1 MeV higher; therefore fission from a nucleus with $A\sim200$ into 2 with $A\sim 100$ will lead to about 200 MeV.
+\Spng{bea}{Binding energy per nucleon as a function of $A$ when $Z$ is set to minimize the binding energy in the SEMF.}
+
+
+\lecture{Nuclear Physics II}
+
+We need to understand the decay process.
+\bee
+\item Why are some nuclei unstable? This involves building a model for the {\bf binding energy.}
+\item What are the products of a decay and how much energy is released?
+\item What determines the lifetime of a given nucleus?
+\item Why do neutrons speed up the process?
+\eee
+
+\lsection{Binding Energy} 
+\bei
+\item We have a model for binding energy. 
+\item States with higher energy can decay into states with lower energy.
+\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
+\eei
+
+\lsection{Decay Products and Energy}
+Fission occurs when the decay products have lower energy than the parent particle. The total binding energy of the daughters must be greater than the binding energy of the parent. A rough estimate for the energy released is to assume the particle splits in half. Then the energy released is
+\be
+Q = 2B(Z/2,A/2) - B(Z,A)
+\ee
+with $Z$ set to the minimum energy number of protons for the nuclei with mass number $A$. This leads to Fig. 18.2 and the fact that large $A>200$ make the best candidates for fuel, emitting up to 200 MeV of energy.
+
+\example{Decay of $^{235}$U: There are many possibilities; example 18.1 follows one of them
+\be
+{}^{235}_{92}U + n\rightarrow {}^{144}_{56}Ba + {}^{90}_{36}Kr + 2n.\ee
+The SEMF we are using predicts about 170 MeV released. This is mostly given to the kinetic energy of the products, which are quickly cooled down to the temperature of the moderator. Subsequently, the nuclei decay further via $\beta$ decay:
+\be
+Ba \rightarrow La \rightarrow Ce\rightarrow Pr \rightarrow Nd\, (stable)
+\ee
+Note that Fig.~\rf{bachain} has $Ce$ coded red because its lifetime is 285 days, whereas the others are less than an hour, so this could stay around and cause problems in the reactor even after the fuel is removed.
+\Sfig{bachain}{Chain of decays that emerge from one decay product (Ba) of U.}}
+
+\lecture{Nuclear Decays}
+
+Goals:
+\bei
+\item Demonstrate what controls the lifetime of heavy elements, such $^{235}$U 
+\item Why slow neutrons lead to instantaneous decay
+\eei
+
+\lsection{Lifetimes}
+
+\bee
+\item Surface area vs. volume leads to spherical nuclei: e.g., surface area of cube is $6V^{2/3}$ while the surface area of a sphere is $4\pi R^2 = 4\pi (V3/4\pi)^{2/3}$, so the coefficient is $(36\pi)^{1/3}=4.8$.
+\item This breaks down for large $A$ when Coulomb force favors elongated nuclei. For example, in 2D, at fixed volume $R^2$, 4 charges at the end of a square of length $R$, have a total energy of $e^2/R[1+(1+\sqrt{2}) + 2 +\sqrt{2}]=2[2+\sqrt{2}]e^2/R$, whereas if they were lined up a distance $10R$ from one another in a very elongated rectangle the energy would be much lower ($\sim 3e^2/100R$) but they could have the same volume if the height was small enough $~R/30$. So very heavy nuclei are unstable to Coulomb repulsion. 
+\item Even moderately heavy nuclei ($A\sim 200$) have energy states lower than purely spherical, but small perturbations from spherical are still disfavored. Figure with barrier
+\item QM decay rates with barrier: Consider the potential in Fig.~\rf{barrier}.
+\Sfig{barrier}{Black line denotes the potential and other curves are cartoons of the wave function.} 
+\bei
+\item Classically a particle incident from the left with energy less than $V_0$ would not be able to move through the barrier: it would simply deflect back to the left. 
+\item Quantum mechanically there is a small chance it will {\it tunnel} through to the right.
+\item In general the Schrodinger equation is
+\be
+\psi''+\frac{2m(E-V(x))}{\hbar^2} = 0.\ee
+\item So outside the solutions are of the form $\psi\propto e^{\pm ikx}$ with $k\equiv \sqrt{2mE/\hbar^2}=p/\hbar$. 
+\item In the central region, the solutions are are of the form $\psi \propto e^{\pm \kappa x}$ with $\kappa\equiv \sqrt{2m(V_0-E)}/\hbar$.
+\item On physical grounds we expect the $e^{-\kappa x}$ solution to be the dominant one. To see that it is so mathematically, match $\psi$ at the right boundary; then the exponentially increasing solution will be infinitesmally small at the left boundary so taking the left boundary to be $x=0$ will have amplitude very close to zero.
+\item The probability of finding the particle to the right then becomes of order
+\be
+P = e^{-2\kappa L}\ee
+where $L$ is the length of the box.
+\eei
+\item Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
+\be
+\tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
+\item Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
+
+Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
+\be
+V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
+\ee
+%hen the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  
+The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
+\be
+ \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
+ So the argument of the exponential can be as large as several hundred,
+% For $Q=200$ MeV, this sets $L\simeq 10^{-13}$m.
+% So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-15}$m, 
+% \bea
+% \frac2{\hbar}\,Q\, L
+% &\simeq& \frac2{\hbar c}\,10^9 {\rm MeV}\, \, 10^{-14} m
+%  \vs
+% &=& 100
+% \eea
+ enough to extend the lifetime to much longer than the age of the universe.
+\eee
+
+\lsection{Impact of neutrons}
+
+\bei
+\item The fission barrier energy for $^{235}U$ is 5.9 MeV, and the lifetime is $7\times 10^8$ years; i.e., still enough are around.
+\item If they capture a neutron, then even using the SEMF gives a binding energy change of 6MeV, above the fission barrier energy (the actual value is 6.5MeV)
+\item The energy released when the neutron is absorbed is therefore {\it larger} than the barrier energy; it is spread out over all the nucleons and enables the nucleus to decay by going over the barrier instead of under it. That happens instantaneously.
+\item What dictates that slow neutrons are more effective? which follows from considering a box of length $dx$ and total area $A$. The number of $U$ atoms in that box is $nAdx$; they each have a cross section $\sigma$, so the chance of being absorbed is $nAdx \times \sigma/A = n\sigma dx$. 
+\item Slow neutrons have larger cross sections: the cross section is $10^4$ barns\footnote{1 barn = $10^{-28}m^2$.} at $E=10^{-4}$ eV and about 100 times lower at 1 eV, so roughly it scales as $E^{-1/2}$. roughly speaking, the increase is because the cross section scales as $R^2$ and the Compton radius of the neutron is $h/p=2\pi\hbar/\sqrt{2mE}$.
+\eei
+
+
+\lecture{Nuclear Reactors}
+
+
+
+Follow the neutrons: {\bf $k$ is the number of thermal neutrons generated by the previous generation of 1 thermal neutron}. If $k>1$, the reactor is supercritical; if it is less than 1, it is sub-critical. The goal is to keep $k$ very close to 1; or $\rho\equiv (k-1)/k$ close to zero.
+
+Fundamental equation:
+
+{\bf Number of slow neutrons generated = (number of fast neutrons the initial thermal neutron will generate when it gets captured by the fuel) $\times$ (probability that the neutron gets thermalized before being captured) $\times$ (fraction of slow neutrons that are captured by the fuel)}
+
+\be
+k=\eta\epsilon p f
+\ee
+where
+\bei
+\item $\eta$ is the number of fast neutrons the initial thermal neutron will generate when it gets captured by a U nucleus. Fig.~\rf{f191} shows the possibilities. For it to ``succeed,'' it has to get captured by $^{235}$U and induce fission. The numerator then is the rate at which the neutron gets absorbed and causes fission by $^{235}$U (as opposed to $^{238}$U) and the denominator is all the possible reactions for the thermal neutron:
+\bea
+\eta &=& 2.42\,\left( \frac{x\sigma_f(^{235}U)}{x\sigma_a(^{235}U) + (1-x)\sigma_a(^{238}U)}\right)
+\vs
+&=&
+2.42\,\left( \frac{585x}{684x + 2.68(1-x)}
+\right)
+.\eea
+\Sfig{f191}{This governs $\eta$, roughly equal to $B/A$.}
+This assumes that the rate for neutron capture to fission is proportional to $n_U\sigma$. Then the factors follows by the definition of $x\equiv 235/238$.
+\item $\epsilon$ is basically 1, but can be slightly larger as it counts the very few fast neutrons that cause fission (off of $^{238}U$)
+\item $p$ is the probability that the neutron gets thermalized before being captured. The formula for this is
+\be
+p \simeq \exp\left\{-\frac{0.61}{\langle\xi\rangle}\,\Big[ \frac{n(^{238}U) \sigma_c}{\Sigma_s}\Big]^{0.514}
+\right\}\ee
+where $\xi$ is the fractional energy lost in each scatter with the moderator; $\sigma_c$ is the cross-section for capture in $^{238}$U which does not lead to fission but rather photon emission; the denominator is the total cross section for scattering. There is a very rough way to understand this: with each interaction, the neutron loses a fraction $\xi$ of its energy, so 
+\be
+\frac{dE}{dN} = -\xi E
+\ee
+the solution to which is \be
+\frac{E}{E_0} = e^{-N\xi}\ee, so to lose 8 orders of magnitude of energy requires $N\sim 18/\xi$ scatters. The probability of the neutron remaining uncaptured after one scatter is 
+$1-\Sigma_c/\Sigma_s$ assuming $\Sigma_s$ is much less than $\Sigma_c$. The probability of not being captured after $N$ scatters -- i.e., the probability that the neutron thermalizes -- is therefore
+\be
+p \sim \left( 1-\Sigma_s/\Sigma_c\right)^N = e^{N\ln(1-\Sigma_s/\Sigma_c)} \simeq e^{-C \Sigma_s/\xi\Sigma_c} .\ee
+Not quite right, but captures some of the qualitative dependence.
+\item $f$ is the fraction of thermal neutrons that are captured by the fuel (some are captured by the moderator), so (neglecting the few $^{238}$U that capture nuclei),
+\bea
+f  &\simeq &\frac{n_{U}\sigma_a(U)}{n_{U}\sigma_a(U) + n_m \sigma_a({\rm moderator})} \vs
+&=& \frac{684x}{684x+.664y}
+\eea
+where the $.664$ is for water.
+\eei
+
+
+
+%Reaction rates are determined by cross-sections. For the reaction $B+T\rightarrow C$, the rate at which $C$ particles are produced is equal to
+%\be
+%\frac{dN_C}{dt} = \Phi_B \sigma_{BT\rightarrow C} \ee
+%where $\Phi_B$ is the flux, the number of particles per unit area per time. 
+%
+%
+%Key processes for neutrons:
+%\bei
+%\item Scattering off $^{238}U$; $\sigma\sim 10$ barns
+%\item destruction via absorption by $^{238}U$: $\sigma\sim 1$ barn
+%\item fission via $^{238}U$ capture: $\sigma\sim 10^{-5}$ barns for thermal neutrons but up to one barn for $E>1$ MeV
+%\item fission via $^{235}U$ capture: $\sigma\sim600$ barns for thermal neutrons
+%\item energy loss off moderator, governed by energy loss per collision (roughly $\xi$) and cross-section
+%\eei
+
+
+In a state where $k$ is close to one, the power generated by the reactor is
+\be
+P = E_f \frac{dN_f}{dt}
+\ee
+where $E_f$ is the energy released in one fission cascade ($\sim200$ MeV) and $dN_f/dt$ is the number of neutron-captured fission events per time. But that rate is equal to $\Delta M/m\Delta t$, so roughly,
+\bea
+P&\simeq & E_f\, \frac{\Delta M}{m\Delta t}\vs
+&=&
+\frac{\Delta M}{1 tonne}\,\frac{1 year}{\Delta t}\, \frac{200 MeV\times 10^3 }{1.67\times 235\times 10^{-27}\times 3\times 10^7 s}\,1.6\times 10^{-13} J/MeV
+\vs
+&=&
+\frac{\Delta M}{1 tonne}\,\frac{1 year}{\Delta t}\, 3GW.
+\eea
+
+%\lsection{Safety}
+%
+%As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
+%\be
+%\sigma_0(E) = A\delta(E-E_0)
+%\ee
+%when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
+%\be
+%E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
+%\ee
+%assuming $v\gg V$. So, the total cross section has changed from
+%$\sigma_0 $
+%to
+%\be
+%\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
+%\ee
+%The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
+%\be
+%\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
+%\ee
+%so the cross section broadens with a width in energy of \be
+%\sigma_E = mv \sqrt{k_BT/M}.\ee
+%So, the width of the resonance scales as the square root of the temperature.
+%
+%\lsection{Fusion}
+
+\lecture{Solar Energy}
+
+\lsection{Insolation}
+
+\bei
+\item $T_\odot=5800$K
+\item This leads to a total radiation using Planck's Law of 63 million W/m$^2$ or a luminosity when integrating over the area of the Sun of $L_\odot=3.89\times 10^{26}$W.
+\Spng{solar_wavelength}{Emission from blackbody radiation as a function of wavelength.}
+\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1366 W/m$^2$.
+\Spng{balance}{Power per wavelength per area incoming on the Earth from the Sun and outgoing as a function of wavelength.}
+\eei
+
+
+
+
+
+\lsection{Variation of Insolation}
+\bei
+\item The Earth is tilted at an angle $\epsilon=23^\circ$ with respect to the normal to the plan of the orbit.
+\item This tilt leads to the seasons.
+\item The insolation, or radiance, is
+\be
+I=I_0\cos\beta
+\ee
+where $I_0\simeq 1366 W/m^2$ with variation on the order of a few percent over the course of the year due to the elliptical orbit of the Earth and variations in the solar output. The angle of incidence $\beta$ determines how much power a given area receives: if $\beta=90^\circ$, the radiation is perpendicular to the area and therefore does not heat it at all. 
+\item At noon, $\cos\beta=\cos(\lambda-\delta)$, where $\lambda$ is the latitude (0 at the equator) and $\delta$ is the latitude at which the Sun is directly overhead. So, at the vernal and autumnal equinoxes, $\delta=0^\circ$. On those days, the equator gets the maximum isolation and the poles get 0. At the summer solstice (June), $\delta=\epsilon$, so the Northern hemisphere gets the most insolation, as shown in Fig.~\rf{insolation}.
+\Spng{insolation}{Insolation as a function of latitude at different seasons.}
+\eei
+
+\lsection{Power Potential}
+
+Consider placing photovoltaic cells in the deserts. Including the effect of leaving space for optimal configuration, the efficiency of these is of order 6\%. Therefore, if the average daily insolation is 300W/m$^2$ in the desert, then we would extract 18W/m$^2$. The world uses 3TW of electricity every day and that could go up to 4 if electric vehicles become more common. So, to get to 4TW, requires $4.e12/18=2\times 10^{11}m^2$ of desert. The third largest desert -- after the ones in the poles -- is the Sahara, with an area of $9\times 10^{12}m^2$. After that, things drop sharply, with the Austrailian and Arabian deserts having $5\times 10^{12}m^2$ between them. Taking these 3 means that less than 1\% of the land area would need to be covered by solar cells.
+
+\lsection{Absorption}
+
+\lecture{Ocean}
+
+\lsection{Energy Balance}
+\bei
+\item Input Solar Radiation: 1366 W/m$^2$ at the top of the atmosphere.
+\item In the absence of any reflection or absorption by clouds, only some fraction of this hits any particular region, modulated by the $\cos\beta$ fraction. The ensuing insolation is shown in Fig.~\rf{davidbice}. Integrating over all altitudes gives about 340W/m$^2$. 
+\Spng{davidbice}{Solar insolation after integrating over the time-dependent $\cos\beta$ factor. Credit: \href{https://www.e-education.psu.edu/earth103/node/1004}{David Bice}.}
+\item About 30\% gets reflected by albedo. Another 20\% absorbed by the atmosphere, so the remaining 50\% reaches Earth. Together with the variation of the insolation with latitude and season, this gets us to the 50-260 W/m$^2$ at latitudes below 50$^\circ$ mentioned on page 515.
+\item Most of the sunlight gets absorbed in the {\it mixed layer} which is of order 100m; it heats up the mixed layer so adds thermal energy. In the tropics the temperature of the mixed layer is a steady $\sim25^\circ$. From 100-1000 m deep, the {\it thermocline}, the temperature drops linearly until it reaches the {\it abyss}, in which the temperature is a constant $5^\circ$.
+\item Why doesn't heat flow from the mixed layer to the thermocline? There are two possibilities: convection or conduction. Convection works only if the hotter fluid on top is more dense than the fluid on the bottom. But in this case, the fluid on top is less dense than the fluid below. Conduction takes place at a rate
+\be
+q=k|\nabla T|.\ee
+For water, $k=0.6$ W/m K, and the gradient in the tropics is of order $20 K/800$m, so the rate of heat conduction is 0.015 W$/m^2$. 
+\eei
+
+
+Where does the thermal energy absorbed by the ocean go? 
+\bei
+\item {\it Latent Heat} 
+\bee
+\item The primary mechanism of heat loss from the ocean is evaporation. Liquid water has lower energy than water vapor, so to evaporate it needs to absorb heat, the heat from the sun. 
+\item A steady rate of evaporation across the ocean surface is responsible for removal of roughly half of the ocean thermal energy absorbed from sunlight. 
+\item This energy is put back in the atmosphere when the water vapor subsequently condenses. 
+\item This latent heat flux (because it doesn't change the temperature) drives winds and powers storms.
+\eee
+\item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
+\item Conduction, or {\it Sensible Heat}, but it is very small.
+\item Some of the heat is transported via currents from the tropics to the poles.
+\eei
+
+
+\lsection{Potential resource of energy due to temperature difference between mixed layer and abyss}
+\bei
+\item $\Delta T=20$K
+\item Consider all the water in the top 100m in the tropics, total volume of $100m\,\times 2\pi R_\Earth^2  \times 2\times\int_0^{\pi/8} d\theta\,\sin\theta$ since the angle that subtends the tropics is about 23$^\circ$ or $\pi/8$. The integral is about 0.08. Therefore, $V=4\times 10^{15}m^3$
+\item The heat capacity of water is $4 MJ/K/m^3$.
+\item So the potential resource is 
+\be
+20\times 4\times 10^{15}\times 4 \times 10^6J =3.2\times 10^{23} J\ee
+%with $A=7\times 10^6 km^2$.
+\eei
+
+
+
+\lsection{Coriolis Force}
+
+\bei
+\item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with circular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = m\omega^2 \vec r$ to counter the fictional centrifugal force
+\be
+\vec F_{cent} = -m\omega^2\vec r.\ee
+\item {\bf Coriolis} Fig.~\rf{coriolis} shows the basic setup. The person perceives themselves walking along the red path and getting pushed by some external force towards the center. The frequency vector is pointing out of the plane of the paper, so $\vec v\times\vec\omega$ points in the direction in the plane of the paper perpendicular to the velocity. Therefore, in the top panel, the force acts to push the walker back towards the dotted line, and in the bottom panel, the force pushes the walker towards the solid black line.
+\Sfig{coriolis}{Black line shows path observed from outside observer as person walks from rim to center of rotating disk. The red shows the path taken on the disk by the walker.}
+
+\item Use $\Delta \vec L = \vec R\times\vec F \Delta t$ to infer the magnitude of the force due to the rotation of the Earth. Assume a parcel of air, say, moves from latitude $\lambda_i$ to $\lambda_f$. Since $\vec L = m\vec R\times  \vec v$ where $\vec R$ is the perpendicular distance from the axis of rotation, so $R=R_\Earth\cos\lambda$, where $\lambda$ is the latitude ($0$ at the equator). %For circular rotation, $\vec v= \vec\omega\times\vec r$, so the magnitude of the angular momentum is
+%\be
+%|L| = mR_\Earth^2\cos^2\lambda\omega_\Earth.\ee
+As a parcel changes latitude by a small amount $\Delta\lambda$, the change in angular momentum is
+\bea
+\Delta L &=& 2mR_\Earth^2\cos\lambda\sin\lambda\omega_\Earth \Delta\lambda\vs
+&=&
+2mR_\Earth\cos\lambda\sin\lambda\omega_\Earth v \Delta t
+\eea
+forgetting about the sign, because we know that. 
+The effective torque felt by the parcel is $\vec R\times\vec F$. Let's write $\vec F = A \vec v\times\vec\omega$ and try to figure out $A$. Again, just focusing on the magnitude, 
+take the velocity to be towards the North in the Northern hemisphere, so $\vec v\times\vec\omega$ has magnitude $v\omega_\Earth\sin\lambda$. Therefore, $|F|=Av\omega\sin\lambda$ pointing East. The torque then has magnitude $R_\Earth F\cos\lambda$. Therefore,
+\be
+2mR_\Earth\cos\lambda\sin\lambda\omega_\Earth v \Delta t = R_\Earth \cos\lambda Av\omega_\Earth\sin\lambda\Delta t
+.\ee
+Therefore, $A=2m$ and so
+\be
+F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
+\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. The latter is
+\be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
+\eei
+
+\lecture{Impact of Coriolis force on Currents}
+
+{\bf Coriolis Force} 
+\bei
+\item \be
+F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
+\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. The latter is
+\be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
+\eei
+
+
+\lsection{Surface Currents}
+\bei
+\item Iceberg at constant velocity at an angle to the direction of the wind.
+To see this, consider Fig.~\rf{iceberg} drawn on the surface of the Earth. Since $\hat n$ is out of the paper, and the velocity is as shown, the coriolis force points downwards. Since the iceberg drifts at a constant velocity, the sum of the forces must vanish, so the force of wind must be equal and opposite to the sum of the coriolis and drag forces. This dictates the direction of the iceberg, which is clearly {\bf not} in the direction of the wind.
+\Sfig{iceberg}{Forces on an iceberg drifting with constant velocity on the plane of the Earth. Since the velocity is to the East, the Coriolis force is to the south, and that combined with the drag force serve to counter the force of the wind.}
+\item Now consider an initial force from a gust of wind on the water, say to the North (always in the Northern hemisphere). Ignore drag because it is very small. The water starts with initial velocity North, but then is acted on with acceleration pointing perpendicular to its velocity. Hence, it will move in circular motion.
+\item Now consider the impact of constant wind on a patch of water. This induces currents known as the Ekman Spiral. The equation for a patch of ocean surface is
+\bea
+m\vec a &=& \vec F_{\rm cor} + \vec F_{w}
+\vs
+&=& 2m\omega\sin\lambda \vec v\times\vec n + \vec F_{w}.
+\eea
+Choose the $y-$axis so it is along the direction of the wind (or simply consider what happens if the wind is blowing north). Then, the $x,y$ components are
+\bea
+\dot v_x &=& 2\omega\sin\lambda v_y \vs
+\dot v_y &=& - 2\omega\sin\lambda v_x +\frac{F_w}{m}
+\eea
+Differentiate the second of these and insert the first to get
+\be\ddot v_y = -\Omega^2 v_y
+\ee
+where $\Omega\equiv 2\omega\sin\lambda$. The solution to this is sinusoidal with a drift:
+\bea
+v_y &=& A\sin\Omega t\vs
+v_x&=&\frac{F_w}{m\Omega} t + A\cos\Omega t\eea
+I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
+\item {\it Ekman Mass Transport:} 
+\bee
+\item Including the impact of viscosity and depth changes these idealized examples.
+\item For wind speed $v_s$ due North ($\hat y$), after averaging over rotation, the ocean velocity is
+\be \vec v = v_s \left [ \hat y {\rm Re} + \hat x {\rm Im} \right] e^{-z/z_0} e^{i[\pi/4+z/z_0]}\ee
+\item Integrating over $z$ (the depth of the ocean) leads to $v_y=0$ so no total mass transport to the North
+\item The perpendicular component however is non-zero:
+\be
+\int_0^\infty dz v_x = \frac{v_s}{\sqrt{2}} z_0.\ee
+So, there is substantial mass transport to the right of the wind velocity (in the Northern hemisphere). 
+\item E.g., winds from the north along California drive ocean water away from the coast towards the west. Deeper, colder water rises to the surface so generates the cold, foggy weather in San Francisco.
+\eee
+\eei
+
+
+\lsection{Global Circulation}
+\bei
+\item Circulation of air leads to winds which in turn drive ocean currents
+\item Air circulation globally is in hadley and polar cells. 
+\item Hadley cells have warm air rising from the ocean near the equator towards the tropopause due to convection, moving northward (perhaps adiabatically following lines of constant potential?), and then dropping back to surface at latitudes of order 30$^\circ$ because the ambient air is now colder and drier. 
+The air is then driven along the surface of the ocean back to the equator.
+\item polar cells: again rising at 60$^\circ$ towards the tropopause; flowing towards the poles and then dropping down to surface and returning to its origin.
+\item The net impact for both sets of cells is to transport heat from the equator towards the poles.
+\item Air at the surface returning Southward experiences the Coriolis force pushing it west.
+\item For the Hadley cell, when the air comes back towards the equator, it drives winds to the west; while at mid-latitudes, the wind blows to the east.
+\item The land masses induce vorticity so wind blows north on the western side and south on the eatern side (p. 524). 
+\item In a vacuum, this pattern of wind flow would exert a Southern force on the ocean because the Coriolis force at $30^\circ$ points Southward with an amplitude proportional to $\sin 30^\circ$ while at the equator it vanishes. 
+\item In the presence of the land masses, this produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
+\eei
+
+
+
+
+
+\lecture{Wind}
+
+%\lsection{Properties}
+%\lsection{Global winds} %(Box 28.1)}
+\lsection{Fundamentals Considerations}
+\bei
+\item
+Force on a parcel of air per unit volume due to the pressure gradient is
+\be
+\vec f_p = -\nabla p.\ee
+Here we are considering only the horizontal component of the force. 
+\item At the equator, winds are oriented along lines of constant gradient; i.e., perpendicular to lines of constant pressure
+\item When $\sin\lambda$ is not small, this must be balanced by the coriolis force per volume
+\be
+\vec F_{cor} = 2\rho\omega_\Earth\sin\lambda\,\vec v\times \hat n
+.\ee
+So,
+\be\vec v\times\hat n = \frac{\nabla p}{2\rho\omega_\Earth\sin\lambda}
+.\ee
+Take the cross product of both sides with $\hat n$. The left hand side then becomes $\vec v$, leading to
+\be
+\vec v = \frac{\hat n\times \nabla p}{2\rho\omega_\Earth\sin\lambda}.\eql{geo}\ee
+\item 
+The direction of $\vec v$ for different orientations of the pressure gradient is depicted in Fig.~\rf{geo1}. In the Northern hemisphere, perpendicular to the left of the temperature gradient, or along the lines of constant pressure, {\it isobars}.
+\Sfig{geo1}{In the horizontal plane, the direction of the wind velocity given the pressure gradient, using the fact that the Coriolis force balances the pressure force.}
+\eei
+
+\lsection{Observed Pressure}
+\bei
+\item
+Fig.~\rf{pressure-sea-level} shows that there are high pressure centers at $\sim\pm30^\circ$ latitude, where the air from the Hadley cells sinks. 
+\item This makes sense because we learned that the hydrostatic equation is
+\be
+\frac{dP}{dz} = -\rho g
+.\ee
+Therefore, integrating from $z=\infty$ where $P=0$, we get
+\be
+P_0 = \int_0^\infty dz \rho g
+\ee
+and it is not surprising that the total mass above the Hadley cell end is largest.
+\item Units of pressure: 1Pascal (Pa) $=0.01$millibar (mb) = kg/m/s$^2$. Equivalently 1 hectoPa  (hPa) = 1 mb.
+\item Note that the differences at sea level are of order 10 mbar per about 3000km.
+%\item This level of variation is also seen at higher altitudes, where the pressure has dropped to 500 mbars. E.g., see Fig.~\rf{500_heights}.
+\eei
+\Spng{pressure-sea-level}{Lines of constant pressure. Note that the highest pressure is where the air flows down in the Hadley cells, at $\pm 30^\circ$.}
+
+\lsection{Ensuing Wind Patterns}
+The ensuing wind patterns are what you would expect: 
+\bei
+\item above the high pressure region at 30$^\circ$, the pressure gradient points South, so the winds blow to the East. Below are the trade winds. This is depicted in Fig.~\rf{windspeed}.
+\Spng{windspeed}{Wind velocity map.}
+\item 
+Wind speeds over land at 80m height are shown in Fig.~\rf{wind80}. They are much lower than over the oceans because of friction.
+\item Fig. 28.12 in the book shows that wind speeds decline with height as friction becomes more important.
+\eei
+\Spng{wind80}{Wind speeds at 80 m.} 
+
+\lsection{Wind Speeds}
+We can estimate the expected wind speeds from \ec{geo}. Use $\rho_{\rm air}=1$kg/m$^3$; $\omega_\Earth= 7.3\times 10^{-5}$ Hz. For simplicity, take $\sin\lambda=1/2$. Then,
+\be
+v \simeq 1.4\times 10^4 \left( \frac{m^3 s}{kg}\right)\, \nabla P.\eql{vgradp}\ee
+So, the term in parentheses is
+$m^2/s/Pa$. Let's normalize the gradient to its value over 1 km; i.e, $\nabla P =\frac{\Delta P_1}{1\,km}$; then
+\be
+v\simeq 14 \frac{\Delta P_1}{0.01\, mb}\, m/s 
+.\ee
+But we know from above that typical changes in sea level pressure are of order .003 mbar/km, so indeed we expect wind speeds of order 5 m/s, at least over the ocean.
+
+\lsection{Physics of the Pressure field}
+The winds depend on the pressure field. Let's work out the physics of pressure variation.
+Hydrostatic equilibrium requires
+\be
+\frac{dP}{dz} = -g\rho = -\frac{gP}{RT}
+\ee
+where $R=k_B/m_{air}$. 
+%Integrating from $z=0$ leads to
+%\be
+%z_P = \frac{R}{g} \int_{\ln P}^{\ln P_0} dx \,T
+%.\ee
+%So, the difference in heights at which the pressure reaches $P$ is determined by the logarithmic integral over the temperature. Typical temperature differences over 1000km in latitude can be 10K, or 3\%. Therefore, the height at which the pressure equals 500mb should vary by 3\% over 1000km. This corresponds to horizontal derivatives of order $15mb/1000$km or about 0.015mb/km. 
+%
+%Generally, we have
+Integrating from the ground gives
+\be
+\int_{P_0}^P\frac{dP'}{P'} = -\frac{g}{R}\, \int_0^z \frac{dz'}{T(z')}.\ee
+The two limiting possibilities are isothermal and adiabatic:
+\be
+P^{iso} = P_0 e^{-z/H}\ee
+with $H\equiv RT_0/g=\frac{k_BT}{m_{\rm air}g}.$ 
+If the temperature falls adiabatically, then the integral on the right becomes
+\be
+\frac{g}{R\Gamma}\,\ln\left( T_0-\Gamma z\right)\vert_0^z
+= \frac{g}{R\Gamma}\,\ln\left(1-\frac{\Gamma z}{T_0}\right).\ee
+Therefore, the pressure is
+\be P^{ad}(z)=P_0 \left(1-\frac{\Gamma z}{T_0}\right)^{g/R\Gamma}.\eql{pad}\ee
+These two limits are shown in Fig.~\rf{pisoad}.
+\Spng{pisoad}{Pressure profile for isothermal and adiabatic temperature profiles. The true temperature profile falls somewhere in between.}
+Note that since $R=k_B/m_{air}$ %and $\Gamma_{ad}=g/c_p$
+, the first order term in the Taylor expansion in \ec{pad} is $z/H$, exactly like the small $z$ isothermal expansion. 
+
+Note from Fig.~\rf{pt} that for either isothermal or adiabatic,  $P$ drops much faster than $T$ . This is obviously true for isothermal, but for adiabatic, considering the ground  20$^\circ$C curve, when the temperature drops to 220K (i.e., by 73/293), the pressure has dropped by about 2/3 (from 1000 to 350).
+\Spng{pt}{Variation of pressure vs. temperature for 2 different ground temperatures in the isothermal and adiabatic case.}
+
+%To get wind speeds of the proper order of magnitude, we see that the horizontal gradients must be one thousand times smaller. 
+%Consider Fig.~\rf{500_heights}.
+%\Spng{500_heights}{Contours showing the altitude at which the pressure is equal to 500 mb. Add an extra 0 to the height to get the result in meters.}
+%The horizontal pressure gradient is $dp/dx = dP/dz\, dz/dx$ and one can see that the vertical change $dz$ is of order 50 m over horizontal distances of order more than 100 km. For example, the lines labeled 546 and 552 correspond to regions where the pressure is equal to 500 mb at heights 60m apart. Yet they are separated by roughly half the width of Nebraska, so at least 100 km.
+
+
+
+%\comment{We can actually solve this to find what is called the {\it potential temperature}, the temperature that would be obtained if a parcel moved from one pressure to another. Writing the equation as
+%\be
+%\frac{dP}{P} = \frac{\gamma}{\gamma-1}\,\frac{dT}{T}
+%\ee
+%and then integrating leads to
+%\be
+%P = P_0 \left( \frac{T}{T_0} \right)^{\gamma/(\gamma-1)}.\ee
+%Identifying $T_0$ with $\theta$, the potential temperature, and then inverting leads to 
+%\be
+%\theta = T\,\left( \frac{P_0}{P} \right)^{1-1/\gamma}
+%\ee
+%For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
+%}\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
+
+Since the wind velocity depends on the horizontal gradient of $P$, it is useful to look at pressure differences over land surfaces with different temperatures. Fig.~\rf{dpdt} shows this difference for a 10$^\circ$ ground temperature difference for adiabatic and isothermal profiles; they are not much different. If we take the typical horizontal scale over the which the temperature varies by 10$^\circ$C as 1000km, then $\nabla P\sim 10hPa/10^3km = 10^{-3}$Pa/m. Therefore, \ec{vgradp} suggests that typical wind speeds will be 15 m/s, which is roughly correct.
+\Spng{dpdt}{Difference in pressure as a function of height when the ground temperature differs by 10$^\circ$C. Both the adiabatic and isothermal limits are shown.}
+
+
+%General circulation, as described in Wallace and Hobbs 1.3.5: wind blows clockwise in the Northern hemisphere around high pressure regions. There is a high pressure max around $30^\circ$N; above this, the wind blows to the east (westerly wind) and below, winds are easterly. Winds are strongest over the ocean where there is less surface friction. So, this explains the comments above that the winds off the coast of San Francisco come from the North (Fig.~\rf{wh115}): they move clockwise around the high pressure region in the center of the Pacific and therefore on the Eastern side of the ocean, the winds are moving towards the equator at the latitude of San Francisco ($38^\circ$).
+%\Sjpg{wh115}{Circulation in the Northern Hemisphere. Note that the winds on the eastern side of the ocean at latitudes less than the high pressure belt at $45^\circ$ blow towards the equator, i.e., from the North. This is the cause of fog in San Francisco.}
+
+\lecture{Wind Power}
+
+Wind as a resource:
+\bee
+\item Power Density (28.2): Each parcel of wind carries kinetic energy $mv^2/2$ with a speed of $v$
+\item Consider a box of area $A$ and length $dx$. The parcel of wind in that box has total energy equal to $mv^2/2$ where $m$ is the total mass in the box, equal to $\rho Adx$. All that energy moves out of the box in a time $dt=dx/v$, so the rate at which energy flows out of the box per area (and is potentially captured for use) is 
+\be
+\frac{\frac12 \rho  [A dx] v^2}{A\,dt}= \frac12\,\rho v^3\equiv \mathcal{P},
+\ee
+the power density.
+\item Power density has units of energy per time per area, so the power that you extract is the power density times the area of the device that collects the energy.
+\eee
+\example{Put a 100 square meter wind turbine in an area where the wind speed is typically 10 m/s. Then, the optimal power you would get is
+\be
+P = \frac12\,{\rm kg/m}^3\, 10^3 m^3/s^3\, 100 m^2 = 50 kW
+\ee}
+
+Two caveats to this: wind speed is not constant. This actually helps because the relevant average is not the average wind speed but the average of $v^3$, which is larger than the average of $v$. 
+\example{Two regions, one with constant wind speed of 5m/s and another with zero wind 2/3 of the time but 10m/s 1/3 of the time. Using
+\be
+\bar{v^3} = \frac1T\,\int_0^T dt v^3(t)\ee
+leads to a ratio of $375/1000$; the steady wind area provides much less power.}
+
+The second caveat is that you cannot access all of the power due to the Betz limit. The simplest proof of this is to consider only elastic collisions.
+\bei
+\item In the limit that the device is unmoved by the wind (hard wall), the wind bounces off with the same speed it entered with, so retains all the energy, and the device gets none of the incoming energy.
+\item In the limit that the device is moving with the wind, again it gets no energy as no particles hit it.
+\item Consider then a more general detector speed $w$ in the same direction as the wind speed $v$ but not equal to it.
+\item In the rest frame of the detector, a molecule in the wind moves towards it with speed $v-w$
+\item After the elastic collision, the molecule moves away with speed $v-w$ or negative velocity in this 1D case $w-v$. 
+\item Move back to the original reference frame and the molecule is moving away with speed $2w-v$.
+\item So the change in the kinetic energy of the molecule is 
+\be
+\Delta E = \frac12mv^2 - \frac12m(2w-v)^2=2mw(v-w).\ee
+\item The flux of molecules is $n(v-w)$, so the power density is
+\be
+\mathcal{P} = 2\rho w(v-w)^2.\ee
+\item In the limit that $w=v$ or $w=0$ the power density vanishes. The maximum values of the power density is obtained when $w=v/3$. 
+\item Plugging this in, gives the maximum power that can be extracted as a ratio of the incoming power density
+\bea
+\frac{\mathcal{P}_{max}}{\mathcal{P}_{in}} &=& \frac{(2/3)^3}{1/2}
+\vs
+&=&
+\frac{16}{27}=0.59,
+\eea
+the Betz limit.
+\eei
+
+\lsection{Wind Turbines: Actuator Disk}
+
+\Sjpg{turbine}{Air flowing through the actuator slows down; the energy is converted into electrical energy.}
+
+Recall that power can be written as
+\bea
+\frac{dE}{dt} &=& \frac{d}{dt}\,\left[ \frac 12 mv^2\right]\vs
+&=& mv \frac{dv}{dt} = Fv.\eea
+
+Two basic laws:
+\bee
+\item  Since the mass density is constant, $dm/dt=$constant, mass flow is constant. Therefore, 
+\be
+\frac{\rho dV}{dt} = \rho A v = {\rm Constant}
+\ee
+or in the incompressible limit we will be working in, $Av=constant$.
+\item Bernoulli equation. This is simple energy conservation. As mass enters a small volume $dV$ its kinetic energy changes (from $dm v_1^2/2$ to $dm v_2^2/2$). This is due to the work done on the fluid by the pressure difference: $(P_2-P_1)dV = (P_2-P_1)dm/\rho$. Equation the two leads to
+\be
+\frac12 v_1^2 + \frac{P_1}\rho = \frac12 v_2^2 + \frac{P_2}\rho .\ee
+\eee
+
+Apply this to the actuator to get the following set of equations:
+\bea
+p_0 + \frac12\rho v_1^2 &=& p_2 + \frac12\rho v_2^2\vs
+p_3+ \frac12\rho v_3^2 &=& p_0 + \frac12\rho v_4^2.\eea
+Subtracting these 2 and setting $v_2=v_3$ leads to
+\be
+P_2-P_3 = \frac12\rho\left(v_1^2-v_4^2\right).
+\ee
+This though is proportional to the power, since the pressure difference is equal to Force per area, so the power density is this multiplied by the velocity
+\be
+\mathcal{P} =  \frac12\rho\left(v_1^2-v_4^2\right)\,v_2
+.\ee
+
+Equate this to the power obtained via the change in momentum going out and coming in:
+\bea
+\Delta p &=&  \Delta (\rho V v)\vs
+&=& \rho dt \left( A_4 v_4^2 - A_1 v_1^2 \right).\eea
+Dimensionally, momentum has units of M-L/T. If we divide by $dt$, we have something with dimensions of $M-L/T^2$, the momentum transfer per time, or the force. Multiplying force by distance gives work and force by velocity gives power. So the power extracted from the wind is
+\be
+{\rm Power} = \rho Av \left( v_1-v_4\right)v_2.\ee
+Equating leads to
+\be
+v_2 = \frac{v_1+v_4}2,\ee
+the velocity at the turbine is the average of the velocity on either end.
+
+In the homework, you will be able to show that these equations lead to
+\be
+A\mathcal{P}= \frac12\rho v_1^3A_T4a(1-a)^2
+\ee
+where $A_T$ is the area of the turbine and 
+\be
+a\equiv \frac{v_1-v_2}{v_1}.\ee
+
+Note:
+\bee
+\item The power is proportional to the area of the turbine
+\item It scales as the incoming wind speed $v_1^3$ as expected
+\item In the limit $a$ goes to zero, the turbine does not slow the wind down at all so no energy is extracted
+\item In the limit that $a$ goes to 1, $v_2=0$, and the air does not pass through the turbine so again so energy can be extracted.
+\item The power is maximized when $a=1/3$, at which point 
+\be
+\frac{A\mathcal{P}}{\frac12\rho v_1^3A_T} = \frac{16}{27}
+\ee
+the Betz limit again.
+\eee
+
+%\lsection{Fluids}
+
+%\bee
+%\item Continuity equation 
+%\item Bernoulli's Principle
+%\item Shear Stress: Horizontal Force (29.21)
+%The no-slip condition is due to molecular interactions at the surface and requires the velocity of the fluid at a surface to be at rest with respect to the surface. That leads directly to the picture in Fig. 29.9. The fluid is moving faster as you move up, so for a fixed surface at height $z$, if we take the fluid at rest, above it the fluid is moving faster, therefore dragging it forward. The force on a small element $dA$ on this surface is in the $x$-direction and proportional to both $dA$ and $\partial v_x/\partial z$. Therefore, the drag force is
+%\be
+%\frac{dF_x}{dA} = \eta \frac{\partial v_x}{\partial z}.\ee
+%\item Reynolds Number
+%\item Shear Stress: Lift (29.26)
+%In Fig. 29.13, the net force on the layer in the $\hat y$ (vertical) direction is 
+%\be
+%\frac{d\vec F_{lift}}{dz dx} = \hat y \left[P_--P_+\right]\ee
+%From Bernoulli's eqn though $P+\rho v^2/2$ is constant, so perturbing leads to
+%\be
+%P(z^+,x) + \rho v(z_+,x) v_\infty = P(z^-,x) + \rho v(z_-,x) v_\infty.\ee
+%Inserting that for the pressure difference leads to
+%\bea
+%\frac{d\vec F_{lift}}{dz} &=& \rho v_\infty \hat y \int_0^L dx\,\left[ v^+(x)-v^-(x)\right]\vs
+%&\equiv &
+%-\Gamma \rho v_\infty \hat y
+%.\eea
+%\item Airfoils: How does circulation develop?
+%\eee
+
+
+\lecture{Climate}
+
+Overview of next lectures:
+\bei
+\item  Energy Balance I: Zeroth Order (review)
+\item Energy Balance II: Corrections
+\item Convection
+\item $CO_2$ production and absorption 
+\item Radiative Transfer
+\item Energy Balance III: Full Accounting
+\item Climate Forcing
+\item Feedbacks
+\eei
+
+Useful sites:
+\bee
+\item\href{Cimateinfomatics}{http://www.climateinformatics.org/}
+\item\href{The Climate Laboratory}{https://brian-rose.github.io/ClimateLaboratoryBook/home.html}
+\eee
+
+\lsection{Energy Balance I}
+
+\bei
+\item incoming solar radiation: $I_\Sun$=1366 W/m$^2$
+\item In any one area the incoming flux is 1/4 of this, since Earth absorbs over $\pi R^2$ and emits over $4\pi R^2$
+\item Flux of interest then is $340 W/m^2$
+\item Simple balance: $\sigma T_\Earth^4 = 340 W/m^2$, so $T_\Earth=278K=5$C, not bad
+\item Divided up into incoming (short wabelength) and outgoing (long wavelength) as in Fig.~\rf{balance1}. The log-plot is a convenient way to display this because you can integrate by eye: just multiply the height by the width. Roughly the height is 100 W/m$^2$ and the width is $d\ln\lambda \simeq 2$. More precisely it is clear that the outgoing infrared emission is equal to the incoming short wavelength emission.
+\Spng{balance1}{Incoming and outgoing radiation. Note that both curves integrate to 340W/m$^2$ and that there is very little overlap. Also, note that the 15 micron line of $CO_2$ falls right at the peak of the infrared emission.}
+\item Because there is little overlap, many figures and write-ups will often treat them independently, but of course all a photon or an absorber cares about is the wavelength of the photon, not where it came from.
+\eei 
+
+\example{Venus: Orbital radius is 0.72 AU, so the flux is larger by $(1/.72)^2$, so the temperature should be larger by $1/.72^{0.5}$, or 328K or $56^\circ$C. Actual temperature is 450$^\circ$C.}
+
+\example{Mars: 1.5 further away, so its temperature should be cooler by $1/1.5^{.5}$; it should have a temperature of 227K=-46$^\circ$C. Pretty close to the actual -61.}
+
+\lsection{Energy Balance II: Corrections}
+
+\bei
+\item {\bf Albedo:} Some of the radiation from the sun is reflected back into space: a total of about 100W/m$^2$. The breakdown is 24:76 for surface reflection:cloud/atmosphere reflection (that is from Fig.34.7; the text says surface albedo is closer to 0.1, but the total is not in doubt). Technically, this is called the {\it albedo}: $a_\Earth=100/340=0.3$. Taken at face value, this reduces the total absorbed by $0.7$ and therefore the temperature is smaller by $0.7^{1/4}$, leading to a revised estimate: $T_\Earth=254K=-18$C, much worse.
+\example{Venus is blanketed by reflecting clouds so its albedo is much higher, $a\sim 0.75$. This should reduce the temperature by a factor of $0.25^{.25}=0.7$, leading to a predicted temperature of 230K, a much worse prediction than before!}
+\item
+{\bf Atmosphere, Radiative Heating:} Account for the fact that some of the radiation emitted by Earth is reflected by the atmosphere back down to Earth, so radiative balance at the surface of the Earth leads to:
+\be
+%4\pi R_\Earth^2 
+\left[ (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 \right]
+= %4\pi R_\Earth^2 
+\sigma T_\Earth^4
+\ee
+while radiative balance in the (cartoon-version) atmosphere leads to
+\be
+T_\Earth^4 = 2T_{atm}^4
+\ee
+where the factor of 2 accounts for the radiation emitted up and down from the atmosphere. This results in
+\be
+T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma}\times 2 \right]^{1/4} = 303K,
+\ee
+a factor of $2^{1/4}$ larger than before. 
+This is the greenhouse effect: radiation from the Earth is trapped and serves to heat it. This assumes that the atmosphere is a single layer and absorbs all of the long wavelength radiation emitted from Earth.
+Note that the temperature of the atmosphere is lower than the surface temperature by a factor of $2^{1/4}$, so it is equal to our previous estimate of the surface temperature, 255K. If we take the lapse rate to be the observed lapse rate in the atmosphere $6.5K/km$, this temperature difference of 48K would correspond to a height of 7 km.
+\example{Venus: Applying the same argument to Venus leads to $T_{\rm Venus} = 276$K, still much lower than the actual temperature.}
+\eei
+%
+%v4: Based on \href{https://brian-rose.github.io/ClimateLaboratoryBook/courseware/elementary-greenhouse.html}{The Climate Laboratory}, section 2, depicted in Fig.~\rf{2layerAtm_sketch}.
+%\Spng{2layerAtm_sketch}{Simple two-layer model for the temperature.}
+%Radiative equilibrium must hold at all 3 layers:
+%\bei
+%\item Surface: 
+%\be
+%\sigma T_s^4 = (1-\alpha) Q + \epsilon\sigma \left( T_0^4 + (1-\epsilon) T_1^4\right)\ee
+%where $Q$ is the sunlight absorbed on Earth $I_\Sun/4$ and $\epsilon$ is the fraction of short wavelength radiation absorbed by each layer. Note that Kirschoff's Law is used here: the emitted radiation is at the temperature of interest but suppressed by $\epsilon$. If the gas absorbs a lot at the wavelengths of interest, it also emits a lot at those wavelengths.
+%\item Layer 0:
+%\be
+%2\epsilon\sigma T_0^4 = \epsilon\sigma T_s^4 + \epsilon^2\sigma T_1^4\ee
+%\item Layer 1:
+%\be
+%2\epsilon\sigma T_1^4 = (1-\epsilon)\epsilon \sigma T_s^4 + \epsilon^2\sigma T_0^4
+%\ee
+%\eei
+%These are three 3 equations for 4 unknowns (taking $\alpha=0.3$. Fig.~\rf{twolayer} shows the results for the 3 temperatures as a function of the remaining free parameter $\epsilon$.
+%\Spng{twolayer}{Prediction of the two-layer model for the temperatures of its 3 components as a function of $\epsilon$, the fraction of long wavelength radiation absorbed by the two atmospheric layers.}
+%The limit $\epsilon=1$ means they absorb all the radiation so the temperatures are identical to the two-layer model in Example 34.2. The limit $\epsilon=0$ corresponds to no greenhouse effect so it recovers the prediction of v2, 254K for the surface.
+%
+%The horizontal dashed lines are the observed temperatures at the surface, about 3 km up and about 10km up. Clearly, this one-parameter model is not sufficient to fit all 3 data points. Roughly the best fit is at the vertical line, $\epsilon$ a bit lower than 0.6. The temperature there is a tad lower than 300K, getting closer to truth. This model goes beyond v3 in two ways: first, by putting in a second layer, and then by allowing the opacity to drop below 100\%. 
+%
+%These models are simple because (i) the radiation is not blackbody and the absorbers allow through more radiation at some wavelengths than at others and (ii) radiative transfer is not the only form of heat transfer: convection is also important. 
+
+\lecture{Convection and Radiative Transfer}
+
+
+
+Including convection:
+\bei
+\item
+The actual temperature drop is defined to be {\it lapse rate}
+\be
+\Gamma \equiv -\frac{dT}{dz}.
+\ee
+\item There is convective instability (e.g., air will rise) if
+\be
+\Gamma > \Gamma_d
+\ee
+where
+\be
+\Gamma_d = \frac{g}{c_p} = 9.5 K/km
+\ee
+if $\Gamma>\Gamma_d$ then convection occurs until the temperature gradient drops down to $\Gamma_d$. If $\Gamma< \Gamma_d$, then there is no convection.
+\item When accounting for the latent heat associated with water, the moist adiabatic lapse rate is smaller, 6.5K/km, and this is roughly what is observed in the atmosphere.
+\eei
+
+
+%The work done can be obtained by taking the differential of the ideal gas law ($PV=Nk_BT)$:
+%\be
+%PdV+dPV=Nk_BdT\ee
+%so
+%\be
+%c_VdT= -\left( Nk_BdT-VdP\right).
+%\ee
+%From Chapter 5 (5.32), $C_P=C_V+Nk_B$ for a monotomic ideal gas, so
+%\be
+%dT = \frac{VdP}{C_P} = \frac{ -\rho Vg dz}{C_P}
+%\ee
+%So, there will be convective instability and therefore heat propagation from lower to upper levels if
+%\be
+%\frac{ \rho Vg}{C_P} < \Gamma.
+%\ee
+%The adiabatic lapse rate \be
+%\Gamma_d \equiv \frac{ \rho Vg}{C_P}
+%\ee
+%is the dividing line in the temperature change: 
+%Near the Earth's surface, we can compute $\Gamma_d$ using the fact that $c_P=C_P/\rho V=1$ kJ/kg-K. We find $\Gamma_d=9.8$ K/km. It might be interesting to compare this to the very simple v3 model above, where the temperature in the ``atmosphere'' was $2^{1/4}=1.19$ smaller than that on Earth. In that model, that means a difference: 
+%\be
+%\Delta T = 303\left(1-\frac{1}{1.19}\right)= 48K.\ee
+%So depending on where you put the top of the atmosphere in that simple model (somewhere between the tropopause at 20km and the stratosphere at 40km), it seems clear that the lapse rate will be roughly of order the adiabatic lapse rate, so convection will play some role.
+
+The balance equation above neglects heating via evaporation and then convection. We can estimate this by simply using the fixed lapse rate and redoing the balance equations:
+\bea
+ \sigma T_\Earth^4 + Q_{convection}&=& 2\sigma T_{atm}^4 \vs
+ \sigma T_\Earth^4 + Q_{convection}&=&  (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 .\eea
+ This does not change the atmospheric temperature; it is fixed at 255K to balance the incoming 240W/m$^2$. This is based on the assumption that {\it no} radiation emitted from the Earth escapes the atmosphere. Therefore, the only way to balance the incoming is for it to come from the atmosphere. However, this does change the temperature on Earth. If we assume the globally averaged temperature is 287K, then the heat carried by convection is fixed to be
+ \be
+ Q_{convection} = 95 W/m^2\ee
+ which is very close to correct. Finally, this fixes the height of the atmosphere to be $(287-255)/6.5=4.9$ km, which turns out also to be correct. Fig.~\rf{toa} show this approximation.
+ \Spng{toa}{Solar influx accounting for the albedo is exactly matched by the ``top of the atmosphere'' approximation in which the temperature is 255K. The temperature at the surface of the Earth is much higher. The yellow curve is roughly correct, as is the total amount that gets out -- the integral of the green -- but there is much wavelength dependence scrubbed away here.}
+ 
+ \lsection{Radiative Transfer}
+ 
+ \bei
+ \item In small distance $dz$, the fraction of radiation that is lost is $n\sigma dz$
+ \item The loss term therefore is 
+ \be
+ \frac{dI_\nu}{d|z|} = -I_\nu n\sigma_\nu .\ee
+ \item If this was all, then the solution would be 
+ \be
+ I_\nu(z_2) = I_\nu(z_1) e^{-\tau(z_1,z_2)} \ee
+ with
+the optical depth is defined as
+ \be
+ \tau_\nu(z_1,z_2) = \left\vert  \int_{z_1}^{z_2} dz n\sigma_\nu. \right\vert\ee
+ We'll drop the absolute value sign and simply remember that the initial intensity is always suppressed by $e^{-\tau}$. We will also drop the $\nu$ subscript but it is very important to remember that the optical depth, which depends on the cross section, is very sensitive to the frequency.
+ \item As an example, consider $O_2$ in the upper atmosphere. A photon can dissociate $O_2$ into two oxygen atoms if its energy is above the binding energy $E=5.2$eV. This leads to all photons with wavelengths shorter than 240nm being absorbed. The cross-section is very sensitive to wavelength but a lower bound is $10^{-27}$m$^2$. Multiply this by the density $n_{O_2} = 0.21\times 1.2 \times e^{-z/H}/(32\times 1.67\times 10^{-27})$/m$^3=4\times 10^{24} m^{-3}$. So cross sections above $10^{-27}m^2$ lead to an optical depth 
+ \be
+ \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
+ \ee
+ So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
+ \eei
+ 
+ \lecture{Radiative Transfer, Continued}
+ 
+This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
+
+There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
+ \be
+ \frac{dI_\nu}{dz} = -I_\nu n \sigma + {\rm Gain\ Term}.
+ \ee
+ We know that in equilibrium the intensity will simply equal that of a blackbody, $B_\nu$. This fixes the gain term to be $n \sigma B_\nu$.
+
+ 
+ Solve the radiative transfer, the Schwarzschild, equation:
+$$ dI_\nu = (-I_\nu + B_\nu(T)) n\sigma_\nu dz $$
+This has the analytical solution:
+$$ I_\nu(z) = I_\nu(z_0) e^{-\tau} + \int_{0}^\tau d\tau'\,e^{-(\tau-\tau')}\, B_\nu\left(T(z[\tau'])\right)$$
+where $$\tau(z)\equiv \int_{z_0}^z  n\sigma_\nu(z') dz'.$$
+\bei
+\item Limit $\tau$ is large: the initial flux goes away and the exponential in the integrand keeps $\tau'$ very close to $\tau$, so $B_\nu$ can be removed from the integrand. The integral is essentially one, so in this limit
+\be
+\lim_{\tau\rightarrow\infty} I_\nu(z) = B_\nu(z)
+\ee
+exactly as we had it before: the slab just emits at the temperature it is at.
+\item In the limit that $\tau=0$, all the flux escapes and 
+\be
+\lim_{\tau\rightarrow 0} I_\nu(z) = I_\nu(z_0)
+.\ee
+\eei
+If we take a simple expression for absorption rate based on the density decrease, $n\sigma=\kappa e^{-z/H}$, then
+$$ \tau(z) = \kappa H \left( 1- e^{-z/H}\right).$$
+\Spng{co2flux}{Impact of absorption and emission for different opacities in the region of the 15 micron line.}
+
+\lecture{Energy Balance, Forcing,  and $CO_2$}
+
+\lsection{Energy Balance}
+
+Fig.~\rf{earthbalance} summarizes the balance.  
+\Spng{earthbalance}{Balance}
+\bei
+\item 340 in from the Sun
+\item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the gorund
+\item Atmosphere absorbs 80
+\item The remaining 160 is absorbed by the Earth.
+\item Convection spits out 100
+\item The Earth's temperature is a less less than 290, leading to 400 OLR
+\item Since 240 comes in in short wavelength radiation, 240 must go out from the atmosphere. 
+\item For the atmosphere to be in equilibrium then, it must balance: 80 absorbed in short wavelength; 100 in convection; (400-240) in long wavelength. So it spits down 340.
+\item Note that this leads to balance at the Earth: 160 from the sun together with 340 from the atmosphere is 500. That is equal to 100 from convection and 400 in IR radiation.
+\eei
+
+\lsection{Radiative Forcing}
+
+If this balance is upset by some {\it forcing}, e.g., more sunlight; more albedo; more atmospheric absorption, then the temperature will change. 
+\bei
+\item How much will the temperature change for a given forcing (in W/m$^2$)? If less gets out, so the forcing is negative, the temperature will have to rise:
+\be
+\Delta(\sigma T^4) = -F.\ee
+\item This motivates the definition of the temperature response, defined as the proportionality constant in $F\propto \Delta T$. You might think here then that
+\be
+\lambda_0 = -4\sigma T^3.\ee
+\item Remember that the emitted long-wavelength radiation is 240 W/m$^2$. So the effective temperature satisfies $\sigma T_e^4=240W/m^2$, so
+\be
+\lambda_0= -4\,\frac{240 W/m^2}{255K} = -3.76 W/m^2/K\ee
+where the denominator comes from solving for $T_e$.
+\item As we know, not everything is emitted at that temperature, so the actual value of 
+\be
+\lambda_0=-3.2 W/m^2/K\eql{lambda}\ee
+\eei
+
+\lsection{$CO_2$ Increase, Review}
+\bei
+\item
+Human emit 10 GT of carbon every year (Fig~\rf{emissions}). This is often reported in units of parts per million. The conversion factor is
+\be
+1 {\rm ppm} =2.13 \,{\rm GigaTonnes\, of\, Carbon}.
+\ee
+The total amount of air in the atmosphere is about 5.15 quadrillion tonnes $=5.15\times 10^{18}$ kg. One part per million means that the number density of $CO_2$ particle is a millionth of the total density. Since the mass of carbon in $CO_2$ compared to the average mass ($N_2$ (78\%) and $O_2$ (21\%)) is $12/29$, 1 ppm is equivalent to 0.414ppmm (of Carbon, not $CO_2$), where the last 'm' stands for mass. This means that 1 ppm corresponds to $2.13\times10^{12}$ kg of $CO_2$. That in turn corresponds to $2.13$ Gigatonnes, since 1 tonne is equal to 1000 kg.
+\Spng{emissions}{Global Annual CO$_2$ emissions in tons of carbon.}
+\item This has led to an increase of 400 GTC since pre-industrial but only half of that remains in the atmosphere with the other half going into the ocean (see Figs.~\rf{cum} and \rf{co2}).
+\Spng{cum}{Cumulative global emissions. Note that about half of this stays in the atmosphere.}
+The bottom line though is that there is now 900 GTC in the atmosphere, corresponding to 420ppm.
+\Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
+\eei
+
+\lsection{$CO_2$ Radiative Forcing}
+Consider the region around 15 microns due to $CO_2$ absorption.
+\bee
+\item The transition from vibrational number $\nu=0\rightarrow \nu=1$ corresponds to 15 microns, or $\Delta E = 0.08$ eV
+\item Around this there are rotational transitions: from $J\rightarrow J\pm 1$, with each energy level equal to 
+\be
+E_J = B\, J(J+1)
+\ee
+with $B=4.8\times 10^{-5}$ eV.
+\item This roughly traces the cross section, which is quantified via
+\be
+\sigma = s_0 e^{-r|k-k_0|}
+\ee
+with $r=0.089$ cm; $s_0=3.71\times 10^{-23}m^2$;  $k=1/\lambda$; and $k_0=1/15 \mu=667$ cm$^{-1}$. Fig.~\rf{co2cross} shows this.
+\Spng{co2cross}{Cross section approximation as well as Boltzmann weighted transitions.}
+\item Optical depth as a function of wavelength, shown in Fig.~\rf{opticaldepth} assuming the cross section depicted in Fig.~\rf{co2cross}. 
+\Spng{opticaldepth}{Optical depth due to $CO_2$ near the 15 micron line.}
+The resulting impact on $CO_2$ emission is depicted in Fig.~\rf{co2doubling}, as well as the impact of doubling the concentration.
+\Spng{co2doubling}{Impact of doubling the $CO_2$ concentration for different opacities..}
+\item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
+\Spng{olr}{Outgoing long wavelength radiation as a function of wavelength}
+\item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
+\be
+\Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
+\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
+\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
+%Forcing
+%\bei
+%%\item According to 34.37, this corresponds to a forcing of about 2W/m$^2$. The underlying physics here is that the absorption cross section for $CO_2$ decays exponentially away from the central wavelength of 15 $\mu$m. There are several reasons for this broadening: thermal broadening, which we covered in nuclear physics, the intrinsic line width of the cross section, which is due to quantum mechanics, and the actual culprit here: what is called {\it pressure-broadening}. This is the hardest of the three to understand. \href{https://iopscience.iop.org/article/10.1088/1361-6463/aabac6#daabac6eqn037}{This article} has a nice treatment of the full effect.
+%\item Without feedbacks, since $\lambda_0=-3.2$ W/m$^2$ K (34.32), the temperature increase due to this amount of carbon would be 0.6K. The blackbody version of this is to compute the forcing due to a temperature in the change of the Earth with everything else held fixed. A positive temperature change $\Delta T$ would lead to a larger upward (hence negative) flux via
+%\be
+%F = -4\sigma T^3 \Delta T = -4\times 5.67\times 10^{-8} \times 288^3 \times \frac{\Delta T}{K} \,W/m^2\eql{upward}\ee
+%or
+%$F=-5.4 (\Delta T/K) W/m^2$.However, the Earth's radiation does reach the tropopause cleanly. Rather with ``the state held fixed,'' quite a bit of the Earth's radiation is absorbed by the atmosphere. Therefore, a change in the Earth's temperature by $\Delta T$ would lead to a smaller upward flux than predicted by \ec{upward}. The book uses the heuristic that on average across wavelengths the radiation that reaches the tropopause comes from a height such that the atmosphere is about 255K, and that reduces the above estimate to 3.76 W/m$^2$ for each $\Delta T/K$. But this seems misleading. 
+\item There are feedbacks, the most important of which is that warmer air can hold more water vapor, which itself absorbs a lot more IR radiation. This roughly doubles the predicted rise in temperature.
+\eee
+
+\lecture{Feedbacks}
+
+Review about $CO_2$ forcing:
+\bei
+\item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
+\Spng{olr}{Outgoing long wavelength radiation as a function of wavelength}
+\item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
+\be
+\Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
+\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
+\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
+\eei
+
+Feedbacks:
+\bei
+\item Initial forcing $F$ leads to initial temperature change
+\be
+\Delta T_0 = -F/\lambda_0.\ee
+\item But then this temperature change leads to a new forcing $F_1=\lambda \Delta T_0$; this in turns leads to a new temperature change:
+\be
+\Delta T_1 = -F_1/\lambda_0 = -\frac{\lambda}{\lambda_0}\, \Delta T_0 = \frac{\lambda}{\lambda_0^2}\,F.\ee 
+\item This leads to a new forcing $F_2=\lambda \Delta T_1 = (\lambda/\lambda_0)^2 F$ and a new temperature response
+\be
+\Delta T_2 = -F_2/\lambda_0 = -(\lambda^2/\lambda_0^3) F
+\ee
+\item so the total change in temperature is
+\be
+\Delta T_0 + \Delta T_1 + \Delta T_2 + \ldots = -\frac{F}{\lambda_0}\, \left[ 1 - \frac{\lambda}{\lambda_0} + \left( \frac{\lambda}{\lambda_0} \right)^2 + \ldots \right].
+\ee
+\item The sum is equal to $1/(1+x)$, so the total change in temperature is
+\be
+\Delta T = -\frac{F}{\lambda_0 + \lambda}.\ee
+\eei
+
+\Spng{1990}{1990 IPCC prediction}
+
+
+\Sfig{ipcc6fig}{Different scenarios}
+
+To do the integration, we have to assume something about the density. In principle this is done together, but a rough estimate can be gleaned from previous results
+\bei
+\item The upward force on a horizontal slab is $P(z)A-P(z+dz)A=-(dP/dz)A dz$. This is an upward force.This must be balanced by the force of gravity $\rho Adz g$, so
+\be
+dP = -\rho g dz.
+\ee
+\item Treating the gas as ideal leads to
+\be
+P=nk_BT=\frac{\rho}{m} k_BT\ee
+\item Therefore,
+\be
+\frac{dP}{\rho} = \frac{dP k_BT}{mP} = -gdz\ee
+or\be
+\frac{dP}{P} = -\frac{dz}{H}
+\ee
+with \be
+H\equiv \frac{k_BT}{mg}\ee
+\item The solution is therefore
+\be
+P=P_0e^{-\int_0^z \frac{dz'}{H(z')}}
+\ee
+\item Taking the atmosphere to be composed of some mixture of oxygen (with 32 protons and neutrons) and nitrogen (with 28) for a compromise of 29 times the mass of the nucleon leads to $H=8.4$km at $T=290$K. If the temperature were constant, the pressure profile would look like Fig.~\rf{pressure}.
+\Sfig{pressure}{Pressure profile assuming constant temperature. 290 is the surface temperature and 220 is temperature in the tropopause.}
+The actual pressure follows this trend out to about 15km, where the pressure has dropped to about 100-200 mb. But it drops much faster than that at higher altitudes, so more or less moves from the blue to the orange curve.
+\item The pressure profile in the more realistic limit of linearly dropping temperature, at least out to the top of the troposphere (the point at which the temperature stops decreasing due to heating by ozone and oxygen dissociation) is then
+\bea
+P(z) &=& P_0 \exp\left\{ -\int_0^z \frac{dz'}{H(z')} \right\}
+\vs
+&=&P_0 \exp\left\{ -\frac{mg}{k_B}\,\int_0^z \frac{dz'}{ (T_0-\Gamma z')} \right\}\vs
+&=&
+P_0 \exp\left\{ -\frac{1}{H_0}\,\int _0^z\,\left( \frac{dz'}{1- \frac{\Gamma z'}{T_0}}\right)\right\}
+\vs
+&=& P_0 \left(1 -  \frac{\Gamma z}{T_0}\right)^{T_0/\Gamma H_0}.
+\eea
+Plugging in numbers leads to the power being a bit over 5, so the pressure drops off faster than in the isothermal case:
+\Spng{pisoad}{Pressure for adiabatic and isothermal profiles.}
+\item This also impacts the density profile:
+\be
+\frac{\rho}{\rho_0} = \frac{P}{P_0}\,\frac{T_0}{T}\ee
+This leads to the profiles shown in Fig.~\rf{isoad}.
+\Spng{isoad}{Profiles of pressure, density, and temperature in the adiabatic case, contrasted with the exponentially suppressed isothermal case. Note that the density, which determines the optical depth, is about 10\% larger when the realistic temperature change is inserted since $|dP/dz|$ is larger as well.}
+\eei
+
+
+
+
+
+\newcommand\ipcc[1]{{\tt IPCC Report: #1}}
+
+\lecture{Radiative Forcing}
+
+This is defined to be: ``The change in net irradiance (down -up) at the tropopause after allowing for stratospheric temperatures to readjust to radiative equilibrium, but with surface and tropospheric temperatures and state held fixed at the unperturbed values.'' 
+
+\example{If the albedo changes from 0.1 to 0.11; this means that an additional one percent of solar radiation is reflected back to space instead of absorbed. Since the total flux hitting Earth is about $341\times(1-0.21)$ W/m$^2$, where the 0.21 is the albedo due to the atmosphere and clouds; i.e., stuff that stops the solar flux from hitting Earth. Hence, the change in the Earth's albedo by 0.01 would reflect back an additional $0.01*.79*341=2.7$ W/m$^2$. So the forcing would be -2.7 W/m$^2$. Note that estimates for this vary, from Example 34.3, which I don't understand, to \href{https://en.wikipedia.org/wiki/Radiative_forcing}{the wikipedia article} that goes much lower.}
+
+\example{Box 34.2: Clouds are the hard problem. Thet reflect light with the solar spectrum with an albedo of 0.13, leading to upward forcing of $0.13\times1366/4=44$ W/m$^2$. But they also reflect infrared radiation from Earth back to the surface; the estimate the book gives is 31, so the net forcing would be -13W/m$^2$. This mean that if the cloud cover were to increase by a percent, the forcing would be quite small.}
+
+\ipcc{A.4.1: Human caused radiative forcing of $2.72\pm 0.76$ W/m$^2$ in 2019 relative to 1750.}
+
+
+Radiation:
+\bee
+\item Optical depth less than one can be handled with an emissivity less than one as above. So, increase the amount of absorber would just reduce the amount of IR radiation linearly with the density
+\item An optically thick absorber like CO$_2$ is more complicated. There is the exponential suppression in the wings that leads to a logarithmic dependence on the density.
+\item Even in the trough though, the emissions in that band would come from higher up in the atmosphere so -- keeping the emission temperature fixed and the lapse rate fixed -- leads to a higher surface temperature.
+\eee 
+
+\appendix
+\newcommand\ans[1]{{\tt #1}}
+\lecture{Climate Class}
+
+\bee
+\item What does IPCC say is the largest driver of climate change?
+\ans{carbon dioxide emissions}
+\item How does the radiative forcing (driving of climate change) from CO2 alone compare to the total forcing from human activity (anthropogenic RF) in 2011?
+\ans{From SPM.2, it seems to contribute 0.8$^\circ$}
+\item What does IPCC estimate to be the likely temperature change after a CO2 doubling and how does this compare with the Charney estimate?
+\ans{From Fig. SPM.10, it looks a doubling will increase by 1-2 C}
+\item Based on Figure SPM.10, what is the limit on the total emissions of CO2 for global temperature increases to stay below +2 C (the "Paris" limit) and +1.5 C (the Paris "aspiration")?
+\ans{4000 Gigatons of CO2; to keep to 1.5 C seems to require 3000}
+\eee
+
+
+\bee
+\item 1. What is the Charney estimate of the range of emissions from changes in land use (in GtC)?
+
+\item What does IPCC estimate to be the amount of CO2 released from land-use change?
+
+\item What does the IPCC estimate to be the amount of CO2 taken up by natural terrestrial ecosystems?
+
+\item The difference between these is the "net biosphere" term in your CO2 burden plots - how do these compare?
+
+\item Based on the IPCC figure SPM.10 and your cumulative emissions plot, how much MORE CO2 can be emitted (ever) to hold temperature change below 2.0 and 1.5 C (this is the "global emissions budget")?
+
+\eee
+
+
+
+\end{document}
