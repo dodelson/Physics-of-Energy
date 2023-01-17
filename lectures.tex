@@ -2127,7 +2127,7 @@ Fig.~\rf{earthbalance} summarizes the balance.
 \Spng{earthbalance}{Balance}
 \bei
 \item 340 in from the Sun
-\item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the gorund
+\item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the ground
 \item Atmosphere absorbs 80
 \item The remaining 160 is absorbed by the Earth.
 \item Convection spits out 100
@@ -2226,7 +2226,9 @@ Feedbacks:
 \item Initial forcing $F$ leads to initial temperature change
 \be
 \Delta T_0 = -F/\lambda_0.\ee
-\item But then this temperature change leads to a new forcing $F_1=\lambda \Delta T_0$; this in turns leads to a new temperature change:
+\item But then this temperature change leads to a new forcing $F_1=\lambda \Delta T_0$. For example, $\lambda$ could quantify the impact of the increase in water vapor due to the rise in temperature.  Note from Fig.~\rf{ghg} that this will decrease amount of radiation out and therefore lead to a positive forcing. The estimate of this forcing is $\lambda_{wv}=+1.6 W/m^2/K$.
+\Spng{ghg}{Absorption as a function of wavelength for different green house gasses.}
+\item This in turns leads to a new temperature change:
 \be
 \Delta T_1 = -F_1/\lambda_0 = -\frac{\lambda}{\lambda_0}\, \Delta T_0 = \frac{\lambda}{\lambda_0^2}\,F.\ee 
 \item This leads to a new forcing $F_2=\lambda \Delta T_1 = (\lambda/\lambda_0)^2 F$ and a new temperature response
@@ -2240,12 +2242,20 @@ Feedbacks:
 \item The sum is equal to $1/(1+x)$, so the total change in temperature is
 \be
 \Delta T = -\frac{F}{\lambda_0 + \lambda}.\ee
+\item Using only water vapor, which turns out to be a good estimate because the other feedbacks cancel, leads to
+\be
+\Delta T = -\frac{F}{1.6 W/m^2} \, K\ee
 \eei
 
 \Spng{1990}{1990 IPCC prediction}
+To date, the impact from $CO_2$ increase from 280 to 420 ppm then led to a forcing of 2W/m$^2$, which should have led to a temperature increase of about 1.2K. This is almost exactly what is seen in Figure~\rf{1990}, which was predicted back in 1990.
 
+It also predicts that when the concentration doubles, the forcing will be 3.7 W/m$^2$, leading to a temperature increase of 3.7/1.6=2.3$^\circ$C. Fig.~\rf{ipcc6fig} shows some different scenarios for when this will happen.
 
 \Sfig{ipcc6fig}{Different scenarios}
+
+
+\lecture{Atmospheric conditions}
 
 To do the integration, we have to assume something about the density. In principle this is done together, but a rough estimate can be gleaned from previous results
 \bei
