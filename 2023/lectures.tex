@@ -284,12 +284,15 @@ to keep the particle in circular motion.
 taking the radius of the Earth to be 6400km and the rotation frequency to be $2\pi/24$ hours. So, this is a few hundred times to a thousand times smaller than the acceleration due to gravity. Note that this force points from the surface of the Earth to the axis of rotation, so it is possible to decompose it into a vertical force (akin to gravity) and a horizontal component. However, the shape of the Earth deforms so that the combined force in pointing inwards (see page 518).}
 \item The angular momentum of this is simple to calculate:
 \be
-\vec L = \vec r \times \vec p = - mR^2 \omega\hat z \ee
-as expected from the right-hand rule, pointing along the downwards $\hat z$-axis. It is natural to define the direction of the angular frequency to be with that same right-handed rule, here along $-\hat z$. Note that $(\vec v=\vec r\times \vec\omega)$.
+\vec L = \vec r \times \vec p =  mR^2 \omega\hat z \ee
+as expected from the right-hand rule, pointing along the  $\hat z$-axis. It is natural to define the direction of the angular frequency to be with that same right-handed rule, here along $\hat z$. Note that $(\vec v = \vec\omega \times \vec r)$.
 Therefore,
 \be
 \vec L =mR^2\vec \omega
 \ee
+\item Energy can be defined in terms of this: 
+\be
+E = \frac12 mR^2\omega^2 = \frac{L^2}{2I}.\ee
 \item Generalize for multiple particles:
 \be \vec L = I\vec \omega\ee
 and $E=I\omega^2/2$. The moment of inertia is defined as
@@ -389,11 +392,57 @@ Fig.~\rf{intensity_country} shows the evolution for several different countries.
 \exercise{Download \href{https://github.com/owid/co2-data}{this data set} and make the above plots.}
 
 \lecture{Heat and Thermal Energy}
-\lsection{Equipartition Theorem}
+
+Relationship of Energy and Temperature:
+\bei
+\item Thermal distribution
+\item Translational Energy
+\item Internal Vibrational Energy
+\item Internal Rotational Energy
+\eei
+Bottom line: as the temperature increases, more and more internal states can get occupied, so you need to provide more energy to raise the temperature.
+
+%\lsection{Equipartition Theorem}
 
 \bei
 \item Translational Motion
 The kinetic energy of a system of $N$ particles is equal to
+%\be
+%\langle E \rangle = \int dv f(v)\,\frac{mv^2}{2}
+%\ee
+%Here $f(v)$ is the velocity distribution normalized so that
+%\be
+%N = \int dv f(v)
+%.\ee
+%In equilibrium, $f\propto e^{-E/k_BT} = e^{-mv^2/2k_BT}$, so normalization leads to
+%\bea
+%N &=& C\int_0^\infty dv e^{-mv^2/2k_BT}
+%\vs 
+%&=& C \left(\frac{2k_BT}{m} \right)^{1/2}\int_0^\infty dx e^{-x^2}
+%\vs
+%&=&
+%C \left(\frac{2k_BT}{m} \right)^{1/2}\,\frac{\sqrt{\pi}}2
+%\vs
+%&=&
+%C \left(\frac{\pi k_BT}{2m} \right)^{1/2}.
+%\eea
+%So,
+%\be
+%f=N \left( \frac{2m}{\pi k_BT}\right)^{1/2}\, e^{-mv^2/2k_BT}.\ee
+%We can now calculate the kinetic energy:
+%\bea
+%\langle E \rangle &=& N \left( \frac{2m}{\pi k_BT}\right)^{1/2}\,  \int dv e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
+%\vs &=& 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \int_0^\infty dv v^4 e^{-mv^2/2k_BT} \vs
+%&=&
+%2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\,\int_0^\infty dx x^4 e^{-x^2} 
+%\vs
+%&=&
+%2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\, \frac{3\sqrt{\pi}}{8}
+%\vs
+%&=&
+%\frac{3Nk_BT}{2}.
+%\eea
+
 \be
 \langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
 \ee
@@ -449,7 +498,7 @@ So the total energy would be 17EJ.
 \eee
 }
 %with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
-\item Order of magnitude:
+\item Internal Energy
 \bee
 \item Electronic Energy levels: $E_e\sim p^2/m\sim \hbar^2/mR^2 \sim 8 eV$.
 \item Vibrational Energy: $E_v=\hbar \sqrt{k/M}\left( n+ \frac12\right)$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
