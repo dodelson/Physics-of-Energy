@@ -511,6 +511,16 @@ So the total energy would be 17EJ.
 \eee
 }
 %with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
+\eei
+\newcommand\old[1]{\bigskip {\it {\bf Old Material} #1}}
+
+\lecture{Heat Capacity}
+
+We are after the heat capacity defined as 
+\be
+C \equiv \frac{\partial U}{\partial T}
+.\ee
+\bei
 \item Vibrational Motion: Diatomic Molecule
 
 The situation is more complex for more complex particles, starting with diatomic molecules. There, the book says you add $k_BT/2$ for each degree of freedom. 
@@ -549,14 +559,15 @@ since $E_e\sim p^2/2 \sim\hbar^2/mR^2$.
 
 Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
 \Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
-\item
+
+\old{%\item
 More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
 \be
 f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
-This turns out to be the Bose-Einstein occupation number.
+This turns out to be the Bose-Einstein occupation number.}
+
 \eei
 
-\newcommand\old[1]{{\it {\bf Old Material} #1}}
 \old{Molecular Energies Order of Magnitude
 \bee
 \item Electronic Energy levels: $E_e\sim p^2/m\sim \hbar^2/mR^2 \sim 8 eV$.
@@ -567,7 +578,7 @@ E_v \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV.\ee
 \eee
 }
 
-\lecture{Thermal Energy 2}
+%\lecture{Thermal Energy 2}
 
 \bei
 \item Diatomic Molecule: Rotational Energy. 
