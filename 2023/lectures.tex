@@ -633,7 +633,7 @@ Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of
 
 
 
-\lsection{Pressure and Energy Conversion}
+\lecture{Pressure, Energy Conversion, and Heat Capacities}
 
 Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension, with fixed walls
 \bee 
@@ -659,22 +659,16 @@ If the walls are fixed, e.g., if there is a piston, then the thermal motion does
 \be
 dW = Fdx=PAdx = PdV.\ee
 Energy is hence converted from thermal energy to mechanical energy.
-\item Converting Mechanical Energy to Thermal Energy
-Consider Example 5.2 in the book. 
- What is the initial internal energy? (150 J)
-How much work is done to reduce the volume by a factor of 2? (50 J)
-What is the new temperature? ($4T_i/3=364K$)
-What is the pressure right after compression? ($8P_i/3=2.67\times 10^5$Pa)
 \item 
 On the other hand, in the more realistic case that the region outside has a pressure smaller by only a smaller amount $\Delta P$ (if, e.g., the inner region is slightly heated), then the force is only $\Delta P A$. So, the efficiency -- the fraction of work done related to maximum possible is
 \be
 \eta = \frac{\Delta P}{P} = \frac{T_{in}-T_{out}}{T_{in}}
 \ee
 where the second equality holds in the case of an ideal gas.
-\eee
-
-\lecture{Heat $\rightarrow$ Heat Transfer}
-\bee
+%\eee
+%
+%\lecture{Heat $\rightarrow$ Heat Transfer}
+%\bee
 \item 
 The internal energy of the gas in the inner region is reduced by the work it does, by an amount $PdV$ (some of this work serves to heat the gas on the other side of the piston, not just move the piston). But, it can also gain internal energy if it is heated so the total change in its internal energy is
 \be
@@ -694,6 +688,24 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 \eei
 \eee
  
+\example{Consider Example 5.2 in the book. One liter ($10^{-3}m^3$) of a mona ideal gas at T=273K, $p=10^5$Pa. 
+\bei
+\item
+What is the initial internal energy?
+Its internal energy is:
+\be
+U=\frac32 Nk_BT = \frac32 \frac{PV}{k_BT} k_BT = \frac32 PV
+=  150 J.\ee
+\item How much work is done to reduce the volume by a factor of 2? 
+\be W = P*V/2 = 50J.\ee
+\item What is the new internal energy, temperature, and pressure?
+\be U_{new}=U_{i}+W=200J.\ee
+The new temperature is larger than the initial by 200/150=4/3, so is equal to 363K
+The pressure is now $Nk_BT'/V'= P_{old} \times 8/3= 2.67\times 10^{5}$Pa.
+\item When the temperature cools to external temperature at 273, so drops by 4/3, the pressure will similarly drop to twice the initial pressure. All the work done to compress the volume has been lost to the heat that escapes as it cools.
+\eei}
+
+
  \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
  
  The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
