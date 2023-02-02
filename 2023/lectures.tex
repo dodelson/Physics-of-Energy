@@ -635,6 +635,17 @@ Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of
 
 \lecture{Pressure, Energy Conversion, and Heat Capacities}
 
+\example{Some useful conversion factors:
+\bea
+400 ppm &=& 850 GtC
+\vs
+1\, eV &=& 1.6\times 10^{-19}\, J\vs
+Nk_B &=& nR
+\eea
+where $n$ is the number of moles and 
+\be
+R\equiv N_A k_B = 8.3\, J/mole/K.\ee}
+
 Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension, with fixed walls
 \bee 
 \item Ideal Gas Law
@@ -642,11 +653,11 @@ Thermal energy can be converted into mechanical energy.  E.g., thermal motion fr
 \item Each particle that hits the wall has its energy remain the same (so $|v|$ is constant) but it changes direction. Therefore, the change in momentum in a given bounce off the wall is $2mv$. 
 \item The particle will then move in the other direction towards the fixed wall in a time $l/v$, and then return to the piston in the same time. So in a total time $2l/v$, the momentum that the particle gives to the piston is $2mv$. 
 \item The force is then 
-\be F = \frac{\Delta p}{\Delta t} = \frac{mv^2}{l}
+\be F = \frac{\Delta p}{\Delta t} = \frac{mv_x^2}{l}
 \ee
 \item The total force from $N$ particles drawn from a thermal distribution is
 \be
-F = \frac{Nm\langle v^2\rangle}{l} = \frac{Nk_BT}{l}
+F = \frac{Nm\langle v_x^2\rangle}{l} = \frac{Nk_BT}{l}
 \ee
 \item The pressure is the force per area, so
 \be
@@ -654,17 +665,42 @@ PV = Nk_BT.
 \ee
 \eei
 This is the ideal gas law.
-\item Work and energy conversion
+\item {\it Work and energy conversion:}
 If the walls are fixed, e.g., if there is a piston, then the thermal motion does work pushing the piston a distance $dx$
 \be
 dW = Fdx=PAdx = PdV.\ee
 Energy is hence converted from thermal energy to mechanical energy.
-\item 
+\item {\it First Law:}
+The change in internal energy of a system is therefore the difference between the change in internal energy as heat is added so the temperature increases and the amount of work the system does:
+\be
+dU = C dT - PdV
+.\ee
+
+\example{Consider Example 5.2 in the book. One liter ($10^{-3}m^3$) of a monatomic ideal gas at T=273K, $p=10^5$Pa. 
+\bei
+\item
+What is the initial internal energy?
+Its internal energy is:
+\be
+U=\frac32 Nk_BT = \frac32 \frac{PV}{k_BT} k_BT = \frac32 PV
+=  150 J.\ee
+\item How much work is done to reduce the volume very quickly (so $P,T$ don't change) by a factor of 2? 
+\be dW = P*V/2 = 50J\ee
+because the work done is on the system, $PdV$ is negative leading to a gain in internal energy.
+\item What is the new internal energy, temperature, and pressure?
+\be U_{new}=U_{i}+W=200J.\ee
+That gain in internal energy leads to a new temperature that is larger than the initial by 200/150=4/3, so is equal to 363K.
+The pressure is now $Nk_BT'/V'= P_{old} \times 8/3= 2.67\times 10^{5}$Pa.
+\item On longer time scales, when the temperature cools to external temperature at 273, so drops by 4/3, the pressure will similarly drop to twice the initial pressure. All the work done to compress the volume has been lost to the heat that escapes as it cools. Neither the region of interest or its environment has a quantity called ``work'' or ``heat' so those are not {\it State Variables} like pressure and temperature. 
+\eei}
+
+
+\item {\it Efficiency:} 
 On the other hand, in the more realistic case that the region outside has a pressure smaller by only a smaller amount $\Delta P$ (if, e.g., the inner region is slightly heated), then the force is only $\Delta P A$. So, the efficiency -- the fraction of work done related to maximum possible is
 \be
 \eta = \frac{\Delta P}{P} = \frac{T_{in}-T_{out}}{T_{in}}
 \ee
-where the second equality holds in the case of an ideal gas.
+where the second equality holds in the case of an ideal gas, but this is a very general indiction of the efficiency of extracting mechanical work from thermal energy.
 %\eee
 %
 %\lecture{Heat $\rightarrow$ Heat Transfer}
@@ -686,26 +722,12 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 \item Note that using the ideal gas law, a gas has $C_P=(5/2)Nk_B$
 %\item Diatomic (high $T$): $C_V=(7/2) N k_B$ because of the 2 vibrational and 2 rotational degrees of freedom.
 \eei
+\item {\it Latent Heat:} This is the amount of energy required to change the phase of a substance: e.g., a solid is a lower energy state than a liquid (more tightly bound), so you need to addd energy to transform it into a liquid. This energy is called latent heat. E.g, for ice to water it is equal to 334 kJ/kg. %This makes sense: roughly we expect the energy connecting the atoms in a solid to be of order 5 eV. So the energy per molecule should be of order
+%\be
+%\frac{\Delta E_{Binding}}{\mass} \sim \frac{5\, eV}{18\times1.67\times 10^{-27}\, kg} =.\ee
+Near a phase transition, the temperature will not rise as heat is added; rather the bonds will be broken. So it is called latent heat, as opposed to sensible heat (when the temperature does rise).
 \eee
  
-\example{Consider Example 5.2 in the book. One liter ($10^{-3}m^3$) of a mona ideal gas at T=273K, $p=10^5$Pa. 
-\bei
-\item
-What is the initial internal energy?
-Its internal energy is:
-\be
-U=\frac32 Nk_BT = \frac32 \frac{PV}{k_BT} k_BT = \frac32 PV
-=  150 J.\ee
-\item How much work is done to reduce the volume by a factor of 2? 
-\be W = P*V/2 = 50J.\ee
-\item What is the new internal energy, temperature, and pressure?
-\be U_{new}=U_{i}+W=200J.\ee
-The new temperature is larger than the initial by 200/150=4/3, so is equal to 363K
-The pressure is now $Nk_BT'/V'= P_{old} \times 8/3= 2.67\times 10^{5}$Pa.
-\item When the temperature cools to external temperature at 273, so drops by 4/3, the pressure will similarly drop to twice the initial pressure. All the work done to compress the volume has been lost to the heat that escapes as it cools.
-\eei}
-
-
  \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
  
  The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
