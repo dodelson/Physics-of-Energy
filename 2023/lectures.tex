@@ -728,7 +728,7 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 Near a phase transition, the temperature will not rise as heat is added; rather the bonds will be broken. So it is called latent heat, as opposed to sensible heat (when the temperature does rise).
 \eee
  
- \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
+\old{ \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
  
  The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
  \be
@@ -746,20 +746,46 @@ This corresponds to a mass of about $1.6\times 10^4$ kg.
 Check the value of $c_P=C_P/m=(5/2) N k_B/ m$ since $c_P$ is the specific heat capacity, which is per mass. Now $m/N$ is the total mass divided by the total number of particles, which is just the mass of a single helium atom, $4\times 1.67\times 10^{-27}$kg. Therefore, 
 \be
 c_P=\frac{2.5\times 1.38\times 10^{-23} J/K}{4\times 1.67\times 10^{-27} kg},\ee which is indeed 5.2 kJ/K/kg.
-}
+}}
  
  
  
-\lsection{Heat Transfer}
+\lecture{Heat Capacity Summary and Heat Transfer}
 
-Definitions:
 \bei
-\item Heat flux $\vec q$: energy flowing per time per area
-\item Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation: the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
+\item Heat Capacity and latent heat relate the energy input into the system ($dQ$) with the change in temperature or the internal structure of the system. 
+\item The macroscopic heat capacity and latent heat expressed in terms of J/K/kg or J/kg can be related to the microscopic processes inside the system
+\item For example, vibrational energies of diatomic molecules were of order $0.1$ eV. That leads to a heat capacity that adds 2 degrees of freedom at $T\sim 1000$K.
+\item Latent heat is another example. We said the energy required to melt ice was 334 kJ/kg. One kg of ice contains $1/(1.67\times 10^{-27}\times 18)=3.3\times 10^{25}$ molecules of $H_20$. That means the energy per molecule required is $3.34\times 10^5/(1.6\times 10^{-19}\times 3.3\times 10^{25})= 0.06$ eV. This is about 3 times the vibrational energy of the molecules in the solid.
+\eei
+
+
+Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
+
+There are three ways to transfer heat:
+\bei
+\item Conduction
+\item Convection
+\item Radiative Transfer
 \eei
 
 \lsection{Conduction}
 This is simply particles in regions with larger velocity dispersions leaking into regions with lower dispersions and visa versa.
+Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
+.\ee
+where the heat flux $\vec q$ is the energy flowing per time per area.
+Thermal conductivity $k$ has dimensions of $E/(t\times L\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, at fixed temperature difference, more heat flows  if glass separates the two regions than if air does. %meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
+
+\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
+\bee
+\item Heat flows at a rate of 
+\be
+q=0.026\times \frac{13}{1.2\times 10^6} W/m^2=52.8\times 10^{-7} W/m^2. \ee
+So a square region in front of Pittsburgh that is 10km high and wide will receive 30 W of heat from Atlanta. This is less than a light bulb.
+\item How much heat flows into a volume of order $10^3km^3$ during a single day?  Multiply by the number of seconds in a day: $8.6\times 10^4$ to get 2.5MJ/day.
+\item How much does this increase the temperature: $\Delta T = Q/c_pm=2.5\times 10^6J/(10^3J/kg/K\times (1.25\times 10^{12}kg) =2\times 10^{-9}K$/day. So it makes sense that the South is colder than the North throughout the winter.\eee}
+
+
 
 Derivation: Consider gas between two plates with fixed temperatures, the hotter one on the right. Consider a plate in the middle somewhere with area $dA$. The number of particles incident on this plane from both the left and the right in a time $dt$ within the velocity region $d^3v$ is
 \be
@@ -801,40 +827,33 @@ Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
 
 The electrical conductivity can be calculated in a similar way, and the relationship leads to
 \be
-\frac{\kappa}{\sigma} = LT\ee
+\frac{k}{\sigma} = LT\ee
 where $L$ is the Lorenz number. This empirical relation was discovered in the 1800's; the theoretical justification came from quantum mechanics. You can calculate that
 \be
 L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
 This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
 
-\lecture{Conduction II}
+%\old{
+%\be
+%k = \frac13 nm c_v l\bar v.\ee
+%Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
+%.\ee}
+%
 
-\be
-k = \frac13 nm c_v l\bar v.\ee
-Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
-.\ee
+
 It is hard to go much further than this without more details but a couple of notes:
 \bee
-\item $k$ has dimensions of $E/(t\times L\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, at fixed temperature difference, more heat flows  if glass separates the two regions than if air does. %meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
-\item Since liquids are much denser than gases, they conduct much better: $\kappa$ for water is 20 times larger than that for air.
+\item Since liquids are much denser than gases, they conduct much better: k for water is 20 times larger than that for air.
 \item In a bit more detail, the mean free path for molecules in a liquid in roughly the interparticle spacing $n^{-1/3}$. For a gas, it depends on the cross section of the molecule and for air, the mean free path is a factor of $\sim 20$ larger than $n^{-1/3}$.
 \item The density of air is 1000 times smaller than that of water so the $n^{2/3}$ dependence leads to a factor of 100 but this is mitigated by the the factor of 20. The specific heat of water is 4 times larger so you get the factor of 20 difference.
-\item For a liquid like water, the mean free path is rougly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
+\item For a liquid like water, the mean free path is roughly equal to $n^{-1/3}$, the inter-particle distance, in this case about 3$\AA$. The density of water is 1000kg/m$^3$; its mass is 18 times the proton mass; and its specific heat is 4.2 kJ/kg K. From the above, its average speed at 300K is about 600m/s. Putting these together leads to an estimate of
 \be
 k=0.25 {\rm W/K\,m}\ee
 a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
 \eee
 
 
-
-\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
-\bee
-\item Heat flows at a rate of 
-\be
-q=0.026\times \frac{13}{1.2\times 10^6} W/m^2=52.8\times 10^{-7} W/m^2. \ee
-So a square region in front of Pittsburgh that is 10km high and wide will receive 30 W of heat from Atlanta. This is less than a light bulb.
-\item How much heat flows into a volume of order $10^3km^3$ during a single day?  Multiply by the number of second in a day: $8.6\times 10^4$ to get 2.5MJ/day.
-\item How much does this increase the temperature: $\Delta T = Q/c_pm=2.5\times 10^6J/(10^3J/kg/K\times (1.25\times 10^{12}kg) =2\times 10^{-9}K$/day. So it makes sense that the South is colder than the North throughout the winter.\eee}
+Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation: the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
 
 
 
@@ -858,9 +877,9 @@ q=k \frac{T_0-T_1}{L}
 .\ee
 The final expression for the temperature gradient is
 \be
-T=T_0 - x \frac{T_0-T_1}{L}.\ee
+T=T_0 - x \frac{T_0-T_1}{L}.\ee}
 
-For example, for glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature difference, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.}
+For example, for glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature difference, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.
 
 It is clear that the relevant variable is {\it thermal resistance}:
 \be
