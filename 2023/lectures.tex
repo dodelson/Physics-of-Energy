@@ -1006,20 +1006,50 @@ c\equiv \sqrt{\omega/2a}\ee
 F_{\rm o} = m_og - \Delta PA = gV\left(\rho_o-\rho_a\right).\ee
 So, if the density in the object is less than the ambient fluid, it will feel an upwards force. 
 \item Since density is inversely proportional to temperature, this means that hot air will rise as long as the density remains constant.
-\item 
-Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The net force on a stable volume element vanishes; it is equal to 
-\be
-\Delta F_{net}= -\Delta P A - g\rho A\Delta z
-\ee
-where the first sign is negative because pressure that decreases with height corresponds to negative $\Delta P$, which leads to an upward force. In equilibrium, these two forces vanish so
-\be
-\frac{dP}{dz} = -g\rho
-.\ee
-The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
+\item More generally, this phenomenon is the physics behind convection: air packets moving up or down. 
+\item Convection will turn out to play an important role in the change of temperature with altitude, which is a big part of the climate picture.
 \eei
 
+Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
 
-If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
+
+If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density.
+
+
+Compute how the density changes when the gas expands adiabatically:
+In the adiabatic case, $dQ=0$, so 
+\be
+c_vdT= - PdV=PVd\rho/\rho
+.\ee
+For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$, so 
+\be
+c_v dT  = PV [\frac{dP}P - dT/T] \ee
+or
+\be
+dT \left[ c_v + \frac{PV}{T} \right] = V dP
+.\ee
+But the term in square brackets is $c_p$, so $c_vdT= c_vVdP/c_p$ and
+\be
+c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
+or
+\be
+\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
+%
+%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
+%\ee
+%Therefore,
+%\be
+%\left[ dP - d\rho c_v T\right] = PVd\rho.
+% \ee
+% This leads to 
+% \be
+% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+%\ee, 
+the solution to which is $P\propto \rho^\gamma$.
+
+
+
+Coming back to our problem and using $\rho\propto P^{1/\gamma}$, we have
 \bea
 \rho_2^* &=& \rho_1^*\,\left(\frac{P_2^*}{P_1^*}\right)^{1/\gamma}
 \vs
@@ -1055,16 +1085,6 @@ Plugging in leads to:
 The left hand side is called the adiabatic lapse rate or temperature gradient. Both left and right sides are positive because pressure and temperature decrease as you go up.
 So, this equation says that there is no instability, no convection, if the temperature gradient (absolute value) is smaller than the adiabatic value. If it is larger, then the hot air rises.
 
-\lecture{Convection, continued, and Quantum Mechanics}
-
-Reading: Finish Chapter 6, Chapter 7, Section 22.3
-
-Heat Loss Mechanisms:
-\bee
-\item Conduction: Fast Molecules from hot region randomly migrate to cooler region and vise versa
-\item Convection: Whole parcels of fluids move up or down due to gravity {\bf if} the temperature drops too steeply as you go up: the hot air from the ground moves up to reduce this steep drop.
-\item Radiative Heating (coming)
-\eee
 
 Condition for convective stability:
 \be
@@ -1090,6 +1110,28 @@ Three possible temperature profiles:
 \eee
 
 
+
+\old{The net force on a stable volume element vanishes; it is equal to 
+\be
+\Delta F_{net}= -\Delta P A - g\rho A\Delta z
+\ee
+where the first sign is negative because pressure that decreases with height corresponds to negative $\Delta P$, which leads to an upward force. In equilibrium, these two forces vanish so
+\be
+\frac{dP}{dz} = -g\rho
+.\ee
+}
+
+\lecture{Convection, continued, and Quantum Mechanics}
+
+Reading: Finish Chapter 6, Chapter 7, Section 22.3
+
+Heat Loss Mechanisms:
+\bee
+\item Conduction: Fast Molecules from hot region randomly migrate to cooler region and vise versa
+\item Convection: Whole parcels of fluids move up or down due to gravity {\bf if} the temperature drops too steeply as you go up: the hot air from the ground moves up to reduce this steep drop.
+\item Radiative Heating (coming)
+\eee
+
 \comment{There is another way to do this: apply the first law:
 \be
 dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
@@ -1107,36 +1149,6 @@ dP = dT \frac{\rho k_B}{m}\left[
  But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
 \ec{conveq}.}
 
-
-{\it Aside: In the adiabatic case, $dQ=0$, so 
-\be
-c_vdT= - PdV=PVd\rho/\rho
-.\ee
-For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
-\be
-c_v dT  = PV [\frac{dP}P - dT/T] \ee
-or
-\be
-dT \left[ c_v + \frac{PV}{T} \right] = V dP
-.\ee
-But the term in square brackets is $c_p$, so
-\be
-c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
-or
-\be
-\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
-%
-%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
-%\ee
-%Therefore,
-%\be
-%\left[ dP - d\rho c_v T\right] = PVd\rho.
-% \ee
-% This leads to 
-% \be
-% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
-%\ee, 
-the solution to which is $P\propto \rho^\gamma$.}
 
 
 
