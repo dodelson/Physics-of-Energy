@@ -1713,42 +1713,51 @@ P&\simeq & E_f\, \frac{\Delta M}{m\Delta t}\vs
 \frac{\Delta M}{1 tonne}\,\frac{1 year}{\Delta t}\, 3GW.
 \eea
 
-%\lsection{Safety}
-%
-%As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
-%\be
-%\sigma_0(E) = A\delta(E-E_0)
-%\ee
-%when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
-%\be
-%E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
-%\ee
-%assuming $v\gg V$. So, the total cross section has changed from
-%$\sigma_0 $
-%to
-%\be
-%\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
-%\ee
-%The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
-%\be
-%\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
-%\ee
-%so the cross section broadens with a width in energy of \be
-%\sigma_E = mv \sqrt{k_BT/M}.\ee
-%So, the width of the resonance scales as the square root of the temperature.
-%
+\lecture{Thermal Broadening and Solar Energy}
+
+As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
+\be
+\sigma_0(E) = A\delta(E-E_0)
+\ee
+when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
+\be
+E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
+\ee
+assuming $v\gg V$. So, the total cross section has changed from
+$\sigma_0 $
+to
+\be
+\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
+\ee
+The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
+\be
+\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
+\ee
+so the cross section broadens with a width in energy of \be
+\sigma_E = mv \sqrt{k_BT/M}.\ee
+So, the width of the resonance scales as the square root of the temperature.
+
+\bee
+\item
+In the context of nuclear reactors, neutrons get absorbed more by $^{238}U$, which means less by 235, so $\rho$ goes down.
+\item In the context of climate, more photons from the Earth are absorbed by the rotational-vibrational lines.
+\eee
+
 %\lsection{Fusion}
 
-\lecture{Solar Energy}
 
-\lsection{Insolation}
+\lsection{Solar Insolation}
 
 \bei
 \item $T_\odot=5800$K
 \item This leads to a total radiation using Planck's Law of 63 million W/m$^2$ or a luminosity when integrating over the area of the Sun of $L_\odot=3.89\times 10^{26}$W.
-\Spng{solar_wavelength}{Emission from blackbody radiation as a function of wavelength.}
-\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1366 W/m$^2$.
-\Spng{balance}{Power per wavelength per area incoming on the Earth from the Sun and outgoing as a function of wavelength.}
+\Spng{solar1}{Emission from blackbody radiation as a function of wavelength.}
+\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1366 W/m$^2$, spread out by frequency as shown in Fig.~\rf{solar2}.
+\Spng{solar2}{Power per frequency per area incoming on the Earth from the Sun and outgoing.}
+\item Correct for the fact that the total is $\int d\nu I_\nu$ to get Fig.~\rf{solar3}.
+\Spng{solar3}{Power per log frequency per area incoming on the Earth from the Sun and outgoing.}
+\item Switch to wavelength to get Fig.~\rf{solar4}
+\Spng{solar4}{Power per log wavelength per area incoming on the Earth from the Sun and outgoing.}
 \eei
 
 
@@ -1757,15 +1766,19 @@ P&\simeq & E_f\, \frac{\Delta M}{m\Delta t}\vs
 
 \lsection{Variation of Insolation}
 \bei
-\item The Earth is tilted at an angle $\epsilon=23^\circ$ with respect to the normal to the plan of the orbit.
+\item The Earth is tilted at an angle $\epsilon=23^\circ$ with respect to the normal to the plan of the orbit as indicated in Fig.~\rf{tiltorbit}.
+\Spng{tiltorbit}{Earth's motion around the Sun.}
 \item This tilt leads to the seasons.
 \item The insolation, or radiance, is
 \be
 I=I_0\cos\beta
 \ee
 where $I_0\simeq 1366 W/m^2$ with variation on the order of a few percent over the course of the year due to the elliptical orbit of the Earth and variations in the solar output. The angle of incidence $\beta$ determines how much power a given area receives: if $\beta=90^\circ$, the radiation is perpendicular to the area and therefore does not heat it at all. 
+
 \item At noon, $\cos\beta=\cos(\lambda-\delta)$, where $\lambda$ is the latitude (0 at the equator) and $\delta$ is the latitude at which the Sun is directly overhead. So, at the vernal and autumnal equinoxes, $\delta=0^\circ$. On those days, the equator gets the maximum isolation and the poles get 0. At the summer solstice (June), $\delta=\epsilon$, so the Northern hemisphere gets the most insolation, as shown in Fig.~\rf{insolation}.
 \Spng{insolation}{Insolation as a function of latitude at different seasons.}
+\item Accounting for the variation with latitude and the fact that half the Earth is dark at night, only 1/4 of the insolation is absorbed from the sun, so the actual power looks more like Fig.~\rf{solar5}.
+\Spng{solar5}{Insolation accounting for the factor of 4.}
 \eei
 
 \lsection{Power Potential}
