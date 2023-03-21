@@ -1006,20 +1006,50 @@ c\equiv \sqrt{\omega/2a}\ee
 F_{\rm o} = m_og - \Delta PA = gV\left(\rho_o-\rho_a\right).\ee
 So, if the density in the object is less than the ambient fluid, it will feel an upwards force. 
 \item Since density is inversely proportional to temperature, this means that hot air will rise as long as the density remains constant.
-\item 
-Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The net force on a stable volume element vanishes; it is equal to 
-\be
-\Delta F_{net}= -\Delta P A - g\rho A\Delta z
-\ee
-where the first sign is negative because pressure that decreases with height corresponds to negative $\Delta P$, which leads to an upward force. In equilibrium, these two forces vanish so
-\be
-\frac{dP}{dz} = -g\rho
-.\ee
-The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
+\item More generally, this phenomenon is the physics behind convection: air packets moving up or down. 
+\item Convection will turn out to play an important role in the change of temperature with altitude, which is a big part of the climate picture.
 \eei
 
+Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
 
-If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density, and the equation of state says that density scales with pressure as $\rho\propto P^{1/\gamma}$, we have
+
+If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density.
+
+
+Compute how the density changes when the gas expands adiabatically:
+In the adiabatic case, $dQ=0$, so 
+\be
+c_vdT= - PdV=PVd\rho/\rho
+.\ee
+For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$, so 
+\be
+c_v dT  = PV [\frac{dP}P - dT/T] \ee
+or
+\be
+dT \left[ c_v + \frac{PV}{T} \right] = V dP
+.\ee
+But the term in square brackets is $c_p$, so $c_vdT= c_vVdP/c_p$ and
+\be
+c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
+or
+\be
+\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
+%
+%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
+%\ee
+%Therefore,
+%\be
+%\left[ dP - d\rho c_v T\right] = PVd\rho.
+% \ee
+% This leads to 
+% \be
+% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
+%\ee, 
+the solution to which is $P\propto \rho^\gamma$.
+
+
+
+Coming back to our problem and using $\rho\propto P^{1/\gamma}$, we have
 \bea
 \rho_2^* &=& \rho_1^*\,\left(\frac{P_2^*}{P_1^*}\right)^{1/\gamma}
 \vs
@@ -1044,27 +1074,39 @@ Expanding the term in parentheses leads to
 \ee
 If this is satisfied, then the system is in convective equilibrium.
 
+\lecture{Convective Instability and Quantum Mechanics}
+
+Last time, 
+\bei
+\item Start from the requirement that the density of the packet at the perturbed height must be greater than the ambient density in order to maintain stability against convection:
+\be
+\rho_2^* > \rho_2
+\ee
+\item Using $\rho_2^* = \rho_1 (P_2/P_1)^{1/\gamma}$ and Taylor expanding, this resulted in
+ the following condition for convective stability:
+\be
+{\Delta\rho^*} \simeq \Delta z\, \rho\frac{P'}{\gamma P} >{\rho'}\Delta z\ee
+If this is satisfied, there is no convection because a packet raised would have larger density than ambient.
+\item Both of these derivative are negative, so the constraint becomes
+\be
+ \vert \rho\frac{P'}{\gamma P} \vert < \vert{\rho'}\vert\ee
+\item Example in class: density higher on one side of the room than on the other: like going up into the atmosphere. If a group of students moved from right to left (up), would their density be greater than or less than the ambient density? If the pressure didn't change or changed very little then they wouldn't expand so their density would be larger than ambient and they would sink back. If the pressure changed a lot, then they would get diluted and their density would be lower than ambient and they would continue to rise: convective instability. 
+\eei
+
+
 In the case of the ideal gas law: $\rho= \frac{mP}{k_BT}$, so
 \be
-\rho' = \frac{mP'}{k_BT} - \frac{mPT'}{k_BT^2}
+\rho' = \frac{mP'}{k_BT} - \frac{mPT'}{k_BT^2} 
 .\ee
+So \be
+\frac{\rho'}{\rho} =  \frac{P'}{P} - \frac{T'}{T} .\ee
 Plugging in leads to:
 \be
--\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dr} > -\frac{dT}{dr}\eql{conveq}
+-\left(1-\frac{1}{\gamma}\right)\, \frac{T}{P}\, \frac{dP}{dz} > -\frac{dT}{dz}\eql{conveq}
 \ee
 The left hand side is called the adiabatic lapse rate or temperature gradient. Both left and right sides are positive because pressure and temperature decrease as you go up.
 So, this equation says that there is no instability, no convection, if the temperature gradient (absolute value) is smaller than the adiabatic value. If it is larger, then the hot air rises.
 
-\lecture{Convection, continued, and Quantum Mechanics}
-
-Reading: Finish Chapter 6, Chapter 7, Section 22.3
-
-Heat Loss Mechanisms:
-\bee
-\item Conduction: Fast Molecules from hot region randomly migrate to cooler region and vise versa
-\item Convection: Whole parcels of fluids move up or down due to gravity {\bf if} the temperature drops too steeply as you go up: the hot air from the ground moves up to reduce this steep drop.
-\item Radiative Heating (coming)
-\eee
 
 Condition for convective stability:
 \be
@@ -1078,7 +1120,7 @@ where the adiabatic lapse rate is defined as
 \vs
 &=&
 \frac{M}{C_P}\,g\vs&=&
-c_p g.\eea
+\frac{g}{c_P}.\eea
 For air, $c_p=10^3$J/kg/K, so
 $\Gamma_{\rm adiabatic} \simeq 10K/km$. 
 
@@ -1090,53 +1132,45 @@ Three possible temperature profiles:
 \eee
 
 
-\comment{There is another way to do this: apply the first law:
-\be
-dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
-where the last equality follows from $\rho\propto V^{-1}$.
-Then, for an ideal gas,
-\be
-dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
-=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
-\ee
-Consolidating leads to
-\be
-dP = dT \frac{\rho k_B}{m}\left[ 
-\frac{c_vT}{PV} + 1
- \right] \ee
- But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
-\ec{conveq}.}
-
-
-{\it Aside: In the adiabatic case, $dQ=0$, so 
-\be
-c_vdT= - PdV=PVd\rho/\rho
-.\ee
-For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$ so,
-\be
-c_v dT  = PV [\frac{dP}P - dT/T] \ee
-or
-\be
-dT \left[ c_v + \frac{PV}{T} \right] = V dP
-.\ee
-But the term in square brackets is $c_p$, so
-\be
-c_v \frac{VdP}{c_p} = PV \frac{d\rho}{\rho}\ee
-or
-\be
-\frac{dP}P = \frac{d\rho}\rho \,\frac{c_p}{c_v} \equiv \frac{d\rho}\rho \,\gamma\ee
 %
-%\frac1{\rho}\,\left[ dP - d\rho c_v T\right]
-%\ee
-%Therefore,
+%\old{The net force on a stable volume element vanishes; it is equal to 
 %\be
-%\left[ dP - d\rho c_v T\right] = PVd\rho.
-% \ee
-% This leads to 
-% \be
-% \frac{dP}{d\rho} = PV + c_vT = c_PT = \gamma\frac{P}{\rho}
-%\ee, 
-the solution to which is $P\propto \rho^\gamma$.}
+%\Delta F_{net}= -\Delta P A - g\rho A\Delta z
+%\ee
+%where the first sign is negative because pressure that decreases with height corresponds to negative $\Delta P$, which leads to an upward force. In equilibrium, these two forces vanish so
+%\be
+%\frac{dP}{dz} = -g\rho
+%.\ee
+%}
+%
+%%\lecture{Convection, continued, and Quantum Mechanics}
+%
+%Reading: Finish Chapter 6, Chapter 7, Section 22.3
+%
+%Heat Loss Mechanisms:
+%\bee
+%\item Conduction: Fast Molecules from hot region randomly migrate to cooler region and vise versa
+%\item Convection: Whole parcels of fluids move up or down due to gravity {\bf if} the temperature drops too steeply as you go up: the hot air from the ground moves up to reduce this steep drop.
+%\item Radiative Heating (coming)
+%\eee
+%
+%\comment{There is another way to do this: apply the first law:
+%\be
+%dQ=0 = dU+dW=c_vdT + PdV=c_vdT-\frac{Pd\rho V}{\rho}\ee
+%where the last equality follows from $\rho\propto V^{-1}$.
+%Then, for an ideal gas,
+%\be
+%dP = \frac{d\rho k_BT}{m} + \frac{\rho k_B dT}{m} 
+%=   \frac{c_v\rho dT k_BT}{mPV} + \frac{\rho k_B dT}{m} 
+%\ee
+%Consolidating leads to
+%\be
+%dP = dT \frac{\rho k_B}{m}\left[ 
+%\frac{c_vT}{PV} + 1
+% \right] \ee
+% But $PV/T = Nk_B=c_p-c_V$, so the term in brackets is $\gamma/(\gamma-1)$, and the equilibrium condition becomes
+%\ec{conveq}.}
+
 
 
 
@@ -1144,10 +1178,38 @@ the solution to which is $P\propto \rho^\gamma$.}
 \lsection{Quantum Mechanics}
 
 \bei
-\item Light comprised of photons with energy
+\item
+Light comprised of photons with energy
 \be
 E = pc = \frac{hc}{\lambda} =h\nu = \hbar\omega
 .\ee
+\item Particle in a box:
+The particle of mass $m$ is in a potential that is infinite everywhere except in the range $0\le x\le L$, where it vanishes, so the particle must be in that range. 
+\bee
+\item {\it Schrodinger Eqn:}
+\be
+\frac{-\hbar^2}{2m} \psi'' =E\psi
+\ee
+where the wave function $\psi$ can be a complex number and $\psi(x)^*\psi(x) dx$ is the probability that the particle is at the position $x$ in a range $x\rightarrow x+dx$. 
+\item
+Using boundary conditions
+\be
+\psi_n = A\sin(\sqrt{2mE_n}x/\hbar) = \sqrt{2/L}\,\sin(n\pi x/L)
+\ee
+with 
+\be
+E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}\qquad n=1,2,\ldots
+.\ee
+\item The probability of finding the particle in a given region is $(2/L) \sin^(n\pi x/L)$. So it vanishes at the ends and peaks in the middle for $n=1$. For $n=2$, it vanishes in the middle (!) even though it is moving. On average, $\langle p^2\rangle = 2mE = (\hbar n\pi)^2/L^2$.
+\item If there are many identical particles, if the particles are bosons, as many particles as possible can coexist in the same level, but if they are fermions, each state may be occupied by at most one particle.
+\eee
+\eei
+
+\lecture{Transitions and Radiation}
+
+{\bf Transitions:}
+
+\bei
 \item Discrete energy levels: $E_n$. For atoms and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
 \example{We estimated earlier that for $CO_2$,
 \be
@@ -1171,7 +1233,7 @@ The wavenumbers due to rotational transitions should be of order 0.1\% the 15$\m
 %\comment{Check Neil's notes on this.}
 
 
-\lsection{Radiative Transfer}
+{\bf Radiation}
 
 Derive Stefan-Boltzmann law:
 \bee
@@ -1191,17 +1253,7 @@ U(\omega) &=& 2 \frac{d^3p}{(2\pi\hbar)^3}\, f(p) \, pc \vs
 \vs
 &=&
 \frac{6.63\times 10^{-34}J-s 3\times 10^8m/s}{5*1.38*10^{-23} * 6000 J} =500 nm
-\eea\eee
-
-\lecture{Quantum Mechanics II}
-\bee
-\item The energy emitted per time per frequency is just obtained by multiply by $c\cos\theta$ and integrating over angles $\theta<\pi/2$:
-\be
-\int d\Omega = 2\pi \int_0^{\pi/2} d\theta\sin\theta\cos\theta = \pi.\ee
-Therefore,
-\be
-\frac{dE}{dtdA} = \frac{\hbar}{(2\pi c)^2}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\ee
-Note that this has units of W/m$^2$, our usual metric for how energy is transported.
+\eea
 \item We can plot this vs frequency or vs the more common wavelength, recalling that $\omega=2\pi c/\lambda$. Therefore,
 \be
 \frac{dE}{dt dA d\lambda} = \frac{\hbar (2\pi c)^2}{\lambda^5} \,\frac{1}{e^{hc/\lambda k_BT}-1}.
@@ -1210,6 +1262,13 @@ Fig.~\rf{bb} shows the spectra for two objects, one with a temperature roughly e
 \Spng{bb}{Flux per wavelength for an object the temperature of the Sun and one the temperature of the Earth.}
 Note that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
 \Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
+\item The energy emitted per time per frequency is just obtained by multiply by $c\cos\theta$ and integrating over angles $\theta<\pi/2$:
+\be
+\int d\Omega = 2\pi \int_0^{\pi/2} d\theta\sin\theta\cos\theta = \pi.\ee
+Therefore,
+\be
+\frac{dE}{dtdA} = \frac{\hbar}{(2\pi c)^2}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\ee
+Note that this has units of W/m$^2$, our usual metric for how energy is transported.
 \item We can carry out the integral. It becomes
 \bea
 \frac{dE}{dtdA} &=&  \frac{\hbar}{(2\pi c)^2}\, \int_0^\infty   \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}
@@ -1268,27 +1327,6 @@ $R_{orbit}=1.5e11$m.
 
 
 %\lecture{Quantum Mechanics II}
-
-\lsection{Particle in a box}
-The particle of mass $m$ is in a potential that is infinite everywhere except in the range $0\le x\le L$, where it vanishes, so the particle must be in that range. 
-\bee
-\item {\it Schrodinger Eqn:}
-\be
-\frac{-\hbar^2}{2m} \psi'' =E\psi
-\ee
-where the wave function $\psi$ can be a complex number and $\psi(x)^*\psi(x) dx$ is the probability that the particle is at the position $x$ in a range $x\rightarrow x+dx$. 
-\item
-Using boundary conditions
-\be
-\psi_n = A\sin(\sqrt{2mE_n}x/\hbar) = \sqrt{2/L}\,\sin(n\pi x/L)
-\ee
-with 
-\be
-E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}\qquad n=1,2,\ldots
-.\ee
-\item The probability of finding the particle in a given region is $(2/L) \sin^(n\pi x/L)$. So it vanishes at the ends and peaks in the middle for $n=1$. For $n=2$, it vanishes in the middle (!) even though it is moving. On average, $\langle p^2\rangle = 2mE = (\hbar n\pi)^2/L^2$.
-\item If there are many identical particles, if the particles are bosons, as many particles as possible can coexist in the same level, but if they are fermions, each state may be occupied by at most one particle.
-\eee
 \example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm, roughly true when $A\sim100$; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
 
 
@@ -1298,7 +1336,38 @@ E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}\qquad n=1,2,\ldots
 %
 %\lsection{Latent Heat}
 %
-\lecture{Nuclear Power}
+\lecture{Midterm and Nuclear Power}
+
+\lsection{Midterm}
+
+\bei 
+\item Mechanical Energy (Chapter 2)
+\bei
+\item Kinetic Energy
+\item Rotational Energy
+\item Potential Energy
+\eei
+\item Thermal Energy (5)
+\bei
+\item Heat Capacity as a function of temperature, microscopic explanation
+\item Pressure
+\item First Law: $dU=dQ-PdV$
+\item Ideal Gas Law
+\item Specific Heat Capacity (per mass)
+\item Latent Heat
+\eei
+\item Heat Transport (6)
+\bei
+\item Conduction: Fourier's Law: $\vec q = -k\nabla T$; thermal resistance; heat equation
+\item Convection: convective instability when $\vert dT/dz\vert > \Gamma_{\rm adibatic} =\frac{g}{c_P}$
+\item Radiation: $dQ/dt dA = \sigma T^4$; shape of the spectrum; relation of temperature to energy 
+\eei
+\item Quantum Mechanics (7, 9.1-9.3)
+\bei
+\item Photons: $E=h\nu=\hbar\omega=pc=hc/\lambda$
+\item Transitions: electronic, vibrational, rotational
+\eei
+\eei
 
 \lsection{Overview}
 \bei
@@ -1337,7 +1406,7 @@ Some basic principles that determine the binding energy of a given nucleus:
 \eei
 
 
-Toy model in 1D: There are $Z$ protons and $N$ neutrons, each with mass $M$ in a box of size $L=A\times 1fm$. No state can be occupied by more than one identical particle, although 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
+\old{Toy model in 1D: There are $Z$ protons and $N$ neutrons, each with mass $M$ in a box of size $L=A\times 1fm$. No state can be occupied by more than one identical particle, although 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
 \be
 E = 2\frac{\hbar^2\pi^2}{2ML^2}\, \left( \sum_{n=1}^{Z/2} n^2 + \sum_{n=1}^{N/2} n^2 \right).\ee
 Approximate the sum as an integral (good approximation for large $Z,N$ so that each is equal $(X/2)^3/3=(Z,N)^3/24$. Then the energy of this ground state is
@@ -1363,7 +1432,7 @@ E = \frac{\hbar^2\pi^2\rho^2}{96M} \left( A + 3\frac{(N-Z)^2}{A}  \right).\ee
 Taking $\rho=1/fm=10^{15}m^{-1}$; $Mc^2=10^9$eV and $\hbar c = 2\times 10^{-7}$eV-m leads to
 \be
 E = \epsilon_V A + 3\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
-where we have identified a leading term in the binding energy of the nucleus: $\epsilon_V=4$ MeV, only a factor of 4 too small.
+where we have identified a leading term in the binding energy of the nucleus: $\epsilon_V=4$ MeV, only a factor of 4 too small.}
 
 
 Semi-Empirical Mass Formula
@@ -1387,8 +1456,26 @@ with $\epsilon_C=0.7$ MeV. Note that this is much smaller so becomes important o
 B_{sym}=-\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
 with $\epsilon_{sym}=23.28$ MeV.
 \eee
+
+\lecture{Nuclear Physics, II}
+We need to understand the decay process.
+\bee
+\item Why are some nuclei unstable? This involves building a model for the {\bf binding energy.}
+\item What are the products of a decay and how much energy is released?
+\item What determines the lifetime of a given nucleus?
+\item Why do neutrons speed up the process?
+\eee
+We have a model for the binding energy of a nucleus:
+\bei
+\item We have a model for binding energy. 
+\be
+B=\epsilon_VA-\epsilon_SA^{2/3}-\epsilon_C Z^2/A^{1/3}-\epsilon_{sym} \frac{(N-Z)^2}{A}.\ee
 Some examples for fixed $Z$ are shown in Fig.~\rf{bez}. Since iron is the most tightly bound nucleus, energy can be extracted from {\it fusion}, reactions in which lighter elements fuse to form heavier elements until the end product is iron; similarly elements heavier than iron can decay into lighter ones in {\it fission}.
 \Spng{bez}{Binding energy per nucleon as a function of $A$ for nuclei with a fixed number of protons. Note that iron has the largest binding energy of the 3 and indeed of any nucleus and therefore it is the most tightly bound nucleus.}
+\item States with higher energy can decay into states with lower energy.
+\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
+\eei
+
 
 Alternatively, for fixed $A$, we can find the number of protons that produce the largest binding energy and therefore represent the most stable configuration. Note that this will often be the dominant element since protons and neutrons can transform into one another via $\beta$ decay:
 \bea
@@ -1412,22 +1499,8 @@ This enforces that at low $A$, there are an equal number of neutrons and protons
 \Spng{bea}{Binding energy per nucleon as a function of $A$ when $Z$ is set to minimize the binding energy in the SEMF.}
 
 
-\lecture{Nuclear Physics II}
+%\lecture{Nuclear Physics II}
 
-We need to understand the decay process.
-\bee
-\item Why are some nuclei unstable? This involves building a model for the {\bf binding energy.}
-\item What are the products of a decay and how much energy is released?
-\item What determines the lifetime of a given nucleus?
-\item Why do neutrons speed up the process?
-\eee
-
-\lsection{Binding Energy} 
-\bei
-\item We have a model for binding energy. 
-\item States with higher energy can decay into states with lower energy.
-\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
-\eei
 
 \lsection{Decay Products and Energy}
 Fission occurs when the decay products have lower energy than the parent particle. The total binding energy of the daughters must be greater than the binding energy of the parent. A rough estimate for the energy released is to assume the particle splits in half. Then the energy released is
@@ -1501,7 +1574,55 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
  enough to extend the lifetime to much longer than the age of the universe.
 \eee
 
-\lsection{Impact of neutrons}
+
+\lecture{Project}
+
+Write a $\sim10$ page essay with figures that demonstrates the following quantitatively:
+\bee
+\item The trends in energy consumption and production 
+\item The relation between energy and $CO_2$ production
+\item The relation between $CO_2$ production and measured $CO_2$ in the atmosphere and the trends in both
+\item The predicted increase in temperature due to the increased $CO_2$ vs. the measured $CO_2$
+\item Future projections varying any of the first 3 items above
+\eee
+
+\lecture{Decays and neutrons}
+
+Recall: 
+QM decay rates with barrier: Consider the potential in Fig.~\rf{barrier}.
+\Sfig{barrier}{Black line denotes the potential and other curves are cartoons of the wave function.} 
+The probability of finding the particle to the right then becomes of order
+\be
+P = e^{-2\kappa L}\ee
+where $L$ is the length of the box and $\kappa \equiv \sqrt{2m\Delta E}/\hbar$ where $\Delta E $ is the height of the potential. .
+
+
+Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
+\be
+\tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
+ Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
+
+Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
+\be
+V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
+\ee
+%hen the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  
+The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
+\be
+ \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
+ So the argument of the exponential can be as large as several hundred,
+% For $Q=200$ MeV, this sets $L\simeq 10^{-13}$m.
+% So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-15}$m, 
+% \bea
+% \frac2{\hbar}\,Q\, L
+% &\simeq& \frac2{\hbar c}\,10^9 {\rm MeV}\, \, 10^{-14} m
+%  \vs
+% &=& 100
+% \eea
+ enough to extend the lifetime to much longer than the age of the universe.
+
+
+\section{Impact of neutrons}
 
 \bei
 \item The fission barrier energy for $^{235}U$ is 5.9 MeV, and the lifetime is $7\times 10^8$ years; i.e., still enough are around.
@@ -1512,7 +1633,7 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
 \eei
 
 
-\lecture{Nuclear Reactors}
+\section{Nuclear Reactors}
 
 
 
@@ -1550,7 +1671,7 @@ the solution to which is \be
 \frac{E}{E_0} = e^{-N\xi}\ee, so to lose 8 orders of magnitude of energy requires $N\sim 18/\xi$ scatters. The probability of the neutron remaining uncaptured after one scatter is 
 $1-\Sigma_c/\Sigma_s$ assuming $\Sigma_s$ is much less than $\Sigma_c$. The probability of not being captured after $N$ scatters -- i.e., the probability that the neutron thermalizes -- is therefore
 \be
-p \sim \left( 1-\Sigma_s/\Sigma_c\right)^N = e^{N\ln(1-\Sigma_s/\Sigma_c)} \simeq e^{-C \Sigma_s/\xi\Sigma_c} .\ee
+p \sim \left( 1-\Sigma_c/\Sigma_s\right)^N = e^{N\ln(1-\Sigma_c/\Sigma_s)} \simeq e^{-C \Sigma_c/\xi\Sigma_s} .\ee
 Not quite right, but captures some of the qualitative dependence.
 \item $f$ is the fraction of thermal neutrons that are captured by the fuel (some are captured by the moderator), so (neglecting the few $^{238}$U that capture nuclei),
 \bea
