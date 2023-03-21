@@ -1336,7 +1336,38 @@ $R_{orbit}=1.5e11$m.
 %
 %\lsection{Latent Heat}
 %
-\lecture{Nuclear Power}
+\lecture{Midterm and Nuclear Power}
+
+\lsection{Midterm}
+
+\bei 
+\item Mechanical Energy (Chapter 2)
+\bei
+\item Kinetic Energy
+\item Rotational Energy
+\item Potential Energy
+\eei
+\item Thermal Energy (5)
+\bei
+\item Heat Capacity as a function of temperature, microscopic explanation
+\item Pressure
+\item First Law: $dU=dQ-PdV$
+\item Ideal Gas Law
+\item Specific Heat Capacity (per mass)
+\item Latent Heat
+\eei
+\item Heat Transport (6)
+\bei
+\item Conduction: Fourier's Law: $\vec q = -k\nabla T$; thermal resistance; heat equation
+\item Convection: convective instability when $\vert dT/dz\vert > \Gamma_{\rm adibatic} =\frac{g}{c_P}$
+\item Radiation: $dQ/dt dA = \sigma T^4$; shape of the spectrum; relation of temperature to energy 
+\eei
+\item Quantum Mechanics (7, 9.1-9.3)
+\bei
+\item Photons: $E=h\nu=\hbar\omega=pc=hc/\lambda$
+\item Transitions: electronic, vibrational, rotational
+\eei
+\eei
 
 \lsection{Overview}
 \bei
@@ -1375,7 +1406,7 @@ Some basic principles that determine the binding energy of a given nucleus:
 \eei
 
 
-Toy model in 1D: There are $Z$ protons and $N$ neutrons, each with mass $M$ in a box of size $L=A\times 1fm$. No state can be occupied by more than one identical particle, although 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
+\old{Toy model in 1D: There are $Z$ protons and $N$ neutrons, each with mass $M$ in a box of size $L=A\times 1fm$. No state can be occupied by more than one identical particle, although 2 protons with opposite spins can occupy the same state. The total energy of the lowest energy state is therefore,
 \be
 E = 2\frac{\hbar^2\pi^2}{2ML^2}\, \left( \sum_{n=1}^{Z/2} n^2 + \sum_{n=1}^{N/2} n^2 \right).\ee
 Approximate the sum as an integral (good approximation for large $Z,N$ so that each is equal $(X/2)^3/3=(Z,N)^3/24$. Then the energy of this ground state is
@@ -1401,7 +1432,7 @@ E = \frac{\hbar^2\pi^2\rho^2}{96M} \left( A + 3\frac{(N-Z)^2}{A}  \right).\ee
 Taking $\rho=1/fm=10^{15}m^{-1}$; $Mc^2=10^9$eV and $\hbar c = 2\times 10^{-7}$eV-m leads to
 \be
 E = \epsilon_V A + 3\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
-where we have identified a leading term in the binding energy of the nucleus: $\epsilon_V=4$ MeV, only a factor of 4 too small.
+where we have identified a leading term in the binding energy of the nucleus: $\epsilon_V=4$ MeV, only a factor of 4 too small.}
 
 
 Semi-Empirical Mass Formula
@@ -1425,8 +1456,26 @@ with $\epsilon_C=0.7$ MeV. Note that this is much smaller so becomes important o
 B_{sym}=-\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
 with $\epsilon_{sym}=23.28$ MeV.
 \eee
+
+\lecture{Nuclear Physics, II}
+We need to understand the decay process.
+\bee
+\item Why are some nuclei unstable? This involves building a model for the {\bf binding energy.}
+\item What are the products of a decay and how much energy is released?
+\item What determines the lifetime of a given nucleus?
+\item Why do neutrons speed up the process?
+\eee
+We have a model for the binding energy of a nucleus:
+\bei
+\item We have a model for binding energy. 
+\be
+B=\epsilon_VA-\epsilon_SA^{2/3}-\epsilon_C Z^2/A^{1/3}-\epsilon_{sym} \frac{(N-Z)^2}{A}.\ee
 Some examples for fixed $Z$ are shown in Fig.~\rf{bez}. Since iron is the most tightly bound nucleus, energy can be extracted from {\it fusion}, reactions in which lighter elements fuse to form heavier elements until the end product is iron; similarly elements heavier than iron can decay into lighter ones in {\it fission}.
 \Spng{bez}{Binding energy per nucleon as a function of $A$ for nuclei with a fixed number of protons. Note that iron has the largest binding energy of the 3 and indeed of any nucleus and therefore it is the most tightly bound nucleus.}
+\item States with higher energy can decay into states with lower energy.
+\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
+\eei
+
 
 Alternatively, for fixed $A$, we can find the number of protons that produce the largest binding energy and therefore represent the most stable configuration. Note that this will often be the dominant element since protons and neutrons can transform into one another via $\beta$ decay:
 \bea
@@ -1450,22 +1499,8 @@ This enforces that at low $A$, there are an equal number of neutrons and protons
 \Spng{bea}{Binding energy per nucleon as a function of $A$ when $Z$ is set to minimize the binding energy in the SEMF.}
 
 
-\lecture{Nuclear Physics II}
+%\lecture{Nuclear Physics II}
 
-We need to understand the decay process.
-\bee
-\item Why are some nuclei unstable? This involves building a model for the {\bf binding energy.}
-\item What are the products of a decay and how much energy is released?
-\item What determines the lifetime of a given nucleus?
-\item Why do neutrons speed up the process?
-\eee
-
-\lsection{Binding Energy} 
-\bei
-\item We have a model for binding energy. 
-\item States with higher energy can decay into states with lower energy.
-\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
-\eei
 
 \lsection{Decay Products and Energy}
 Fission occurs when the decay products have lower energy than the parent particle. The total binding energy of the daughters must be greater than the binding energy of the parent. A rough estimate for the energy released is to assume the particle splits in half. Then the energy released is
@@ -1539,7 +1574,55 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
  enough to extend the lifetime to much longer than the age of the universe.
 \eee
 
-\lsection{Impact of neutrons}
+
+\lecture{Project}
+
+Write a $\sim10$ page essay with figures that demonstrates the following quantitatively:
+\bee
+\item The trends in energy consumption and production 
+\item The relation between energy and $CO_2$ production
+\item The relation between $CO_2$ production and measured $CO_2$ in the atmosphere and the trends in both
+\item The predicted increase in temperature due to the increased $CO_2$ vs. the measured $CO_2$
+\item Future projections varying any of the first 3 items above
+\eee
+
+\lecture{Decays and neutrons}
+
+Recall: 
+QM decay rates with barrier: Consider the potential in Fig.~\rf{barrier}.
+\Sfig{barrier}{Black line denotes the potential and other curves are cartoons of the wave function.} 
+The probability of finding the particle to the right then becomes of order
+\be
+P = e^{-2\kappa L}\ee
+where $L$ is the length of the box and $\kappa \equiv \sqrt{2m\Delta E}/\hbar$ where $\Delta E $ is the height of the potential. .
+
+
+Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
+\be
+\tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
+ Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
+
+Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
+\be
+V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
+\ee
+%hen the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  
+The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
+\be
+ \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
+ So the argument of the exponential can be as large as several hundred,
+% For $Q=200$ MeV, this sets $L\simeq 10^{-13}$m.
+% So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-15}$m, 
+% \bea
+% \frac2{\hbar}\,Q\, L
+% &\simeq& \frac2{\hbar c}\,10^9 {\rm MeV}\, \, 10^{-14} m
+%  \vs
+% &=& 100
+% \eea
+ enough to extend the lifetime to much longer than the age of the universe.
+
+
+\section{Impact of neutrons}
 
 \bei
 \item The fission barrier energy for $^{235}U$ is 5.9 MeV, and the lifetime is $7\times 10^8$ years; i.e., still enough are around.
@@ -1550,7 +1633,7 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
 \eei
 
 
-\lecture{Nuclear Reactors}
+\section{Nuclear Reactors}
 
 
 
@@ -1588,7 +1671,7 @@ the solution to which is \be
 \frac{E}{E_0} = e^{-N\xi}\ee, so to lose 8 orders of magnitude of energy requires $N\sim 18/\xi$ scatters. The probability of the neutron remaining uncaptured after one scatter is 
 $1-\Sigma_c/\Sigma_s$ assuming $\Sigma_s$ is much less than $\Sigma_c$. The probability of not being captured after $N$ scatters -- i.e., the probability that the neutron thermalizes -- is therefore
 \be
-p \sim \left( 1-\Sigma_s/\Sigma_c\right)^N = e^{N\ln(1-\Sigma_s/\Sigma_c)} \simeq e^{-C \Sigma_s/\xi\Sigma_c} .\ee
+p \sim \left( 1-\Sigma_c/\Sigma_s\right)^N = e^{N\ln(1-\Sigma_c/\Sigma_s)} \simeq e^{-C \Sigma_c/\xi\Sigma_s} .\ee
 Not quite right, but captures some of the qualitative dependence.
 \item $f$ is the fraction of thermal neutrons that are captured by the fuel (some are captured by the moderator), so (neglecting the few $^{238}$U that capture nuclei),
 \bea
