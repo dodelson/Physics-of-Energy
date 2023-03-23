@@ -1785,25 +1785,51 @@ where $I_0\simeq 1366 W/m^2$ with variation on the order of a few percent over t
 
 Consider placing photovoltaic cells in the deserts. Including the effect of leaving space for optimal configuration, the efficiency of these is of order 6\%. Therefore, if the average daily insolation is 300W/m$^2$ in the desert, then we would extract 18W/m$^2$. The world uses 3TW of electricity every day and that could go up to 4 if electric vehicles become more common. So, to get to 4TW, requires $4.e12/18=2\times 10^{11}m^2$ of desert. The third largest desert -- after the ones in the poles -- is the Sahara, with an area of $9\times 10^{12}m^2$. After that, things drop sharply, with the Austrailian and Arabian deserts having $5\times 10^{12}m^2$ between them. Taking these 3 means that less than 1\% of the land area would need to be covered by solar cells.
 
-\lsection{Absorption}
+\lecture{Absorption and Ocean}
 
-\lecture{Ocean}
+\lsection{Absorption}
+The change in the intensity of light as it passes through absorbers is
+\be
+dI = -n\sigma I dz
+\ee
+Therefore, after passing through the atmosphere, the amount of sunlight incident on Earth is
+\be
+I = I_0e^{-\int_0^\infty dz n \sigma}
+\ee
+\example{Photons can be absorbed via
+\be
+\gamma+O_3\rightarrow O_2+O.\ee
+The density of ozone ($O_3$) is $2-5\times10^{15}m^{-3}$ in a band with a width of about $\Delta z \simeq 20km$ in the stratosphere.
+\Spng{ozone-sigma}{Cross section for photon absorption from ozone.}
+Looking at Fig.~\rf{ozone-sigma}, we see that the cross section for photons with wavelengths smaller than 300 nm is about $10^{-18}$ cm$^2$. Therefore, the optical depth is
+\be
+\tau = \Delta z  3\times 10^{-3} m^{-1} =  60
+\ee
+so all UV radiation is absorbed.}
+\Spng{ozoneabs}{Spectrum of solar radiation after it passes through the atmosphere. Note that all wavelengths less than 300nm are absorbed by ozone.}
+
+
+\section{Ocean}
 
 \lsection{Energy Balance}
 \bei
 \item Input Solar Radiation: 1366 W/m$^2$ at the top of the atmosphere.
 \item In the absence of any reflection or absorption by clouds, only some fraction of this hits any particular region, modulated by the $\cos\beta$ fraction. The ensuing insolation is shown in Fig.~\rf{davidbice}. Integrating over all altitudes gives about 340W/m$^2$. 
 \Spng{davidbice}{Solar insolation after integrating over the time-dependent $\cos\beta$ factor. Credit: \href{https://www.e-education.psu.edu/earth103/node/1004}{David Bice}.}
-\item About 30\% gets reflected by albedo. Another 20\% absorbed by the atmosphere, so the remaining 50\% reaches Earth. Together with the variation of the insolation with latitude and season, this gets us to the 50-260 W/m$^2$ at latitudes below 50$^\circ$ mentioned on page 515.
+\item About 30\% gets reflected by albedo. Another 20\% absorbed by the atmosphere; of the remaining 50\%, much of it is absorbed by the oceans.
+% reaches Earth. 
+\item If the average insolation starts at 340W/m$^2$, divide by 2 to get a baseline of about 170 W/m$^2$. This is seasonal and varies with latitude, so at any time the solar insolation on the ocean ranges from 50-260 W/m$^2$.
+%Together with the variation of the insolation with latitude and season, this gets us to the 50-260 W/m$^2$ at latitudes below 50$^\circ$ mentioned on page 515.
 \item Most of the sunlight gets absorbed in the {\it mixed layer} which is of order 100m; it heats up the mixed layer so adds thermal energy. In the tropics the temperature of the mixed layer is a steady $\sim25^\circ$. From 100-1000 m deep, the {\it thermocline}, the temperature drops linearly until it reaches the {\it abyss}, in which the temperature is a constant $5^\circ$.
 \item Why doesn't heat flow from the mixed layer to the thermocline? There are two possibilities: convection or conduction. Convection works only if the hotter fluid on top is more dense than the fluid on the bottom. But in this case, the fluid on top is less dense than the fluid below. Conduction takes place at a rate
 \be
 q=k|\nabla T|.\ee
 For water, $k=0.6$ W/m K, and the gradient in the tropics is of order $20 K/800$m, so the rate of heat conduction is 0.015 W$/m^2$. 
+\item This is far too slow to eliminate the $\sim100$ W/m$^2$ that is entering, so the solar energy (converted to thermal energy in the ocean) must go somewhere.
 \eei
 
 
-Where does the thermal energy absorbed by the ocean go? 
+Where does the energy absorbed by the ocean go? 
 \bei
 \item {\it Latent Heat} 
 \bee
@@ -1814,7 +1840,7 @@ Where does the thermal energy absorbed by the ocean go?
 \eee
 \item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
 \item Conduction, or {\it Sensible Heat}, but it is very small.
-\item Some of the heat is transported via currents from the tropics to the poles.
+\item 15\% of the heat is transported via currents from the tropics to the poles.
 \eei
 
 
