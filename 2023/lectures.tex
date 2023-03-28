@@ -1845,7 +1845,7 @@ Where does the energy absorbed by the ocean go?
 
 \lecture{Where does Ocean-absorbed heat go?}
 \bei
-\item {\it Latent Heat} 
+\item {\it Latent Heat} 84 W/m$^2$
 \item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
 \item Conduction, or {\it Sensible Heat}, but it is very small.
 \item 15\% of the heat is transported via currents from the tropics to the poles.
@@ -1854,13 +1854,20 @@ Where does the energy absorbed by the ocean go?
 
 \lsection{Potential resource of energy due to temperature difference between mixed layer and abyss}
 \bei
+\item Basic idea illustrated in Fig.~\rf{otec}.
+\Spng{otec}{Open cycle OTEC}
 \item $\Delta T=20$K
 \item Consider all the water in the top 100m in the tropics, total volume of $100m\,\times 2\pi R_\Earth^2  \times 2\times\int_0^{\pi/8} d\theta\,\sin\theta$ since the angle that subtends the tropics is about 23$^\circ$ or $\pi/8$. The integral is about 0.08. Therefore, $V=4\times 10^{15}m^3$
 \item The heat capacity of water is $4 MJ/K/m^3$.
 \item So the potential resource is 
 \be
 20\times 4\times 10^{15}\times 4 \times 10^6J =3.2\times 10^{23} J\ee
+\item We estimated way back that the maximal efficiency is 
+\be
+\eta = \frac{T_+-T_-}{T_+} = \frac{20}{298} = 7\%\ee
+and in fact functioning Ocean Thermal Energy Conversion (OTEC) systems have efficiencies in the 2-3\% range.
 %with $A=7\times 10^6 km^2$.
+\item \href{https://www.science.org/doi/10.1126/science.ade7521}{This recent article} outlines some of the unintended consequences.
 \eei
 
 
@@ -1868,9 +1875,9 @@ Where does the energy absorbed by the ocean go?
 \lsection{Coriolis Force}
 
 \bei
-\item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with circular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = m\omega^2 \vec r$ to counter the fictional centrifugal force
+\item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with circular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This (multiplied by the mass) is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = -m\omega^2 \vec r$ to counter the fictional centrifugal force
 \be
-\vec F_{cent} = -m\omega^2\vec r.\ee
+\vec F_{cent} = m\omega^2\vec r.\ee
 \item {\bf Coriolis} Fig.~\rf{coriolis} shows the basic setup. The person perceives themselves walking along the red path and getting pushed by some external force towards the center. The frequency vector is pointing out of the plane of the paper, so $\vec v\times\vec\omega$ points in the direction in the plane of the paper perpendicular to the velocity. Therefore, in the top panel, the force acts to push the walker back towards the dotted line, and in the bottom panel, the force pushes the walker towards the solid black line.
 \Sfig{coriolis}{Black line shows path observed from outside observer as person walks from rim to center of rotating disk. The red shows the path taken on the disk by the walker.}
 
