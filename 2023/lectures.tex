@@ -1857,7 +1857,7 @@ Where does the energy absorbed by the ocean go?
 \item Basic idea illustrated in Fig.~\rf{otec}.
 \Spng{otec}{Open cycle OTEC}
 \item $\Delta T=20$K
-\item Consider all the water in the top 100m in the tropics, total volume of $100m\,\times 2\pi R_\Earth^2  \times 2\times\int_0^{\pi/8} d\theta\,\sin\theta$ since the angle that subtends the tropics is about 23$^\circ$ or $\pi/8$. The integral is about 0.08. Therefore, $V=4\times 10^{15}m^3$
+\item Consider all the water in the top 100m in the tropics, total volume of $100m\,\times 2\pi R_\Earth^2  \times 2\times\int_{\pi/2-\pi/8}^{\pi/2} d\theta\,\cos\theta$ since the angle that subtends the tropics is about 23$^\circ$ or $\pi/8$. The integral is about 0.08. Therefore, $V=4\times 10^{15}m^3$
 \item The heat capacity of water is $4 MJ/K/m^3$.
 \item So the potential resource is 
 \be
@@ -1880,7 +1880,10 @@ and in fact functioning Ocean Thermal Energy Conversion (OTEC) systems have effi
 \vec F_{cent} = m\omega^2\vec r.\ee
 \item {\bf Coriolis} Fig.~\rf{coriolis} shows the basic setup. The person perceives themselves walking along the red path and getting pushed by some external force towards the center. The frequency vector is pointing out of the plane of the paper, so $\vec v\times\vec\omega$ points in the direction in the plane of the paper perpendicular to the velocity. Therefore, in the top panel, the force acts to push the walker back towards the dotted line, and in the bottom panel, the force pushes the walker towards the solid black line.
 \Sfig{coriolis}{Black line shows path observed from outside observer as person walks from rim to center of rotating disk. The red shows the path taken on the disk by the walker.}
+\eei
 
+\lecture{Coriolis}
+\bei
 \item Use $\Delta \vec L = \vec R\times\vec F \Delta t$ to infer the magnitude of the force due to the rotation of the Earth. Assume a parcel of air, say, moves from latitude $\lambda_i$ to $\lambda_f$. Since $\vec L = m\vec R\times  \vec v$ where $\vec R$ is the perpendicular distance from the axis of rotation, so $R=R_\Earth\cos\lambda$, where $\lambda$ is the latitude ($0$ at the equator). %For circular rotation, $\vec v= \vec\omega\times\vec r$, so the magnitude of the angular momentum is
 %\be
 %|L| = mR_\Earth^2\cos^2\lambda\omega_\Earth.\ee
@@ -1898,18 +1901,12 @@ take the velocity to be towards the North in the Northern hemisphere, so $\vec v
 .\ee
 Therefore, $A=2m$ and so
 \be
-F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
-\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. The latter is
-\be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
-\eei
-
-\lecture{Impact of Coriolis force on Currents}
-
-{\bf Coriolis Force} 
-\bei
-\item \be
-F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\ee
-\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. The latter is
+F_{\rm cori} = 2m\vec v\times\vec\omega_\Earth\eql{cori}\ee
+\item The Coriolis force due to the rotation of the Earth has a component perpendicular to the surface and parallel to it. 
+To obtain the latter, break up $\vec\omega_\Earth$ into components parallel and perpendicular to the Earth's surface (with $\hat n$ radially outwards):
+\be
+\vec\omega_\Earth = \vec\omega_{\parallel} + \hat n \omega_\Earth\sin\lambda\ee
+where the latter follows since at the equator, $\hat n$ is perpendicular to $\vec\omega$ and hence the last term vanishes there. The cross product of the velocity $\vec v$ of something in the plane of the Earth's surface with the last component here is the one we want since it too lies on the Earth's surface, so the horizontal component of \ec{cori} becomes
 \be F_{hc} = 2m\omega_\Earth\sin\lambda \vec v\times\vec n\ee
 \eei
 
@@ -1937,7 +1934,7 @@ Differentiate the second of these and insert the first to get
 where $\Omega\equiv 2\omega\sin\lambda$. The solution to this is sinusoidal with a drift:
 \bea
 v_y &=& A\sin\Omega t\vs
-v_x&=&\frac{F_w}{m\Omega} t + A\cos\Omega t\eea
+v_x&=&\frac{F_w}{m\Omega}  + A\cos\Omega t\eea
 I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
 \item {\it Ekman Mass Transport:} 
 \bee
