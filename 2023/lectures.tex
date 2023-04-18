@@ -2316,17 +2316,18 @@ the optical depth is defined as
  \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
  \ee
  So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
- \eei
- 
- \lecture{Radiative Transfer, Continued}
- 
-This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
-
-There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
+ This, and other forms of absorption lead to Fig.~\rf{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}.
+ \Spng{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}{Solar radiation as a function of wavelength.}
+ This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
+\item There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
  \be
  \frac{dI_\nu}{dz} = -I_\nu n \sigma + {\rm Gain\ Term}.
  \ee
  We know that in equilibrium the intensity will simply equal that of a blackbody, $B_\nu$. This fixes the gain term to be $n \sigma B_\nu$.
+\eei
+ 
+ 
+
 
  
  Solve the radiative transfer, the Schwarzschild, equation:
@@ -2345,8 +2346,28 @@ exactly as we had it before: the slab just emits at the temperature it is at.
 \lim_{\tau\rightarrow 0} I_\nu(z) = I_\nu(z_0)
 .\ee
 \eei
-If we take a simple expression for absorption rate based on the density decrease, $n\sigma=\kappa e^{-z/H}$, then
-$$ \tau(z) = \kappa H \left( 1- e^{-z/H}\right).$$
+
+Apply this to the atmosphere:
+\bei
+\item Until the top of the troposphere, the temperature decrease linearly with the lapse rate $\Gamma\simeq 6.5K/$km. After that, in the stratosphere, the temperature rises because of the heat released when ozone is dissociated by very short wavelength sunlight. This leads to the layers in Fig.~\rf{tempvsz}.
+\Spng{tempvsz}{Temperature as a function of height in the atmosphere.}
+\item The density falls off exponentially 
+\be
+\frac{dP}{dz} = -g\rho = -\frac{gP}{RT}
+\ee
+where $R=k_B/m_{air}$. Solving this up into the tropopause leads to
+\be
+P(z) = P_0\,\exp\left\{ -\frac{g}{R}\int_0^z \frac{dz'}{T_0-\Gamma z'} \right\}
+\ee
+or
+\be
+P(z) = P_0\,\left( 1 - \frac{\Gamma z}{T_0}\right)^{g/R\Gamma}.
+\ee
+Note that since $H=RT_0/g$, this is equal to the isothermal example we have covered but actually the pressure drops a bit faster in this case.
+\item The density tracks the pressure so falls also faster than exponential into the stratosphere. By the top of the stratosphere, there is essentially no absorption takes place above the stratosphere and in fact most OLR is free above the tropopause.
+\item This leads to the OLR above the tropopause as shown in Fig.~\rf{IR_emission_in_current_greenhouse_levels}.
+\Spng{IR_emission_in_current_greenhouse_levels}{OLR as a function of wavelength.}
+\eei
 \Spng{co2flux}{Impact of absorption and emission for different opacities in the region of the 15 micron line.}
 
 \lecture{Energy Balance, Forcing,  and $CO_2$}
