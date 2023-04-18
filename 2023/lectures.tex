@@ -2311,11 +2311,12 @@ the optical depth is defined as
  \be
  \tau_\nu(z_1,z_2) = \left\vert  \int_{z_1}^{z_2} dz n\sigma_\nu. \right\vert\ee
  We'll drop the absolute value sign and simply remember that the initial intensity is always suppressed by $e^{-\tau}$. We will also drop the $\nu$ subscript but it is very important to remember that the optical depth, which depends on the cross section, is very sensitive to the frequency.
- \item As an example, consider $O_2$ in the upper atmosphere. A photon can dissociate $O_2$ into two oxygen atoms if its energy is above the binding energy $E=5.2$eV. This leads to all photons with wavelengths shorter than 240nm being absorbed. The cross-section is very sensitive to wavelength but a lower bound is $10^{-27}$m$^2$. Multiply this by the density $n_{O_2} = 0.21\times 1.2 \times e^{-z/H}/(32\times 1.67\times 10^{-27})$/m$^3=4\times 10^{24} m^{-3}$. So cross sections above $10^{-27}m^2$ lead to an optical depth 
- \be
- \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
- \ee
- So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
+ \item We did the example of ozone absorption in the stratosphere and found that all solar photons with wavelength below about 300 nm are absorbed by dissociating ozone.
+% \item As an example, consider $O_2$ in the upper atmosphere. A photon can dissociate $O_2$ into two oxygen atoms if its energy is above the binding energy $E=5.2$eV. This leads to all photons with wavelengths shorter than 240nm being absorbed. The cross-section is very sensitive to wavelength but a lower bound is $10^{-27}$m$^2$. Multiply this by the density $n_{O_2} = 0.21\times 1.2 \times e^{-z/H}/(32\times 1.67\times 10^{-27})$/m$^3=4\times 10^{24} m^{-3}$. So cross sections above $10^{-27}m^2$ lead to an optical depth 
+% \be
+% \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
+% \ee
+% So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
  This, and other forms of absorption lead to Fig.~\rf{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}.
  \Spng{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}{Solar radiation as a function of wavelength.}
  This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
