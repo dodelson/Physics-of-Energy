@@ -2367,9 +2367,48 @@ P(z) = P_0\,\left( 1 - \frac{\Gamma z}{T_0}\right)^{g/R\Gamma}.
 Note that since $H=RT_0/g$, this is equal to the isothermal example we have covered but actually the pressure drops a bit faster in this case.
 \item The density tracks the pressure so falls also faster than exponential into the stratosphere. By the top of the stratosphere, there is essentially no absorption takes place above the stratosphere and in fact most OLR is free above the tropopause.
 \item This leads to the OLR above the tropopause as shown in Fig.~\rf{IR_emission_in_current_greenhouse_levels}.
+%\Spng{IR_emission_in_current_greenhouse_levels}{OLR as a function of wavelength.}
+\eei
+%\Spng{co2flux}{Impact of absorption and emission for different opacities in the region of the 15 micron line.}
+
+
+\lecture{Radiative Transfer in the Atmosphere}
+
+Recall:
+\bei
+\item Until the top of the troposphere, the temperature decrease linearly with the lapse rate $\Gamma\simeq 6.5K/$km. After that, in the stratosphere, the temperature rises because of the heat released when ozone is dissociated by very short wavelength sunlight. This leads to the layers in Fig.~\rf{tempvsz}.
+%\Spng{tempvsz}{Temperature as a function of height in the atmosphere.}
+\item The density falls off exponentially 
+\be
+\frac{dP}{dz} = -g\rho = -\frac{gP}{RT}
+\ee
+where $R=k_B/m_{air}$. Solving this up into the tropopause leads to
+\be
+P(z) = P_0\,\exp\left\{ -\frac{g}{R}\int_0^z \frac{dz'}{T_0-\Gamma z'} \right\}
+\ee
+or
+\be
+P(z) = P_0\,\left( 1 - \frac{\Gamma z}{T_0}\right)^{g/R\Gamma}.
+\ee
+Note that since $H=RT_0/g$, this is equal to the isothermal example in the small $z$ limit we have covered but actually the pressure drops a bit faster in this case, as shown in Fig~\rf{pisoad}.
+\Spng{pisoad}{Pressure under two limiting temperature conditions.}
+\item The density tracks the pressure so falls also faster than exponential into the stratosphere. By the top of the stratosphere, there is essentially no absorption takes place above the stratosphere and in fact most OLR is free above the tropopause.
+\eei
+
+Do the radiative transfer:
+\bei
+\item 
+\bea  \tau (z) &=&
+n_0 \sigma \int_0^z dz' e^{-z'/H} \vs
+&\equiv& \kappa H\left(1-e^{-z/H} \right).\eea
+\item We can invert this to get an expression for $z(\tau)$:
+\be
+z = -H\,\ln\left( 1- \frac{\tau}{\kappa H}\right).\ee
+\item This leads to the OLR above the tropopause as shown in Fig.~\rf{IR_emission_in_current_greenhouse_levels}.
 \Spng{IR_emission_in_current_greenhouse_levels}{OLR as a function of wavelength.}
 \eei
 \Spng{co2flux}{Impact of absorption and emission for different opacities in the region of the 15 micron line.}
+
 
 \lecture{Energy Balance, Forcing,  and $CO_2$}
 
