@@ -2462,7 +2462,7 @@ It makes sense that $\lambda$ is smaller. Imagine a crazy case where half of the
 
 {\bf The bottom line is that any forcing will be met with a temperature change given by
 \be
-\Delta T = -\frac{F}{3.2\,W/m^2}\, K.
+\Delta T = \frac{F}{3.2\,W/m^2}\, K.
 \ee
 What is the forcing if we double the $CO_2$ abundance?}
 \bei
@@ -2473,7 +2473,8 @@ What is the forcing if we double the $CO_2$ abundance?}
 \item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
 \item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
 \be
-\Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
+\Delta F = 3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
+The sign is positive because less radiation gets out.
 \Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
 \item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
 %Forcing
@@ -2487,20 +2488,38 @@ What is the forcing if we double the $CO_2$ abundance?}
 \item There are feedbacks, the most important of which is that warmer air can hold more water vapor, which itself absorbs a lot more IR radiation. This roughly doubles the predicted rise in temperature.
 \eei
 
-\lecture{Feedbacks}
+\lecture{Summary: Energy Balance, Energy to Temperature Change}
 
-Review about $CO_2$ forcing:
+Fig.~\rf{earthbalance} summarizes the balance.  
+\Spng{earthbalance}{Balance}
 \bei
-\item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.3 W/m$^2$. 
-%\Spng{olr}{Outgoing long wavelength radiation as a function of wavelength}
-\item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
-\be
-\Delta F = -3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
-%\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
-\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
+\item 340 in from the Sun
+\item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the gorund
+\item Atmosphere absorbs 80
+\item The remaining 160 is absorbed by the Earth.
+\item Convection spits out 100
+\item The Earth's temperature is a less less than 290, leading to 400 OLR
+\item Since 240 comes in in short wavelength radiation, 240 must go out from the atmosphere. 
+\item For the atmosphere to be in equilibrium then, it must balance: 80 absorbed in short wavelength; 100 in convection; (400-240) in long wavelength. So it spits down 340.
+\item Note that this leads to balance at the Earth: 160 from the sun together with 340 from the atmosphere is 500. That is equal to 100 from convection and 400 in IR radiation.
 \eei
 
-Feedbacks:
+{\bf Forcing, Redux}
+\bei
+\item A forcing is a small change to the system: an increase ($F>0$) or decrease ($F<0$) in the radiation incident on Earth.
+\item In response to a forcing, the temperature will change by
+\be
+\Delta T = -\frac{F}{\lambda_0}
+\ee
+where $\lambda_0=-3.2$ W/m$^2$/K.
+\item The forcing due to increased $CO_2$ abundance is
+\be
+F = 3.7 W/m^2\, \log_2(c/c_0)
+\ee
+where $c_0$ is usually taken to be pre-industrial abundance: 280 ppm, which is equal to 600GtC.
+\eei
+
+{\bf Feedbacks, Redux}
 \bei
 \item Initial forcing $F$ leads to initial temperature change
 \be
@@ -2518,47 +2537,70 @@ Feedbacks:
 \ee
 \item The sum is equal to $1/(1+x)$, so the total change in temperature is
 \be
-\Delta T = -\frac{F}{\lambda_0 + \lambda}.\ee
-\item Using only water vapor, which turns out to be a good estimate because the other feedbacks cancel, leads to
+\Delta T =  -\frac{F}{\lambda_0 + \lambda}.\ee
+\item Using only water vapor, $\lambda=1.6$, which turns out to be a good estimate because the other feedbacks cancel, leads to
 \be
-\Delta T = \frac{F}{1.6 W/m^2} \, K.\ee
+\Delta T = -\frac{F}{-3.2+1.6} = \frac{F}{1.6 W/m^2} \, K.\ee
 Plugging in leads to 
 \be
 \Delta T = \frac{3.7\log_2(c/c_0)}{1.6} \, K.\ee
 \eei
 
-\lsection{$CO_2$ Increase, Review}
+{\bf From Energy to Temperature Increase}
 \bei
+\item Human produce and use $6\times 10^{20}J$ of energy every year.
 \item
-Human emit 10 GT of carbon every year (Fig~\rf{emissions}). This is often reported in units of parts per million. The conversion factor is
+In so doing, we emit 10 GT of carbon every year (Fig~\rf{emissions}). This is often reported in units of parts per million. The conversion factor is
 \be
 1 {\rm ppm} =2.13 \,{\rm GigaTonnes\, of\, Carbon}.
 \ee
+So 10 GtC = 4.7 ppm every year.
 The total amount of air in the atmosphere is about 5.15 quadrillion tonnes $=5.15\times 10^{18}$ kg. One part per million means that the number density of $CO_2$ particle is a millionth of the total density. Since the mass of carbon in $CO_2$ compared to the average mass ($N_2$ (78\%) and $O_2$ (21\%)) is $12/29$, 1 ppm is equivalent to 0.414ppmm (of Carbon, not $CO_2$), where the last 'm' stands for mass. This means that 1 ppm corresponds to $2.13\times10^{12}$ kg of $CO_2$. That in turn corresponds to $2.13$ Gigatonnes, since 1 tonne is equal to 1000 kg.
 \Spng{emissions}{Global Annual CO$_2$ emissions in tons of carbon.}
+\item The {\it greenhouse gas intensity} is the ratio of carbon produced per energy use. It is
+\be
+GHGI = \frac{10GtC}{6\times 10^{20} J} = \frac{10^{16} g}{6\times 10^{14} MJ} = 17 g/MJ.\ee
 \item This has led to an increase of 400 GTC since pre-industrial but only half of that remains in the atmosphere with the other half going into the ocean (see Figs.~\rf{cum} and \rf{co2}).
 \Spng{cum}{Cumulative global emissions. Note that about half of this stays in the atmosphere.}
 The bottom line though is that there is now 900 GTC in the atmosphere, corresponding to 420ppm.
 \Spng{co2}{Measured CO$_2$ in the atmosphere in units of tons of carbon. There is more CO2 in the atmosphere in Northern Spring and less in the Fall. This reflects the fact that throughout the winter the plants are decaying and returning CO2 to the atmosphere. Then in the Spring, the plants start recapturing the CO2 to grow so that by Fall the atmospheric CO2 is a minimum.}
-\eei
-
-\lsection{Energy Balance}
-
-Fig.~\rf{earthbalance} summarizes the balance.  
-\Spng{earthbalance}{Balance}
-\bei
-\item 340 in from the Sun
-\item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the gorund
-\item Atmosphere absorbs 80
-\item The remaining 160 is absorbed by the Earth.
-\item Convection spits out 100
-\item The Earth's temperature is a less less than 290, leading to 400 OLR
-\item Since 240 comes in in short wavelength radiation, 240 must go out from the atmosphere. 
-\item For the atmosphere to be in equilibrium then, it must balance: 80 absorbed in short wavelength; 100 in convection; (400-240) in long wavelength. So it spits down 340.
-\item Note that this leads to balance at the Earth: 160 from the sun together with 340 from the atmosphere is 500. That is equal to 100 from convection and 400 in IR radiation.
-\eei
-
+\item The additional $CO_2$ increases the temperature by an amount
+\be
+\Delta T = 2.3\log_2(c/c_0)\eql{cot}
+.\ee
+You can check this by looking at the graphs since 1960, as shown in Fig.~\rf{TA1_CO2}.
+\Spng{TA1_CO2}{The predicted rise in temperature as a function of $CO_2$ abundance using \ec{cot} since 1960 and the observed temperature increase.} 
+\item We can turn this into an equation for the expected rise in temperature as a function of energy use, using:
+\be
+c = c_0 + GHGI\times E \times 0.5
+\ee
+In units of ppm, this translates to
+\be
+c = 422\,ppm + 0.5 \frac{E}{6\times 10^{20} J}\, \frac{10 GtC}{ppm}\,ppm\ee
+or
+\be\frac{c}{280} = 1.5 + \frac{2.3}{280}\, \frac{E}{6\times 10^{20} J},\ee
+Therefore,
+\be \Delta T = 2.3K\,\log_2\left( 1.5+ \frac{2.3}{280} \frac{E}{6\times 10^{20} J} \right).\ee
+\item The simplest estimate is we continue using the same energy year so $E/600EJ$ is just equal to the number of years from now. Then,
+\be
+\Delta T = 2.3K\,\log_2\left( 1.5+ 0.0082N\right).\ee
+This predicts that in 2100, the temperature anomaly will be 2.5$^\circ$. This predicts that temperature anomaly will reach 2$^\circ$C in 40 years.
 \Spng{1990}{1990 IPCC prediction}
+\eei
+
+\lecture{Appendix}
+
+Review about $CO_2$ forcing:
+\bei
+\item Integrating over all wavelengths in Fig.~\rf{olr} leads to a difference when the CO$_2$ abundance double from 280 to 560 ppm of 3.7W/m$^2$. That is, when the ghg concentration doubles, the OLR will decrease by 3.7 W/m$^2$. 
+%\Spng{olr}{Outgoing long wavelength radiation as a function of wavelength}
+\item The deficit is logarithmically dependent on the concentration as indicated in Fig.~\rf{olrlog}:
+\be
+\Delta F = 3.7\log_2(c/c_0) W/m^2.\eql{log}\ee 
+%\Spng{olrlog}{Change in the emission at the top of the atmosphere in the 15 micron region as the CO$_2$ concentration goes up. The solid curve is the logarithmic fit as in \ec{log} .}
+\item Taking the concentration today to be 420 ppm leads to a forcing of $3.7\log_2(420/280)=2 W/m^2$. This should have led to a temperature increase, using \ec{lambda} of 0.6$^\circ$C and an increase of 1.1$^\circ$C when the concentration doubles. In fact, we will see that the situation is much worse than that.
+\eei
+
 
 
 \Sfig{ipcc6fig}{Different scenarios}
