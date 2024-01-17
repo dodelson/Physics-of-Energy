@@ -1,0 +1,2090 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.4.7)  15 JAN 2024 14:35
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**lectures.tex
+(./lectures.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/local/texlive/2020/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@chapter=\count168
+\c@section=\count169
+\c@subsection=\count170
+\c@subsubsection=\count171
+\c@paragraph=\count172
+\c@subparagraph=\count173
+\c@figure=\count174
+\c@table=\count175
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen137
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen138
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count176
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count177
+\leftroot@=\count178
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count179
+\DOTSCASE@=\count180
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box45
+\strutbox@=\box46
+\big@size=\dimen139
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count181
+\c@MaxMatrixCols=\count182
+\dotsspace@=\muskip16
+\c@parentequation=\count183
+\dspbrk@lvl=\count184
+\tag@help=\toks17
+\row@=\count185
+\column@=\count186
+\maxfields@=\count187
+\andhelp@=\toks18
+\eqnshift@=\dimen140
+\alignsep@=\dimen141
+\tagshift@=\dimen142
+\tagwidth@=\dimen143
+\totwidth@=\dimen144
+\lineht@=\dimen145
+\@envbody=\toks19
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2020/03/24 v1.24 mathematical typesetting tools
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count188
+\calc@Bcount=\count189
+\calc@Adimen=\dimen146
+\calc@Bdimen=\dimen147
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count190
+\calc@Cskip=\skip54
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count191
+\l_MT_multwidth_dim=\dimen148
+\origjot=\skip55
+\l_MT_shortvdotswithinadjustabove_dim=\dimen149
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen150
+\l_MT_above_intertext_sep=\dimen151
+\l_MT_below_intertext_sep=\dimen152
+\l_MT_above_shortintertext_sep=\dimen153
+\l_MT_below_shortintertext_sep=\dimen154
+\xmathstrut@box=\box47
+\xmathstrut@dim=\dimen155
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/mathabx/mathabx.sty
+Package: mathabx 2003/07/29 v0.0 Non-standard LaTeX package mathabx
+\symmatha=\mathgroup4
+\symmathb=\mathgroup5
+\symmathx=\mathgroup6
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/mathabx/mathabx.dcl
+LaTeX Font Info:    Redeclaring math symbol \cdotp on input line 25.
+LaTeX Font Info:    Redeclaring math symbol \times on input line 33.
+LaTeX Font Info:    Redeclaring math symbol \div on input line 34.
+LaTeX Font Info:    Redeclaring math symbol \cdot on input line 35.
+LaTeX Font Info:    Redeclaring math symbol \circ on input line 36.
+LaTeX Font Info:    Redeclaring math symbol \ast on input line 38.
+LaTeX Font Info:    Redeclaring math symbol \pm on input line 41.
+LaTeX Font Info:    Redeclaring math symbol \mp on input line 42.
+LaTeX Font Info:    Redeclaring math symbol \diamond on input line 45.
+LaTeX Font Info:    Redeclaring math symbol \bullet on input line 46.
+LaTeX Font Info:    Redeclaring math symbol \star on input line 47.
+LaTeX Font Info:    Redeclaring math symbol \amalg on input line 51.
+LaTeX Font Info:    Redeclaring math symbol \equiv on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \sim on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \approx on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \simeq on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \asymp on input line 89.
+LaTeX Font Info:    Redeclaring math symbol \neg on input line 134.
+LaTeX Font Info:    Redeclaring math symbol \ll on input line 136.
+LaTeX Font Info:    Redeclaring math symbol \gg on input line 137.
+LaTeX Font Info:    Redeclaring math symbol \vdash on input line 139.
+LaTeX Font Info:    Redeclaring math symbol \dashv on input line 140.
+LaTeX Font Info:    Redeclaring math symbol \flat on input line 158.
+LaTeX Font Info:    Redeclaring math symbol \natural on input line 159.
+LaTeX Font Info:    Redeclaring math symbol \sharp on input line 160.
+LaTeX Font Info:    Redeclaring math symbol \infty on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \propto on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \dagger on input line 163.
+LaTeX Font Info:    Redeclaring math symbol \ddagger on input line 164.
+LaTeX Font Info:    Redeclaring math symbol \smile on input line 171.
+LaTeX Font Info:    Redeclaring math symbol \frown on input line 172.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 193.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 195.
+LaTeX Font Info:    Redeclaring math symbol \setminus on input line 218.
+LaTeX Font Info:    Redeclaring math symbol \mid on input line 222.
+LaTeX Font Info:    Redeclaring math symbol \forall on input line 279.
+LaTeX Font Info:    Redeclaring math symbol \partial on input line 281.
+LaTeX Font Info:    Redeclaring math symbol \exists on input line 284.
+LaTeX Font Info:    Redeclaring math symbol \emptyset on input line 288.
+LaTeX Font Info:    Redeclaring math symbol \top on input line 290.
+LaTeX Font Info:    Redeclaring math symbol \bot on input line 291.
+LaTeX Font Info:    Redeclaring math symbol \perp on input line 292.
+LaTeX Font Info:    Redeclaring math symbol \in on input line 299.
+LaTeX Font Info:    Redeclaring math symbol \owns on input line 300.
+LaTeX Font Info:    Redeclaring math symbol \cap on input line 312.
+LaTeX Font Info:    Redeclaring math symbol \cup on input line 313.
+LaTeX Font Info:    Redeclaring math symbol \uplus on input line 314.
+LaTeX Font Info:    Redeclaring math symbol \sqcap on input line 315.
+LaTeX Font Info:    Redeclaring math symbol \sqcup on input line 316.
+LaTeX Font Info:    Redeclaring math symbol \wedge on input line 318.
+LaTeX Font Info:    Redeclaring math symbol \vee on input line 320.
+LaTeX Font Info:    Redeclaring math symbol \subset on input line 344.
+LaTeX Font Info:    Redeclaring math symbol \supset on input line 345.
+LaTeX Font Info:    Redeclaring math symbol \subseteq on input line 348.
+LaTeX Font Info:    Redeclaring math symbol \supseteq on input line 349.
+LaTeX Font Info:    Redeclaring math symbol \sqsubseteq on input line 380.
+LaTeX Font Info:    Redeclaring math symbol \sqsupseteq on input line 381.
+LaTeX Font Info:    Redeclaring math symbol \triangleleft on input line 407.
+LaTeX Font Info:    Redeclaring math symbol \triangleright on input line 409.
+LaTeX Font Info:    Redeclaring math symbol \leq on input line 439.
+LaTeX Font Info:    Redeclaring math symbol \geq on input line 441.
+LaTeX Font Info:    Redeclaring math symbol \prec on input line 498.
+LaTeX Font Info:    Redeclaring math symbol \succ on input line 499.
+LaTeX Font Info:    Redeclaring math symbol \preceq on input line 506.
+LaTeX Font Info:    Redeclaring math symbol \succeq on input line 507.
+LaTeX Font Info:    Redeclaring math symbol \leftarrow on input line 540.
+LaTeX Font Info:    Redeclaring math symbol \rightarrow on input line 542.
+LaTeX Font Info:    Redeclaring math symbol \nwarrow on input line 546.
+LaTeX Font Info:    Redeclaring math symbol \nearrow on input line 547.
+LaTeX Font Info:    Redeclaring math symbol \swarrow on input line 548.
+LaTeX Font Info:    Redeclaring math symbol \searrow on input line 549.
+LaTeX Font Info:    Redeclaring math symbol \leftrightarrow on input line 550.
+LaTeX Font Info:    Redeclaring math symbol \mapstochar on input line 557.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoonup on input line 560.
+LaTeX Font Info:    Redeclaring math symbol \rightharpoonup on input line 561.
+LaTeX Font Info:    Redeclaring math symbol \leftharpoondown on input line 562.
+
+LaTeX Font Info:    Redeclaring math symbol \rightharpoondown on input line 563
+.
+LaTeX Font Info:    Redeclaring math symbol \Leftarrow on input line 575.
+LaTeX Font Info:    Redeclaring math symbol \Rightarrow on input line 576.
+LaTeX Font Info:    Redeclaring math symbol \Leftrightarrow on input line 579.
+LaTeX Font Info:    Redeclaring math symbol \rhook on input line 612.
+LaTeX Font Info:    Redeclaring math symbol \lhook on input line 613.
+LaTeX Font Info:    Redeclaring math symbol \oplus on input line 658.
+LaTeX Font Info:    Redeclaring math symbol \ominus on input line 659.
+LaTeX Font Info:    Redeclaring math symbol \otimes on input line 661.
+LaTeX Font Info:    Redeclaring math symbol \odot on input line 663.
+LaTeX Font Info:    Redeclaring math symbol \oslash on input line 675.
+\mayacnter=\count192
+\mayacnta=\count193
+\mayacntb=\count194
+\mayacntc=\count195
+\mayawidth=\dimen156
+LaTeX Font Info:    Redeclaring math symbol \intop on input line 753.
+LaTeX Font Info:    Redeclaring math symbol \ointop on input line 760.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 842.
+LaTeX Info: Redefining \{ on input line 846.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 848.
+LaTeX Info: Redefining \} on input line 852.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 858.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 859.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 863.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 865.
+LaTeX Font Info:    Redeclaring math delimiter \uparrow on input line 868.
+LaTeX Font Info:    Redeclaring math delimiter \downarrow on input line 869.
+LaTeX Font Info:    Redeclaring math delimiter \updownarrow on input line 870.
+LaTeX Font Info:    Redeclaring math delimiter \Uparrow on input line 871.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 872.
+LaTeX Font Info:    Redeclaring math delimiter \Updownarrow on input line 873.
+LaTeX Font Info:    Redeclaring math delimiter \lgroup on input line 880.
+LaTeX Font Info:    Redeclaring math delimiter \rgroup on input line 881.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 882.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 883.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 884.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 885.
+LaTeX Font Info:    Redeclaring math symbol \braceld on input line 903.
+LaTeX Font Info:    Redeclaring math symbol \bracerd on input line 905.
+LaTeX Font Info:    Redeclaring math symbol \bracelu on input line 907.
+LaTeX Font Info:    Redeclaring math symbol \braceru on input line 909.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 944.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 946.
+))
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020/01/14 v7.00d Hypertext links for LaTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2019/11/24 v0.31 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen157
+\Hy@linkcounter=\count196
+\Hy@pagecounter=\count197
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020/01/14 v7.00d Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count198
+Package hyperref Info: Hyper figures OFF on input line 4547.
+Package hyperref Info: Link nesting OFF on input line 4552.
+Package hyperref Info: Hyper index ON on input line 4555.
+Package hyperref Info: Plain pages OFF on input line 4562.
+Package hyperref Info: Backreferencing OFF on input line 4567.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4800.
+\c@Hy@tempcnt=\count199
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5159.
+\XeTeXLinkMargin=\dimen158
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count266
+\Field@Width=\dimen159
+\Fld@charsize=\dimen160
+Package hyperref Info: Hyper figures OFF on input line 6430.
+Package hyperref Info: Link nesting OFF on input line 6435.
+Package hyperref Info: Hyper index ON on input line 6438.
+Package hyperref Info: backreferencing OFF on input line 6445.
+Package hyperref Info: Link coloring OFF on input line 6450.
+Package hyperref Info: Link coloring with OCG OFF on input line 6455.
+Package hyperref Info: PDF/A mode OFF on input line 6460.
+LaTeX Info: Redefining \ref on input line 6500.
+LaTeX Info: Redefining \pageref on input line 6504.
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count267
+\c@Item=\count268
+\c@Hfootnote=\count269
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020/01/14 v7.00d Hyperref driver for pdfTeX
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count270
+\c@bookmark@seq@number=\count271
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(/usr/local/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip56
+)
+\c@lectureno=\count272
+\c@secno=\count273
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count274
+\l__pdf_internal_box=\box48
+)
+(./lectures.aux
+
+LaTeX Warning: Label `fig:barrier' multiply defined.
+
+
+LaTeX Warning: Label `fig:pisoad' multiply defined.
+
+
+LaTeX Warning: Label `eq:log' multiply defined.
+
+
+LaTeX Warning: Label `fig:pisoad' multiply defined.
+
+)
+\openout1 = `lectures.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 122.
+LaTeX Font Info:    ... okay on input line 122.
+ (/usr/local/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count275
+\scratchdimen=\dimen161
+\scratchbox=\box49
+\nofMPsegments=\count276
+\nofMParguments=\count277
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count278
+\MPscratchDim=\dimen162
+\MPnumerator=\count279
+\makeMPintoPDFobject=\count280
+\everyMPtoPDFconversion=\toks22
+) (/usr/local/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+\AtBeginShipoutBox=\box50
+Package hyperref Info: Link coloring OFF on input line 122.
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(/usr/local/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/usr/local/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.s
+ty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count281
+)
+LaTeX Info: Redefining \ref on input line 122.
+LaTeX Info: Redefining \pageref on input line 122.
+LaTeX Info: Redefining \nameref on input line 122.
+ (./lectures.out) (./lectures.out)
+\@outlinefile=\write3
+\openout3 = `lectures.out'.
+
+<../Figures/ec.png, id=17, 433.62pt x 289.08pt>
+File: ../Figures/ec.png Graphic file (type png)
+<use ../Figures/ec.png>
+Package pdftex.def Info: ../Figures/ec.png  used on input line 127.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/co2gr.png, id=20, 433.62pt x 289.08pt>
+File: ../Figures/co2gr.png Graphic file (type png)
+<use ../Figures/co2gr.png>
+Package pdftex.def Info: ../Figures/co2gr.png  used on input line 130.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/ghgi.png, id=22, 433.62pt x 289.08pt>
+File: ../Figures/ghgi.png Graphic file (type png)
+<use ../Figures/ghgi.png>
+Package pdftex.def Info: ../Figures/ghgi.png  used on input line 135.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+
+Overfull \hbox (3.69118pt too wide) in paragraph at lines 134--137
+\OT1/cmr/bx/n/10.95 more $\OML/cmm/m/it/10.95 CO[]$ \OT1/cmr/bx/n/10.95 will we
+ have emit-ted by 2050? An-swer: 270GtC 
+ []
+
+[1{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+ <../Figures/ec.png>]
+<../Figures/co2atm.png, id=41, 433.62pt x 289.08pt>
+File: ../Figures/co2atm.png Graphic file (type png)
+<use ../Figures/co2atm.png>
+Package pdftex.def Info: ../Figures/co2atm.png  used on input line 139.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [2 <../Figures/co2gr.png>] [3 <../Figures/ghgi.png> <../Figures/co2atm.png>]
+<../Figures/TA_CO2.png, id=60, 433.62pt x 289.08pt>
+File: ../Figures/TA_CO2.png Graphic file (type png)
+<use ../Figures/TA_CO2.png>
+Package pdftex.def Info: ../Figures/TA_CO2.png  used on input line 151.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [4 <../Figures/TA_CO2.png>] [5] [6] [7]
+Overfull \hbox (13.41864pt too wide) in paragraph at lines 258--258
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Kinetic energy of an airplane: with a mass of 68
+,000
+ []
+
+
+Overfull \hbox (30.91077pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10.95 kg (Airbus-A320). (This is the maximum mass the aircraft is
+ allowed
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10.95 to take off with.) Flight time from Boston to New York is 3
+0 minutes
+ []
+
+
+Overfull \hbox (30.91077pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10.95 and the distance is 210 miles= 340km. Therefore, its kineti
+c energy
+ []
+
+
+Overfull \hbox (76.90027pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10.95 Doing the multiplication leads to 1.2GJ. That corresponds t
+o 680km/h=440mph. 
+ []
+
+
+Overfull \hbox (0.46535pt too wide) in paragraph at lines 258--258
+[]\OT1/cmtt/m/n/10.95 There is also the potential energy $\OML/cmm/m/it/10.95 m
+gh$\OT1/cmtt/m/n/10.95 . Assuming the plane
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 258--258
+\OT1/cmtt/m/n/10.95 flies at 30,000 ft (9000m), this potential energy is about 
+500 MJ. 
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 258--259
+\OT1/cmtt/m/n/10.95 about 5 times the kinetic energy. So the total energy requi
+red
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 258--259
+\OT1/cmtt/m/n/10.95 is over 7 GJ (neglecting air resistance). The number of pas
+sengers
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 258--259
+\OT1/cmtt/m/n/10.95 on the plane is about 150. Dividing that up leads to 50 MJ 
+per
+ []
+
+
+Overfull \hbox (65.15683pt too wide) in paragraph at lines 268--268
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Air resistance of airplane: take the width of th
+e Airbus-A320
+ []
+
+
+Overfull \hbox (9.85309pt too wide) in paragraph at lines 268--268
+\OT1/cmtt/m/n/10.95 to be 3.7m, so that the cross-sectional area is $\OML/cmm/m
+/it/10.95 ^^Y \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\
+OT1/cmr/m/n/10.95 5[]\OML/cmm/m/it/10.95 m[] \U/matha/m/n/10.95 ^^P \OT1/cmr/m/
+n/10.95 11\OML/cmm/m/it/10.95 m[]$\OT1/cmtt/m/n/10.95 ;
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 268--268
+\OT1/cmtt/m/n/10.95 the speed of a short flight to be again 200m/s (450 mi/hour
+). For
+ []
+
+[8]
+Overfull \hbox (0.50784pt too wide) in paragraph at lines 268--268
+\OT1/cmtt/m/n/10.95 with $\OML/cmm/m/it/10.95 H \U/matha/m/n/10.95 ^^P \OT1/cmr
+/m/n/10.95 8\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 5$\OT1/cmtt/m/n/10.95 km. T
+hen, the density of air at 30,000 ft is about
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 268--269
+\OT1/cmtt/m/n/10.95 The good news is that airplanes are designed to have []very
+ small
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 268--269
+\OT1/cmtt/m/n/10.95 drag coefficients, less than about 0.04[]. So, the energy l
+ost to
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 268--269
+\OT1/cmtt/m/n/10.95 air resistance does seem to be sub-dominant to that due to 
+kinetic
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 268--269
+\OT1/cmtt/m/n/10.95 and potential energy. Note though that these losses increas
+e with
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 268--269
+\OT1/cmtt/m/n/10.95 distance, so a flight ten times longer might need to accoun
+t for
+ []
+
+[9]
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 281--284
+\OT1/cmtt/m/n/10.95 EXAMPLE: Rotational energy of tires in a car: 4, suppose ea
+ch
+ []
+
+
+Overfull \hbox (7.31462pt too wide) in paragraph at lines 281--284
+\OT1/cmtt/m/n/10.95 of which has all its mass $\OML/cmm/m/it/10.95 m$ \OT1/cmtt
+/m/n/10.95 at $\OML/cmm/m/it/10.95 R$ \OT1/cmtt/m/n/10.95 from the center. But 
+the
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 284--285
+\OT1/cmtt/m/n/10.95 suppressed compared to the translational energy by the rati
+o
+ []
+
+
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 295--300
+\OT1/cmtt/m/n/10.95 EXAMPLE: Particle on surface of the Earth experiences a for
+ces
+ []
+
+
+Overfull \hbox (52.54544pt too wide) in paragraph at lines 295--300
+\OT1/cmtt/m/n/10.95 of magnitude $\OML/cmm/m/it/10.95 m![]r$ \OT1/cmtt/m/n/10.9
+5 where $\OML/cmm/m/it/10.95 r$ \OT1/cmtt/m/n/10.95 is the distance to the axis
+ of rotation,
+ []
+
+
+Overfull \hbox (7.53975pt too wide) in paragraph at lines 295--300
+\OT1/cmtt/m/n/10.95 equal to $\OML/cmm/m/it/10.95 R[] [] ^^U$\OT1/cmtt/m/n/10.9
+5 , where $\OML/cmm/m/it/10.95 ^^U$ \OT1/cmtt/m/n/10.95 is the latitude, equal 
+to zero at
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 taking the radius of the Earth to be 6400km and the rotatio
+n
+ []
+
+
+Overfull \hbox (17.04407pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 frequency to be $\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 ^^
+Y\U/matha/m/n/10.95 {\OT1/cmr/m/n/10.95 24$ \OT1/cmtt/m/n/10.95 hours. So, this
+ is a few hundred times
+ []
+
+
+Overfull \hbox (41.03976pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 to a thousand times smaller than the acceleration due to gr
+avity.
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 Note that this force points from the surface of the Earth t
+o
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 the axis of rotation, so it is possible to decompose it int
+o
+ []
+
+
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 a vertical force (akin to gravity) and a horizontal compone
+nt.
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 300--301
+\OT1/cmtt/m/n/10.95 However, the shape of the Earth deforms so that the combine
+d
+ []
+
+[10]
+Overfull \hbox (16.76212pt too wide) in paragraph at lines 347--347
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: $\OML/cmm/m/it/10.95 CO[]$ \OT1/cmtt/m/n/10.95 m
+olecule: The carbon atom is at the center and
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 347--347
+\OT1/cmtt/m/n/10.95 the 2 oxygens at the ends of a roughly linear configuration
+.
+ []
+
+
+Overfull \hbox (9.19775pt too wide) in paragraph at lines 347--347
+\OT1/cmtt/m/n/10.95 from []this paper[]. Taking $\OML/cmm/m/it/10.95 R$\OT1/cmt
+t/m/n/10.95 , the distance between the oxygen
+ []
+
+
+Overfull \hbox (29.54239pt too wide) in paragraph at lines 347--347
+\OT1/cmtt/m/n/10.95 and carbon, to be the typical atomic value of an angstrom l
+eads
+ []
+
+
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 347--347
+\OT1/cmtt/m/n/10.95 Taking the mass of oxygen to be 16 times the proton mass le
+ads
+ []
+
+[11]
+Overfull \hbox (2.07408pt too wide) in paragraph at lines 347--347
+\OT1/cmtt/m/n/10.95 pretty close to $[]$, where $[] \U/matha/m/n/10.95 ^^P \OT1
+/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 05 \U/matha/m/n/10.95 ^
+^B \OT1/cmr/m/n/10.95 10[]$ \OT1/cmtt/m/n/10.95 J-s. So its energy
+ []
+
+[12]
+<../Figures/winds.jpg, id=162, 2023.56pt x 1517.67pt>
+File: ../Figures/winds.jpg Graphic file (type jpg)
+<use ../Figures/winds.jpg>
+Package pdftex.def Info: ../Figures/winds.jpg  used on input line 371.
+(pdftex.def)             Requested size: 216.0022pt x 161.98845pt.
+
+Overfull \hbox (13.41864pt too wide) in paragraph at lines 391--391
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Energy in wind circulation system: Consider a pa
+rcel
+ []
+
+
+Overfull \hbox (33.83896pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 of air, annulus with $\OT1/cmr/m/n/10.95 5[]$ \OT1/cmtt/m/n
+/10.95 width, at $\OT1/cmr/m/n/10.95 40[]$ \OT1/cmtt/m/n/10.95 latitude over th
+e Pacific Ocean
+ []
+
+
+Overfull \hbox (21.04382pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 up to 1 km above. Its' \OT1/cmr/m/it/10.95 zonal \OT1/cmtt/
+m/n/10.95 (westerly) wind speed is about 10m/s.
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 Let's calculate its rotational energy. Taking the density t
+o be
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 constant and all roughly the same distance from the axis of
+ rotation,
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 since 5 degrees is equal to 0.09 in radians. To get the ang
+ular
+ []
+
+[13 <../Figures/winds.jpg>]
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 This is not quite the right metric for wind power. Better i
+s the
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 391--391
+\OT1/cmtt/m/n/10.95 power density, the energy per volume multiplied by the spee
+d. In
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 391--392
+\OT1/cmtt/m/n/10.95 The amount of power we could get out of this is limited by,
+ among
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 391--392
+\OT1/cmtt/m/n/10.95 be covered by wind turbines. In principle in this swath of 
+the
+ []
+
+
+Overfull \hbox (30.35835pt too wide) in paragraph at lines 391--392
+\OT1/cmtt/m/n/10.95 atmosphere, there is $\OT1/cmr/m/n/10.95 3 \U/matha/m/n/10.
+95 ^^B \OT1/cmr/m/n/10.95 10[]$\OT1/cmtt/m/n/10.95 W available, or about 1/3 of
+ a TerraWatt.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 391--392
+
+ []
+
+<../Figures/world_energy_co2.png, id=172, 389.455pt x 266.9975pt>
+File: ../Figures/world_energy_co2.png Graphic file (type png)
+<use ../Figures/world_energy_co2.png>
+Package pdftex.def Info: ../Figures/world_energy_co2.png  used on input line 39
+7.
+(pdftex.def)             Requested size: 288.0011pt x 197.44875pt.
+[14 <../Figures/world_energy_co2.png>]
+<../Figures/intensity18.png, id=185, 383.4325pt x 283.0575pt>
+File: ../Figures/intensity18.png Graphic file (type png)
+<use ../Figures/intensity18.png>
+Package pdftex.def Info: ../Figures/intensity18.png  used on input line 408.
+(pdftex.def)             Requested size: 288.0011pt x 212.62083pt.
+<../Figures/intensity_country.png, id=187, 402.50375pt x 262.9825pt>
+File: ../Figures/intensity_country.png Graphic file (type png)
+<use ../Figures/intensity_country.png>
+Package pdftex.def Info: ../Figures/intensity_country.png  used on input line 4
+11.
+(pdftex.def)             Requested size: 288.0011pt x 188.1715pt.
+ [15 <../Figures/intensity18.png>]
+[16 <../Figures/intensity_country.png>] [17]
+Overfull \hbox (41.03976pt too wide) in paragraph at lines 528--528
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: 5.1: How much energy does it take to heat the mo
+natomic
+ []
+
+[18]
+Overfull \hbox (1.89423pt too wide) in paragraph at lines 528--528
+[]\OT1/cmtt/m/n/10.95 Argon atoms in atmosphere: Argon makes up about 1% of
+ []
+
+
+Overfull \hbox (16.1943pt too wide) in paragraph at lines 528--528
+\OT1/cmtt/m/n/10.95 this and the mass of a single argon atom is $\OT1/cmr/m/n/1
+0.95 6\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 63 \U/matha/m/n/10.95 ^^B \OT1/cm
+r/m/n/10.95 10[]$\OT1/cmtt/m/n/10.95 kg,
+ []
+
+
+Overfull \hbox (12.83919pt too wide) in paragraph at lines 528--528
+\OT1/cmtt/m/n/10.95 so there are about $\OT1/cmr/m/n/10.95 8 \U/matha/m/n/10.95
+ ^^B \OT1/cmr/m/n/10.95 10[]$ \OT1/cmtt/m/n/10.95 argon atoms in the atmosphere
+. 
+ []
+
+[19] [20]
+<../Figures/dof.png, id=241, 433.62pt x 289.08pt>
+File: ../Figures/dof.png Graphic file (type png)
+<use ../Figures/dof.png>
+Package pdftex.def Info: ../Figures/dof.png  used on input line 577.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [21 <../Figures/dof.png>] [22]
+<../Figures/sh.png, id=266, 433.62pt x 289.08pt>
+File: ../Figures/sh.png Graphic file (type png)
+<use ../Figures/sh.png>
+Package pdftex.def Info: ../Figures/sh.png  used on input line 632.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+
+Overfull \hbox (8.02975pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 which corresponds to $\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.
+95 :\OT1/cmr/m/n/10.95 23\OML/cmm/m/it/10.95 N[]$ \OT1/cmtt/m/n/10.95 kJ/kg/K. 
+We can take 18 degrees
+ []
+
+
+Overfull \hbox (58.28583pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 of freedom since []Section 5 here[] explains that this can 
+be understood
+ []
+
+
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 if we treat water as a solid. In general, there are 6 degre
+es
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 of freedom for a monatomic atom in a solid, so multiply thi
+s
+ []
+
+
+Overfull \hbox (29.54239pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 by the 3 atoms to get 18. An 8-minute shower contains a vol
+ume
+ []
+
+
+Overfull \hbox (15.77841pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 of water equal to $\OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 
+:\OT1/cmr/m/n/10.95 1 \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 8$ \OT1/cmtt/m/
+n/10.95 gallons of hot water $\U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 9\OML/c
+mm/m/it/10.95 :\OT1/cmr/m/n/10.95 5 \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 8
+ \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 10[]\OML/cmm/m/it/10.95 m[]$\OT1/cmt
+t/m/n/10.95 .
+ []
+
+
+Overfull \hbox (48.75311pt too wide) in paragraph at lines 645--645
+\OT1/cmtt/m/n/10.95 The density of water is 997 $\OML/cmm/m/it/10.95 kg\U/matha
+/m/n/10.95 {\OML/cmm/m/it/10.95 m[]$\OT1/cmtt/m/n/10.95 . Therefore, the energy
+ required
+ []
+
+[23]
+Overfull \hbox (0.79895pt too wide) in paragraph at lines 645--646
+\OT1/cmtt/m/n/10.95 Therefore, the energy needed to heat an 8 minute shower is
+ []
+
+[24 <../Figures/sh.png>] [25]
+Overfull \hbox (25.97545pt too wide) in paragraph at lines 711--711
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Consider Example 5.2 in the book. One liter ($\O
+T1/cmr/m/n/10.95 10[]\OML/cmm/m/it/10.95 m[]$\OT1/cmtt/m/n/10.95 )
+ []
+
+
+Overfull \hbox (19.14029pt too wide) in paragraph at lines 711--711
+[]\OT1/cmtt/m/n/10.95 What is the initial internal energy? Its internal energy
+ []
+
+
+Overfull \hbox (7.64291pt too wide) in paragraph at lines 711--711
+[]\OT1/cmtt/m/n/10.95 How much work is done to reduce the volume very quickly
+ []
+
+
+Overfull \hbox (13.4679pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 because the work done is on the system, $\OML/cmm/m/it/10.9
+5 PdV$ \OT1/cmtt/m/n/10.95 is negative
+ []
+
+
+Overfull \hbox (30.63766pt too wide) in paragraph at lines 711--711
+[]\OT1/cmtt/m/n/10.95 What is the new internal energy, temperature, and pressur
+e? 
+ []
+
+
+Overfull \hbox (7.64291pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 That gain in internal energy leads to a new temperature
+ []
+
+
+Overfull \hbox (30.63766pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 that is larger than the initial by 200/150=4/3, so is equal
+
+ []
+
+
+Overfull \hbox (8.20459pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 to 363K. The pressure is now $\OML/cmm/m/it/10.95 Nk[]T[]\U
+/matha/m/n/10.95 {\OML/cmm/m/it/10.95 V[] \U/matha/m/n/10.95 ^^P \OML/cmm/m/it/
+10.95 P[] \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 8\U/matha/m/n/10.95 {\OT1/c
+mr/m/n/10.95 3 \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 :
+\OT1/cmr/m/n/10.95 67 \U/matha/m/n/10.95 ^^B
+ []
+
+
+Overfull \hbox (42.13504pt too wide) in paragraph at lines 711--711
+[]\OT1/cmtt/m/n/10.95 On longer time scales, when the temperature cools to exte
+rnal
+ []
+
+
+Overfull \hbox (1.89423pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 temperature at 273, so drops by 4/3, the pressure will
+ []
+
+
+Overfull \hbox (1.89423pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 similarly drop to twice the initial pressure. All the
+ []
+
+
+Overfull \hbox (24.88898pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 work done to compress the volume has been lost to the heat
+ []
+
+
+Overfull \hbox (19.14029pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 that escapes as it cools. Neither the region of interest
+ []
+
+
+Overfull \hbox (36.38635pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 or its environment has a quantity called ``work'' or ``heat
+'
+ []
+
+
+Overfull \hbox (38.08385pt too wide) in paragraph at lines 711--711
+\OT1/cmtt/m/n/10.95 so those are not \OT1/cmr/m/it/10.95 State Vari-ables \OT1/
+cmtt/m/n/10.95 like pressure and temperature. 
+ []
+
+[26] [27]
+Overfull \hbox (2.58315pt too wide) in paragraph at lines 765--765
+[]\OT1/cmr/bx/n/10.95 Old Ma-te-rial  \OT1/cmtt/m/n/10.95 EXAMPLE: In a fission
+ reactor, helium is a good
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 substance to carry the heat from the center of the reactor,
+ where
+ []
+
+
+Overfull \hbox (42.40814pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 it is hottest to the outside where it is transformed into e
+lectricity.
+ []
+
+
+Overfull \hbox (1.1676pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 The helium comes to the turbines at a temperature of 1000$[
+]$C and
+ []
+
+
+Overfull \hbox (6.91629pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 -- after imparting its energy to the turbines -- drops to 1
+00$[]$C.
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 If each helium atom makes the trip once every 5 minutes, ho
+w much
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 helium is required to generate 100 MW of electricity? Note 
+that
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 the efficiency of turning the thermal energy into electrici
+ty is
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 40%, so the amount of thermal power required is 250MWth (fo
+r 100MWe). 
+ []
+
+
+Overfull \hbox (28.97255pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 So to get to 250MW, we require $\OML/cmm/m/it/10.95 N \U/ma
+tha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 5
+ \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 10[]$ \OT1/cmtt/m/n/10.95 atoms. Thi
+s corresponds
+ []
+
+
+Overfull \hbox (14.95886pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 specific heat capacity, which is per mass. Now $\OML/cmm/m/
+it/10.95 m\U/matha/m/n/10.95 {\OML/cmm/m/it/10.95 N$ \OT1/cmtt/m/n/10.95 is the
+ total
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 765--765
+\OT1/cmtt/m/n/10.95 mass divided by the total number of particles, which is jus
+t the
+ []
+
+[28]
+Overfull \hbox (1.92126pt too wide) in paragraph at lines 802--802
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Consider Pittsburgh and Atlanta, separated by ab
+out
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 802--802
+\OT1/cmtt/m/n/10.95 1200 km. On a given day in January, the temperature differe
+nce
+ []
+
+
+Overfull \hbox (6.36893pt too wide) in paragraph at lines 802--802
+\OT1/cmtt/m/n/10.95 is $\OT1/cmr/m/n/10.95 13[]$\OT1/cmtt/m/n/10.95 . How long 
+would it take conduction to equilibrate these? 
+ []
+
+[29]
+Overfull \hbox (6.54764pt too wide) in paragraph at lines 802--802
+\OT1/cmtt/m/n/10.95 So a square region in front of Pittsburgh that is 10km high
+
+ []
+
+
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 802--802
+\OT1/cmtt/m/n/10.95 and wide will receive 30 W of heat from Atlanta. This is le
+ss
+ []
+
+
+Overfull \hbox (2.41652pt too wide) in paragraph at lines 802--802
+[]\OT1/cmtt/m/n/10.95 How much heat flows into a volume of order $\OT1/cmr/m/n/
+10.95 10[]\OML/cmm/m/it/10.95 km[]$ \OT1/cmtt/m/n/10.95 during a
+ []
+
+
+Overfull \hbox (23.3052pt too wide) in paragraph at lines 802--802
+\OT1/cmtt/m/n/10.95 single day? Multiply by the number of seconds in a day: $\O
+T1/cmr/m/n/10.95 8\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 6 \U/matha/m/n/10.95 
+^^B
+ []
+
+
+Overfull \hbox (7.48451pt too wide) in paragraph at lines 802--802
+[]\OT1/cmtt/m/n/10.95 How much does this increase the temperature: $\OT1/cmr/m/
+n/10.95 ^^A\OML/cmm/m/it/10.95 T \U/matha/m/n/10.95 ^^P \OML/cmm/m/it/10.95 Q\U
+/matha/m/n/10.95 {\OML/cmm/m/it/10.95 c[]m \U/matha/m/n/10.95 ^^P
+ []
+
+
+Overfull \hbox (23.7937pt too wide) in paragraph at lines 802--802
+\OT1/cmtt/m/n/10.95 makes sense that the South is colder than the North through
+out
+ []
+
+[30] [31]
+
+LaTeX Warning: Command \r invalid in math mode on input line 868.
+
+[32]
+Overfull \hbox (38.01997pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 window of thickness 5mm, we find $\OML/cmm/m/it/10.95 q \U/
+matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 4$\OT1/cmtt/m/n/10.95 kW/m$[]$. The larg
+er the thickness
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 of the window the less heat is lost; that makes sense. And 
+similarly
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 the greater the temperature difference, the more heat is lo
+st. If
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 the thermal conductivity is large, then again more heat is 
+lost.
+ []
+
+
+Overfull \hbox (1.1687pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 Finally, if the area of the window is 1m$[]$, then a total 
+of 4 kW
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 is lost. So over 24 hours, you might think about 100 kW hou
+rs are
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 903--904
+\OT1/cmtt/m/n/10.95 required to provide the heat that accounts for this one win
+dow.
+ []
+
+[33]
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 923--925
+\OT1/cmtt/m/n/10.95 EXAMPLE: In the example above, what was neglected was the b
+oundary
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 923--925
+\OT1/cmtt/m/n/10.95 layer on either side of the window. The window itself contr
+ibutes
+ []
+
+
+Overfull \hbox (0.32405pt too wide) in paragraph at lines 923--925
+\OML/cmm/m/it/10.95 R[] \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 0\OML/cmm/m/i
+t/10.95 :\OT1/cmr/m/n/10.95 005$ \OT1/cmtt/m/n/10.95 m$[]$K/W, but $\OML/cmm/m/
+it/10.95 R[] \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\O
+T1/cmr/m/n/10.95 12$ \OT1/cmtt/m/n/10.95 m$[]$K/W and $\OML/cmm/m/it/10.95 R[] 
+\U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10
+.95 03$ \OT1/cmtt/m/n/10.95 m$[]$K/W,
+ []
+
+
+Overfull \hbox (6.21191pt too wide) in paragraph at lines 923--925
+\OT1/cmtt/m/n/10.95 so $\OML/cmm/m/it/10.95 R[] \U/matha/m/n/10.95 ^^P \OT1/cmr
+/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 155$ \OT1/cmtt/m/n/10.95 m$
+[]$K/W. This gets the heat flux down to $\OT1/cmr/m/n/10.95 129$\OT1/cmtt/m/n/1
+0.95 W/m$[]$, so
+ []
+
+
+Overfull \hbox (7.66995pt too wide) in paragraph at lines 946--946
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Example 6.2 is a realistic estimate of how much 
+heat
+ []
+
+
+Overfull \hbox (12.11761pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 it takes to warm an entire house $\OT1/cmr/m/n/10.95 20[]$ 
+\OT1/cmtt/m/n/10.95 C. The average house size in
+ []
+
+
+Overfull \hbox (20.08592pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 the US is about 2000 square feet, call it $\OT1/cmr/m/n/10.
+95 14 \U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 14$ \OT1/cmtt/m/n/10.95 m$[]$ f
+or simplicity.
+ []
+
+
+Overfull \hbox (29.91214pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 ft (if the height is 3m) and the ceiling has area 196 m$[]$
+ for a total
+ []
+
+
+Overfull \hbox (12.64984pt too wide) in paragraph at lines 946--946
+\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 T\U/matha/m/n/10.95 {\OML/cmm/m/it/10
+.95 R \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 91\OML/cmm/m/it/10.95 W\U/matha
+/m/n/10.95 {\OML/cmm/m/it/10.95 m[]$\OT1/cmtt/m/n/10.95 . Over the entire surfa
+ce area of the house,
+ []
+
+
+Overfull \hbox (29.54239pt too wide) in paragraph at lines 946--946
+[]\OT1/cmtt/m/n/10.95 To put this in context, over the course of one year, the 
+energy
+ []
+
+
+Overfull \hbox (20.74908pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 required to heat this one house would be $\OT1/cmr/m/n/10.9
+5 10[]$\OT1/cmtt/m/n/10.95 J. Assuming there
+ []
+
+
+Overfull \hbox (18.04501pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 are close to 100 million single family houses in the US, th
+at
+ []
+
+
+Overfull \hbox (29.54239pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 leads to 100EJ, which itself would be 1/5 of the world's en
+ergy
+ []
+
+
+Overfull \hbox (6.34634pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 consumption. There are problems with the estimate: $\OT1/cm
+r/m/n/10.95 ^^A\OML/cmm/m/it/10.95 T$ \OT1/cmtt/m/n/10.95 is
+ []
+
+
+Overfull \hbox (22.24661pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 not $\OT1/cmr/m/n/10.95 20[]$\OT1/cmtt/m/n/10.95 C at all t
+imes and in all places, but it is clearly way
+ []
+
+[34]
+Overfull \hbox (12.55516pt too wide) in paragraph at lines 946--946
+[]\OT1/cmtt/m/n/10.95 Use instead 20 cm ($\OT1/cmr/m/n/10.95 8[]$\OT1/cmtt/m/n/
+10.95 ) of fiberglass with $\OML/cmm/m/it/10.95 R \U/matha/m/n/10.95 ^^P \OT1/c
+mr/m/n/10.95 4\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 6$ \OT1/cmtt/m/n/10.95 Km
+$[]$/W. This
+ []
+
+
+Overfull \hbox (35.29108pt too wide) in paragraph at lines 946--946
+\OT1/cmtt/m/n/10.95 increase R by a factor of 20 and effectively solves the pro
+blem.
+ []
+
+
+Overfull \hbox (9.30219pt too wide) in paragraph at lines 952--954
+\OT1/cmr/m/n/10.95 The time de-pen-dence is cap-tured in the tem-per-a-ture de-
+pen-dence, and $\OML/cmm/m/it/10.95 dy\U/matha/m/n/10.95 {\OML/cmm/m/it/10.95 d
+T \U/matha/m/n/10.95 ^^P
+ []
+
+[35] [36] [37]
+<../Figures/convection.jpg, id=425, 863.225pt x 662.475pt>
+File: ../Figures/convection.jpg Graphic file (type jpg)
+<use ../Figures/convection.jpg>
+Package pdftex.def Info: ../Figures/convection.jpg  used on input line 1076.
+(pdftex.def)             Requested size: 216.0022pt x 165.75986pt.
+ [38 <../Figures/convection.jpg>] [39] [40]
+Overfull \hbox (19.47993pt too wide) in paragraph at lines 1208--1211
+\OT1/cmr/m/n/10.95 where the wave func-tion $\OML/cmm/m/it/10.95  $ \OT1/cmr/m/
+n/10.95 can be a com-plex num-ber and $\OML/cmm/m/it/10.95  \U/matha/m/n/10.95 
+p\OML/cmm/m/it/10.95 x\U/matha/m/n/10.95 q[]\OML/cmm/m/it/10.95  \U/matha/m/n/1
+0.95 p\OML/cmm/m/it/10.95 x\U/matha/m/n/10.95 q\OML/cmm/m/it/10.95 dx$
+ []
+
+[41]
+Overfull \hbox (44.29433pt too wide) in paragraph at lines 1219--1220
+[]\OT1/cmr/m/n/10.95 The prob-a-bil-ity of find-ing the par-ti-cle in a given r
+e-gion is $\U/matha/m/n/10.95 p\OT1/cmr/m/n/10.95 2\U/matha/m/n/10.95 {\OML/cmm
+/m/it/10.95 L\U/matha/m/n/10.95 q [][] \OML/cmm/m/it/10.95 n^^Yx\U/matha/m/n/10
+.95 {\OML/cmm/m/it/10.95 L\U/matha/m/n/10.95 q$\OT1/cmr/m/n/10.95 .
+ []
+
+[42]
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 1237--1248
+\OT1/cmtt/m/n/10.95 EXAMPLE: Given the levels in Eq. ([]142[]), we can calculat
+e the
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 1237--1248
+\OT1/cmtt/m/n/10.95 energies of photons that will be absorbed. For example, the
+
+ []
+
+
+Overfull \hbox (1.70497pt too wide) in paragraph at lines 1237--1248
+\OML/cmm/m/it/10.95 l \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 0 \U/matha/m/n/
+10.95 Ñ \OML/cmm/m/it/10.95 l \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 1$ \OT1
+/cmtt/m/n/10.95 transition is mediated by a photon with energy 
+ []
+
+<../Figures/CO2-lines-detail.png, id=476, 1031.855pt x 405.515pt>
+File: ../Figures/CO2-lines-detail.png Graphic file (type png)
+<use ../Figures/CO2-lines-detail.png>
+Package pdftex.def Info: ../Figures/CO2-lines-detail.png  used on input line 12
+48.
+(pdftex.def)             Requested size: 288.0011pt x 113.17834pt.
+
+Overfull \hbox (18.04501pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 But, what is most interesting is the shift of the vibration
+al
+ []
+
+
+Overfull \hbox (0.79895pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 lines. Consider the photon that induces a transition from
+ []
+
+
+Overfull \hbox (1.64818pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 one vibrational level to another with the main line at 15$\
+OML/cmm/m/it/10.95 ^^V$
+ []
+
+
+Overfull \hbox (35.29108pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 (corresponding to an energy difference in the vibrational s
+tates
+ []
+
+
+Overfull \hbox (0.79895pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 of lines around this one corresponding to rotational shift
+ []
+
+
+Overfull \hbox (0.20625pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 so the fractional shift is the wavelength should be $\OT1/c
+mr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 0012\OML/cmm/m/it/10.95 l
+$
+ []
+
+
+Overfull \hbox (0.79895pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 J. Fig. []13[] shows this structure around the 15 micron li
+ne.
+ []
+
+
+Overfull \hbox (0.79895pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 The wavenumbers due to rotational transitions should be of
+ []
+
+
+Overfull \hbox (23.72537pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 order 0.1% the 15$\OML/cmm/m/it/10.95 ^^V$ \OT1/cmtt/m/n/10
+.95 line at $\OT1/cmr/m/n/10.95 1\U/matha/m/n/10.95 {\OML/cmm/m/it/10.95 ^^U \U
+/matha/m/n/10.95 ^^P$\OT1/cmtt/m/n/10.95 666cm$[]$ or about .7cm$[]$. They
+ []
+
+
+Overfull \hbox (12.29633pt too wide) in paragraph at lines 1248--1248
+\OT1/cmtt/m/n/10.95 are a bit smaller than this suggesting that the situation i
+s
+ []
+
+[43] [44 <../Figures/CO2-lines-detail.png>]
+<../Figures/bb.png, id=498, 433.62pt x 289.08pt>
+File: ../Figures/bb.png Graphic file (type png)
+<use ../Figures/bb.png>
+Package pdftex.def Info: ../Figures/bb.png  used on input line 1278.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/CO2Abs.png, id=500, 433.62pt x 326.21875pt>
+File: ../Figures/CO2Abs.png Graphic file (type png)
+<use ../Figures/CO2Abs.png>
+Package pdftex.def Info: ../Figures/CO2Abs.png  used on input line 1280.
+(pdftex.def)             Requested size: 288.0011pt x 216.67886pt.
+ [45 <../Figures/bb.png>] [46 <../Figures/CO2Abs.png>]
+Overfull \hbox (10.56432pt too wide) in paragraph at lines 1346--1347
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Nucleus: Take $\OML/cmm/m/it/10.95 m \U/matha/m/
+n/10.95 ^^P \OML/cmm/m/it/10.95 m[]$ \OT1/cmtt/m/n/10.95 and a cube with sides 
+$\OML/cmm/m/it/10.95 L \U/matha/m/n/10.95 ^^P \OT1/cmr/m/n/10.95 5$\OT1/cmtt/m/
+n/10.95 fm,
+ []
+
+[47]
+Overfull \hbox (75.09032pt too wide) in paragraph at lines 1391--1392
+\OT1/cmr/m/n/10.95 gies of or-der 1 MeV per nu-cleon, about 200MeV. [] 
+ []
+
+
+Overfull \hbox (147.7773pt too wide) in paragraph at lines 1392--1394
+[]\OT1/cmr/m/n/10.95 Neutrons can col-lide with heavy nu-clei and in-duce more 
+de-cays. [] 
+ []
+
+[48]
+Overfull \hbox (3.92014pt too wide) in paragraph at lines 1398--1400
+\OT1/cmtt/m/n/10.95 produced by 1 kg of $[]$U: each decay produces about 235 Me
+V, and
+ []
+
+
+Overfull \hbox (10.62009pt too wide) in paragraph at lines 1398--1400
+\OT1/cmr/m/n/10.95 10[]$\OT1/cmtt/m/n/10.95 J. Typically these plants are only 
+about 33% efficient so 1kg
+ []
+
+
+Overfull \hbox (18.86098pt too wide) in paragraph at lines 1398--1400
+\OT1/cmtt/m/n/10.95 can generate about $\OT1/cmr/m/n/10.95 3 \U/matha/m/n/10.95
+ ^^B \OT1/cmr/m/n/10.95 10[]$\OT1/cmtt/m/n/10.95 J per year. Compare this to to
+tal usage:
+ []
+
+[49] [50] [51]
+<../Figures/bez.png, id=567, 433.62pt x 289.08pt>
+File: ../Figures/bez.png Graphic file (type png)
+<use ../Figures/bez.png>
+Package pdftex.def Info: ../Figures/bez.png  used on input line 1490.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [52]
+<../Figures/bea.png, id=581, 433.62pt x 289.08pt>
+File: ../Figures/bea.png Graphic file (type png)
+<use ../Figures/bea.png>
+Package pdftex.def Info: ../Figures/bea.png  used on input line 1515.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [53 <../Figures/bez.png>]
+Overfull \hbox (3.67407pt too wide) in paragraph at lines 1536--1536
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Decay of $[]$U: There are many possibilities; ex
+ample
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 1536--1536
+\OT1/cmtt/m/n/10.95 The SEMF we are using predicts about 170 MeV released. This
+ is
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 1536--1536
+\OT1/cmtt/m/n/10.95 mostly given to the kinetic energy of the products, which a
+re quickly
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 1536--1536
+\OT1/cmtt/m/n/10.95 cooled down to the temperature of the moderator. Subsequent
+ly,
+ []
+
+<../Figures/bachain.pdf, id=591, 433.62pt x 289.08pt>
+File: ../Figures/bachain.pdf Graphic file (type pdf)
+<use ../Figures/bachain.pdf>
+Package pdftex.def Info: ../Figures/bachain.pdf  used on input line 1536.
+(pdftex.def)             Requested size: 251.9989pt x 168.00174pt.
+
+Overfull \hbox (33.1214pt too wide) in paragraph at lines 1536--1537
+\OT1/cmtt/m/n/10.95 Note that Fig. []18[] has $\OML/cmm/m/it/10.95 Ce$ \OT1/cmt
+t/m/n/10.95 coded red because its lifetime is 285 days,
+ []
+
+
+Overfull \hbox (25.16208pt too wide) in paragraph at lines 1536--1537
+\OT1/cmtt/m/n/10.95 whereas the others are less than an hour, so this could sta
+y around
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 1536--1537
+\OT1/cmtt/m/n/10.95 and cause problems in the reactor even after the fuel is re
+moved.
+ []
+
+[54 <../Figures/bea.png>]
+Overfull \hbox (3.2017pt too wide) in paragraph at lines 1549--1550
+\OT1/cmr/m/n/10.95 cube is $6\OML/cmm/m/it/10.95 V[]$ \OT1/cmr/m/n/10.95 while 
+the sur-face area of a sphere is $4\OML/cmm/m/it/10.95 ^^YR[] \U/matha/m/n/10.9
+5 ^^P \OT1/cmr/m/n/10.95 4\OML/cmm/m/it/10.95 ^^Y\U/matha/m/n/10.95 p\OML/cmm/m
+/it/10.95 V\OT1/cmr/m/n/10.95 3\U/matha/m/n/10.95 {\OT1/cmr/m/n/10.95 4\OML/cmm
+/m/it/10.95 ^^Y\U/matha/m/n/10.95 q[]$\OT1/cmr/m/n/10.95 ,
+ []
+
+<../Figures/barrier.pdf, id=601, 433.62pt x 289.08pt>
+File: ../Figures/barrier.pdf Graphic file (type pdf)
+<use ../Figures/barrier.pdf>
+Package pdftex.def Info: ../Figures/barrier.pdf  used on input line 1553.
+(pdftex.def)             Requested size: 251.9989pt x 168.00174pt.
+[55 <../Figures/bachain.pdf>]
+Overfull \hbox (8.4434pt too wide) in paragraph at lines 1556--1557
+[]\OT1/cmr/m/n/10.95 Quantum me-chan-i-cally there is a small chance it will \O
+T1/cmr/m/it/10.95 tun-nel \OT1/cmr/m/n/10.95 through
+ []
+
+
+Overfull \hbox (24.23346pt too wide) in paragraph at lines 1560--1561
+[]\OT1/cmr/m/n/10.95 So out-side the so-lu-tions are of the form $\OML/cmm/m/it
+/10.95  \U/matha/m/n/10.95 9\OML/cmm/m/it/10.95 e[]$ \OT1/cmr/m/n/10.95 with $\
+OML/cmm/m/it/10.95 k \U/matha/m/n/10.95 ^^Q [] ^^P
+ []
+
+[56 <../Figures/barrier.pdf>] [57] [58]
+File: ../Figures/barrier.pdf Graphic file (type pdf)
+<use ../Figures/barrier.pdf>
+Package pdftex.def Info: ../Figures/barrier.pdf  used on input line 1609.
+(pdftex.def)             Requested size: 251.9989pt x 168.00174pt.
+ [59] [60]
+<../Figures/f191.pdf, id=720, 311.57506pt x 265.98973pt>
+File: ../Figures/f191.pdf Graphic file (type pdf)
+<use ../Figures/f191.pdf>
+Package pdftex.def Info: ../Figures/f191.pdf  used on input line 1675.
+(pdftex.def)             Requested size: 251.9989pt x 215.13797pt.
+ [61] [62 <../Figures/f191.pdf>] [63]
+<../Figures/solar1.png, id=775, 433.62pt x 289.08pt>
+File: ../Figures/solar1.png Graphic file (type png)
+<use ../Figures/solar1.png>
+Package pdftex.def Info: ../Figures/solar1.png  used on input line 1770.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/solar2.png, id=777, 433.62pt x 289.08pt>
+File: ../Figures/solar2.png Graphic file (type png)
+<use ../Figures/solar2.png>
+Package pdftex.def Info: ../Figures/solar2.png  used on input line 1772.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [64]
+<../Figures/solar3.png, id=790, 433.62pt x 289.08pt>
+File: ../Figures/solar3.png Graphic file (type png)
+<use ../Figures/solar3.png>
+Package pdftex.def Info: ../Figures/solar3.png  used on input line 1774.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/solar4.png, id=792, 433.62pt x 289.08pt>
+File: ../Figures/solar4.png Graphic file (type png)
+<use ../Figures/solar4.png>
+Package pdftex.def Info: ../Figures/solar4.png  used on input line 1776.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/tiltorbit.png, id=794, 1423.3175pt x 847.165pt>
+File: ../Figures/tiltorbit.png Graphic file (type png)
+<use ../Figures/tiltorbit.png>
+Package pdftex.def Info: ../Figures/tiltorbit.png  used on input line 1786.
+(pdftex.def)             Requested size: 288.0011pt x 171.40778pt.
+ [65 <../Figures/solar1.png>] [66 <../Figures/solar2.png> <../Figures/solar3.pn
+g>] [67 <../Figures/solar4.png> <../Figures/tiltorbit.png>]
+<../Figures/insolation.png, id=821, 433.62pt x 289.08pt>
+File: ../Figures/insolation.png Graphic file (type png)
+<use ../Figures/insolation.png>
+Package pdftex.def Info: ../Figures/insolation.png  used on input line 1795.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/solar5.png, id=823, 433.62pt x 289.08pt>
+File: ../Figures/solar5.png Graphic file (type png)
+<use ../Figures/solar5.png>
+Package pdftex.def Info: ../Figures/solar5.png  used on input line 1797.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+
+[68 <../Figures/insolation.png>] [69 <../Figures/solar5.png>]
+<../Figures/ozone-sigma.png, id=836, 236.21584pt x 161.93834pt>
+File: ../Figures/ozone-sigma.png Graphic file (type png)
+<use ../Figures/ozone-sigma.png>
+Package pdftex.def Info: ../Figures/ozone-sigma.png  used on input line 1824.
+(pdftex.def)             Requested size: 288.0011pt x 197.4607pt.
+
+Overfull \hbox (9.43993pt too wide) in paragraph at lines 1824--1824
+\OT1/cmtt/m/n/10.95 The density of ozone ($\OML/cmm/m/it/10.95 O[]$\OT1/cmtt/m/
+n/10.95 ) is $\OT1/cmr/m/n/10.95 2 \U/matha/m/n/10.95 ^^A \OT1/cmr/m/n/10.95 5 
+\U/matha/m/n/10.95 ^^B \OT1/cmr/m/n/10.95 10[]\OML/cmm/m/it/10.95 m[]$ \OT1/cmt
+t/m/n/10.95 in a band with a width
+ []
+
+
+Overfull \hbox (0.5867pt too wide) in paragraph at lines 1824--1824
+\OT1/cmtt/m/n/10.95 of about $\OT1/cmr/m/n/10.95 ^^A\OML/cmm/m/it/10.95 z \U/ma
+tha/m/n/10.95 ^^T \OT1/cmr/m/n/10.95 20\OML/cmm/m/it/10.95 km$ \OT1/cmtt/m/n/10
+.95 in the stratosphere.  Looking at Fig. []29[],
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 1824--1824
+\OT1/cmtt/m/n/10.95 we see that the cross section for photons with wavelengths 
+smaller
+ []
+
+
+Overfull \hbox (4.73358pt too wide) in paragraph at lines 1824--1824
+\OT1/cmtt/m/n/10.95 than 300 nm is about $\OT1/cmr/m/n/10.95 10[]$ \OT1/cmtt/m/
+n/10.95 cm$[]$. Therefore, the optical depth is 
+ []
+
+<../Figures/ozoneabs.png, id=838, 2648.89626pt x 1644.1425pt>
+File: ../Figures/ozoneabs.png Graphic file (type png)
+<use ../Figures/ozoneabs.png>
+Package pdftex.def Info: ../Figures/ozoneabs.png  used on input line 1825.
+(pdftex.def)             Requested size: 288.0011pt x 178.74887pt.
+[70 <../Figures/ozone-sigma.png>]
+<../Figures/davidbice.png, id=850, 702.625pt x 411.5375pt>
+File: ../Figures/davidbice.png Graphic file (type png)
+<use ../Figures/davidbice.png>
+Package pdftex.def Info: ../Figures/davidbice.png  used on input line 1834.
+(pdftex.def)             Requested size: 288.0011pt x 168.6875pt.
+ [71 <../Figures/ozoneabs.png>] [72 <../Figures/davidbice.png>] [73]
+<../Figures/otec.png, id=876, 2145.01375pt x 2228.325pt>
+File: ../Figures/otec.png Graphic file (type png)
+<use ../Figures/otec.png>
+Package pdftex.def Info: ../Figures/otec.png  used on input line 1874.
+(pdftex.def)             Requested size: 288.0011pt x 299.17882pt.
+ [74] [75 <../Figures/otec.png>]
+<../Figures/coriolis.pdf, id=891, 614.295pt x 794.97pt>
+File: ../Figures/coriolis.pdf Graphic file (type pdf)
+<use ../Figures/coriolis.pdf>
+Package pdftex.def Info: ../Figures/coriolis.pdf  used on input line 1898.
+(pdftex.def)             Requested size: 251.9989pt x 326.12177pt.
+ [76] [77 <../Figures/coriolis.pdf>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/iceberg.pdf): PDF
+ inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<../Figures/iceberg.pdf, id=910, 423.10483pt x 221.73239pt>
+File: ../Figures/iceberg.pdf Graphic file (type pdf)
+<use ../Figures/iceberg.pdf>
+Package pdftex.def Info: ../Figures/iceberg.pdf  used on input line 1934.
+(pdftex.def)             Requested size: 251.9989pt x 132.06265pt.
+[78] [79 <../Figures/iceberg.pdf>] [80]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/geo1.pdf): PDF in
+clusion: found PDF version <1.6>, but at most version <1.5> allowed
+<../Figures/geo1.pdf, id=950, 216.07626pt x 137.80986pt>
+File: ../Figures/geo1.pdf Graphic file (type pdf)
+<use ../Figures/geo1.pdf>
+Package pdftex.def Info: ../Figures/geo1.pdf  used on input line 2003.
+(pdftex.def)             Requested size: 251.9989pt x 160.73009pt.
+[81] [82 <../Figures/geo1.pdf>]
+Overfull \hbox (2.28612pt too wide) in paragraph at lines 2042--2043
+[]\OT1/cmr/m/n/10.95 Units of pres-sure: 1Pas-cal (Pa) $\U/matha/m/n/10.95 ^^P 
+\OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 01$millibar (mb) = 
+kg/m/s$[]$. Equiv-
+ []
+
+<../Figures/pressure-sea-level.png, id=1058, 1606.0pt x 645.41125pt>
+File: ../Figures/pressure-sea-level.png Graphic file (type png)
+<use ../Figures/pressure-sea-level.png>
+Package pdftex.def Info: ../Figures/pressure-sea-level.png  used on input line 
+2045.
+(pdftex.def)             Requested size: 288.0011pt x 115.73569pt.
+<../Figures/windspeed.png, id=1060, 505.89pt x 331.2375pt>
+File: ../Figures/windspeed.png Graphic file (type png)
+<use ../Figures/windspeed.png>
+Package pdftex.def Info: ../Figures/windspeed.png  used on input line 2054.
+(pdftex.def)             Requested size: 288.0011pt x 188.57483pt.
+<../Figures/AtmosphCirc2.png, id=1061, 578.16pt x 508.90125pt>
+File: ../Figures/AtmosphCirc2.png Graphic file (type png)
+<use ../Figures/AtmosphCirc2.png>
+Package pdftex.def Info: ../Figures/AtmosphCirc2.png  used on input line 2062.
+(pdftex.def)             Requested size: 288.0011pt x 253.49487pt.
+[83 <../Figures/pressure-sea-level.png>] [84 <../Figures/windspeed.png>]
+[85 <../Figures/AtmosphCirc2.png (PNG copy)>]
+<../Figures/wind80.png, id=1082, 775.89874pt x 465.74pt>
+File: ../Figures/wind80.png Graphic file (type png)
+<use ../Figures/wind80.png>
+Package pdftex.def Info: ../Figures/wind80.png  used on input line 2087.
+(pdftex.def)             Requested size: 288.0011pt x 172.87541pt.
+ [86]
+<../Figures/pisoad.png, id=1094, 433.62pt x 289.08pt>
+File: ../Figures/pisoad.png Graphic file (type png)
+<use ../Figures/pisoad.png>
+Package pdftex.def Info: ../Figures/pisoad.png  used on input line 2118.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/pt.png, id=1097, 433.62pt x 289.08pt>
+File: ../Figures/pt.png Graphic file (type png)
+<use ../Figures/pt.png>
+Package pdftex.def Info: ../Figures/pt.png  used on input line 2123.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/dpdt.png, id=1100, 433.62pt x 289.08pt>
+File: ../Figures/dpdt.png Graphic file (type png)
+<use ../Figures/dpdt.png>
+Package pdftex.def Info: ../Figures/dpdt.png  used on input line 2147.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [87 <../Figures/wind80.png>] [88 <../Figures/pisoad.png> <../Figures/pt.png>] 
+[89 <../Figures/dpdt.png>]
+<../Figures/balance1.png, id=1127, 433.62pt x 289.08pt>
+File: ../Figures/balance1.png Graphic file (type png)
+<use ../Figures/balance1.png>
+Package pdftex.def Info: ../Figures/balance1.png  used on input line 2181.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+
+Overfull \hbox (30.6647pt too wide) in paragraph at lines 2185--2186
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Venus: Orbital radius is 0.72 AU, so the flux is
+ larger
+ []
+
+
+Overfull \hbox (17.60535pt too wide) in paragraph at lines 2185--2186
+\OT1/cmtt/m/n/10.95 by $\U/matha/m/n/10.95 p\OT1/cmr/m/n/10.95 1\U/matha/m/n/10
+.95 {\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 72\U/matha/m/n/10.95 q[]$\OT1/cmtt
+/m/n/10.95 , so the temperature should be larger by $\OT1/cmr/m/n/10.95 1\U/mat
+ha/m/n/10.95 {\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 72[]$\OT1/cmtt/m/n/10.95 
+, or 328K
+ []
+
+
+Overfull \hbox (13.41864pt too wide) in paragraph at lines 2187--2188
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Mars: 1.5 further away, so its temperature shoul
+d be
+ []
+
+
+Overfull \hbox (26.67963pt too wide) in paragraph at lines 2187--2188
+\OT1/cmtt/m/n/10.95 cooler by $\OT1/cmr/m/n/10.95 1\U/matha/m/n/10.95 {\OT1/cmr
+/m/n/10.95 1\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 5[]$\OT1/cmtt/m/n/10.95 ; i
+t should have a temperature of 227K=-46$[]$C. Pretty
+ []
+
+[90]
+Overfull \hbox (0.41068pt too wide) in paragraph at lines 2192--2195
+\OT1/cmtt/m/n/10.95 clouds so its albedo is much higher, $\OML/cmm/m/it/10.95 a
+ \U/matha/m/n/10.95 ^^R \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/1
+0.95 75$\OT1/cmtt/m/n/10.95 . This should
+ []
+
+
+Overfull \hbox (6.54764pt too wide) in paragraph at lines 2192--2195
+\OT1/cmtt/m/n/10.95 to a predicted temperature of 230K, a much worse prediction
+
+ []
+
+[91 <../Figures/balance1.png>] [92]
+<../Figures/solar6.png, id=1152, 433.62pt x 289.08pt>
+File: ../Figures/solar6.png Graphic file (type png)
+<use ../Figures/solar6.png>
+Package pdftex.def Info: ../Figures/solar6.png  used on input line 2296.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [93] [94 <../Figures/solar6.png>] [95]
+<../Figures/Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-p
+repared-by-Robert-A.png, id=1174, 746.79pt x 555.07375pt>
+File: ../Figures/Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surf
+ace-prepared-by-Robert-A.png Graphic file (type png)
+<use ../Figures/Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surfa
+ce-prepared-by-Robert-A.png>
+Package pdftex.def Info: ../Figures/Solar-irradiance-spectrum-above-the-atmosph
+ere-and-at-the-surface-prepared-by-Robert-A.png  used on input line 2337.
+(pdftex.def)             Requested size: 288.0011pt x 214.06401pt.
+
+[96]
+<../Figures/tempvsz.png, id=1185, 209.78375pt x 241.90375pt>
+File: ../Figures/tempvsz.png Graphic file (type png)
+<use ../Figures/tempvsz.png>
+Package pdftex.def Info: ../Figures/tempvsz.png  used on input line 2370.
+(pdftex.def)             Requested size: 288.0011pt x 332.10007pt.
+ [97 <../Figures/Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surf
+ace-prepared-by-Robert-A.png>] [98 <../Figures/tempvsz.png>] [99]
+File: ../Figures/pisoad.png Graphic file (type png)
+<use ../Figures/pisoad.png>
+Package pdftex.def Info: ../Figures/pisoad.png  used on input line 2410.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/IR_emission_in_current_greenhouse_levels.png, id=1212, 399.74344pt 
+x 359.09157pt>
+File: ../Figures/IR_emission_in_current_greenhouse_levels.png Graphic file (typ
+e png)
+<use ../Figures/IR_emission_in_current_greenhouse_levels.png>
+Package pdftex.def Info: ../Figures/IR_emission_in_current_greenhouse_levels.pn
+g  used on input line 2424.
+(pdftex.def)             Requested size: 288.0011pt x 258.72653pt.
+<../Figures/co2flux.png, id=1213, 433.62pt x 289.08pt>
+File: ../Figures/co2flux.png Graphic file (type png)
+<use ../Figures/co2flux.png>
+Package pdftex.def Info: ../Figures/co2flux.png  used on input line 2426.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [100]
+[101 <../Figures/IR_emission_in_current_greenhouse_levels.png>]
+<../Figures/co2cross.png, id=1230, 433.62pt x 289.08pt>
+File: ../Figures/co2cross.png Graphic file (type png)
+<use ../Figures/co2cross.png>
+Package pdftex.def Info: ../Figures/co2cross.png  used on input line 2445.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/opticaldepth.png, id=1233, 433.62pt x 289.08pt>
+File: ../Figures/opticaldepth.png Graphic file (type png)
+<use ../Figures/opticaldepth.png>
+Package pdftex.def Info: ../Figures/opticaldepth.png  used on input line 2447.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/olr_15.png, id=1235, 433.62pt x 289.08pt>
+File: ../Figures/olr_15.png Graphic file (type png)
+<use ../Figures/olr_15.png>
+Package pdftex.def Info: ../Figures/olr_15.png  used on input line 2449.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [102 <../Figures/co2flux.png>] [103 <../Figures/co2cross.png>] [104 <../Figure
+s/opticaldepth.png> <../Figures/olr_15.png>]
+<../Figures/olr.png, id=1269, 433.62pt x 289.08pt>
+File: ../Figures/olr.png Graphic file (type png)
+<use ../Figures/olr.png>
+Package pdftex.def Info: ../Figures/olr.png  used on input line 2488.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/olrlog.png, id=1272, 433.62pt x 289.08pt>
+File: ../Figures/olrlog.png Graphic file (type png)
+<use ../Figures/olrlog.png>
+Package pdftex.def Info: ../Figures/olrlog.png  used on input line 2494.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [105] [106 <../Figures/olr.png> <../Figures/olrlog.png>] [107]
+<../Figures/earthbalance.png, id=1299, 853.1875pt x 564.1075pt>
+File: ../Figures/earthbalance.png Graphic file (type png)
+<use ../Figures/earthbalance.png>
+Package pdftex.def Info: ../Figures/earthbalance.png  used on input line 2510.
+(pdftex.def)             Requested size: 288.0011pt x 190.4254pt.
+ [108 <../Figures/earthbalance.png>] [109]
+<../Figures/emissions.png, id=1318, 393.47pt x 265.99374pt>
+File: ../Figures/emissions.png Graphic file (type png)
+<use ../Figures/emissions.png>
+Package pdftex.def Info: ../Figures/emissions.png  used on input line 2575.
+(pdftex.def)             Requested size: 288.0011pt x 194.69333pt.
+<../Figures/cum.png, id=1321, 390.45876pt x 282.05376pt>
+File: ../Figures/cum.png Graphic file (type png)
+<use ../Figures/cum.png>
+Package pdftex.def Info: ../Figures/cum.png  used on input line 2580.
+(pdftex.def)             Requested size: 288.0011pt x 208.04941pt.
+<../Figures/co2.png, id=1322, 394.47375pt x 263.98625pt>
+File: ../Figures/co2.png Graphic file (type png)
+<use ../Figures/co2.png>
+Package pdftex.def Info: ../Figures/co2.png  used on input line 2582.
+(pdftex.def)             Requested size: 288.0011pt x 192.73251pt.
+<../Figures/TA1_CO2.png, id=1324, 433.62pt x 289.08pt>
+File: ../Figures/TA1_CO2.png Graphic file (type png)
+<use ../Figures/TA1_CO2.png>
+Package pdftex.def Info: ../Figures/TA1_CO2.png  used on input line 2588.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [110] [111 <../Figures/emissions.png> <../Figures/cum.png>] [112 <../Figures/c
+o2.png>] [113 <../Figures/TA1_CO2.png>]
+<../Figures/1990.png, id=1361, 1541.76pt x 907.39pt>
+File: ../Figures/1990.png Graphic file (type png)
+<use ../Figures/1990.png>
+Package pdftex.def Info: ../Figures/1990.png  used on input line 2604.
+(pdftex.def)             Requested size: 288.0011pt x 169.4983pt.
+ [114 <../Figures/1990.png>]
+
+pdfTeX warning: /Library/TeX/texbin/pdflatex (file ../Figures/ipcc6fig.pdf): PD
+F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<../Figures/ipcc6fig.pdf, id=1372, 597.19112pt x 845.07718pt>
+File: ../Figures/ipcc6fig.pdf Graphic file (type pdf)
+<use ../Figures/ipcc6fig.pdf>
+Package pdftex.def Info: ../Figures/ipcc6fig.pdf  used on input line 2622.
+(pdftex.def)             Requested size: 251.9989pt x 356.59343pt.
+<../Figures/pressure.pdf, id=1374, 433.62pt x 289.08pt>
+File: ../Figures/pressure.pdf Graphic file (type pdf)
+<use ../Figures/pressure.pdf>
+Package pdftex.def Info: ../Figures/pressure.pdf  used on input line 2646.
+(pdftex.def)             Requested size: 251.9989pt x 168.00174pt.
+[115] [116 <../Figures/ipcc6fig.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117 <../Figures/pressure.pdf>]
+File: ../Figures/pisoad.png Graphic file (type png)
+<use ../Figures/pisoad.png>
+Package pdftex.def Info: ../Figures/pisoad.png  used on input line 2659.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+<../Figures/isoad.png, id=1449, 433.62pt x 289.08pt>
+File: ../Figures/isoad.png Graphic file (type png)
+<use ../Figures/isoad.png>
+Package pdftex.def Info: ../Figures/isoad.png  used on input line 2664.
+(pdftex.def)             Requested size: 288.0011pt x 192.01082pt.
+ [118] [119 <../Figures/isoad.png>]
+Overfull \hbox (24.91602pt too wide) in paragraph at lines 2677--2678
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: If the albedo changes from 0.1 to 0.11; this mea
+ns that
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 an additional one percent of solar radiation is reflected b
+ack to
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 space instead of absorbed. Since the total flux hitting Ear
+th is
+ []
+
+
+Overfull \hbox (4.84355pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 about $\OT1/cmr/m/n/10.95 341 \U/matha/m/n/10.95 ^^B p\OT1/
+cmr/m/n/10.95 1 \U/matha/m/n/10.95 ^^A \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 
+:\OT1/cmr/m/n/10.95 21\U/matha/m/n/10.95 q$ \OT1/cmtt/m/n/10.95 W/m$[]$, where 
+the 0.21 is the albedo due to the
+ []
+
+
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 atmosphere and clouds; i.e., stuff that stops the solar flu
+x from
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 hitting Earth. Hence, the change in the Earth's albedo by 0
+.01
+ []
+
+
+Overfull \hbox (1.1687pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 forcing would be -2.7 W/m$[]$. Note that estimates for this
+ vary,
+ []
+
+
+Overfull \hbox (36.65945pt too wide) in paragraph at lines 2677--2678
+\OT1/cmtt/m/n/10.95 from Example 34.3, which I don't understand, to []the wikip
+edia article[]
+ []
+
+
+Overfull \hbox (13.41864pt too wide) in paragraph at lines 2679--2680
+[]\OT1/cmtt/m/n/10.95 EXAMPLE: Box 34.2: Clouds are the hard problem. Thet refl
+ect
+ []
+
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 2679--2680
+\OT1/cmtt/m/n/10.95 light with the solar spectrum with an albedo of 0.13, leadi
+ng to
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 2679--2680
+\OT1/cmtt/m/n/10.95 infrared radiation from Earth back to the surface; the esti
+mate
+ []
+
+
+Overfull \hbox (6.91739pt too wide) in paragraph at lines 2679--2680
+\OT1/cmtt/m/n/10.95 the book gives is 31, so the net forcing would be -13W/m$[]
+$. This
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 2679--2680
+\OT1/cmtt/m/n/10.95 mean that if the cloud cover were to increase by a percent,
+ the
+ []
+
+
+Overfull \hbox (6.90778pt too wide) in paragraph at lines 2681--2682
+[]\OT1/cmtt/m/n/10.95 IPCC Report: A.4.1: Human caused radiative forcing of $\O
+T1/cmr/m/n/10.95 2\OML/cmm/m/it/10.95 :\OT1/cmr/m/n/10.95 72 \U/matha/m/n/10.95
+ ^^H
+ []
+
+[120] [121]
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 2735--2735
+\OT1/cmtt/m/n/10.95 EXAMPLE: Put a 100 square meter wind turbine in an area whe
+re the
+ []
+
+
+Overfull \hbox (19.41339pt too wide) in paragraph at lines 2735--2735
+\OT1/cmtt/m/n/10.95 wind speed is typically 10 m/s. Then, the optimal power you
+ would
+ []
+
+
+Overfull \hbox (2.16733pt too wide) in paragraph at lines 2737--2741
+\OT1/cmtt/m/n/10.95 with constant wind speed of 5m/s and another with zero wind
+ 2/3
+ []
+
+
+Overfull \hbox (4.93437pt too wide) in paragraph at lines 2741--2742
+\OT1/cmtt/m/n/10.95 leads to a ratio of $\OT1/cmr/m/n/10.95 375\U/matha/m/n/10.
+95 {\OT1/cmr/m/n/10.95 1000$\OT1/cmtt/m/n/10.95 ; the steady wind area provides
+ much
+ []
+
+[122]
+<../Figures/turbine.jpg, id=1494, 3145.7525pt x 2430.07875pt>
+File: ../Figures/turbine.jpg Graphic file (type jpg)
+<use ../Figures/turbine.jpg>
+Package pdftex.def Info: ../Figures/turbine.jpg  used on input line 2770.
+(pdftex.def)             Requested size: 216.0022pt x 166.85985pt.
+ [123] [124 <../Figures/turbine.jpg>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2863.
+ [125]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 2863.
+ (./lectures.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2863.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2863.
+
+Package rerunfilecheck Info: File `lectures.out' has not changed.
+(rerunfilecheck)             Checksum: 1850478B10E372706F26219E9C73079E;150.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2863.
+ ) 
+Here is how much of TeX's memory you used:
+ 8457 strings out of 480608
+ 126042 string characters out of 5903631
+ 380207 words of memory out of 5000000
+ 23528 multiletter control sequences out of 15000+600000
+ 546787 words of font info for 70 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 34i,11n,29p,783b,512s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></
+usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
+r/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/20
+20/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2020/tex
+mf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2020/t
+exmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb></usr/local/texlive/2020/
+texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/2020
+/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb></usr/local/texlive/202
+0/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/local/texlive/2
+020/texmf-dist/fonts/type1/public/mathabx-type1/mathb8.pfb></usr/local/texlive/
+2020/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texliv
+e/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1095.pfb>
+Output written on lectures.pdf (125 pages, 21886705 bytes).
+PDF statistics:
+ 1744 PDF objects out of 2073 (max. 8388607)
+ 1345 compressed objects within 14 object streams
+ 637 named destinations out of 1000 (max. 500000)
+ 335 words of extra memory for PDF output out of 10000 (max. 10000000)
+
