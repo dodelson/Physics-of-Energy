@@ -269,6 +269,9 @@ The good news is that airplanes are designed to have \href{https://www.semantics
 
 \lecture{Rotational Energy}
 
+News Story: Taylor Swift. Typical US usage is 1GJ/day. Divide 231 kg $CO_2$ by 44/12 to get to C: 0.06tC. That corresponds to how much energy use: divide by GHGI: $10GtC/600EJ$ to get  4GJ. That would be if she took a passenger flight. The claim is that private jets are about 10 times worse, so that puts it up to 40GJ. 
+\Sfig{swift}{Criticism}
+
 Point mass rotating in a circle 
 \bee
 \item 
@@ -279,10 +282,6 @@ so $|\vec r|=R$, a constant.
 so $|\vec v| = \omega R$, a constant. Therefore,
 \be
 E = \frac12 mR^2\omega^2\ee
-\example{Rotational energy of tires in a car: 4, suppose each of which has all its mass $m$ at $R$ from the center. But the angular speed is $v/R$, so\be
-E\sim 4\times\frac12\times mv^2\ee
-suppressed compared to the translational energy by the ratio of the mass of the tires to the mass of the car.}
-
 \item 
 \be\vec a=-\omega^2 R(\sin\omega t,\cos\omega t) = -\omega^2 \vec r\ee
 again with constant amplitude $\omega^2R$ and direction pointing inwards.
@@ -324,6 +323,10 @@ when the relevant axis is the $z$-axis. I.e., the distance squared is the perpen
 %\be
 %L\simeq \frac{m_ea_0 c}{100} = 9.1\times 10^{-31} \times 0.5\times 10^{-10} \times 3\times 10^8 J-s = 1.4\times 10^{-32} J-s
 %\ee}
+\example{OLD: Rotational energy of tires in a car: 4, suppose each of which has all its mass $m$ at $R$ from the center. But the angular speed is $v/R$, so\be
+E\sim 4\times\frac12\times mv^2\ee
+suppressed compared to the translational energy by the ratio of the mass of the tires to the mass of the car.}
+
 
 \example{$CO_2$ molecule: The carbon atom is at the center and the 2 oxygens at the ends of a roughly linear configuration. The moment of inertia is roughly
 \be
@@ -347,30 +350,34 @@ E = \frac{L^2}{\hbar^2} \,7.69\times 10^{-24}\, J
 \ee}
 \eee
 
-\lsection{Energy Usage}
+\lsection{Power}
 \bei
-\item
-Annual World Energy Use in EJ is 600 EJ ($10^{18}$J)
 \item
 Global Power Use is $6.e20/(365*24*3600)$= 20 TW ($10^{12}$W)
 \item 
 J can be expressed as Watt-hours: 1W-hour=3.6kJ, or 1 MJ=278 W-hours
 \item 
 Global Energy Consumption, 600 EJ,  is then 170,000 TW-hours 
-\item Annual Per Capita Energy Use is 600/8 billion people = 75 GJ ($10^9$J)
 \item
 Daily Energy Use per capita is 75GJ/365=200 MJ=56kW-hours
 \item In the US, a kW-hour of electricity costs a little over 10cents, so we might expect an electric bill of order \$150/month.
 \item Many caveats to the above: more than one person in a house; lots of energy is expended in transportation; efficiency is not 100\%; commercial/industrial use  is large.
 \eei
 
-\newpage
-\lsection{Prior years}
+
+\lsection{Wind}
 
 Consider the wind. Near the equator, the wind blows from east to west (``Northeasterlies'' in the northern hemispheric as it comes from the Northeast), as depicted in Fig.~\rf{winds}.
 \Sjpg{winds}{Cartoon version of wind. In the Northern hemisphere, the wind blows clockwise around high pressure regions and counter-clockwise around low pressure regions and the reverse is true in the Southern hemisphere.}
 
-\example{Energy in wind circulation system: Consider a parcel of air, annulus with $5^\circ$ width, at $40^\circ$ latitude over the Pacific Ocean up to 1 km above. Its' {\it zonal} (westerly) wind speed is about 10m/s. Let's calculate its rotational energy. Taking the density to be constant and all roughly the same distance from the axis of rotation, its moments of inertia is
+\example{Energy in wind circulation system: 
+In a given volume $V$, the kinetic energy of air is $\frac12mv^2$, so the energy density is $mv^2/(2V)$ is a small time $dt$ this energy density moves a distance $vdt$, so the energy density per time, or the power density, is
+\be
+\mathcal{P} =\rho v^3/2.\ee
+Multiplty this by the area of a wind turbine, say 5000$m^2$ to get the power: $10^3\times 5000/2 W = 2MW$, which is about right. This assumes an air density of $1kg/m^3$ and wind speed of 10m/s.}
+
+
+\example{OLD:Consider a parcel of air, annulus with $5^\circ$ width, at $40^\circ$ latitude over the Pacific Ocean up to 1 km above. Its' {\it zonal} (westerly) wind speed is about 10m/s. Let's calculate its rotational energy. Taking the density to be constant and all roughly the same distance from the axis of rotation, its moments of inertia is
 \bea
 I &=& \rho V R_\Earth^2\cos^2\lambda\vs
 &=&\rho \, \left[ 1{\rm km}\times 2\pi R_\Earth^2 (0.09)\cos\lambda \right]\,\left[ R_\Earth^2\cos^2\lambda\right]\,
@@ -407,11 +414,11 @@ Note that this value of the intensity makes sense: roughly speaking, the orbital
 The intensity can be computed for each country. Fig.~\rf{intensity18} shows that countries with more advanced economies (higher GDP/capita) tend to have lower intensities. They are generally moving to energy production that produces less $CO_2$ emissions. 
 \Spng{intensity18}{Intensity (the ratio of $CO_2$ emissions and energy consumed for some of the countries in the world in 2018.}
 
-Fig.~\rf{intensity_country} shows the evolution for several different countries. Brazil is interesting: most of their electricity comes from hydropower. France generates quite a bit of power from nuclear energy. Frustratingly, the US has not appreciably have reduced its intensity over the past 50 years. China has been making slow but steady progress as it modernizes, while India is on a reverse trajectory, similar to many other developing countries.
-\Spng{intensity_country}{Intensity as a function of time for different countries.}
+%Fig.~\rf{intensity_country} shows the evolution for several different countries. Brazil is interesting: most of their electricity comes from hydropower. France generates quite a bit of power from nuclear energy. Frustratingly, the US has not appreciably have reduced its intensity over the past 50 years. China has been making slow but steady progress as it modernizes, while India is on a reverse trajectory, similar to many other developing countries.
+%\Spng{intensity_country}{Intensity as a function of time for different countries.}
 
 \exercise{Download \href{https://github.com/owid/co2-data}{this data set} and make the above plots.}
-
+\newpage
 \lecture{Thermal Energy and Temperature}
 
 Thermal energy is all energy of a system beyond that it would have at zero temperature.
@@ -436,67 +443,31 @@ For a gas:
 \bei
 \item Translational Motion
 The kinetic energy of a system of $N$ particles is equal to
-%\be
-%\langle E \rangle = \int dv f(v)\,\frac{mv^2}{2}
-%\ee
-%Here $f(v)$ is the velocity distribution normalized so that
-%\be
-%N = \int dv f(v)
-%.\ee
-%In equilibrium, $f\propto e^{-E/k_BT} = e^{-mv^2/2k_BT}$, so normalization leads to
-%\bea
-%N &=& C\int_0^\infty dv e^{-mv^2/2k_BT}
-%\vs 
-%&=& C \left(\frac{2k_BT}{m} \right)^{1/2}\int_0^\infty dx e^{-x^2}
-%\vs
-%&=&
-%C \left(\frac{2k_BT}{m} \right)^{1/2}\,\frac{\sqrt{\pi}}2
-%\vs
-%&=&
-%C \left(\frac{\pi k_BT}{2m} \right)^{1/2}.
-%\eea
-%So,
-%\be
-%f=N \left( \frac{2m}{\pi k_BT}\right)^{1/2}\, e^{-mv^2/2k_BT}.\ee
-%We can now calculate the kinetic energy:
-%\bea
-%\langle E \rangle &=& N \left( \frac{2m}{\pi k_BT}\right)^{1/2}\,  \int dv e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
-%\vs &=& 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \int_0^\infty dv v^4 e^{-mv^2/2k_BT} \vs
-%&=&
-%2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\,\int_0^\infty dx x^4 e^{-x^2} 
-%\vs
-%&=&
-%2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\, \frac{3\sqrt{\pi}}{8}
-%\vs
-%&=&
-%\frac{3Nk_BT}{2}.
-%\eea
-
 \be
-\langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
+\langle E \rangle = \int dv f(v)\,\frac{mv^2}{2}
 \ee
 Here $f(v)$ is the velocity distribution normalized so that
 \be
-N = \int d^3v f(v)
+N = \int dv f(v)
 .\ee
 In equilibrium, $f\propto e^{-E/k_BT} = e^{-mv^2/2k_BT}$, so normalization leads to
 \bea
-N &=& C4\pi\int_0^\infty dv v^2 e^{-mv^2/2k_BT}
+N &=& C\int_0^\infty dv e^{-mv^2/2k_BT}
 \vs 
-&=& C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\int_0^\infty dx x^2 e^{-x^2}
+&=& C \left(\frac{2k_BT}{m} \right)^{1/2}\int_0^\infty dx e^{-x^2}
 \vs
 &=&
-C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\,\frac{\sqrt{\pi}}4
+C \left(\frac{2k_BT}{m} \right)^{1/2}\,\frac{\sqrt{\pi}}2
 \vs
 &=&
-C \left(\frac{2\pi k_BT}{m} \right)^{3/2}.
+C \left(\frac{\pi k_BT}{2m} \right)^{1/2}.
 \eea
 So,
 \be
-f=N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, e^{-mv^2/2k_BT}.\ee
+f=N \left( \frac{2m}{\pi k_BT}\right)^{1/2}\, e^{-mv^2/2k_BT}.\ee
 We can now calculate the kinetic energy:
 \bea
-\langle E \rangle &=& N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\,  \int d^3v e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
+\langle E \rangle &=& N \left( \frac{2m}{\pi k_BT}\right)^{1/2}\,  \int dv e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
 \vs &=& 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \int_0^\infty dv v^4 e^{-mv^2/2k_BT} \vs
 &=&
 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\,\int_0^\infty dx x^4 e^{-x^2} 
@@ -507,18 +478,56 @@ We can now calculate the kinetic energy:
 &=&
 \frac{3Nk_BT}{2}.
 \eea
-If we had done this in 1D, we would have gotten $k_BT/2$. In general, the variance of any one component of the velocity is $k_BT/m$, so in an isotropic equilibrium situation, there is a factor of 3. 
+
+In 3D, this gets multiplied by 3.
+%\be
+%\langle E \rangle = \int d^3v f(\vec v)\,\frac{mv^2}{2}
+%\ee
+%Here $f(v)$ is the velocity distribution normalized so that
+%\be
+%N = \int d^3v f(v)
+%.\ee
+%In equilibrium, $f\propto e^{-E/k_BT} = e^{-mv^2/2k_BT}$, so normalization leads to
+%\bea
+%N &=& C4\pi\int_0^\infty dv v^2 e^{-mv^2/2k_BT}
+%\vs 
+%&=& C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\int_0^\infty dx x^2 e^{-x^2}
+%\vs
+%&=&
+%C4\pi \left(\frac{2k_BT}{m} \right)^{3/2}\,\frac{\sqrt{\pi}}4
+%\vs
+%&=&
+%C \left(\frac{2\pi k_BT}{m} \right)^{3/2}.
+%\eea
+%So,
+%\be
+%f=N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, e^{-mv^2/2k_BT}.\ee
+%We can now calculate the kinetic energy:
+%\bea
+%\langle E \rangle &=& N \left( \frac{m}{2\pi k_BT}\right)^{3/2}\,  \int d^3v e^{-mv^2/2k_BT}\,\frac{mv^2}{2}
+%\vs &=& 2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \int_0^\infty dv v^4 e^{-mv^2/2k_BT} \vs
+%&=&
+%2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\,\int_0^\infty dx x^4 e^{-x^2} 
+%\vs
+%&=&
+%2\pi Nm \left( \frac{m}{2\pi k_BT}\right)^{3/2}\, \left( \frac{2k_BT}{m}\right)^{5/2}\, \frac{3\sqrt{\pi}}{8}
+%\vs
+%&=&
+%\frac{3Nk_BT}{2}.
+%\eea
+%If we had done this in 1D, we would have gotten $k_BT/2$. 
+In general, the variance of any one component of the velocity is $k_BT/m$, so in an isotropic equilibrium situation, there is a factor of 3. 
 
 \example{5.1: How much energy does it take to heat the monatomic gas argon in the atmosphere by 1K?
 \bee 
 \item Mass of Atmosphere: 
-\be\rho=1.225 e^{-z/H} kg/m^3
+\be\rho=1.2 e^{-z/H} kg/m^3
 \ee
 with $H=8.5km\ll R_\Earth$. So,
 \be
 M = \rho_0 4\pi R_\Earth^2 \int_0^\infty e^{-z/H} = \rho_0 4\pi R_\Earth^2H
 \ee
-Taking $R_\Earth=6.37\times 10^6$m leads to $M=5.3\times 10^{18}$kg. 
+Taking $R_\Earth=6.37\times 10^6$m leads to $M=5.2\times 10^{18}$kg. 
 \item Argon atoms in atmosphere: Argon makes up about 1\% of this and the mass of a single argon atom is $6.63\times 10^{-26}$kg, so there are about $8\times 10^{41}$ argon atoms in the atmosphere.
 \item For each of these,
 \be
@@ -528,109 +537,41 @@ So the total energy would be 17EJ.
 }
 %with $R=8.3J/mol/K$. This is one percent of the atmosphere, which has a total mass of $5.15\times 10^{18}$ kg; suppose that Argon was 1\% in volume of this (it is actually 1\% in mass, but there shouldn't be too much difference). Now 1 mole of Argon weighs 40 gms, so the total amount of moles of argon in the atmosphere is $1.29\times 10^{18}$. Therefore, heating the argon in the atmosphere by 1K would require  16 EJ. That is about 3\% of annual global energy use. So presumably, adding in the rest of the atmosphere would push the energy past the annual global usage.}
 \eei
+
+Aside: Taking the mass of the atmosphere to be $5.2\times 10^{18}$kg and knowing that it is 21\% oxygen and 78\% nitrogen (.22*32+.78*28=29), we get the total number of molecules in the atmosphere to be:
+\be
+\frac{5.14\times 10^{18}}{1.67\times 10^{-27}\times 29} = 1.07\times 10^{44}.\ee
+The total number of $CO_2$ molecules is $900Gt/(12*1.67e-27)=4.49\times 10^{40}$, so the ratio of $CO_2$ molecules to the total number of molecules is 423ppm. More generally, the conversion factor is about $900GtC\simeq423ppm$.
 \newcommand\old[1]{\bigskip {\it {\bf Old Material} #1}}
 
-\lecture{Heat Capacity}
+\bei
+\item Vibrational Motion: Diatomic Molecule
+The situation is more complex for more complex particles, starting with diatomic molecules. There, the book says you add $k_BT/2$ for each degree of freedom. We'll revisit that later but for now, let's assume it is true.
+\item Rotational Motion: Diatomic Molecule
+Same thing: 2 DOF
+\item Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term, so $U=(k_BT/2)*N*3*2$. 
+\eei
 
 We are after the heat capacity defined as 
 \be
-C \equiv \frac{\partial U}{\partial T}
-.\ee
-\bei
-\item Vibrational Motion: Diatomic Molecule
-
-The situation is more complex for more complex particles, starting with diatomic molecules. There, the book says you add $k_BT/2$ for each degree of freedom. 
-%Similarly for solids, the idea is there is no random kinetic energy but rather the $N$ atoms can each oscillate in one of 3 dimensions and each of these modes leads to $k_BT$ because there is a kinetic and potential term. It is really a bit more complicated: 
-The energy of a harmonic oscillator is
-\be
-E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
-Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
-\be
-\langle E\rangle
-= N\frac{\sum_n E_n e^{-E_n/k_BT}}{\sum_n e^{-E_n/k_BT}}
+C \equiv \frac{\partial U}{\partial T} \rightarrow \frac{N_Dk_B}2
 \ee
-or
-\be
-\langle E\rangle = -N\frac{\partial}{\partial\beta} \,\ln Z
-\ee
-where $\beta\equiv 1/k_BT$ and
-\be
-Z\equiv \sum_ne^{-E_n/k_BT}=\frac{e^{-\hbar\omega\beta/2}}{1-e^{-\hbar\omega\beta}}.\ee
-So,
-\be
-\langle E\rangle = N\left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\hbar\omega\beta}-1} \right).\eql{bare}\ee
-The first term is the zero-point energy and the second term is the energy due to thermal excitations.
-The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
-\be
-\langle E\rangle = NE_0\ee
-all the particles in the ground state. The other limit is the high temperature limit, in which case \be
-\langle E\rangle_{hi\, T} =Nk_BT\ee
-The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
+where $N_D$ is the product of the number of molecules and the number of degrees of freedom. The {\it specific heat capacity}, $c_p$,  is the heat capacity per mass of each molecule.
 
-At what temperature does the transition occur? I.e., what temperature corresponds to $k_BT\simeq \hbar\omega$?
-$\omega= \sqrt{k/M}$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
-\be
-\hbar\omega \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV\ee
-since $E_e\sim p^2/2 \sim\hbar^2/mR^2$.
 
-Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
-\Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
+\lecture{Energy Conversion}
+\example{Some useful conversion factors:
+\bea
+423 ppm &=& 900 GtC
+\vs
+1\, eV &=& 1.6\times 10^{-19}\, J\vs
+Nk_B &=& nR
+\eea
+where $n$ is the number of moles (the mass of a substance that contains the same number of atoms as there are carbon atoms in 12 gm of carbon) and 
+\be
+R\equiv N_A k_B = 8.3\, J/mole/K.\ee}
 
-\old{%\item
-More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
-\be
-f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
-This turns out to be the Bose-Einstein occupation number.}
 
-\eei
-
-\old{Molecular Energies Order of Magnitude
-\bee
-\item Electronic Energy levels: $E_e\sim p^2/m\sim \hbar^2/mR^2 \sim 8 eV$.
-\item Vibrational Energy: $E_v=\hbar \sqrt{k/M}\left( n+ \frac12\right)$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
-\be
-E_v \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV.\ee
-\item Rotational: $E_r\sim \hbar^2/MR^2 = (m/M) E_e \sim 10^{-3}$ eV
-\eee
-}
-
-%\lecture{Thermal Energy 2}
-
-\bei
-\item Diatomic Molecule: Rotational Energy. 
-\be E^{rot}_L = \frac{\hbar^2}{2I} \vec L^2 = E_r L(L+1).\ee
-Our estimate for $CO_2$ was 
-\be
-E_{rot}=7.69\times 10^{-24} J = 4.8\times 10^{-5} eV\ee
-so the corresponding temperature $T=E_{rot}/k_B=0.5K$. So, modes as large as $L=30$ can be excited. At all atmospheric temperatures, $k_bT\gg E_{rot}$. Hence, we can simply calculate the partition function:
-\be
-Z= \sum_l (2L+1)\,e^{-E_{rot}L(L+1)/k_BT} \rightarrow \int_0^\infty\, dx (2x+1)e^{-E_{rot}x(x+1)/k_bT}
-\ee
-where the $2L+1$ is the number of states for each level. Define $y\equiv E_{rot}x(x+1)/k_bT$. Then,
-\be
-Z= \frac{k_BT}{E_{rot}}\, \int dy e^{-y}
-.\ee
-The integral is equal to unity, so taking the derivative with respect to $\beta$ leads to
-\be
-\langle E_{rot}\rangle = k_BT.\ee
-Again, two degrees of freedom for the two modes of rotation.
-\item Solid: This follows simply from the vibrational calculation. No translational or rotational DOF, only 3 vibrational, so
-\be
-E_{lmn} = E_0\left (l+m+n+\frac32\right)\ee
-The partition function then becomes
-\be
-Z= \left( \frac{e^{-E_0\beta/2}}{1-e^{-E_0\beta}} \right)^3\ee
-so the internal energy becomes
-\be
-U - 3NE_0 \left( \frac12 + \frac1{e^{E_0\beta}-1} \right)\ee
-where asymptotes to $3Nk_BT$ in the limit of large temperature.
-\item Heat Capacity:
-In all of these cases, $U\rightarrow N\frac{k_BT}2\,N_{DOF}$ as long as the temperature is much larger than the energy splitting so that increasing the temperature will increase the internal energy. In that limit, $U$ is just linearly proportional to the temperature, so the coefficient is quite relevant. It is called the heat capacity:
-\be
-C \equiv \frac{\partial U}{\partial T} \rightarrow  N\frac{k_BT}2\,N_{DOF}.\ee
-More generally, we can turn the plot in Fig.~\rf{dof} into the specific heat by simply differentiating \ec{bare}. The result is plotted in Fig.~\rf{sh}.
-\Spng{sh}{Heat Capacity of a diatomic molecule with vibrational energy $E_00.08$ eV (like $CO_2$, except it's not a diatomic molecule.}
-The {\it specific heat capacity}, $c_p$,  is the heat capacity per mass of each molecule.
 \example{
 Note that the specific heat of water is $c=4.18$kJ/kg/K. If we write
 \be
@@ -643,24 +584,13 @@ The density of water is
 \be
 Q= c_p\times\rho\times V\times \Delta T.\ee
 Therefore, the energy needed to heat an 8 minute shower is 9.5MJ. This is 5\% of the average daily per capita use.}
-\eei
 
 %\comment{This could also draw on the calculation in 8.7.3 and replace/supplement the one above.}
 
 
 
-\lecture{Pressure, Energy Conversion, and Heat Capacities}
+%\lsection{Pressure, Energy Conversion, and Heat Capacities}
 
-\example{Some useful conversion factors:
-\bea
-400 ppm &=& 850 GtC
-\vs
-1\, eV &=& 1.6\times 10^{-19}\, J\vs
-Nk_B &=& nR
-\eea
-where $n$ is the number of moles and 
-\be
-R\equiv N_A k_B = 8.3\, J/mole/K.\ee}
 
 Thermal energy can be converted into mechanical energy.  E.g., thermal motion from a gas exerts a force on a piston. In one dimension, with fixed walls
 \bee 
@@ -700,14 +630,14 @@ Its internal energy is:
 \be
 U=\frac32 Nk_BT = \frac32 \frac{PV}{k_BT} k_BT = \frac32 PV
 =  150 J.\ee
-\item How much work is done to reduce the volume very quickly (so $P,T$ don't change) by a factor of 2? 
+\item How much work is done to reduce the volume very quickly (so $P,T$ don't change) by a factor of 2? That depends on the pressure differential outside and inside. If we are saying that the pressure inside remains at $P$; then let's take the case where the pressure outside jumps to $2P$. Then the effective pressure is $2P-P=P$ and let's keep the external temperature fixed so that it is the number density increase that is driving the pressure increase. Then,
 \be dW = P*V/2 = 50J\ee
 because the work done is on the system, $PdV$ is negative leading to a gain in internal energy.
 \item What is the new internal energy, temperature, and pressure?
 \be U_{new}=U_{i}+W=200J.\ee
 That gain in internal energy leads to a new temperature that is larger than the initial by 200/150=4/3, so is equal to 363K.
 The pressure is now $Nk_BT'/V'= P_{old} \times 8/3= 2.67\times 10^{5}$Pa.
-\item On longer time scales, when the temperature cools to external temperature at 273, so drops by 4/3, the pressure will similarly drop to twice the initial pressure. All the work done to compress the volume has been lost to the heat that escapes as it cools. Neither the region of interest or its environment has a quantity called ``work'' or ``heat' so those are not {\it State Variables} like pressure and temperature. 
+\item On longer time scales, when the temperature cools to external temperature at 273K, so drops by 4/3, the pressure will similarly drop to twice the initial pressure. All the work done to compress the volume has been lost to the heat that escapes as it cools. Neither the region of interest or its environment has a quantity called ``work'' or ``heat' so those are not {\it State Variables} like pressure and temperature. 
 \eei}
 
 
@@ -744,13 +674,16 @@ We have already computed $U$ for an ideal monatomic and diatomic gas.
 Near a phase transition, the temperature will not rise as heat is added; rather the bonds will be broken. So it is called latent heat, as opposed to sensible heat (when the temperature does rise).
 \eee
  
-\old{ \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
  
- The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
- \be
- Power = \frac{2.5N\times 1.38\times 10^{-23} \times 900}{300} W=10^{-22}NW\ee
- So to get to 250MW, we require $N=2.5\times 10^{30}$ atoms. This corresponds to a mass of $1.67\times 10^{4}$kg.
+ 
+ 
+\lecture{Thermal Energy and Heat Transfer}
 
+ \example{In a fission reactor, helium is a good substance to carry the heat from the center of the reactor, where it is hottest to the outside where it is transformed into electricity. The helium comes to the turbines at a temperature of 1000$^\circ$C and -- after imparting its energy to the turbines -- drops to 100$^\circ$C. If each helium atom makes the trip once every 5 minutes, how much helium is required to generate 100 MW of electricity? Note that the efficiency of turning the thermal energy into electricity is 40\%, so the amount of thermal power required is 250MWth (for 100MWe).
+ %The total energy carried is $C_P\Delta T = 2.5Nk_B\Delta T = 2.5N\times 1.38\times 10^{-23} \times 900 J$. In 5 minutes this corresponds to 
+ %\be
+ %Power = \frac{2.5N\times 1.38\times 10^{-23} \times 900}{300} W=10^{-22}NW\ee
+ %So to get to 250MW, we require $N=2.5\times 10^{30}$ atoms. This corresponds to a mass of $1.67\times 10^{4}$kg.
 The heat added to the turbines by a mass $m$ is 
 \be
 c_p m\Delta T = 5.2\times 900\,\frac{m}{kg}\, kJ.\ee
@@ -758,26 +691,28 @@ For this to be equal to $250MW$, we require
 \be
 \frac{5.2\times 900kJ}{300 s} \,\frac{m}{kg} = 2.5\times 10^8J/s.\ee
 This corresponds to a mass of about $1.6\times 10^4$ kg.
+%Check the value of $c_P=C_P/m=(5/2) N k_B/ m$ since $c_P$ is the specific heat capacity, which is per mass. Now $m/N$ is the total mass divided by the total number of particles, which is just the mass of a single helium atom, $4\times 1.67\times 10^{-27}$kg. Therefore, 
+%\be
+%c_P=\frac{2.5\times 1.38\times 10^{-23} J/K}{4\times 1.67\times 10^{-27} kg},\ee which is indeed 5.2 kJ/K/kg.
+}
 
-Check the value of $c_P=C_P/m=(5/2) N k_B/ m$ since $c_P$ is the specific heat capacity, which is per mass. Now $m/N$ is the total mass divided by the total number of particles, which is just the mass of a single helium atom, $4\times 1.67\times 10^{-27}$kg. Therefore, 
-\be
-c_P=\frac{2.5\times 1.38\times 10^{-23} J/K}{4\times 1.67\times 10^{-27} kg},\ee which is indeed 5.2 kJ/K/kg.
-}}
- 
- 
- 
-\lecture{Heat Capacity Summary and Heat Transfer}
+ {\it Latent Heat:} This is the amount of energy required to change the phase of a substance: e.g., a solid is a lower energy state than a liquid (more tightly bound), so you need to addd energy to transform it into a liquid. This energy is called latent heat. E.g, for ice to water it is equal to 334 kJ/kg. %This makes sense: roughly we expect the energy connecting the atoms in a solid to be of order 5 eV. So the energy per molecule should be of order
+%\be
+%\frac{\Delta E_{Binding}}{\mass} \sim \frac{5\, eV}{18\times1.67\times 10^{-27}\, kg} =.\ee
+Near a phase transition, the temperature will not rise as heat is added; rather the bonds will be broken. So it is called latent heat, as opposed to sensible heat (when the temperature does rise).
 
-\bei
+
+\old{\bei
 \item Heat Capacity and latent heat relate the energy input into the system ($dQ$) with the change in temperature or the internal structure of the system. 
 \item The macroscopic heat capacity and latent heat expressed in terms of J/K/kg or J/kg can be related to the microscopic processes inside the system
 \item For example, vibrational energies of diatomic molecules were of order $0.1$ eV. That leads to a heat capacity that adds 2 degrees of freedom at $T\sim 1000$K.
 \item Latent heat is another example. We said the energy required to melt ice was 334 kJ/kg. One kg of ice contains $1/(1.67\times 10^{-27}\times 18)=3.3\times 10^{25}$ molecules of $H_20$. That means the energy per molecule required is $3.34\times 10^5/(1.6\times 10^{-19}\times 3.3\times 10^{25})= 0.06$ eV. This is about 3 times the vibrational energy of the molecules in the solid.
-\eei
+\eei}
 
 
-Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
+%Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
 
+\lsection{Heat Transfer}
 There are three ways to transfer heat:
 \bei
 \item Conduction
@@ -785,12 +720,91 @@ There are three ways to transfer heat:
 \item Radiative Transfer
 \eei
 
-\lsection{Conduction}
+{\bf Conduction}
+
 This is simply particles in regions with larger velocity dispersions leaking into regions with lower dispersions and visa versa.
 Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
 .\ee
 where the heat flux $\vec q$ is the energy flowing per time per area.
 Thermal conductivity $k$ has dimensions of $E/(t\times L\times K)$. Air has $k=0.026$ W/mK, while window glass has $k=1$ W/mK, at fixed temperature difference, more heat flows  if glass separates the two regions than if air does. %meaning that more energy is required to heat up a region on the other side of glass than if there were no glass partition.
+
+\bei
+\item 
+Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation (or conservation of current): the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
+\item Applying Gauss's Law leads to
+\be
+\frac{\partial u}{\partial t} +  \nabla\cdot \vec q = 0\eql{current}
+.\ee
+\eei
+
+
+
+Application: Large uniform area with two ends at temperatures $T_0$ and $T_1$, it is a 1D problem:
+\be
+q=-k\frac{dT}{dx}
+\ee
+If this is, for example, air flow through a wall or window, the temperature on either end is kept constant, and the system settles into $T(x,t)=T(x)$. Therefore $u$ is constant at any $x$ and  via \ec{current}, $q$ is constant is space. The relevant differential equation is then
+\be
+T = T_0 - x\frac{q}{k}
+.\ee
+Setting $T=T_1$ at $x=L$ leads to
+\be
+T_1-T_0= -qL/k \eql{fourier}\ee
+or
+\be
+q=k \frac{T_0-T_1}{L}
+.\ee
+The final expression for the temperature gradient is
+\be
+T=T_0 - x \frac{T_0-T_1}{L}.\ee
+
+\example{Glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature difference, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.}
+
+It is clear that the relevant variable is {\it thermal resistance}:
+\be
+R_{\rm thermal} \equiv \frac{L}{k}
+\ee
+so that the heat flux is
+\be
+q = \frac{\Delta T}{R}.\ee
+
+Combine the impact of different materials in series. Since $q$ is constant,
+\be
+qR_i= \Delta T_i
+\ee
+and summing up to get the full temperature difference leads to
+\be
+q=\frac{\Delta T}{R_{tot}}\ee
+with
+\be
+R_{total} = \sum_i R_i
+.\ee
+\example{In the example above, what was neglected was the boundary layer on either side of the window. The window itself contributes $R_w=0.005$ m$^2$K/W, but $R_{inside}=0.12$ m$^2$K/W and $R_{outside}=0.03$ m$^2$K/W, so $R_{tot}=0.155$ m$^2$K/W. This gets the heat flux down to $129$W/m$^2$, so a loss down to 3kW-hours per day.}
+
+In the above example, we can also estimate the temperature on the inside and outside of the window. [Since air has $k=1$ in these units, 
+\bea
+L_i &=&0.12 m\vs
+L_o &=& 0.03 m
+\eea]
+Since the temperature follows the simple solution of \ec{fourier}, the temperature on the inside of the window
+satisfies
+\be
+T_{\rm room}-T_i=qR_i = 0.12 \times 129K=15.5
+.\ee
+So the temperature right on the window in the inside is 15.5$^\circ$C colder than the rest of the room. Then the temperature right on the outside of the window is $129\times .005K=.645^\circ$ cooler, a little lower than 4$^\circ$C.
+
+\example{Example 6.2 is a realistic estimate of how much heat it takes to warm an entire house $20^\circ$ C. 
+The average house size in the US is about 2000 square feet, call it $14\times 14$ m$^2$ for simplicity. This means the walls have an area of $14\times 3*2 + 14*3*2=168$ sq. ft (if the height is 3m) and the ceiling has area 196 m$^2$ for a total area emitting heat (apart from the ground) of about 365 m$^2$. 
+\bei
+\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 33kW.
+\item
+To put this in context, over the course of one year, the energy required to heat this one house would be $10^{12}$J. Assuming there are close to 100 million single family houses in the US, that leads to 100EJ, which itself would be 1/5 of the world's energy consumption. There are problems with the estimate: $\Delta T$ is not $20^\circ$C at all times and in all places, but it is clearly way too high. 
+
+\item Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.
+\eei}
+
+
+
 
 \example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
 \bee
@@ -870,80 +884,6 @@ It is hard to go much further than this without more details but a couple of not
 k=0.25 {\rm W/K\,m}\ee
 a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
 \eee
-
-
-\bei
-\item 
-Rate of energy across a surface S: \be\frac{dU}{dt} + \int_S d\vec S\cdot \vec q = 0\eql{cont}\ee This is a form of the continuity equation (or conservation of current): the change in time in the internal energy in a region is equal to the flux of energy through the surface bounding that region.
-\item Applying Gauss's Law leads to
-\be
-\frac{\partial u}{\partial t} +  \nabla\cdot \vec q = 0\eql{current}
-.\ee
-\eei
-
-Application: Large uniform area with two ends at temperatures $T_0$ and $T_1$, it is a 1D problem:
-\be
-q=-k\frac{dT}{dx}
-\ee
-If this is, for example, air flow through a wall or window, the temperature on either end is kept constant, and the system settles into $T(x,t)=T(x)$. Therefore $u$ is constant at any $x$ and  via \ec{current}, $q$ is constant is space. The relevant differential equation is then
-\be
-T = T_0 - x\frac{q}{k}
-.\ee
-Setting $T=T_1$ at $x=L$ leads to
-\be
-T_1-T_0= -qL/k \eql{fourier}\ee
-or
-\be
-q=k \frac{T_0-T_1}{L}
-.\ee
-The final expression for the temperature gradient is
-\be
-T=T_0 - x \frac{T_0-T_1}{L}.\ee
-
-\example{Glass, with $k=1$ W/mK; and the temperature inside $T_0=293$ and the temperature outside $T_1=273$ (freezing) and a window of thickness 5mm, we find $q=4$kW/m$^2$. The larger the thickness of the window the less heat is lost; that makes sense. And similarly the greater the temperature difference, the more heat is lost. If the thermal conductivity is large, then again more heat is lost. Finally, if the area of the window is 1m$^2$, then a total of 4 kW is lost. So over 24 hours, you might think about 100 kW hours are required to provide the heat that accounts for this one window. In fact, the amount is much smaller than this.}
-
-It is clear that the relevant variable is {\it thermal resistance}:
-\be
-R_{\rm thermal} \equiv \frac{L}{k}
-\ee
-so that the heat flux is
-\be
-q = \frac{\Delta T}{R}.\ee
-
-Combine the impact of different materials in series. Since $q$ is constant,
-\be
-qR_i= \Delta T_i
-\ee
-and summing up to get the full temperature difference leads to
-\be
-q=\frac{\Delta T}{R_{tot}}\ee
-with
-\be
-R_{total} = \sum_i R_i
-.\ee
-\example{In the example above, what was neglected was the boundary layer on either side of the window. The window itself contributes $R_w=0.005$ m$^2$K/W, but $R_{inside}=0.12$ m$^2$K/W and $R_{outside}=0.03$ m$^2$K/W, so $R_{tot}=0.155$ m$^2$K/W. This gets the heat flux down to $129$W/m$^2$, so a loss down to 3kW-hours per day.}
-
-In the above example, we can also estimate the temperature on the inside and outside of the window. [Since air has $k=1$ in these units, 
-\bea
-L_i &=&0.12 m\vs
-L_o &=& 0.03 m
-\eea]
-Since the temperature follows the simple solution of \ec{fourier}, the temperature on the inside of the window
-satisfies
-\be
-T_{\rm room}-T_i=qR_i = 0.12 \times 129K=15.5
-.\ee
-So the temperature right on the window in the inside is 15.5$^\circ$C colder than the rest of the room. Then the temperature right on the outside of the window is $129\times .005K=.645^\circ$ cooler, a little lower than 4$^\circ$C.
-
-\example{Example 6.2 is a realistic estimate of how much heat it takes to warm an entire house $20^\circ$ C. 
-The average house size in the US is about 2000 square feet, call it $14\times 14$ m$^2$ for simplicity. This means the walls have an area of $14\times 3*2 + 14*3*2=168$ sq. ft (if the height is 3m) and the ceiling has area 196 m$^2$ for a total area emitting heat (apart from the ground) of about 365 m$^2$. 
-\bei
-\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 33kW.
-\item
-To put this in context, over the course of one year, the energy required to heat this one house would be $10^{12}$J. Assuming there are close to 100 million single family houses in the US, that leads to 100EJ, which itself would be 1/5 of the world's energy consumption. There are problems with the estimate: $\Delta T$ is not $20^\circ$C at all times and in all places, but it is clearly way too high. 
-
-\item Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.
-\eei}
 
 
 
@@ -1352,6 +1292,104 @@ $R_{orbit}=1.5e11$m.
 %
 %\lsection{Latent Heat}
 %
+\lecture{Internal Energy Revisited}
+The energy of a harmonic oscillator is
+\be
+E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
+Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
+\be
+\langle E\rangle
+= N\frac{\sum_n E_n e^{-E_n/k_BT}}{\sum_n e^{-E_n/k_BT}}
+\ee
+or
+\be
+\langle E\rangle = -N\frac{\partial}{\partial\beta} \,\ln Z
+\ee
+where $\beta\equiv 1/k_BT$ and
+\be
+Z\equiv \sum_ne^{-E_n/k_BT}=\frac{e^{-\hbar\omega\beta/2}}{1-e^{-\hbar\omega\beta}}.\ee
+So,
+\be
+\langle E\rangle = N\left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\hbar\omega\beta}-1} \right).\eql{bare}\ee
+The first term is the zero-point energy and the second term is the energy due to thermal excitations.
+The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
+\be
+\langle E\rangle = NE_0\ee
+all the particles in the ground state. The other limit is the high temperature limit, in which case \be
+\langle E\rangle_{hi\, T} =Nk_BT\ee
+The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
+
+At what temperature does the transition occur? I.e., what temperature corresponds to $k_BT\simeq \hbar\omega$?
+$\omega= \sqrt{k/M}$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
+\be
+\hbar\omega \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV\ee
+since $E_e\sim p^2/2 \sim\hbar^2/mR^2$.
+
+Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
+\Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
+
+\old{%\item
+More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
+\be
+f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
+This turns out to be the Bose-Einstein occupation number.}
+
+
+\old{Molecular Energies Order of Magnitude
+\bee
+\item Electronic Energy levels: $E_e\sim p^2/m\sim \hbar^2/mR^2 \sim 8 eV$.
+\item Vibrational Energy: $E_v=\hbar \sqrt{k/M}\left( n+ \frac12\right)$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
+\be
+E_v \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV.\ee
+\item Rotational: $E_r\sim \hbar^2/MR^2 = (m/M) E_e \sim 10^{-3}$ eV
+\eee
+}
+
+%\lecture{Thermal Energy 2}
+
+\bei
+\item Diatomic Molecule: Rotational Energy. 
+\be E^{rot}_L = \frac{\hbar^2}{2I} \vec L^2 = E_r L(L+1).\ee
+Our estimate for $CO_2$ was 
+\be
+E_{rot}=7.69\times 10^{-24} J = 4.8\times 10^{-5} eV\ee
+so the corresponding temperature $T=E_{rot}/k_B=0.5K$. So, modes as large as $L=30$ can be excited. At all atmospheric temperatures, $k_bT\gg E_{rot}$. Hence, we can simply calculate the partition function:
+\be
+Z= \sum_l (2L+1)\,e^{-E_{rot}L(L+1)/k_BT} \rightarrow \int_0^\infty\, dx (2x+1)e^{-E_{rot}x(x+1)/k_bT}
+\ee
+where the $2L+1$ is the number of states for each level. Define $y\equiv E_{rot}x(x+1)/k_bT$. Then,
+\be
+Z= \frac{k_BT}{E_{rot}}\, \int dy e^{-y}
+.\ee
+The integral is equal to unity, so taking the derivative with respect to $\beta$ leads to
+\be
+\langle E_{rot}\rangle = k_BT.\ee
+Again, two degrees of freedom for the two modes of rotation.
+\item Solid: This follows simply from the vibrational calculation. No translational or rotational DOF, only 3 vibrational, so
+\be
+E_{lmn} = E_0\left (l+m+n+\frac32\right)\ee
+The partition function then becomes
+\be
+Z= \left( \frac{e^{-E_0\beta/2}}{1-e^{-E_0\beta}} \right)^3\ee
+so the internal energy becomes
+\be
+U - 3NE_0 \left( \frac12 + \frac1{e^{E_0\beta}-1} \right)\ee
+where asymptotes to $3Nk_BT$ in the limit of large temperature.
+\eei
+
+We are after the heat capacity defined as 
+\be
+C \equiv \frac{\partial U}{\partial T}
+.\ee
+\bei
+\item Heat Capacity:
+In all of these cases, $U\rightarrow N\frac{k_BT}2\,N_{DOF}$ as long as the temperature is much larger than the energy splitting so that increasing the temperature will increase the internal energy. In that limit, $U$ is just linearly proportional to the temperature, so the coefficient is quite relevant. It is called the heat capacity:
+\be
+C \equiv \frac{\partial U}{\partial T} \rightarrow  N\frac{k_BT}2\,N_{DOF}.\ee
+More generally, we can turn the plot in Fig.~\rf{dof} into the specific heat by simply differentiating \ec{bare}. The result is plotted in Fig.~\rf{sh}.
+\Spng{sh}{Heat Capacity of a diatomic molecule with vibrational energy $E_00.08$ eV (like $CO_2$, except it's not a diatomic molecule.}
+\eei
+
 \lecture{Midterm and Nuclear Power}
 
 \lsection{Midterm}
