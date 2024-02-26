@@ -793,27 +793,31 @@ T_{\rm room}-T_i=qR_i = 0.12 \times 129K=15.5
 .\ee
 So the temperature right on the window in the inside is 15.5$^\circ$C colder than the rest of the room. Then the temperature right on the outside of the window is $129\times .005K=.645^\circ$ cooler, a little lower than 4$^\circ$C.
 
-\example{Example 6.2 is a realistic estimate of how much heat it takes to warm an entire house $20^\circ$ C. 
-The average house size in the US is about 2000 square feet, call it $14\times 14$ m$^2$ for simplicity. This means the walls have an area of $14\times 3*2 + 14*3*2=168$ sq. ft (if the height is 3m) and the ceiling has area 196 m$^2$ for a total area emitting heat (apart from the ground) of about 365 m$^2$. 
-\bei
-\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 33kW.
-\item
-To put this in context, over the course of one year, the energy required to heat this one house would be $10^{12}$J. Assuming there are close to 100 million single family houses in the US, that leads to 100EJ, which itself would be 1/5 of the world's energy consumption. There are problems with the estimate: $\Delta T$ is not $20^\circ$C at all times and in all places, but it is clearly way too high. 
+\lecture{Conduction Examples and Theory}
 
-\item Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and effectively solves the problem. Note the typo (0.3 instead of 0.03) in Example 6.2.
-\eei}
+Review:
+\begin{itemize}
+\item Fourier Law: 
+\be \vec q = -k\nabla T
+\ee
+\item Applying Gauss' Law
+\be
+\frac{\partial u}{\partial t} + \nabla\cdot \vec q=0\ee
+\item in 1D with fixed $\Delta T$, 
+\be q = \frac{\Delta T}{R}\ee
+where $R=\sum_i R_i$ and $R_i=L_i/k_i$.
+\end{itemize}
 
 
 
-
-\example{Consider Pittsburgh and Atlanta, separated by about 1200 km. On a given day in January, the temperature difference is $13^\circ$. How long would it take conduction to equilibrate these? 
+\example{Consider Pittsburgh and Charleston, SC [due South], separated by about 1000 km. On a given day in February, the temperature difference is $7^\circ C$. How long would it take conduction to equilibrate these? 
 \bee
 \item Heat flows at a rate of 
 \be
-q=0.026\times \frac{13}{1.2\times 10^6} W/m^2=52.8\times 10^{-7} W/m^2. \ee
-So a square region in front of Pittsburgh that is 10km high and wide will receive 30 W of heat from Atlanta. This is less than a light bulb.
-\item How much heat flows into a volume of order $10^3km^3$ during a single day?  Multiply by the number of seconds in a day: $8.6\times 10^4$ to get 2.5MJ/day.
-\item How much does this increase the temperature: $\Delta T = Q/c_pm=2.5\times 10^6J/(10^3J/kg/K\times (1.25\times 10^{12}kg) =2\times 10^{-9}K$/day. So it makes sense that the South is colder than the North throughout the winter.\eee}
+q=0.026\times \frac{7}{1.\times 10^6} W/m^2=1.8\times 10^{-7} W/m^2. \ee
+So a square region in front of Pittsburgh that is 10km high and wide will receive 18 W of heat from Atlanta. This is less than a light bulb.
+\item How much heat flows into a volume of order $10^3km^3$ during a single day?  Multiply by the number of seconds in a day: $8.6\times 10^4$ to get 1.5MJ/day.
+\item How much does this increase the temperature: $\Delta T = Q/c_pm=1.5\times 10^6J/(10^3J/kg/K\times (1.\times 10^{12}kg) =1.5\times 10^{-9}K$/day. So it makes sense that the South is colder than the North throughout the winter.\eee}
 
 
 
@@ -855,13 +859,22 @@ k = \frac13 nm c_v l\bar v.\ee
 Fourier's Law: \be \vec q(\vec x) = -k\nabla T(\vec x)
 .\ee
 
-The electrical conductivity can be calculated in a similar way, and the relationship leads to
-\be
-\frac{k}{\sigma} = LT\ee
-where $L$ is the Lorenz number. This empirical relation was discovered in the 1800's; the theoretical justification came from quantum mechanics. You can calculate that
-\be
-L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
-This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
+
+
+
+\example{Example 6.2 is a realistic estimate of how much heat it takes to warm an entire house $20^\circ$ C. 
+The average house size in the US is about 2000 square feet, call it $14\times 14$ m$^2$ for simplicity. This means the walls have an area of $14\times 3*2 + 14*3*2=168$ sq. ft (if the height is 3m) and the ceiling has area 196 m$^2$ for a total area emitting heat (apart from the ground) of about 365 m$^2$. 
+\bei
+\item First suppose a 20cm concrete wall with $k=0.9$ W/mK. This corresponds to $R=L/k=.22$ Km$^2$/W, or a heat flow of $q=\Delta T/R = 91 W/m^2$. Over the entire surface area of the house, this would require heating of 33kW.
+\item
+To put this in context, over the course of one day, the energy required to heat this one house would be 3GJ, which is 3x larger than the average US person uses.
+
+\item Use instead 20 cm ($8''$) of fiberglass with $R=4.6$ Km$^2$/W. This increase R by a factor of 20 and leads to only 1.6kW required to heat the house. Per day, this corresponds to just 140MJ. 
+Note the typo (0.3 instead of 0.03) in Example 6.2.
+
+\item Cost is about 15 cents for kw-hours. There are 720 hours in a month, so the first person would be paying \$3500 per month, while the second is paying \$170/month.
+\eei}
+
 
 %\old{
 %\be
@@ -870,7 +883,7 @@ This is the Wiedemann–Franz law, which holds extremely well and whose deviatio
 %.\ee}
 %
 
-\lecture{Conduction, II}
+%\lecture{Conduction, II}
 
 \be
 k = \frac13 nm c_v l\bar v.\ee
@@ -883,14 +896,21 @@ It is hard to go much further than this without more details but a couple of not
 \be
 k=0.25 {\rm W/K\,m}\ee
 a factor of 2 too small, presumably because the mean free path is longer than $n^{-1/3}$.
+\item The electrical conductivity can be calculated in a similar way, and the relationship leads to
+\be
+\frac{k}{\sigma} = LT\ee
+where $L$ is the Lorenz number. This empirical relation was discovered in the 1800's; the theoretical justification came from quantum mechanics. You can calculate that
+\be
+L= \frac{\pi^2}{3}\,\left(\frac{k_B}e\right)^2.\ee
+This is the Wiedemann–Franz law, which holds extremely well and whose deviations are very interesting.
 \eee
 
+\lecture{Time Dependent Conduction and Convection}
 
-
-Applying Gauss's Law to \ec{cont} leads to
+We had \ec{cont}
 \be
 \frac{\partial u(\vec x, t)}{\partial t} = -\nabla\cdot \vec q.\ee
-The time dependence is captured in the temperature dependence, and $dy/dT = \rho c_V$, so
+The time dependence is captured in the temperature dependence, and $du/dT = \rho c_V$, so
 \be
 \rho c_V \dot T + \nabla\cdot \vec q = 0.\ee
 But then, there is Fourier's Law that $\vec q = -k \nabla T$, so
@@ -900,7 +920,7 @@ with the thermal diffusivity $a$ defined as
 \be
 a \equiv \frac{k}{\rho c_V} .\ee
 
-\lecture{Time Dependent Conduction and Convection}
+%\lecture{Time Dependent Conduction and Convection}
 
 %Fourier modes: Consider a simple Fourier mode, $T(\vec k) = T_k(t) e^{i\vec k \cdot \vec x}$ (this is a different $k$ than the heat conductivity; take the real part at the end). Then, the heat equation becomes,
 %\be
@@ -926,7 +946,7 @@ a \equiv \frac{k}{\rho c_V} .\ee
 Use the fact that
 \be T(z=0,t) = T_0 + \Delta T \cos(\omega t) \rightarrow \Delta T {\rm Re}\left[ e^{i\omega t}\right]
 \ee
- focusing on the time-dependent part and writing it in a form that makes it easy to decompose into Fourier modes. The frequency $\Omega \equiv 2\pi/1$ year. To determine the full solution as a function of depth below the soil (positive $z$) write $T(z,t)=\sum_\omega T_\omega e^{i\omega t}$ with the understanding that we will take the real part at the end. Then, we get
+ focusing on the time-dependent part and writing it in a form that makes it easy to decompose into Fourier modes. The frequency $\omega \equiv 2\pi/1$ year. To determine the full solution as a function of depth below the soil (positive $z$) write $T(z,t)= T_\omega e^{i\omega t}$ with the understanding that we will take the real part at the end. Then, we get
 \be
 i\omega T_\omega - a \frac{d^2T_\omega}{dz^2}=0.\ee
 This has an exponential solution with $T_\omega \propto e^{\lambda z}$, with $\lambda$ a complex number satisfying
@@ -957,27 +977,33 @@ c\equiv \sqrt{\omega/2a}\ee
 \lsection{Convection}
 
 \bei
-\item Archimedes' Buoyancy Principle: Suppose a stationary fluid element is replaced by some object. The fluid initially was not moving because the force of gravity on it $\rho_aVg$ balanced the upwards force of pressure: $\Delta P A$. The new object will feel an effective force:
+\item Archimedes' Buoyancy Principle: Suppose a stationary fluid element is replaced by some object with a different density. The fluid initially was not moving because the force of gravity on it $\rho_aVg$ balanced the upwards force of pressure: $\Delta P A$. The new object will feel an effective force:
 \be
 F_{\rm o} = m_og - \Delta PA = gV\left(\rho_o-\rho_a\right).\ee
 So, if the density in the object is less than the ambient fluid, it will feel an upwards force. 
-\item Since density is inversely proportional to temperature, this means that hot air will rise as long as the density remains constant.
+\item Since density is inversely proportional to temperature, this means that hot air will rise as long as the pressure[?] remains constant.
 \item More generally, this phenomenon is the physics behind convection: air packets moving up or down. 
-\item Convection will turn out to play an important role in the change of temperature with altitude, which is a big part of the climate picture.
+\item Convection will turn out to play an important role in the change of temperature with altitude, which is a big part of the climate picture. Where are we headed?
+Condition for convective stability:
+\be
+ \left |\frac{dT}{dz} \right| < \Gamma_{\rm adiabatic} \ee
+where the adiabatic lapse rate is 
+$\Gamma_{\rm adiabatic} \simeq 10K/km$. So the temperature will never drop faster than $\Gamma_{\rm adiabatic}$; if it does, then hot air from below will rise.
 \eei
 
-Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it it raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
+\Sjpg{convection}{A small volume element displaced upwards will experience a restoring force due to gravity if $\rho_2^*>\rho_2$. That is the stability condition; if not satisfied, then there will be convective transport.}
+Consider a small volume element in gravity with density and pressure as shown in Fig.~\rf{convection} (asterisks), compared to that outside. The question is: is it stable to a small perturbation $dz$ ($dr$ in the figure) upwards? The question is: if you move a volume element up a bit, will its density be greater than or less than the ambient density at the new height? (The ambient stuff is in equilibrium.). You might think it would be greater than because it comes from a region where the density was larger, but the volume expands as it is raised so the density goes down. We need a way then of determining the new density of this slightly perturbed volume element.
 
 
-If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density.
+If yes, then it will not move and the system will be stable; if not, then there is an instability that manifests itself as convection. At its new location, it will expand adiabatically until its pressure is equal to the ambient pressure: $P_2^*=P_2$. In its initial position, the density and pressure were equal to that of the surrounding atmosphere. So, the only thing that changed is the density. 
 
 
 Compute how the density changes when the gas expands adiabatically:
-In the adiabatic case, $dQ=0$, so 
+In the adiabatic case, $dQ=dU+PdV=0$, so 
 \be
 c_vdT= - PdV=PVd\rho/\rho
-.\ee
-For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$, so 
+\ee
+where the last equality holds since $\rho V$ is the total mass, a constant. For an ideal gas $P=\rho k_B T/m$, so $\frac{dP}P=d\rho/\rho +dT/T$, so 
 \be
 c_v dT  = PV [\frac{dP}P - dT/T] \ee
 or
@@ -1005,7 +1031,7 @@ the solution to which is $P\propto \rho^\gamma$.
 
 
 
-Coming back to our problem and using $\rho\propto P^{1/\gamma}$, we have
+Coming back to our problem and using $\rho\propto P^{1/\gamma}$, as the bubble expands adiabatically, it maintains $\rho/P^{1/\gamma}=$ constant, so
 \bea
 \rho_2^* &=& \rho_1^*\,\left(\frac{P_2^*}{P_1^*}\right)^{1/\gamma}
 \vs
@@ -1013,11 +1039,11 @@ Coming back to our problem and using $\rho\propto P^{1/\gamma}$, we have
  \rho_1\,\left(\frac{P_2}{P_1}\right)^{1/\gamma}\eea
  since the pressures inside and outside are equal, as are the initial densities before the perturbation.
 
-\Sjpg{convection}{A small volume element displaced upwards will experience a restoring force due to gravity if $\rho_2^*>\rho_2$. That is the stability condition; if not satisfied, then there will be convective transport.}
 
-Now perturb:
-\be\rho_2=\rho+\rho' dr
-\ee
+Now perturb the ambient region around $\rho_1,P_1$ with subscript $_1$ dropped:
+\bea\rho_2&=&\rho+\rho' dr\vs
+P_2&=&P+P'dr
+\eea
 so
 \be
 \rho_2^*= \rho \,\left(\frac{P+P'dr}{P}\right)^{1/\gamma}\ee
@@ -1041,10 +1067,10 @@ Last time,
 \item Using $\rho_2^* = \rho_1 (P_2/P_1)^{1/\gamma}$ and Taylor expanding, this resulted in
  the following condition for convective stability:
 \be
-{\Delta\rho^*} \simeq \Delta z\, \rho\frac{P'}{\gamma P} >{\rho'}\Delta z\ee
-If this is satisfied, there is no convection because a packet raised would have larger density than ambient.
-\item Both of these derivative are negative, so the constraint becomes
-\be
+%{\Delta\rho^*} \simeq \Delta z\, \rho\frac{P'}{\gamma P} >{\rho'}\Delta z\ee
+%If this is satisfied, there is no convection because a packet raised would have larger density than ambient.
+%\item Both of these derivative are negative, so the constraint becomes
+%\be
  \vert \rho\frac{P'}{\gamma P} \vert < \vert{\rho'}\vert\ee
 \item Example in class: density higher on one side of the room than on the other: like going up into the atmosphere. If a group of students moved from right to left (up), would their density be greater than or less than the ambient density? If the pressure didn't change or changed very little then they wouldn't expand so their density would be larger than ambient and they would sink back. If the pressure changed a lot, then they would get diluted and their density would be lower than ambient and they would continue to rise: convective instability. 
 \eei
@@ -1133,12 +1159,9 @@ Three possible temperature profiles:
 
 \lsection{Quantum Mechanics}
 
+{\bf Discrete Energy Levels:}
+
 \bei
-\item
-Light comprised of photons with energy
-\be
-E = pc = \frac{hc}{\lambda} =h\nu = \hbar\omega
-.\ee
 \item Particle in a box:
 The particle of mass $m$ is in a potential that is infinite everywhere except in the range $0\le x\le L$, where it vanishes, so the particle must be in that range. 
 \bee
@@ -1158,42 +1181,124 @@ E_n=\frac{\hbar^2n^2\pi^2}{2mL^2}\qquad n=1,2,\ldots
 .\ee
 \item The probability of finding the particle in a given region is $(2/L) \sin^(n\pi x/L)$. So it vanishes at the ends and peaks in the middle for $n=1$. For $n=2$, it vanishes in the middle (!) even though it is moving. On average, $\langle p^2\rangle = 2mE = (\hbar n\pi)^2/L^2$.
 \item If there are many identical particles, if the particles are bosons, as many particles as possible can coexist in the same level, but if they are fermions, each state may be occupied by at most one particle.
+\item \example{Electron in box of size $0.5\AA$. Difference between ground state energy and first excited state is $3\hbar^2/2\pi^2 mL^2=4.6$eV, roughly a factor of 2 off.}
 \eee
+\item More generally, electrons (or other particles) can be bound in states with discrete energies, each of which is labeled by an integer or a set of integers, and depends on those integers in different ways.
+\item Discrete energy levels: $E_{n,j,\nu}$. For atoms and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_\nu\propto \epsilon \nu$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $j(j+1)$ with energies several orders of magnitude lower than vibrational levels.
+\example{We estimated earlier that for $CO_2$, the rotational energy is
+\be
+E = \frac{\vec L^2}{\hbar^2} \,7.69\times 10^{-24}\, J
+.\ee
+When applying QM, $\vec L^2\rightarrow j(j+1)\hbar^2$, so
+\be E_{j}^{\rm rot} = j(j+1) \,7.69\times 10^{-24}\, J \eql{co2rot}
+\ee or $4.8\times 10^{-5}$ eV.}
 \eei
 
-\lecture{Transitions and Radiation}
+\newcommand\evib{\epsilon^{\rm vib}}
 
-{\bf Transitions:}
+\lecture{Transitions and Radiation}
+Last time: Discrete energy levels: $E_{n,j,\nu}$. For atoms and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_\nu\propto \evib n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $j(j+1)$ with energies several orders of magnitude lower than vibrational levels.
+
+\example{We estimated earlier that for $CO_2$, the rotational energy is
+\be
+E = \frac{\vec L^2}{\hbar^2} \,7.69\times 10^{-24}\, J
+.\ee
+When applying QM, $\vec L^2\rightarrow j(j+1)\hbar^2$, so
+\be E_{j}^{\rm rot} = j(j+1) \,7.69\times 10^{-24}\, J \eql{co2rot}
+\ee or $4.8\times 10^{-5}$ eV.}
+
+
+\lsection{Vibrational Energy}
+The energy of a harmonic oscillator is
+\be
+E_n=\evib\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
+Let's return to a system of these molecules at a temperature $T$. The probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
+\be
+\langle E\rangle
+= N\frac{\sum_n E_n e^{-E_n/k_BT}}{\sum_n e^{-E_n/k_BT}}
+\ee
+or
+\be
+\langle E\rangle = -N\frac{\partial}{\partial\beta} \,\ln Z
+\ee
+where $\beta\equiv 1/k_BT$ and
+\be
+Z\equiv \sum_ne^{-E_n/k_BT}=\frac{e^{-\evib\beta/2}}{1-e^{-\evib\beta}}.\ee
+So,
+\be
+\langle E\rangle = N\left( \frac{\evib}{2} + \frac{\evib}{e^{\evib\beta}-1} \right).\eql{bare}\ee
+The first term is the zero-point energy and the second term is the energy due to thermal excitations.
+The low temperature limit of this $\evib \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
+\be
+\langle E\rangle = NE_0\ee
+all the particles in the ground state. The other limit is the high temperature limit, in which case \be
+\langle E\rangle_{hi\, T} =Nk_BT\ee
+The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
+
+%We can now return to the heat capacity. 
+In all of these cases, $U\rightarrow N\frac{k_BT}2\,N_{DOF}$ as long as the temperature is much larger than the energy splitting so that increasing the temperature will increase the internal energy. In that limit, $U$ is just linearly proportional to the temperature, so the coefficient is quite relevant. It is what we called the heat capacity:
+\be
+C \equiv \frac{\partial U}{\partial T} \rightarrow  N\frac{k_BT}2\,N_{DOF}.\ee
+More generally, we can %turn the plot in Fig.~\rf{dof} into 
+calculate the specific heat by simply differentiating \ec{bare}. The result is plotted in Fig.~\rf{sh}. We had been implicitly assuming that the temperature was large enough that everything was not stuck in the ground state. In that case -- when $k_BT\gg \evib$ -- the specific heat increases by $k_B$ for every particle. Below that temperature though, the vibrational degrees of freedom are locked out, so $C=3Nk_B/2$ just for kinetic energy. 
+\Spng{sh}{Heat Capacity of a diatomic molecule with vibrational energy $\evib=0.08$ eV (like $CO_2$, except it's not a diatomic molecule).}
+
+
+At what temperature does the transition occur? I.e., what temperature corresponds to $k_BT\simeq \evib$?
+\be
+T = \frac{\evib}{k_B} \simeq \frac{0.08 \ eV}{eV/11605 K}. \simeq 900K.\ee
+%Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
+%\Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
+Final Notes:
+\bei
+\item Similar arguments apply for rotational degrees of freedom, but because their energies are so much smaller, these degrees of freedom are almost always excited.
+\item Electronic degrees of freedom are excited only in very hot regions (e.g., stars)
+\item The book argues that \ec{bare} is a derivation of the occupation number of particles in the given energy state
+\eei
+
+%\old{%\item
+%More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
+%\be
+%f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
+%This turns out to be the Bose-Einstein occupation number.}
+
+
+\lsection{Transitions}
 
 \bei
-\item Discrete energy levels: $E_n$. For atoms and molecules there are 3 scales, with electronic shells typically having $E_n\propto \epsilon/n^2$ in the 1-10 eV ($1.6\times 10^{-18}-10^{-19}$ J) range; vibrational levels have $E_n\propto \epsilon n$ with energies in the 0.1 eV ($10^{-20}$) range; and rotational levels scaling as $l(l+1)$ with energies several orders of magnitude lower than vibrational levels.
-\example{We estimated earlier that for $CO_2$,
+\item
+Light comprised of photons with energy
 \be
-E_{l}^{\rm rot} = l(l+1) \,7.69\times 10^{-24}\, J\eql{co2rot}
-\ee}
+E = pc = \frac{hc}{\lambda} =h\nu = \hbar\omega
+.\ee
 \item Photons absorbed means atomic/molecular transition from one state to another, with 
 \be
 E_\gamma = E_2-E_1
 .\ee
-\example{Given the levels in \ec{co2rot}, we can calculate the energies of photons that will be absorbed. For example, the $l=0\rightarrow l=1$ transition is mediated by a photon with energy
+\eei
+
+\lecture{Radiation}
+\example{Consider the photon that induces a transition from one vibrational level to another in $CO_2$ corresponding to an energy difference in the vibrational states of $\evib=1.33\times 10^{-20}$J or $0.083$ eV. What is the wavelength of main line at [Answer: 15$\mu$]. 
+Given the levels in \ec{co2rot}, we can calculate the energies of photons that will be absorbed. For example, the $j=0\rightarrow j=1$ transition is mediated by a photon with energy $\evib+2E^{rot}$
 \be
-E_\gamma = 1.54\times 10^{-23} J\ee
-corresponding to a wavelength of 
-\be
-\lambda = \frac{2\pi\hbar c}{E_\gamma} = 1.28 \,{\rm cm}.\ee
-But, what is most interesting is the shift of the vibrational lines. Consider the photon that induces a transition from one vibrational level to another with the main line at 15$\mu$ (corresponding to an energy difference in the vibrational states of $\Delta E_v=1.33\times 10^{-20}$J or $0.083$ eV). There will be a variety of lines around this one corresponding to rotational shift from $l\rightarrow l-1$, with an energy shift of $lE_\gamma\simeq 1.2\times10^{-3} l \Delta E_v$, so the fractional shift is the wavelength should be $0.0012l$ J. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
+2E^{rot}= 1.54\times 10^{-23} J\ee
+There will be a variety of lines around this one corresponding to rotational shift from $j\rightarrow j\pm1$, with an energy shift of $jE_\gamma\simeq 1.2\times10^{-3} j \evib$, so the fractional shift is the wavelength should be $0.0012j$. Fig.~\rf{CO2-lines-detail} shows this structure around the 15 micron line. 
 %Note that this is at room temperature, so $k_BT\simeq 300$K, which means the ambient energy is of order $4.8\times 10^{-21}$J, which in turn means that rotational states up to $l=10$ should be occupied. Thus, we expect shifts as large as 1\% or 6 cm$^{-1}$ on the plot. This is what is seen,.
 The wavenumbers due to rotational transitions should be of order 0.1\% the 15$\mu$ line at $1/\lambda=$666cm$^{-1}$ or about .7cm$^{-1}$. They are a bit smaller than this suggesting that the situation is more complicated. 
 \Spng{CO2-lines-detail}{Emission lines of $CO_2$ in the region of the 15 micron line (note the fundamental 15 micron line ($n=0\rightarrow n=1$) lies at $1/\lambda=$ 667.5 cm$^{-1}$.}
-}\eei
-%\comment{Check Neil's notes on this.}
+}
+
+{\bf Intrinsic line width.} There will be many reasons, but one is that the energy of a given state is fundamentally uncertain via $\Delta t\Delta E >\hbar$. This means that the width of a given line will be inversely proportional to the lifetime of the state. For example, a given $CO_2$ state can decay to the ground state in 1 sec. The uncertainty on its energy is therefore, $\Delta E = \hbar/1sec = 4\times 10^{-15}$eV. But $\Delta\lambda/\lambda = \Delta E/E$ so this is only one part in a trillion. There is also thermal broadening (which we may come to in nuclear reactors) and pressure broadening, which is the main effect of the lines in the atmosphere.
 
 
-{\bf Radiation}
 
-Derive Stefan-Boltzmann law:
+
+Derive Stefan-Boltzmann law, which governs emission from an object in thermal equilibrium.
 \bee
 %\item Start with a sphere of radius $R$ containing photons of a given energy $E$ corresponding to momentum $pc$. 
+\item Heisenberg Uncertainty Principle: 
+\be
+\Delta x \Delta p >\sim h = 2\pi\hbar.\ee
 \item Suppose these are uniformly distributed with density $f(E)$  (similar to distribution of velocities for particles), so that each box in phase space with volume $d^3r d^3p = h^3$ has this number of photons in it
 \item The energy density therefore is
 \bea
@@ -1218,6 +1323,104 @@ Fig.~\rf{bb} shows the spectra for two objects, one with a temperature roughly e
 \Spng{bb}{Flux per wavelength for an object the temperature of the Sun and one the temperature of the Earth.}
 Note that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
 \Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
+
+%\item At any point in the surface, the energy leaving the volume per time is
+%\be
+% \frac{dQ}{dt} _r = \frac{dQ}{dR}\,\frac{dR}{dt} =  \vec p \cdot \hat r f(\vec p) cR^2 d\Omega d^3p \,\times c 
+%\ee
+%where the extra factor of $c$ is the velocity.
+%\item The total energy carried by these photons with this energy passing through the surface is\footnote{This is not quite right because any value of $\theta<\pi/2$ does not escape, but that factor of 2 is compensated because there are two spin degrees of freedom for the photon.}
+%\be
+% d^3p f(\vec p)pc^2R^2\int_0^\pi d\theta \int_0^{2\pi} d\phi  \cos\theta = d^3p 2\pi R^2  f(\vec p)pc
+% \ee
+% \item Now sum over all momentum: in a given small region of space and momentum, the {\it volume} of the phase space is $(2\pi \hbar)^3$. So instead of summing, when integrating, this leads to
+% \be
+%  \frac{dQ}{dt}  = \frac{Ac^2}{2} \int \frac{d^3p}{(2\pi\hbar)^3}\, f(\vec p)p
+% \ee
+% \item Putting in the Bose-Einstein distribution leads to
+% \be
+%  \frac{dQ}{dt} = \frac{Ac^2}{4\pi^2\hbar^3}\, \int_0^\infty \frac{dp\,p^3}{e^{pc/k_BT} - 1}.\ee
+% \item Changing variables to $x=pc/k_BT$ leads to 
+% \be
+%  \frac{dQ}{dt} = \frac{A(k_BT)^4}{4\pi^2\hbar^3c^2}\, \int_0^\infty \frac{dx\,x^3}{e^{x} - 1}
+%  .\ee
+%  \item The integral is just a number $\pi^4/15$, so the flux is
+%  \be
+%   \frac{dQ}{dt}  = \frac{A\pi^2(k_BT)^4}{60\hbar^3c^2} = A\sigma T^4
+%  \ee
+%  where the Stefan-Boltzmann constant is defined as
+%  \be
+%  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\eee
+
+\lecture{Midterm and Radiation}
+
+\bei 
+\item Mechanical Energy (Chapter 2)
+\bei
+\item Kinetic Energy
+\item Rotational Energy
+\item Potential Energy
+\eei
+\item Thermal Energy (5)
+\bei
+\item Heat Capacity as a function of temperature, microscopic explanation
+\item Pressure
+\item First Law: $dU=dQ-PdV$
+\item Ideal Gas Law
+\item Specific Heat Capacity (per mass)
+\item Latent Heat
+\eei
+\item Heat Transport (6)
+\bei
+\item Conduction: Fourier's Law: $\vec q = -k\nabla T$; thermal resistance; heat equation
+\item Convection: convective instability when $\vert dT/dz\vert > \Gamma_{\rm adibatic} =\frac{g}{c_P}$
+\eei
+\item Quantum Mechanics (7, 9.1-9.3)
+\bei
+\item Particle in box
+\item Photons: $E=h\nu=\hbar\omega=pc=hc/\lambda$
+\item role in transitions: $E_\gamma=E^{upper}-E^{lower}$ for both absorption and emission
+\item Transitions: electronic, vibrational, rotational
+\eei
+\item Radiation in Equilibrium (22)
+\bei 
+\item shape of a blackbody spectrum 
+\item $dQ/dt dA = \sigma T^4$
+\item Radiative Balance
+\eei
+\eei
+
+Derive Stefan-Boltzmann law, which governs emission from an object in thermal equilibrium.
+\bee
+%\item Start with a sphere of radius $R$ containing photons of a given energy $E$ corresponding to momentum $pc$. 
+%\item Heisenberg Uncertainty Principle: 
+%\be
+%\Delta x \Delta p >\sim h = 2\pi\hbar.\ee
+%\item Suppose these are uniformly distributed with density $f(E)$  (similar to distribution of velocities for particles), so that each box in phase space with volume $d^3r d^3p = h^3$ has this number of photons in it
+%\item The energy density therefore is
+%\bea
+%U(\omega) &=& 2 \frac{d^3p}{(2\pi\hbar)^3}\, f(p) \, pc \vs
+%&=&
+%\frac{2\hbar}{(2\pi c)^3}\, \frac{\omega^3d\omega}{e^{\hbar\omega/k_BT}-1}\, d\Omega
+%\eea
+%\item This already carries a lot of information about the {\it spectrum}. It peaks at $\hbar\omega=2.82k_BT$ and falls off exponentially after that. Plotted vs. wavelength, it peaks at $5k_BT$. For example, if the temperature were $6000$K, it would peak at \bea
+%\lambda &=& \frac{c}{\nu} \vs
+%&=& \frac{hc}{\hbar\omega}\vs
+%&=&
+%\frac{h c}{5k_BT}
+%\vs
+%&=&
+%\frac{6.63\times 10^{-34}J-s 3\times 10^8m/s}{5*1.38*10^{-23} * 6000 J} =500 nm
+%\eea
+%\item We can plot this vs frequency or vs the more common wavelength, recalling that $\omega=2\pi c/\lambda$. Therefore,
+%\be
+%\frac{dE}{dt dA d\lambda} = \frac{\hbar (2\pi c)^2}{\lambda^5} \,\frac{1}{e^{hc/\lambda k_BT}-1}.
+%\ee
+%Fig.~\rf{bb} shows the spectra for two objects, one with a temperature roughly equal to the Sun and the other roughly equal to the Earth.
+%\Spng{bb}{Flux per wavelength for an object the temperature of the Sun and one the temperature of the Earth.}
+%Note that there is a symmetry between absorption and emission lines, and Fig.~\rf{CO2Abs} shows the impact of these lines on light emitted by the Earth in this wavelength range.
+%\Spng{CO2Abs}{Radiation detected above the Earth's atmosphere as a function of wavelength.}
 \item The energy emitted per time per frequency is just obtained by multiply by $c\cos\theta$ and integrating over angles $\theta<\pi/2$:
 \be
 \int d\Omega = 2\pi \int_0^{\pi/2} d\theta\sin\theta\cos\theta = \pi.\ee
@@ -1267,23 +1470,28 @@ with the Stefan-Boltzmann constant
 %  where the Stefan-Boltzmann constant is defined as
 %  \be
 %  \sigma \equiv \frac{\pi^2k_B^4}{60\hbar^3c^2} = 5.67\times 10^{-8} \frac{W}{m^2\, K^4}.\ee
+\item This allows us to calculate the luminosity of the sun
+\be
+L_\odot = \sigma T_\odot^4 4\pi R_\odot^2 = 3.9\times 10^{26} W
+\ee
+using $T_\odot=5780K$ and $R_\odot=7\times 10^5$km.
+\item This allows us to compute the solar irradiance on Earth:
+\be
+I_\odot = \frac{L_\odot}{4\pi R_{\rm orbit}^2} = 1366W/m^2.\ee
+using $R_{orbit}=1.5\times 10^8$km. 
 \item One of the key facts about climate is that the energy flowing into the Earth must equal the energy going out. The simplest implementation of this is to ignore the atmosphere and set the energy per time leaving the Earth in the form of long wavelength radiation equal to the incoming short wavelength solar radiation
 \be
-L_{OLR}=L_{in}.
+P_{OLR}=P_{in}.
 \ee
 The former is simply $\sigma T_\Earth^4 \times 4\pi R_\Earth^2$. The latter is the luminosity emerging from the Sun ($\sigma T_\odot^4 \times 4\pi R_\odot^2$) but suppressed by the fraction of the area at the orbital distance that is covered by the Earth: $\pi R_\Earth^2/(4\pi R_{orbit}^2)$. We therefore have our first simple climate model for the temperature of the Earth:
 \be
-T_\Earth = T_\odot \, \left(\frac{R_\odot}{2R_{orbit}}\right)^{1/2}=291K\ee
+T_\Earth = T_\odot \, \left(\frac{R_\odot}{2R_{orbit}}\right)^{1/2}=290K\ee
 which is frighteningly accurate but missing all kinds of details. $R_\odot=7.e8m$ and
 $R_{orbit}=1.5e11$m.
 \eee
 
-
-\lsection{Intrinsic line width.} There will be many reasons, but one is that the energy of a given state is fundamentally uncertain via $\Delta t\Delta E >\hbar$. This means that the width of a given line will be inversely proportional to the lifetime of the state. For example, a given $CO_2$ state can decay to the ground state in 1 sec. The uncertainty on its energy is therefore, $\Delta E = \hbar/1sec = 4\times 10^{-15}$eV. But $\Delta\lambda/\lambda = \Delta E/E$ so this is only one part in a trillion.
-
-
 %\lecture{Quantum Mechanics II}
-\example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm, roughly true when $A\sim100$; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
+%\example{Nucleus: Take $m=m_p$ and a cube with sides $L=5$fm, roughly true when $A\sim100$; then the ground state has energy of about 20 MeV, which is about the nuclear scale.}
 
 
 %Take $m=m_e$; $L=a_0$, the Bohr radius, 0.529$\AA$. Then the energy difference between the first two levels is }
@@ -1293,46 +1501,6 @@ $R_{orbit}=1.5e11$m.
 %\lsection{Latent Heat}
 %
 \lecture{Internal Energy Revisited}
-The energy of a harmonic oscillator is
-\be
-E_n=\hbar \omega\left(n+\frac12 \right).\qquad n=0,1,2,\ldots\ee
-Again, the probability of a single one of these oscillators begin in the $n$th state is proportional to $e^{-E_n/k_BT}$. Now the expected energy is
-\be
-\langle E\rangle
-= N\frac{\sum_n E_n e^{-E_n/k_BT}}{\sum_n e^{-E_n/k_BT}}
-\ee
-or
-\be
-\langle E\rangle = -N\frac{\partial}{\partial\beta} \,\ln Z
-\ee
-where $\beta\equiv 1/k_BT$ and
-\be
-Z\equiv \sum_ne^{-E_n/k_BT}=\frac{e^{-\hbar\omega\beta/2}}{1-e^{-\hbar\omega\beta}}.\ee
-So,
-\be
-\langle E\rangle = N\left( \frac{\hbar\omega}{2} + \frac{\hbar\omega}{e^{\hbar\omega\beta}-1} \right).\eql{bare}\ee
-The first term is the zero-point energy and the second term is the energy due to thermal excitations.
-The low temperature limit of this $\hbar\omega \gg k_BT$ means that only the $n=0$ term will contribute and $Z=e^{-E_0\beta}$, leading to
-\be
-\langle E\rangle = NE_0\ee
-all the particles in the ground state. The other limit is the high temperature limit, in which case \be
-\langle E\rangle_{hi\, T} =Nk_BT\ee
-The book explains this as the harmonic oscillator having kinetic and potential energy, each of which contributes $k_BT/2$.
-
-At what temperature does the transition occur? I.e., what temperature corresponds to $k_BT\simeq \hbar\omega$?
-$\omega= \sqrt{k/M}$. But the energy it takes to disassociate the molecule is of order $kR^2$; this must equal the electronic energy, $E_e$, so $k\sim E_e/R^2$ and
-\be
-\hbar\omega \sim \sqrt{\frac{\hbar^2E_e}{MR^2}}=\sqrt{m/M} E_e\sim 0.1eV\ee
-since $E_e\sim p^2/2 \sim\hbar^2/mR^2$.
-
-Fig.~\rf{dof} shows this as the vibrational + rotational curve as a function of temperature. For low temperatures, translational (1.5) and rotational (2) are excited, while vibrational are not since vibrational energies are of order 0.1 eV corresponding to $T=E/k_B=1000$K.
-\Spng{dof}{The internal energy of a diatomic gas as a function of temperature.}
-
-\old{%\item
-More generally, it will be useful to calculate the expected number of particles in a given state with energy $\hbar\omega$. Putting aside the ground state energy in \ec{bare}, the second term can be thought of as the total number of particles times the mean energy per particle. But the mean energy per particle is the mean number of particles in a state with energy $\hbar\omega$ times that energy. So, the mean number of particles in a state with energy $\hbar\omega$ is
-\be
-f(\omega) = \frac{1}{e^{\hbar\omega/k_BT}-1}.\ee
-This turns out to be the Bose-Einstein occupation number.}
 
 
 \old{Molecular Energies Order of Magnitude
@@ -1377,51 +1545,21 @@ U - 3NE_0 \left( \frac12 + \frac1{e^{E_0\beta}-1} \right)\ee
 where asymptotes to $3Nk_BT$ in the limit of large temperature.
 \eei
 
-We are after the heat capacity defined as 
-\be
-C \equiv \frac{\partial U}{\partial T}
-.\ee
-\bei
-\item Heat Capacity:
-In all of these cases, $U\rightarrow N\frac{k_BT}2\,N_{DOF}$ as long as the temperature is much larger than the energy splitting so that increasing the temperature will increase the internal energy. In that limit, $U$ is just linearly proportional to the temperature, so the coefficient is quite relevant. It is called the heat capacity:
-\be
-C \equiv \frac{\partial U}{\partial T} \rightarrow  N\frac{k_BT}2\,N_{DOF}.\ee
-More generally, we can turn the plot in Fig.~\rf{dof} into the specific heat by simply differentiating \ec{bare}. The result is plotted in Fig.~\rf{sh}.
-\Spng{sh}{Heat Capacity of a diatomic molecule with vibrational energy $E_00.08$ eV (like $CO_2$, except it's not a diatomic molecule.}
-\eei
+%We are after the heat capacity defined as 
+%\be
+%C \equiv \frac{\partial U}{\partial T}
+%.\ee
+%\bei
+%\item Heat Capacity:
+%In all of these cases, $U\rightarrow N\frac{k_BT}2\,N_{DOF}$ as long as the temperature is much larger than the energy splitting so that increasing the temperature will increase the internal energy. In that limit, $U$ is just linearly proportional to the temperature, so the coefficient is quite relevant. It is called the heat capacity:
+%\be
+%C \equiv \frac{\partial U}{\partial T} \rightarrow  N\frac{k_BT}2\,N_{DOF}.\ee
+%More generally, we can turn the plot in Fig.~\rf{dof} into the specific heat by simply differentiating \ec{bare}. The result is plotted in Fig.~\rf{sh}.
+%\Spng{sh}{Heat Capacity of a diatomic molecule with vibrational energy $E_00.08$ eV (like $CO_2$, except it's not a diatomic molecule.}
+%\eei
 
-\lecture{Midterm and Nuclear Power}
+\lecture{Nuclear Power}
 
-\lsection{Midterm}
-
-\bei 
-\item Mechanical Energy (Chapter 2)
-\bei
-\item Kinetic Energy
-\item Rotational Energy
-\item Potential Energy
-\eei
-\item Thermal Energy (5)
-\bei
-\item Heat Capacity as a function of temperature, microscopic explanation
-\item Pressure
-\item First Law: $dU=dQ-PdV$
-\item Ideal Gas Law
-\item Specific Heat Capacity (per mass)
-\item Latent Heat
-\eei
-\item Heat Transport (6)
-\bei
-\item Conduction: Fourier's Law: $\vec q = -k\nabla T$; thermal resistance; heat equation
-\item Convection: convective instability when $\vert dT/dz\vert > \Gamma_{\rm adibatic} =\frac{g}{c_P}$
-\item Radiation: $dQ/dt dA = \sigma T^4$; shape of the spectrum; relation of temperature to energy 
-\eei
-\item Quantum Mechanics (7, 9.1-9.3)
-\bei
-\item Photons: $E=h\nu=\hbar\omega=pc=hc/\lambda$
-\item Transitions: electronic, vibrational, rotational
-\eei
-\eei
 
 \lsection{Overview}
 \bei

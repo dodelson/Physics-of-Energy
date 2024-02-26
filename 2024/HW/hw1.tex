@@ -1,0 +1,72 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\item {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\begin{centering}
+{\bf Homework 1: Due Thursday, January 25, 2024}
+\end{centering}
+
+\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+\problem{Problem 2.4 in the book}
+\problem{Problem 2.5 in the book}
+%\problem{Problem 2.6 or 2.7 in the book}
+%\problem{Problem 2.7 in the book}
+\problem{Problem 2.11 in the book}
+%\problem{Problem 2.15 in the book}
+%\problem{Problem 2.18 in the book}
+\problem{Download the file \href{https://github.com/owid/co2-data/blob/master/owid-co2-data.csv}{https://github.com/owid/co2-data/blob/master/owid-co2-data.csv}. Preferably not using excel [e.g., something like a jupyter notebook instead], plot the $CO_2$ emitted per year by the world in units of GtC. This \href{https://github.com/owid/co2-data/blob/master/owid-co2-codebook.csv}{page} has a description of all the variables.}
+\problem{Using the same data set, make a scatter plot of Green House Gas Intensity (carbon emissions divided by energy used) for every country. On the x-axis, use GDP; on the y-axis GHGI. Remember in both of these plots to include units.}
+
+\end{enumerate}
+
+\end{document}
