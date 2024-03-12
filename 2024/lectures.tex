@@ -88,6 +88,7 @@
 \newcommand\dirac{\delta_D}
 \newcommand{\rf}[1]{\ref{fig:#1}}
 \newcommand\example[1]{{\tt EXAMPLE: #1}}
+\newcommand\group[1]{{\tt Group Work: #1}}
 \newcommand\exercise[1]{\hfill\\
 {\bf EXERCISE: #1}}
 \newcommand\comment[1]{\fbox{ \parbox{.5\linewidth} {\bf
@@ -1500,7 +1501,7 @@ $R_{orbit}=1.5e11$m.
 %
 %\lsection{Latent Heat}
 %
-\lecture{Internal Energy Revisited}
+%\lecture{Internal Energy Revisited}
 
 
 \old{Molecular Energies Order of Magnitude
@@ -1563,7 +1564,7 @@ where asymptotes to $3Nk_BT$ in the limit of large temperature.
 
 \lsection{Overview}
 \bei
-\item Current capacity is about 400 GW (compared to 15TW required), so currently about 3\% of power generated.
+\item Current capacity is about 400 GW (compared to 15TW required), so currently about 3\% of power generated, about 10 percent of electricity generated.
 \item Nuclei that decay produce lighter nuclei and neutrons with total energies of order 1 MeV per nucleon, about 200MeV. \comment{We will go into this.}
 \item Neutrons can collide with heavy nuclei and induce more decays. 
 \comment{We will go into this.}
@@ -1572,11 +1573,13 @@ where asymptotes to $3Nk_BT$ in the limit of large temperature.
 \eei
 
 Notation: each element contains $Z$ protons and $N$ neutrons for a total of $A$ nuclei. $A$ is usually written as the superscript with either $Z$ or the chemical symbol coming after it. For example, the isotope $^{235}U= {}^{235}{92} = {}^{235}_{92}U$ of uranium is less than 1\% of naturally occurring uranium, but it is the most efficient fuel. \comment{We will go into this.}
-\example{Energy produced by 1 kg of $^{235}$U: each decay produces about 235 MeV, and each element weighs $235\times 1.67\times 10^{-27}$kg. So, 1kg produces $.6\times 10^{27}$ MeV, which corresponds to $.6\times 10^{27}\times 10^6 \times 1.6\times 10^{-19}$ J/eV, or about $10^{14}$J. Typically these plants are only about 33\% efficient so 1kg  can generate about $3\times 10^{13}$J per year. Compare this to total usage: $6\times 10^{20}J$.}
+
+\group{How much energy can be produced by 1 kg of $^{235}$U? Each decay produces about 235 MeV, and each atom weighs $235\times 1.67\times 10^{-27}$kg. So, 1kg contains $1/(235\times 1.67\times 10^{-27})$ atoms, each of which produces $235$ MeV, so 1 kg produces $.6\times 10^{27}$ MeV, which corresponds to $.6\times 10^{27}\times 10^6 \times 1.6\times 10^{-19}$ J/eV, or about $10^{14}$J. Typically these plants are only about 33\% efficient so 1kg  can generate about $3\times 10^{13}$J per year. Compare this to total usage: $6\times 10^{20}J$.}
 
 \bee
 \item The take-away is that 1 tonne of $^{235}$U can produce $3\times 10^{16}$J/year; since 1GW-year = $3\times 10^{16}$J, 1 tonne can produce about 1 GW-yrs. Since $^{235}$U is only 0.72\% of all uranium, a 1GW plant requires 140 tonnes of uranium. It's a bit worse than this because not all the $^{235}$U is used as fuel, so a rough estimate is 200 tonnes of natural uranium for a GW plant.
-\item Getting say 10\% of current 15 TW then would require $1500\times 200=3\times 10^5$ tonnes mined per year. This is a larger rate than say tin so seems unlikely. The suggests that 1/3 of this is not unreasonable.Total resources are uncertain but rough estimates put it at $10^7$ tonnes, which  would last 100 years if we could extract it at a higher rate than today, and even that produces only 10\% of our needs.
+\item Getting say 10\% of current 15 TW then would require $1500\times 200=3\times 10^5$ tonnes (300kt) mined per year. This is a larger rate than currently (50kt) so seems unlikely. %If we double that, we could expect 100kt/year, which would lead to 500GW of nuclear power per year.
+Even if we got that much, total resources are uncertain but rough estimates put it at $1-4\times10^7$ tonnes [with the upper range costing more to mine], which  would last a hundred years if we could extract it at a higher rate than today, and even that produces only 10\% of our needs.
 \eee
 
 \lsection{Overview, Take 2}
@@ -1642,7 +1645,7 @@ $\epsilon_S=17.23$ MeV.
 \item The Coulomb energy is just due to protons so 
 \be
 B_C \propto Z^2/R = -\epsilon_C Z^2/A^{1/3}\ee
-with $\epsilon_C=0.7$ MeV. Note that this is much smaller so becomes important only at large values of $A$, and indeed those tend to have more neutrons than protons.
+with $\epsilon_C=0.7$ MeV. Note that this is much smaller so becomes important only at large values of $Z$, so large nuclei tend to have more neutrons than protons.
 \item As estimated earlier, the symmetry term scale as
 \be
 B_{sym}=-\epsilon_{sym} \frac{(N-Z)^2}{A}\ee
