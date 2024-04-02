@@ -68,7 +68,7 @@
 \newcommand{\Spng}[2]{
    \begin{figure}[thbp]
    \begin{center}
-    \sfig{../Figures/#1.png}{0.8\columnwidth}
+    \sfig{../Figures/#1.png}{0.7\columnwidth}
     \caption{{\small #2}}
     \label{fig:#1}
      \end{center}
@@ -1662,13 +1662,13 @@ We need to understand the decay process.
 \eee
 We have a model for the binding energy of a nucleus:
 \bei
+\item States with higher energy can decay into states with lower energy.
+\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
 \item We have a model for binding energy. 
 \be
 B=\epsilon_VA-\epsilon_SA^{2/3}-\epsilon_C Z^2/A^{1/3}-\epsilon_{sym} \frac{(N-Z)^2}{A}.\ee
 Some examples for fixed $Z$ are shown in Fig.~\rf{bez}. Since iron is the most tightly bound nucleus, energy can be extracted from {\it fusion}, reactions in which lighter elements fuse to form heavier elements until the end product is iron; similarly elements heavier than iron can decay into lighter ones in {\it fission}.
 \Spng{bez}{Binding energy per nucleon as a function of $A$ for nuclei with a fixed number of protons. Note that iron has the largest binding energy of the 3 and indeed of any nucleus and therefore it is the most tightly bound nucleus.}
-\item States with higher energy can decay into states with lower energy.
-\item In nuclear and atomic physics, this is quantified with the concept of {\it binding energy}: it is the energy required to break apart the nucleus (or atom) into its constituents.
 \eei
 
 
@@ -1714,20 +1714,23 @@ Ba \rightarrow La \rightarrow Ce\rightarrow Pr \rightarrow Nd\, (stable)
 Note that Fig.~\rf{bachain} has $Ce$ coded red because its lifetime is 285 days, whereas the others are less than an hour, so this could stay around and cause problems in the reactor even after the fuel is removed.
 \Sfig{bachain}{Chain of decays that emerge from one decay product (Ba) of U.}}
 
-\lecture{Nuclear Decays}
-
+%\lecture{Nuclear Decays}
+\lsection{Decays}
 Goals:
 \bei
 \item Demonstrate what controls the lifetime of heavy elements, such $^{235}$U 
 \item Why slow neutrons lead to instantaneous decay
 \eei
 
-\lsection{Lifetimes}
 
 \bee
 \item Surface area vs. volume leads to spherical nuclei: e.g., surface area of cube is $6V^{2/3}$ while the surface area of a sphere is $4\pi R^2 = 4\pi (V3/4\pi)^{2/3}$, so the coefficient is $(36\pi)^{1/3}=4.8$.
-\item This breaks down for large $A$ when Coulomb force favors elongated nuclei. For example, in 2D, at fixed volume $R^2$, 4 charges at the end of a square of length $R$, have a total energy of $e^2/R[1+(1+\sqrt{2}) + 2 +\sqrt{2}]=2[2+\sqrt{2}]e^2/R$, whereas if they were lined up a distance $10R$ from one another in a very elongated rectangle the energy would be much lower ($\sim 3e^2/100R$) but they could have the same volume if the height was small enough $~R/30$. So very heavy nuclei are unstable to Coulomb repulsion. 
-\item Even moderately heavy nuclei ($A\sim 200$) have energy states lower than purely spherical, but small perturbations from spherical are still disfavored. Figure with barrier
+\item This breaks down for large $A$ when Coulomb force favors elongated nuclei. For example, in 2D, at fixed volume $R^2$, 4 charges at the end of a square of length $R$, have a total energy of $e^2/R[1+(1+\sqrt{2}) + 2 +\sqrt{2}]=2[2+\sqrt{2}]e^2/R$, whereas if they were lined up a distance $10R$ from one another in a very elongated rectangle the energy would be much lower ($\sim 3e^2/10R$) but they could have the same volume if the height was small enough $~R/30$. So very heavy nuclei are unstable to Coulomb repulsion. 
+\item Even moderately heavy nuclei ($A\sim 200$) have energy states lower than purely spherical, but small perturbations from spherical are still disfavored. See Figure 18.3 in the book.
+\eee
+
+\lecture{Nuclear Decays}
+\bee
 \item QM decay rates with barrier: Consider the potential in Fig.~\rf{barrier}.
 \Sfig{barrier}{Black line denotes the potential and other curves are cartoons of the wave function.} 
 \bei
@@ -1747,9 +1750,11 @@ where $L$ is the length of the box.
 \item Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
 \be
 \tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
-\item Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
-
-Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
+\item Very rough estimate:   the difference between the potential at its peak and $Q$ is proportional to $V_0-E$, call that difference $\Delta$. Then
+\be
+\kappa = \sqrt{2m\Delta/\hbar^2}.\ee
+The length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
+Estimate the barrier as the Coulomb barrier, so that 
 \be
 V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
 \ee
@@ -1757,7 +1762,9 @@ V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
 The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
 \be
  \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
- So the argument of the exponential can be as large as several hundred,
+ So the argument of the exponential is roughly
+ \be
+ 2\kappa L \simeq Z^2\alpha \sqrt{\frac{8mc^2\Delta}{Q^2}}.\ee
 % For $Q=200$ MeV, this sets $L\simeq 10^{-13}$m.
 % So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-15}$m, 
 % \bea
@@ -1766,46 +1773,35 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
 %  \vs
 % &=& 100
 % \eea
- enough to extend the lifetime to much longer than the age of the universe.
+ enough to extend the lifetime to much longer than the age of the universe. The factor before the square root is of order 100, and the factor inside is greater than 1 (about $(8*200*10^3*6/200^2)**.5\sim 15$, so the lifetime can be $10^{-20}\times e^{100}$, considerably longer than the age of the universe.
 \eee
 
 
-\lecture{Project}
-
-Write a $\sim10$ page essay with figures that demonstrates the following quantitatively:
-\bee
-\item The trends in energy consumption and production 
-\item The relation between energy and $CO_2$ production
-\item The relation between $CO_2$ production and measured $CO_2$ in the atmosphere and the trends in both
-\item The predicted increase in temperature due to the increased $CO_2$ vs. the measured $CO_2$
-\item Future projections varying any of the first 3 items above
-\eee
-
-\lecture{Decays and neutrons}
-
-Recall: 
-QM decay rates with barrier: Consider the potential in Fig.~\rf{barrier}.
-\Sfig{barrier}{Black line denotes the potential and other curves are cartoons of the wave function.} 
-The probability of finding the particle to the right then becomes of order
-\be
-P = e^{-2\kappa L}\ee
-where $L$ is the length of the box and $\kappa \equiv \sqrt{2m\Delta E}/\hbar$ where $\Delta E $ is the height of the potential. .
-
-
-Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
-\be
-\tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
- Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
-
-Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
-\be
-V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
-\ee
-%hen the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  
-The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
-\be
- \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
- So the argument of the exponential can be as large as several hundred,
+%\lecture{Decays and neutrons}
+%
+%Recall: 
+%QM decay rates with barrier: Consider the potential in Fig.~\rf{barrier}.
+%\Sfig{barrier}{Black line denotes the potential and other curves are cartoons of the wave function.} 
+%The probability of finding the particle to the right then becomes of order
+%\be
+%P = e^{-2\kappa L}\ee
+%where $L$ is the length of the box and $\kappa \equiv \sqrt{2m\Delta E}/\hbar$ where $\Delta E $ is the height of the potential. .
+%
+%
+%Generalizing to decays, the prefactor must have dimensions of time (typically it is estimated to be the travel time in the potential (roughly $D/v\sim 10^{-20}$s, but it is heavily suppressed by the exponential, so
+%\be
+%\tau \sim 10^{-20}\,{\rm sec}\,e^{2\kappa L}.\ee
+% Bottom line: the difference between the potential at its peak and $Q$ is proportional to $V_0-E$ (more concretely, $\kappa$ has dimensions of 1/L, so $\kappa = Q/\hbar c$) and the length of the barrier separating the spherical state to the (lower energy) elongated state is $L$. 
+%
+%Very rough estimate: estimate the barrier as the Coulomb barrier, so that 
+%\be
+%V_C(r) \sim\,\frac{Z^2 \hbar c\alpha}{r}
+%\ee
+%%hen the potential peaks at $R\simeq 10^{-14}$m inside large nuclei (the strong force dominates interior to that) so can be as large as $E_B=20$MeV. In actuality, the barrier heights are a bit smaller.  
+%The length is determined by the value of $r$ when the Coulomb force is equal to the energy released $Q$:
+%\be
+% \frac{Z^2 \alpha\hbar c}{L} = Q.\ee
+% So the argument of the exponential can be as large as several hundred,
 % For $Q=200$ MeV, this sets $L\simeq 10^{-13}$m.
 % So a rough estimate for the argument of the exponential is, taking $E_B\sim 5$MeV and $L\sim 10^{-15}$m, 
 % \bea
@@ -1814,10 +1810,11 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
 %  \vs
 % &=& 100
 % \eea
- enough to extend the lifetime to much longer than the age of the universe.
+
+% enough to extend the lifetime to much longer than the age of the universe.
 
 
-\section{Impact of neutrons}
+\lsection{Impact of neutrons}
 
 \bei
 \item The fission barrier energy for $^{235}U$ is 5.9 MeV, and the lifetime is $7\times 10^8$ years; i.e., still enough are around.
@@ -1828,9 +1825,17 @@ The length is determined by the value of $r$ when the Coulomb force is equal to 
 \eei
 
 
-\section{Nuclear Reactors}
+\lecture{Nuclear Reactors}
 
-
+Some definitions:
+\bei
+\item $x\equiv n^{235}/n^U$
+\item $y\equiv n^m/n^U$
+\item $\sigma_f\equiv$ cross section for fission
+\item $\sigma_c\equiv$ cross section for capture with no fission
+\item $\sigma_a\equiv \sigma_f+\sigma_c$
+\item $\sigma_s\equiv$ cross section for scattering
+\eei
 
 Follow the neutrons: {\bf $k$ is the number of thermal neutrons generated by the previous generation of 1 thermal neutron}. If $k>1$, the reactor is supercritical; if it is less than 1, it is sub-critical. The goal is to keep $k$ very close to 1; or $\rho\equiv (k-1)/k$ close to zero.
 
@@ -1858,25 +1863,56 @@ This assumes that the rate for neutron capture to fission is proportional to $n_
 \be
 p \simeq \exp\left\{-\frac{0.61}{\langle\xi\rangle}\,\Big[ \frac{n(^{238}U) \sigma_c}{\Sigma_s}\Big]^{0.514}
 \right\}\ee
-where $\xi$ is the fractional energy lost in each scatter with the moderator; $\sigma_c$ is the cross-section for capture in $^{238}$U which does not lead to fission but rather photon emission; the denominator is the total cross section for scattering. There is a very rough way to understand this: with each interaction, the neutron loses a fraction $\xi$ of its energy, so 
+where $\xi$ is the fractional energy lost in each scatter with the moderator; $\sigma_c$ is the cross-section for capture in $^{238}$U which does not lead to fission but rather photon emission; the denominator is the total cross section for scattering. There is a very rough way to understand this: 
+
+\group{Suppose that with each scatter, the neutron loses a fraction $\xi$ of its energy. How many scatters will it take for a $1$ MeV neutron to cool down to $10^{-2}$ eV?}
 \be
 \frac{dE}{dN} = -\xi E
 \ee
 the solution to which is \be
 \frac{E}{E_0} = e^{-N\xi}\ee, so to lose 8 orders of magnitude of energy requires $N\sim 18/\xi$ scatters. The probability of the neutron remaining uncaptured after one scatter is 
-$1-\Sigma_c/\Sigma_s$ assuming $\Sigma_s$ is much less than $\Sigma_c$. The probability of not being captured after $N$ scatters -- i.e., the probability that the neutron thermalizes -- is therefore
+$1-\Sigma_c/\Sigma_s$ assuming $\Sigma_s$ is much larger than $\Sigma_c$. The probability of not being captured after $N$ scatters -- i.e., the probability that the neutron thermalizes -- is therefore
 \be
 p \sim \left( 1-\Sigma_c/\Sigma_s\right)^N = e^{N\ln(1-\Sigma_c/\Sigma_s)} \simeq e^{-C \Sigma_c/\xi\Sigma_s} .\ee
 Not quite right, but captures some of the qualitative dependence.
-\item $f$ is the fraction of thermal neutrons that are captured by the fuel (some are captured by the moderator), so (neglecting the few $^{238}$U that capture nuclei),
+\item $f$ is the fraction of thermal neutrons that are captured by the fuel (some are captured by the moderator), so 
 \bea
 f  &\simeq &\frac{n_{U}\sigma_a(U)}{n_{U}\sigma_a(U) + n_m \sigma_a({\rm moderator})} \vs
 &=& \frac{684x}{684x+.664y}
 \eea
-where the $.664$ is for water.
+where the $.664$ is for water. Here we dropped the absorption by $^{238}U$ because the cross section for capture at low energies is so low.
 \eei
 
 
+
+
+As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
+\be
+\sigma_0(E) = A\delta(E-E_0)
+\ee
+when the absorber is at rest. But the absorbers themselves are moving such that their velocity $V$ is drawn from a Maxwellian distribution determined by the temperature $T$ . For simplicity, consider just one dimension. Then, the energy of the neutron -- which is $mv^2/2$ in the rest frame -- in the frame of the moving absorber is 
+\be
+E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
+\ee
+assuming $v\gg V$. So, the total cross section has changed from
+$\sigma_0 $
+to
+\be
+\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
+\ee
+The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
+\be
+\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
+\ee
+so the cross section broadens with a width in energy of \be
+\sigma_E = mv \sqrt{k_BT/M}.\ee
+So, the width of the resonance scales as the square root of the temperature.
+
+\bee
+\item
+In the context of nuclear reactors, neutrons get absorbed more by $^{238}U$, which means less by 235, so $p$ goes down.
+\item In the context of climate, more photons from the Earth are absorbed by the rotational-vibrational lines.
+\eee
 
 %Reaction rates are determined by cross-sections. For the reaction $B+T\rightarrow C$, the rate at which $C$ particles are produced is equal to
 %\be
@@ -1908,51 +1944,33 @@ P&\simeq & E_f\, \frac{\Delta M}{m\Delta t}\vs
 \frac{\Delta M}{1 tonne}\,\frac{1 year}{\Delta t}\, 3GW.
 \eea
 
-\lecture{Thermal Broadening and Solar Energy}
 
-As a reactor heats up, the absorption cross section gets larger due to Doppler broadening. Since this is a phenomenon that leaves its imprint especially in climate physics, let's explore it in detail. Suppose the cross section for a reaction is a Dirac delta function in the energy of the neutron:
-\be
-\sigma_0(E) = A\delta(E-E_0)
-\ee
-when the absorber is at rest. But the absorbers themselves are moving with a Maxwellian distribution determined by the temperature. For simplicity, consider just one dimension. Then, the energy of the neutron in the frame of the moving absorber is 
-\be
-E'=\frac12\,m(v-V)^2 \simeq E_0 - mvV
-\ee
-assuming $v\gg V$. So, the total cross section has changed from
-$\sigma_0 $
-to
-\be
-\sigma(E) = \frac{A}{\sqrt{2\pi k_BT/M}} \int_{-\infty}^\infty dV e^{-MV^2/2k_BT} \delta(E-mVv-E_0)
-\ee
-The delta function sets $V=\Delta E/mv$ and also brings down in the denominator a factor of $mv$, so
-\be
-\sigma(E)= \frac{A}{mv\sqrt{2\pi k_BT/M}} \,\exp\left\{ -\frac{M\Delta E^2}{m^2v^22k_BT} \right\}
-\ee
-so the cross section broadens with a width in energy of \be
-\sigma_E = mv \sqrt{k_BT/M}.\ee
-So, the width of the resonance scales as the square root of the temperature.
+\hrulefill
 
+{\bf Project}
+Write a $\sim10$ page essay with figures that demonstrates the following quantitatively:
 \bee
-\item
-In the context of nuclear reactors, neutrons get absorbed more by $^{238}U$, which means less by 235, so $p$ goes down.
-\item In the context of climate, more photons from the Earth are absorbed by the rotational-vibrational lines.
+\item The trends in energy consumption and production 
+\item The relation between energy and $CO_2$ production
+\item The relation between $CO_2$ production and measured $CO_2$ in the atmosphere and the trends in both
+\item The predicted increase in temperature due to the increased $CO_2$ vs. the measured $CO_2$
+\item Future projections varying any of the first 3 items above
 \eee
+
 
 %\lsection{Fusion}
 
 
-\lsection{Solar Insolation}
+\lecture{Solar Power}
 
 \bei
 \item $T_\odot=5800$K
 \item This leads to a total radiation using Planck's Law of 63 million W/m$^2$ or a luminosity when integrating over the area of the Sun of $L_\odot=3.89\times 10^{26}$W.
-\Spng{solar1}{Emission from blackbody radiation as a function of wavelength.}
-\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1366 W/m$^2$, spread out by frequency as shown in Fig.~\rf{solar2}.
-\Spng{solar2}{Power per frequency per area incoming on the Earth from the Sun and outgoing.}
-\item Correct for the fact that the total is $\int d\nu I_\nu$ to get Fig.~\rf{solar3}.
-\Spng{solar3}{Power per log frequency per area incoming on the Earth from the Sun and outgoing.}
-\item Switch to wavelength to get Fig.~\rf{solar4}
-\Spng{solar4}{Power per log wavelength per area incoming on the Earth from the Sun and outgoing.}
+\Spng{balance0}{Emission from blackbody radiation as a function of wavelength.}
+\item The Earth (or its atmosphere) receives an insolance of this divided by $4\pi R_{\rm orbit}^2$ of this or 1366 W/m$^2$, spread out by wavelength as shown in Fig.~\rf{balance1}.
+\Spng{balance1}{Power per wavelength per area incoming on the Earth from the Sun and outgoing.}
+\item Account for the fact that the total is $\int d\lambda I_\lambda$ to get Fig.~\rf{balance2}.
+\Spng{balance2}{Power per log wavelength per area incoming on the Earth from the Sun and outgoing.}
 \eei
 
 
@@ -1980,7 +1998,8 @@ where $I_0\simeq 1366 W/m^2$ with variation on the order of a few percent over t
 
 Consider placing photovoltaic cells in the deserts. Including the effect of leaving space for optimal configuration, the efficiency of these is of order 6\%. Therefore, if the average daily insolation is 300W/m$^2$ in the desert, then we would extract 18W/m$^2$. The world uses 3TW of electricity every day and that could go up to 4 if electric vehicles become more common. So, to get to 4TW, requires $4.e12/18=2\times 10^{11}m^2$ of desert. The third largest desert -- after the ones in the poles -- is the Sahara, with an area of $9\times 10^{12}m^2$. After that, things drop sharply, with the Austrailian and Arabian deserts having $5\times 10^{12}m^2$ between them. Taking these 3 means that less than 1\% of the land area would need to be covered by solar cells.
 
-\lecture{Absorption and Ocean}
+%\lecture{Absorption and Ocean}
+\Spng{balance3}{Power per log wavelength per area incoming on the Earth from the Sun and outgoing.}
 
 \lsection{Absorption}
 The change in the intensity of light as it passes through absorbers is
@@ -1991,20 +2010,25 @@ Therefore, after passing through the atmosphere, the amount of sunlight incident
 \be
 I = I_0e^{-\int_0^\infty dz n \sigma}
 \ee
+
+\Spng{ozoneabs}{Spectrum of solar radiation after it passes through the atmosphere. Note that all wavelengths less than 300nm are absorbed by ozone.}
+Account for the fact that roughly radiation is released from high up in the atmosphere and that 70\% of solar radiation gets through to Earth to get Fig.~\rf{balance3}.
+
+\newpage
+
+\lecture{Absorption and Ocean}
+
 \example{Photons can be absorbed via
 \be
 \gamma+O_3\rightarrow O_2+O.\ee
-The density of ozone ($O_3$) is $2-5\times10^{15}m^{-3}$ in a band with a width of about $\Delta z \simeq 20km$ in the stratosphere.
+The density of ozone ($O_3$) is $2-5\times10^{18}m^{-3}$ in a band with a width of about $\Delta z \simeq 20km$ in the stratosphere.
 \Spng{ozone-sigma}{Cross section for photon absorption from ozone.}
 Looking at Fig.~\rf{ozone-sigma}, we see that the cross section for photons with wavelengths smaller than 300 nm is about $10^{-18}$ cm$^2$. Therefore, the optical depth is
 \be
 \tau = \Delta z  3\times 10^{-3} m^{-1} =  60
 \ee
 so all UV radiation is absorbed.}
-\Spng{ozoneabs}{Spectrum of solar radiation after it passes through the atmosphere. Note that all wavelengths less than 300nm are absorbed by ozone.}
 
-
-\section{Ocean}
 
 \lsection{Energy Balance}
 \bei
@@ -2038,13 +2062,13 @@ Where does the energy absorbed by the ocean go?
 \item 15\% of the heat is transported via currents from the tropics to the poles.
 \eei
 
-\lecture{Where does Ocean-absorbed heat go?}
-\bei
-\item {\it Latent Heat} 84 W/m$^2$
-\item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
-\item Conduction, or {\it Sensible Heat}, but it is very small.
-\item 15\% of the heat is transported via currents from the tropics to the poles.
-\eei
+%\lecture{Where does Ocean-absorbed heat go?}
+%\bei
+%\item {\it Latent Heat} 84 W/m$^2$
+%\item Radiative Heat: some of the heat also is emitted in the form of infrared radiation. We can check how much is radiated by the ocean at steady $T=298$K but accounting for the incoming thermal radiation from the atmosphere (say at 293K): $\sigma (T_0^4-T_a^4)= 29W/m^2$.
+%\item Conduction, or {\it Sensible Heat}, but it is very small.
+%\item 15\% of the heat is transported via currents from the tropics to the poles.
+%\eei
 
 
 \lsection{Potential resource of energy due to temperature difference between mixed layer and abyss}
@@ -2062,12 +2086,12 @@ Where does the energy absorbed by the ocean go?
 \eta = \frac{T_+-T_-}{T_+} = \frac{20}{298} = 7\%\ee
 and in fact functioning Ocean Thermal Energy Conversion (OTEC) systems have efficiencies in the 2-3\% range.
 %with $A=7\times 10^6 km^2$.
-\item \href{https://www.science.org/doi/10.1126/science.ade7521}{This recent article} outlines some of the unintended consequences.
+%\item \href{https://www.science.org/doi/10.1126/science.ade7521}{This recent article} outlines some of the unintended consequences.
+\item \href{https://www.thecooldown.com/green-tech/dominique-project-sustainable-ocean-thermal-energy-otec/}{This recent article} reports on an upcoming OPEC project off the west coast of Africa.
 \eei
 
 
-
-\lsection{Coriolis Force}
+\lecture{Impact of Coriolis Force on Transport}
 
 \bei
 \item {\bf Centrifugal Force} Person on merry-go-round: from the perspective of someone standing on Earth, they are rotating with circular velocity $v$ at a radius $r$, so have angular frequency $\omega=v/r$. The acceleration is pointing towards the center, with a magnitude $v^2/r=r\omega^2$, so $\vec a = - \omega^2\vec r$. This (multiplied by the mass) is the force that needs to be exerted by the rider to keep her from falling forward. From the rider's perspective, she is stationary and exerting this force $\vec F = -m\omega^2 \vec r$ to counter the fictional centrifugal force
@@ -2077,7 +2101,6 @@ and in fact functioning Ocean Thermal Energy Conversion (OTEC) systems have effi
 \Sfig{coriolis}{Black line shows path observed from outside observer as person walks from rim to center of rotating disk. The red shows the path taken on the disk by the walker.}
 \eei
 
-\lecture{Coriolis}
 \bei
 \item Use $\Delta \vec L = \vec R\times\vec F \Delta t$ to infer the magnitude of the force due to the rotation of the Earth. Assume a parcel of air, say, moves from latitude $\lambda_i$ to $\lambda_f$. Since $\vec L = m\vec R\times  \vec v$ where $\vec R$ is the perpendicular distance from the axis of rotation, so $R=R_\Earth\cos\lambda$, where $\lambda$ is the latitude ($0$ at the equator). %For circular rotation, $\vec v= \vec\omega\times\vec r$, so the magnitude of the angular momentum is
 %\be
@@ -2129,8 +2152,9 @@ Differentiate the second of these and insert the first to get
 where $\Omega\equiv 2\omega\sin\lambda$. The solution to this is sinusoidal with a drift:
 \bea
 v_y &=& A\sin\Omega t\vs
-v_x&=&\frac{F_w}{m\Omega}  + A\cos\Omega t\eea
-I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
+v_x&=&\frac{F_w}{m\Omega}  - A\cos\Omega t.\eea
+Implementing $\dot v_y(t=0)=F_w/m$ leads to $A=F_w/m\Omega$.
+I.e., apart from the drift, the current moves in a circular orbit with speed $\sqrt{v_x^2+v_y^2}=A=F_w/m\Omega$ and frequency $\Omega$; the drift speed is $F_w/m\Omega$ and it is in the direction perpendicular to the wind. The uniform drift speed means that, on average, the ocean patch feels no force as the wind and Coriolis force cancel. In the Northern hemisphere, a wind blowing to the north leads to currents flowing East.
 \item {\it Ekman Mass Transport:} 
 \bee
 \item Including the impact of viscosity and depth changes these idealized examples.
