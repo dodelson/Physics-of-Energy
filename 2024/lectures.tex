@@ -2202,14 +2202,14 @@ Take the cross product of both sides with $\hat n$. The left hand side then beco
 \be
 \vec v = \frac{\hat n\times \nabla p}{2\rho\omega_\Earth\sin\lambda}.\eql{geo}\ee
 \item 
-The direction of $\vec v$ for different orientations of the pressure gradient is depicted in Fig.~\rf{geo1}. In the Northern hemisphere, perpendicular to the left of the temperature gradient, or along the lines of constant pressure, {\it isobars}.
+The direction of $\vec v$ for different orientations of the pressure gradient is depicted in Fig.~\rf{geo1}. In the Northern hemisphere, perpendicular to the left of the pressure gradient, or along the lines of constant pressure, {\it isobars}.
 \Sfig{geo1}{In the horizontal plane, the direction of the wind velocity given the pressure gradient, using the fact that the Coriolis force balances the pressure force.}
 \eei
 
 \lsection{Pressure}
 \bei
 \item
-Fig.~\rf{pressure-sea-level} shows that there are high pressure centers at $\sim\pm30^\circ$ latitude, where the air from the Hadley cells sinks. 
+Fig.~\rf{pressure-sea-level} shows that there are high pressure centers at $\sim\pm30^\circ$ latitude. %, where the air from the Hadley cells sinks. 
 \item This makes sense because we learned that the hydrostatic equation is
 \be
 \frac{dP}{dz} = -\rho g
@@ -2238,41 +2238,17 @@ Integrating from the ground gives
 In the isothermal limit,
 \be
 P^{iso} = P_0 e^{-z/H}\ee
-with $H\equiv RT_0/g=\frac{k_BT}{m_{\rm air}g}.$ 
-\item \be
-\Delta z = H \ln\left(\frac{P_2}{P_1}\right).\ee
-So surface of constant pressure have larger thickness in hot regions than in cool regions.
+with $H\equiv RT_0/g=\frac{k_BT}{m_{\rm air}g}.$ Note that $H=8.2$km when $T=283$.
+%\item \be
+%\Delta z = H \ln\left(\frac{P_2}{P_1}\right).\ee
+%So surface of constant pressure have larger thickness in hot regions than in cool regions.
 \item Units of pressure: 1Pascal (Pa) $=0.01$millibar (mb) = kg/m/s$^2$. Equivalently 1 hectoPa  (hPa) = 1 mb.
 \item Note that the differences at sea level are of order 10 mbar per about 3000km.
 %\item This level of variation is also seen at higher altitudes, where the pressure has dropped to 500 mbars. E.g., see Fig.~\rf{500_heights}.
 \Spng{pressure-sea-level}{Lines of constant pressure. Note that the highest pressure is where the air flows down in the Hadley cells, at $\pm 30^\circ$.}
 \eei
 
-The ensuing wind patterns are what you would expect: 
-Put this together for the pressure/wind:
-\bei
-\item So, over the equator, the pressure drops the fastest, and the surface of constant pressure is much higher up in the troposphere over the equator than it is over the mid-tropics.
-\item This leads air over the ocean at the equator to rise, then get pushed towards the poles. Eventually, when it becomes much colder than surrounding air, it will drop.
-\item above the high pressure region at 30$^\circ$, the pressure gradient points South, so the winds blow to the East. Below are the trade winds. This is depicted in Fig.~\rf{windspeed}.
-\Spng{windspeed}{Wind velocity map.}
-\eei
 
-
-{\bf Circulation: Summary}
-\bei
-\item Circulation of air leads to winds which in turn drive ocean currents
-\item Air circulation globally is in hadley and polar cells. 
-\Spng{AtmosphCirc2}{Cartoon of cells.}
-\item Hadley cells have warm air rising from the ocean near the equator towards the tropopause due to convection, moving northward (perhaps adiabatically following lines of constant potential?), and then dropping back to surface at latitudes of order 30$^\circ$ because the ambient air is now colder and drier. 
-The air is then driven along the surface of the ocean back to the equator.
-\item polar cells: again rising at 60$^\circ$ towards the tropopause; flowing towards the poles and then dropping down to surface and returning to its origin.
-\item The net impact for both sets of cells is to transport heat from the equator towards the poles.
-\item Air at the surface returning Southward experiences the Coriolis force pushing it west.
-\item For the Hadley cell, when the air comes back towards the equator, it drives winds to the west; while at mid-latitudes, the wind blows to the east, so the air flow is clockwise in the North.
-\item The land masses induce vorticity so wind blows north on the western side and south on the eastern side (p. 524). 
-\item In a vacuum, this pattern of wind flow would exert a Southern force on the ocean because the Coriolis force at $30^\circ$ points Southward with an amplitude proportional to $\sin 30^\circ$ while at the equator it vanishes. 
-\item In the presence of the land masses, this produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
-\eei
 
 
 \lsection{Wind Speeds}
@@ -2284,13 +2260,39 @@ $m^2/s/Pa$. Let's normalize the gradient to its value over 1 km; i.e, $\nabla P 
 \be
 v\simeq 14 \frac{\Delta P_1}{0.01\, mb}\, m/s 
 .\ee
-But we know from above that typical changes in sea level pressure are of order .003 mbar/km, so indeed we expect wind speeds of order 5 m/s, at least over the ocean.
+But we know from above that typical changes in sea level pressure are of order .003 mbar/km, so indeed we expect wind speeds of order 5 m/s, at least over the ocean. Recall: 1m/s=2.2mph, so about 12 mph.
 Wind speeds over land at 80m height are shown in Fig.~\rf{wind80}. They are much lower than over the oceans because of friction.
 Fig. 28.12 in the book shows that wind speeds decline with height as friction becomes more important.
 \Spng{wind80}{Wind speeds at 80 m.} 
 
+Since the wind velocity depends on the horizontal gradient of $P$, it is useful to look at pressure differences over land surfaces with different temperatures. Fig.~\rf{dpdt} shows this difference for a 10$^\circ$ ground temperature difference for adiabatic and isothermal profiles; they are not much different. If we take the typical horizontal scale over the which the temperature varies by 10$^\circ$C as 1000km, then $\nabla P\sim 10hPa/10^3km = 10^{-3}$Pa/m. Therefore, \ec{vgradp} suggests that typical wind speeds will be 15 m/s, which is roughly correct.
+\Spng{dpdt}{Difference in pressure as a function of height when the ground temperature differs by 10$^\circ$C. Both the adiabatic and isotwhen $T=283$.hermal limits are shown.}
 
-\lsection{Physics of the Pressure field}
+
+\lsection{Circulation}
+The ensuing wind patterns are what you would expect: 
+%\item So, over the equator, the pressure drops the fastest, and the surface of constant pressure is much higher up in the troposphere over the equator than it is over the mid-tropics.
+%\item Air over the ocean at the equator to rise, then get pushed towards the poles. Eventually, when it becomes much colder than surrounding air, it will drop.
+%\item above the high pressure region at 30$^\circ$, the pressure gradient points South, so the winds blow to the East. Below are the trade winds. This is depicted in Fig.~\rf{windspeed}.
+\Spng{windspeed}{Wind velocity map.}
+
+
+\bei
+\item Circulation of air leads to winds which in turn drive ocean currents
+\item Air circulation globally is in hadley and polar cells. 
+\Spng{AtmosphCirc2}{Cartoon of cells.}
+\item Hadley cells have warm air rising from the ocean near the equator towards the tropopause due to convection, moving northward (following lines of constant pressure), and then dropping back to surface at latitudes of order 30$^\circ$ because the ambient air is now colder and drier. 
+The air is then driven along the surface of the ocean back to the equator.
+\item polar cells: again rising at 60$^\circ$ towards the tropopause; flowing towards the poles and then dropping down to surface and returning to its origin.
+\item The net impact for both sets of cells is to transport heat from the equator towards the poles.
+\item Air at the surface returning Southward experiences the Coriolis force pushing it west.
+\item For the Hadley cell, when the air comes back towards the equator, it drives winds to the west; while at mid-latitudes, the wind blows to the east, so the air flow is clockwise in the North.
+\item The land masses induce vorticity so wind blows north on the western side and south on the eastern side (p. 524). 
+\item In a vacuum, this pattern of wind flow would exert a Southern force on the ocean because the Coriolis force at $30^\circ$ points Southward with an amplitude proportional to $\sin 30^\circ$ while at the equator it vanishes. 
+\item In the presence of the land masses, this produces ocean currents that flow southward towards the equator broadly and then return in narrow channels along the west ocean bordering land: the Gulf Stream in the Atlantic off the east coast of North America and the Kurishio in the Pacific along the Eastern coast of Asia.
+\eei
+
+\lsection{Adiabatic vs. Isothermal Pressure}
 The winds depend on the pressure field. Let's work out the physics of pressure variation.
 Hydrostatic equilibrium requires
 \be
@@ -2346,8 +2348,6 @@ Note from Fig.~\rf{pt} that for either isothermal or adiabatic,  $P$ drops much 
 %For dry air, $\gamma=1.4$, so the exponent is 0.286. This potential temperature is what is plotted in atmospheric sounding plots. Fig.~\rf{sounding} shows both lines of constant temperature and potential temperature. The thick curves, which at the surface are around 20K, are the actual temperatures. If the temperature at a given height is higher than the potential temperature
 %}\Sfig{sounding}{Plot showing the variation of temperature and pressure with altitude. Red lines denote constant temperature; blue thin lines are the potential temperature.}
 
-Since the wind velocity depends on the horizontal gradient of $P$, it is useful to look at pressure differences over land surfaces with different temperatures. Fig.~\rf{dpdt} shows this difference for a 10$^\circ$ ground temperature difference for adiabatic and isothermal profiles; they are not much different. If we take the typical horizontal scale over the which the temperature varies by 10$^\circ$C as 1000km, then $\nabla P\sim 10hPa/10^3km = 10^{-3}$Pa/m. Therefore, \ec{vgradp} suggests that typical wind speeds will be 15 m/s, which is roughly correct.
-\Spng{dpdt}{Difference in pressure as a function of height when the ground temperature differs by 10$^\circ$C. Both the adiabatic and isothermal limits are shown.}
 
 
 %General circulation, as described in Wallace and Hobbs 1.3.5: wind blows clockwise in the Northern hemisphere around high pressure regions. There is a high pressure max around $30^\circ$N; above this, the wind blows to the east (westerly wind) and below, winds are easterly. Winds are strongest over the ocean where there is less surface friction. So, this explains the comments above that the winds off the coast of San Francisco come from the North (Fig.~\rf{wh115}): they move clockwise around the high pressure region in the center of the Pacific and therefore on the Eastern side of the ocean, the winds are moving towards the equator at the latitude of San Francisco ($38^\circ$).
