@@ -2447,8 +2447,8 @@ Useful sites:
 \item In any one area the incoming flux is 1/4 of this, since Earth absorbs over $\pi R^2$ and emits over $4\pi R^2$
 \item Flux of interest then is $340 W/m^2$
 \item Simple balance: $\sigma T_\Earth^4 = 340 W/m^2$, so $T_\Earth=278K=5$C, not bad
-\item Divided up into incoming (short wabelength) and outgoing (long wavelength) as in Fig.~\rf{balance1}. The log-plot is a convenient way to display this because you can integrate by eye: just multiply the height by the width. Roughly the height is 100 W/m$^2$ and the width is $d\ln\lambda \simeq 2$. More precisely it is clear that the outgoing infrared emission is equal to the incoming short wavelength emission.
-\Spng{balance1}{Incoming and outgoing radiation. Note that both curves integrate to 340W/m$^2$ and that there is very little overlap. Also, note that the 15 micron line of $CO_2$ falls right at the peak of the infrared emission.}
+\item Divided up into incoming (short wavelength) and outgoing (long wavelength) as in Fig.~\rf{balance1a}. The log-plot is a convenient way to display this because you can integrate by eye: just multiply the height by the width. Roughly the height is 100 W/m$^2$ and the width is $d\ln\lambda \simeq 2$. More precisely it is clear that the outgoing infrared emission is equal to the incoming short wavelength emission.
+\Spng{balance1a}{Incoming and outgoing radiation. Note that both curves integrate to 340W/m$^2$ and that there is very little overlap. Also, note that the 15 micron line of $CO_2$ falls right at the peak of the infrared emission.}
 \item Because there is little overlap, many figures and write-ups will often treat them independently, but of course all a photon or an absorber cares about is the wavelength of the photon, not where it came from.
 \eei 
 
@@ -2459,7 +2459,8 @@ Useful sites:
 \lsection{Energy Balance II: Corrections}
 
 \bei
-\item {\bf Albedo:} Some of the radiation from the sun is reflected back into space: a total of about 100W/m$^2$. The breakdown is 24:76 for surface reflection:cloud/atmosphere reflection (that is from Fig.34.7; the text says surface albedo is closer to 0.1, but the total is not in doubt). Technically, this is called the {\it albedo}: $a_\Earth=100/340=0.3$. Taken at face value, this reduces the total absorbed by $0.7$ and therefore the temperature is smaller by $0.7^{1/4}$, leading to a revised estimate: $T_\Earth=254K=-18$C, much worse.
+\item {\bf Albedo:} Some of the radiation from the sun is reflected back into space: a total of about 100W/m$^2$. The breakdown is 24:76 for surface reflection:cloud/atmosphere reflection (that is from Fig.34.7; the text says surface albedo is closer to 0.1, but the total is not in doubt). Technically, this is called the {\it albedo}: $a_\Earth=100/340=0.3$. Taken at face value, this reduces the total absorbed by $0.7$ and therefore the temperature is smaller by $0.7^{1/4}$, leading to a revised estimate: $T_\Earth=254K=-18$C, as shown in Fig.~\rf{balance1b}, much worse.
+\Spng{balance1b}{Accounting for the albedo of the Earh: $a_\Earth=0.3$.}
 \example{Venus is blanketed by reflecting clouds so its albedo is much higher, $a\sim 0.75$. This should reduce the temperature by a factor of $0.25^{.25}=0.7$, leading to a predicted temperature of 230K, a much worse prediction than before!}
 \item
 {\bf Atmosphere, Radiative Heating:} Account for the fact that some of the radiation emitted by Earth is reflected by the atmosphere back down to Earth, so radiative balance at the surface of the Earth leads to:
@@ -2479,7 +2480,9 @@ T_\Earth = \left[ \frac{(1-a_\Earth) I_\Sun}{4\sigma}\times 2 \right]^{1/4} = 30
 \ee
 a factor of $2^{1/4}$ larger than before. 
 This is the greenhouse effect: radiation from the Earth is trapped and serves to heat it. This assumes that the atmosphere is a single layer and absorbs all of the long wavelength radiation emitted from Earth.
-Note that the temperature of the atmosphere is lower than the surface temperature by a factor of $2^{1/4}$, so it is equal to our previous estimate of the surface temperature, 255K. If we take the lapse rate to be the observed lapse rate in the atmosphere $6.5K/km$, this temperature difference of 48K would correspond to a height of 7 km.
+Note that the temperature of the atmosphere is lower than the surface temperature by a factor of $2^{1/4}$, so it is equal to 255K, as shown in Fig.~\rf{albedoatmos}.
+\Spng{albedoatmos}{Emission/absorption accounting for albedo plus single layer of atmosphere.}
+ If we take the lapse rate to be the observed lapse rate in the atmosphere $6.5K/km$, this temperature difference of 48K would correspond to a height of 7 km.
 \example{Venus: Applying the same argument to Venus leads to $T_{\rm Venus} = 276$K, still much lower than the actual temperature.}
 %T_\Earth^4 = 
 
@@ -2564,23 +2567,23 @@ The balance equation above neglects heating via evaporation and then convection.
  or $T_\Earth=286$K, a bit larger than our naive estimate.
  By the way, this fixes the height of the atmosphere to be $(287-255)/6.5=4.9$ km, which turns out also to be correct. Fig.~\rf{solar6} show this approximation.
  \Spng{solar6}{Solar influx accounting for the albedo is exactly matched by the ``top of the atmosphere'' approximation in which the temperature is 255K. The temperature at the surface of the Earth is much higher. The yellow curve is roughly correct, as is the total amount that gets out -- the integral of the green -- but there is much wavelength dependence scrubbed away here.}
- \item Two-Layer Atmosphere
-
-Now there are three equations. Radiative balance for the two are:
-\be
-2T_{top}^4 = T_{atm}^4.\ee
-\be
-T_\Earth^4 + T_{top}^4 = 2T_{atm}^4
-\ee
-and
-\be
-\left[ (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 \right]
-= %4\pi R_\Earth^2 
-\sigma T_\Earth^4
-\ee
-Subtracting twice the second equation from the first leads to $3T_{atm}^4=2T_\Earth^4$, and then the first gives $T_{top}^4=T_\Earth^4/3$. 
-The final equation then sets the temperature at the top of the atmosphere to be 255K again, as it must be. So $T_\Earth=(3)^{1/4} 255K=  296K$.
-Clearly, the more layers in the atmosphere -- the thicker the atmosphere -- the warmer the Earth will be. You could add more and more layers and get a surface temperature that scales as $(n+1)^{1/4}$. Indeed, the thickness of Venus's atmosphere is the reason it is so hot. We need to think harder about how radiation gets out.
+% \item Two-Layer Atmosphere
+%
+%Now there are three equations. Radiative balance for the two are:
+%\be
+%2T_{top}^4 = T_{atm}^4.\ee
+%\be
+%T_\Earth^4 + T_{top}^4 = 2T_{atm}^4
+%\ee
+%and
+%\be
+%\left[ (1-a_\Earth) I_\Sun/4 + \sigma T_{atm}^4 \right]
+%= %4\pi R_\Earth^2 
+%\sigma T_\Earth^4
+%\ee
+%Subtracting twice the second equation from the first leads to $3T_{atm}^4=2T_\Earth^4$, and then the first gives $T_{top}^4=T_\Earth^4/3$. 
+%The final equation then sets the temperature at the top of the atmosphere to be 255K again, as it must be. So $T_\Earth=(3)^{1/4} 255K=  296K$.
+%Clearly, the more layers in the atmosphere -- the thicker the atmosphere -- the warmer the Earth will be. You could add more and more layers and get a surface temperature that scales as $(n+1)^{1/4}$. Indeed, the thickness of Venus's atmosphere is the reason it is so hot. We need to think harder about how radiation gets out.
 \eei
  
 \lecture{Radiative Transfer}
