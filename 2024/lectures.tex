@@ -2600,16 +2600,12 @@ the optical depth is defined as
  \be
  \tau_\nu(z_1,z_2) = \left\vert  \int_{z_1}^{z_2} dz n\sigma_\nu. \right\vert\ee
  We'll drop the absolute value sign and simply remember that the initial intensity is always suppressed by $e^{-\tau}$. We will also drop the $\nu$ subscript but it is very important to remember that the optical depth, which depends on the cross section, is very sensitive to the frequency.
- \item We did the example of ozone absorption in the stratosphere and found that all solar photons with wavelength below about 300 nm are absorbed by dissociating ozone.
 % \item As an example, consider $O_2$ in the upper atmosphere. A photon can dissociate $O_2$ into two oxygen atoms if its energy is above the binding energy $E=5.2$eV. This leads to all photons with wavelengths shorter than 240nm being absorbed. The cross-section is very sensitive to wavelength but a lower bound is $10^{-27}$m$^2$. Multiply this by the density $n_{O_2} = 0.21\times 1.2 \times e^{-z/H}/(32\times 1.67\times 10^{-27})$/m$^3=4\times 10^{24} m^{-3}$. So cross sections above $10^{-27}m^2$ lead to an optical depth 
 % \be
 % \tau(z,\infty) = 4\times 10^{-3} m^{-1} \int_z^\infty dz' e^{-z'/H} = 32 e^{-z/H}
 % \ee
 % So the optical depth equals 1 when $z=28$km and by the time $z=15$km (the height mentioned in the book, well above the troposphere), the optical depth has risen to 5, so the flux has dropped by a factor of $e^{-5}=0.004$. 
- This, and other forms of absorption lead to Fig.~\rf{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}.
- \Spng{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}{Solar radiation as a function of wavelength.}
- This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
-\item There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
+ \item There is also a gain term, since the molecules in a layer of width $dz$ emit thermal radiation. We can guess the form of this by writing the equation as
  \be
  \frac{dI_\nu}{dz} = -I_\nu n \sigma + {\rm Gain\ Term}.
  \ee
@@ -2620,11 +2616,11 @@ the optical depth is defined as
 
 
  
- Solve the radiative transfer, the Schwarzschild, equation:
+\lsection{Solution} Solve the radiative transfer, the Schwarzschild, equation:
 $$ dI_\nu = (-I_\nu + B_\nu(T)) n\sigma_\nu dz $$
 This has the analytical solution:
 $$ I_\nu(z) = I_\nu(z_0) e^{-\tau} + \int_{0}^\tau d\tau'\,e^{-(\tau-\tau')}\, B_\nu\left(T(z[\tau'])\right)$$
-where $$\tau(z)\equiv \int_{z_0}^z  n\sigma_\nu(z') dz'.$$
+where $$\tau(z)\equiv \int_{z_0}^z  n\sigma_\nu(z') dz'.\eql{rtan}$$
 \bei
 \item Limit $\tau$ is large: the initial flux goes away and the exponential in the integrand keeps $\tau'$ very close to $\tau$, so $B_\nu$ can be removed from the integrand. The integral is essentially one, so in this limit
 \be
@@ -2637,31 +2633,38 @@ exactly as we had it before: the slab just emits at the temperature it is at.
 .\ee
 \eei
 
+\lsection{Atmosphere}
 Apply this to the atmosphere:
 \bei
-\item Until the top of the troposphere, the temperature decrease linearly with the lapse rate $\Gamma\simeq 6.5K/$km. After that, in the stratosphere, the temperature rises because of the heat released when ozone is dissociated by very short wavelength sunlight. This leads to the layers in Fig.~\rf{tempvsz}.
+ \item We did the example of ozone absorption in the stratosphere and found that all solar photons with wavelength below about 300 nm are absorbed by dissociating ozone. This, and other forms of absorption lead to Fig.~\rf{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}.
+ \Spng{Solar-irradiance-spectrum-above-the-atmosphere-and-at-the-surface-prepared-by-Robert-A}{Solar radiation as a function of wavelength.}
+ This dissociation leads to heat (since energy is released) and therefore above the troposphere at $\sim10$km, the temperature starts rising.
+\item Until the top of the troposphere, the temperature decreases linearly with the lapse rate $\Gamma\simeq 6.5K/$km. After that, in the stratosphere, the temperature rises because of the heat released when ozone and other molecules are dissociated by very short wavelength sunlight. This leads to the layers in Fig.~\rf{tempvsz}.
 \Spng{tempvsz}{Temperature as a function of height in the atmosphere.}
 \item The density falls off exponentially (not exactly, but the 3rd tutorial will show that it's close) so
-\bea  \tau (z) &=&
+\bea  \tau (z_0,z) &=&
 n_0 \sigma \int_0^z dz' e^{-z'/H} \vs
 &\equiv& \kappa H\left(1-e^{-z/H} \right)\eea
-where $H=8.5$km. 
+where $H=8.5$km and $z_0$ is the surface.
 \item Fig.~\rf{tau} shows how the optical depth varies with height for different values of $\kappa$.
-\Spng{tau}{Optical depth vs. height for different $\kappa$.}
-\item A slightly more relevant quantity for large optical depth from optical depth from the top: i.e., what is the optical depth a photon at height  $z$ experiences as it leaves the atmopshere. Very high up, this will be small, but as  $z$
+\Spng{tau}{Optical depth from the surface to height $z$ vs. height for different $\kappa$.}
+\item In the optically thin limit, this is all you need: a faction $1-\tau$ of OLR from the Earth escapes to the atmosphere.
+\item In the optically thick limit, it is more complicated: none of the OLR from Earth escapes. The first term in \ec{rtan} goes away. The second term survives: this tells us that radiation is emitted from the atmosphere higher up. How much radiation is emitted is given by the full integral: radiation from lower $z$ has less chance of escaping. Radiation from very high up is more likely to escape. 
+\item An approximation is that all of the radiation is emitted from the height at which $\tau(z,\infty)=1$. 
+So, we want to ask: what is the optical depth a photon at height  $z$ experiences as it leaves the atmosphere: $\tau(z,\infty)$? Very high up, this will be small, but as  $z$
   decreases, eventually it will reach 1. This is roughly the place from which photons of this wavelength are emitted. This is shown in Fig.~\rf{tautop}.
   \Spng{tautop}{Optical depth from $z$ to infinity.}
   \item The height at which this rises to one defines the height of release:
 \be
 1\equiv   \kappa He^{-z_{release}/H} =1\rightarrow z_{release} = H\ln(\kappa H) .\ee
-\item We know what the density of air is at the surface, so dividing by the mass of a typical air molecule we get
-\be
-n_0 = \frac{1.25}{1.67\times 10^{-27} \times 29} = 2.6\times 10^{25} m^{-3}.\ee
-As an example, the cross section of $CO_2$ at 15 microns is $3.7\times 10^{-23}m^2$, and the density of $CO_2$ is $4.2\times 10^{-4}n_0$, $\kappa=0.4/m=400/km$.
-\item To determine the emission above the stratosphere at 50 km, take
-\be
-\tau(\infty) - \tau(50 km) = \kappa H e^{-50km/H} = 0.0028 \kappa H.\ee
-So at the peak of the line, no photons get out until they get above the stratosphere, but almost all other wavelengths escape well before the top of the stratosphere, and in most cases the tropopause.
+%\item We know what the density of air is at the surface, so dividing by the mass of a typical air molecule we get
+%\be
+%n_0 = \frac{1.25}{1.67\times 10^{-27} \times 29} = 2.6\times 10^{25} m^{-3}.\ee
+%As an example, the cross section of $CO_2$ at 15 microns is $3.7\times 10^{-23}m^2$, and the density of $CO_2$ is $4.2\times 10^{-4}n_0$, $\kappa=0.4/m=400/km$.
+%\item To determine the emission above the stratosphere at 50 km, take
+%\be
+%\tau(\infty) - \tau(50 km) = \kappa H e^{-50km/H} = 0.0028 \kappa H.\ee
+%So at the peak of the line, no photons get out until they get above the stratosphere, but almost all other wavelengths escape well before the top of the stratosphere, and in most cases the tropopause.
 \item In the region of the 15 micron line, Fig.~\rf{co2flux} shows the solution: for large $\kappa$, basically, emissions are at the low temperature at the top of the tropopause.
 \Spng{co2flux}{Impact of absorption and emission for different opacities in the region of the 15 micron line.}
 \item This leads to the OLR above the tropopause as shown in Fig.~\rf{IR_emission_in_current_greenhouse_levels}.
