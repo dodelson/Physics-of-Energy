@@ -2619,8 +2619,8 @@ the optical depth is defined as
 \lsection{Solution} Solve the radiative transfer, the Schwarzschild, equation:
 $$ dI_\nu = (-I_\nu + B_\nu(T)) n\sigma_\nu dz $$
 This has the analytical solution:
-$$ I_\nu(z) = I_\nu(z_0) e^{-\tau} + \int_{0}^\tau d\tau'\,e^{-(\tau-\tau')}\, B_\nu\left(T(z[\tau'])\right)$$
-where $$\tau(z)\equiv \int_{z_0}^z  n\sigma_\nu(z') dz'.\eql{rtan}$$
+\be I_\nu(z) = I_\nu(z_0) e^{-\tau} + \int_{0}^\tau d\tau'\,e^{-(\tau-\tau')}\, B_\nu\left(T(z[\tau'])\right)\eql{rtan}\ee
+where $$\tau(z)\equiv \int_{z_0}^z  n\sigma_\nu(z') dz'.$$
 \bei
 \item Limit $\tau$ is large: the initial flux goes away and the exponential in the integrand keeps $\tau'$ very close to $\tau$, so $B_\nu$ can be removed from the integrand. The integral is essentially one, so in this limit
 \be
