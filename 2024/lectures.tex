@@ -2863,8 +2863,86 @@ The resulting impact on $CO_2$ emission is depicted in Fig.~\rf{olr_15}.
 \eee
 
 
+\lecture{Summary}
+
+Some key things we learned:
+
+\bee
+\item Energy Conservation
+\bei
+\item Drag force on car
+\item Hydro-storage converts potential to kinetic energy
+\item When a photon with long wavelength is emitted from Earth and absorbed by a $CO_2$ molecule, the molecule jumps to an excited state. Only photons with specific energies can lead to a particular excitation. E.g., 15 micron line
+\item When water in the ocean absorbs solar energy, it tends to evaporate more since the energy in the gas state is higher than the energy in the liquid state
+\item When the air condenses into clouds, it releases energy since it drops to the lower energy liquid state
+\eei
+\item Equilibrium
+\bei
+\item Monatomic Gas: Maxwellain distribution governed by temperature $T$, leads $\Delta Q=C\Delta T$ with $C=3/2Nk_B$
+\item $k_BT$ governs typical energy of atoms 
+\item Diatomic Gas can have vibrational and rotational levels as well, so as $k_BT$ gets larger than rotational splitting 2 more DOF and $3/2\rightarrow 5/2$. At even higher $T$, $7/2$.
+\item All materials in equilibrium radiate photons with a characteristic shape:
+\be
+B_\nu(T) = \frac{2h\nu^3}{c^2}\, \frac1{e^{h\nu/k_BT}-1}\ee
+with the typical frequency determined by the temperature (peaking near $\nu\sim k_BT/h$)
+\eei
+\item Rates of Interactions
+\bei
+\item Air resistance: energy transfered per time
+\item Optical depth for a photon is given by $\int dz n\sigma$: important for GHG and for UV absorbtion
+\item Rates for processes in nuclear reactors depend on speed of nuclei, e.g.
+\item Cross sections are not geometric and are very important in governing how often something happens
+\eei
+\item Gravity and Pressure
+\bei
+\item Pressure is force per area
+\item Ideal Gas Law
+\item Hydrostatic Equilibrium: $dP/dz=-\rho g$. Comes from the force of a bouncing ball
+\item Leads to pressure profile. E.g., for $T=T_0-\Gamma z$,
+\bea
+P(z) &=& %P_0 \exp\left\{ -\int_0^z \frac{dz'}{H(z')} \right\}
+%\vs
+%&=&
+P_0 \exp\left\{ -\frac{mg}{k_B}\,\int_0^z \frac{dz'}{ (T_0-\Gamma z')} \right\}\vs
+&=&
+P_0 \exp\left\{ -\frac{1}{H}\,\int _0^z\,\left( \frac{dz'}{1- \frac{\Gamma z'}{T_0}}\right)\right\}
+\vs
+&=& P_0 \left(1 -  \frac{\Gamma z}{T_0}\right)^{T_0/\Gamma H}.
+\eea
+\eei
+ \item Taylor Expansion:
+\be\left(1 -  \frac{\Gamma z}{T_0}\right)^{T_0/\Gamma H }\simeq 1-z/H\ee
+exactly the same as the isothermal case where $P=P_0e^{-z/H}$.
+\item Heat Transfer
+\bei
+\item Conduction
+\item Convection: derived by balancing gravity and pressure
+\item Radiative Transfer
+\eei
+\item Quantum mechanics dictates that bound states have discrete, or {\it quantized}, energy levels. 
+\bei
+\item Particle trapped in a box gives estimate of nuclear energies: $E\sim \hbar^2\pi^2/2mL^2$
+\item $CO_2$ has discrete vibrational, rotational levels
+\item Nuclei have specific energies or binding energies
+\item  Hierarchy in molecules: electronic, vibrational states, and rotational states
+\eei
+\item Rotational Energy and Motion
+\bei
+\item Angular Momentum: $E=L^2/2I$ together with $L\sim\hbar$ leads to estimates of rotational energy levels
+\item Coriolis Force dictates horizonal flow of heat across the globe
+\eei
+\item Equilibrium maintained on Earth
+\bei 
+\item Energy Balance: Solar energy in is balanced by OLR
 Fig.~\rf{earthbalance} summarizes the balance.  
 \Spng{earthbalance}{Balance}
+\item Forcing leads to change in temperature
+\eei
+\eee
+
+
+
+\lecture{appendix}
 \bei
 \item 340 in from the Sun
 \item Albedo reflects 100 of that, 75 from the atmosphere and 25 from the gorund
