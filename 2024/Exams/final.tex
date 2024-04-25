@@ -1,0 +1,326 @@
+\documentclass[11pt]{article}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathabx}
+\usepackage{xcolor}
+\begin{document}
+\newcommand{\problem}[1]{%\addtocounter{problemc}{1}
+\newpage
+Problem\ {#1}
+}
+\newcommand{\probl}[1]{\label{#1}}
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\bea{\begin{eqnarray}}
+\def\eea{\end{eqnarray}}
+\newcommand{\vs}{\nonumber\\}
+\def\across{a^\times}
+\def\tcross{T^\times}
+\def\ccross{C^\times}
+\newcommand{\ec}[1]{Eq.~(\ref{eq:#1})}
+\newcommand{\eec}[2]{Eqs.~(\ref{eq:#1}) and (\ref{eq:#2})}
+\newcommand{\Ec}[1]{(\ref{eq:#1})}
+\newcommand{\eql}[1]{\label{eq:#1}}
+\newcommand{\sfig}[2]{
+\includegraphics[width=#2]{#1}
+        }
+\newcommand{\sfigr}[2]{
+\includegraphics[angle=270,origin=c,width=#2]{#1}
+        }
+\newcommand{\sfigra}[2]{
+\includegraphics[angle=90,origin=c,width=#2]{#1}
+        }
+\newcommand{\Sfig}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.pdf}{0.5\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Sjpeg}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.jpeg}{0.7\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+\newcommand{\Spng}[2]{
+   \begin{figure}[thbp]
+   \begin{center}
+    \sfig{../Figures/#1.png}{\columnwidth}
+    \caption{{\small #2}}
+    \label{fig:#1}
+     \end{center}
+   \end{figure}
+}
+
+
+\newcommand\dirac{\delta_D}
+\newcommand{\rf}[1]{\ref{fig:#1}}
+\newcommand\rhoc{\rho_{\rm cr}}
+\newcommand\zs{D_S}
+\newcommand\dts{\Delta t_{\rm Sh}}
+\newcommand\zle{D_L}
+\newcommand\zsl{D_{SL}}
+\newcommand\sh{\gamma}
+\newcommand\surb{\mathcal{S}}
+\newcommand\psf{\mathcal{P}}
+\newcommand\spsf{\sigma_{\rm PSF}}
+\newcommand\bei{\begin{itemize}}
+\newcommand\eei{\end{itemize}}
+\newcommand\bee{\begin{enumerate}}
+\newcommand\eee{\end{enumerate}}
+
+\renewcommand{\theenumi}{\Alph{enumi}}
+%{\bf Name:}
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+
+\begin{centering}
+{\bf Final, Physics of Energy 33-226}
+\end{centering}
+
+There are 9 problems that vary in length and difficulty. However, each of the 9 problems is worth the same number of points.
+By signing this, I affirm that I have not consulted any sources other than the textbook ``Physics of Energy,'' my notes on the course, and material on the course canvas site. I also affirm that I used only a non-programmable calculator to get numerical results and that I did all this work by myself.
+\bigskip
+
+\begin{tabular}{@{}p{.5in}p{4in}@{}}
+
+Printed: & \hrulefill  \\
+\bigskip\\
+Signed: & \hrulefill \\
+
+\end{tabular}
+
+%\begin{enumerate}
+
+%\problem{Problem 2.1 in the book}
+
+
+\problem{1. {\bf Conservation of Energy:}
+How much does the speed of an 1800 kg car increase as it rolls down a 15 meter hill if its initial speed was 60 mph?
+}
+
+%\problem{2. If the temperature of the Sun increased by 2K, what would be the forcing felt on Earth (in units of $W/m^2$)? By how much would the Earth's temperature change?}
+
+\problem{2. {\bf Rate of Interaction:} In the early universe, the mass density of electrons is $\rho_e=9\times 10^{-20} kg/m^3$. The cross section for photons to scatter off of electrons is $\sigma=6.65\times 10^{-29}$ m$^2$.
+\bee
+\item The mean free path is the distance a photon travelled at which its optical depth is equal to one. What is the mean free path for photons to scatter during this epoch?
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item At some later time, as the universe expanded, the same number of electrons were contained in a volume 1000 times larger. Additionally,  most of the electrons became bound in hydrogen atoms (which are transparent to the low frequency photons around at the time), so that only $10^{-4}$ of the electrons could scatter a photon. What is the mean free path at that time? 
+\eee
+}
+
+\problem{3. {\bf Equilibrium:} The goal of the next two questions is to calculate how much the temperature of a system rises if additional energy is added. We will consider the simplest possible system: a monatomic gas in a fixed volume, and assume there are a billion atoms in the gas. The added energy is the kinetic energy of 1 new atom added (say due to nuclear decay), which has kinetic energy of 1 MeV. Although you won't need it for this part of the problem, take the temperature of the initial billion unheated particles to be $T_i=300$K.
+
+%\item What is the mass of one $CO_2$ molecule in kg?
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+%\bigskip
+Using the heat capacity of the monatomic gas, calculate the temperature change.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+}
+
+
+\problem{4.  {\bf Equilibrium:} Same problem as 3, just calculate the temperature change by answering the following questions.
+\bee
+\item What is the total kinetic energy of the initial unheated billion particles in electron volts?
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item What is the total kinetic energy (your answer to (A) plus the kinetic energy of the added particle)?
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item Determine the final temperature of the thermalized system of all $N'\equiv 10^9+1$ particles after thermalization by equating your answer in (B) to $N' \langle E \rangle$, where $ \langle E \rangle$ is the average kinetic energy of particles at the final temperature $T_f$.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item Draw a rough histogram of the energies of all $N'$ particles before and after thermalization.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\eee}
+
+\problem{5. An electron is trapped in a box with infinitely high walls of length $10^{-10}$m.
+\bee
+\item Draw an energy level diagram with the 3 lowest levels shown and indicate the spacing between each level.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item What is the wavelength of a photon that is emitted when the electron drops from the second lowest level to the lowest level?
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\eee}
+
+\problem{6. The net reaction that accounts for the Sun’s power takes four neutral hydrogen atoms and fuses them to make aneutral helium atom. 
+\bee
+\item Taking the binding energy of helium to be 28 MeV, calculate the energyreleased per hydrogen atom. 
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item The Sun’s total power outputis \be
+L_\odot= 3.85 \times 10^{26}W.\ee
+ How many protons persecond are reacting in the Sun? 
+ \bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item Approximately 10\%of the protons in the Sun will fuse during its stablehydrogen burning phase. Given the mass of the Sun,$M_\odot=2 \times 10^{30}$ kg, estimate how long the Sun’s hydrogen burningphase will last.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\eee}
+
+\problem{7. Explain the temperature change due to seasons by answering the following questions. Refer to Pittsburgh, which is located at latitude of $40^\circ$ and recall that the axis of the Earth's rotation is tilted by $23^\circ$ with respect to the line connecting the sun to the Earth.
+\bee
+\item In words (you can include a drawing), explain why it is colder in Pittsburgh in the winter and warmer in the summer.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item Recalling that the solar radiation energy at the location of the Earth is 1366 W/m$^2$, what the solar insolation in Pittsburgh when the Sun is directly overhead in the summer solstice and the winter solstice? For the purpose of this part of the problem, neglect the atmosphere.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item Again neglecting any atmospheric or albedo effects, what would the temperature be in the winter and summer? To make this estimate quasi-realistic, account for the 24 hour changes in insolation in Pittsburgh by simply dividing the solar insolation by 4.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\item The answer you got to part C should have been {\it too extreme}, a larger temperature difference between Summer and Winter than is observed (the observed difference is less than $20^\circ$C). Qualitatively, what mitigates this difference? I.e., why is the temperature difference smaller than the estimate you obtained in B and C? Very short answer required here.
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\eee}
+
+
+\end{document}
